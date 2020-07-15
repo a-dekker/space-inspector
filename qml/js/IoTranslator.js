@@ -20,7 +20,7 @@
 
 var SubDirsWithSize = {
     getCommand: function(path) {
-        var command = 'du -a -B 1024 --max-depth=1 "' + path + '"';
+        var command = 'du -a -k -d 1 "' + path + '"';
         //console.debug(command);
         return command;
     },

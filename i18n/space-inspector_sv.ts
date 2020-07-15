@@ -55,6 +55,14 @@ använt av
         <source>Cancelled</source>
         <translation>Avbruten</translation>
     </message>
+    <message>
+        <source>Source folder does not exist</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot create target folder %1</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>GlobalPushUpMenu</name>

@@ -88,3 +88,4 @@ DISTFILES += \
     i18n/space-inspector_es.ts \
     i18n/space-inspector_sv.ts
 
+SAILFISHAPP_ICONS = 86x86 108x108 128x128 172x172 256x256

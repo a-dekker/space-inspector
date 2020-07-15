@@ -56,6 +56,14 @@ usado de
         <source>Cancelled</source>
         <translation>Cancelado</translation>
     </message>
+    <message>
+        <source>Source folder does not exist</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot create target folder %1</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>GlobalPushUpMenu</name>

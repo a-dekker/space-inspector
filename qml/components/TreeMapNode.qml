@@ -97,7 +97,6 @@ Rectangle {
     NodeContextMenu {
         id:contextMenu
         nodeModel:treeMapNode.nodeModel
-        remorseItem:remorsePopup
         onClosed: {
             treeMapNode.z = 1;
         }
@@ -112,10 +111,6 @@ Rectangle {
                 if(!running) collapseSubNode(nodeModel.dir)
             }
         }
-    }
-
-    RemorsePopup {
-        id:remorsePopup
     }
 
     opacity:0.6
