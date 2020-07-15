@@ -5,6 +5,7 @@ import "../js/Util.js" as Util
 ContextMenu {
     id: contextMenu
     property var nodeModel
+    property Item remorseItem
     property bool listViewMode: false
     signal collapseClicked
 

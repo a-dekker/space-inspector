@@ -14,7 +14,7 @@ Name:       harbour-space-inspector
 %{?qtc_builddir:%define _builddir %qtc_builddir}
 Summary:    Space Inspector
 Version:    0.7
-Release:    3
+Release:    4
 Group:      Qt/Qt
 License:    GPL v3
 URL:        https://github.com/jklingen/space-inspector
