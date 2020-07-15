@@ -19,16 +19,6 @@ TARGET = harbour-space-inspector
 CONFIG += sailfishapp
 CONFIG += sailfishapp_i18n
 
-
-i18n.path = /usr/share/harbour-space-inspector/i18n
-i18n.files = i18n/space-inspector_de.qm \
-    i18n/space-inspector_es.qm \
-    i18n/space-inspector_sv.qm
-
-INSTALLS += i18n
-
-#system(lrelease $$PWD/i18n/*.ts)
-
 SOURCES += src/harbour-space-inspector.cpp \
     src/shell.cpp \
     src/io/engine.cpp \
@@ -39,7 +29,6 @@ SOURCES += src/harbour-space-inspector.cpp \
 OTHER_FILES += qml/harbour-space-inspector.qml \
     qml/cover/CoverPage.qml \
     rpm/harbour-space-inspector.spec \
-    rpm/harbour-space-inspector.yaml \
     harbour-space-inspector.desktop \
     qml/pages/TreeMapPage.qml \
     qml/components/TreeMapNode.qml \
@@ -73,10 +62,6 @@ HEADERS += \
 RESOURCES += \
     resources/resources.qrc
 
-TRANSLATIONS = \
-    i18n/space-inspector_de.ts \
-    i18n/space-inspector_es.ts \
-    i18n/space-inspector_sv.ts
 lupdate_only {
 SOURCES += \
     qml/pages/*.qml \
@@ -84,8 +69,11 @@ SOURCES += \
 }
 
 DISTFILES += \
-    i18n/space-inspector_de.ts \
-    i18n/space-inspector_es.ts \
-    i18n/space-inspector_sv.ts
+    translations/*.ts
 
 SAILFISHAPP_ICONS = 86x86 108x108 128x128 172x172 256x256
+
+TRANSLATIONS = \
+    translations/$${TARGET}-de.ts \
+    translations/$${TARGET}-es.ts \
+    translations/$${TARGET}-sv.ts

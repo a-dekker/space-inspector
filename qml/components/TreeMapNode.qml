@@ -80,7 +80,7 @@ Rectangle {
         }
         onPressAndHold: {
             treeMapNode.z = 1000; // ensure context menu is on top
-            contextMenu.show(treeMapNode);
+            contextMenu.open(treeMapNode);
         }
     }
 

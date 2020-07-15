@@ -27,7 +27,6 @@
 #include <QGuiApplication>
 #include <QQmlContext>
 #include <QtQuick/QQuickPaintedItem>
-#include <QTranslator>
 #include "shell.h"
 #include "io/engine.h"
 
@@ -40,11 +39,6 @@ int main(int argc, char *argv[])
 
     QTranslator translator;
     QString locale = QLocale::system().name();
-    //locale="sv"; // for testing purposes only
-    if(!translator.load("space-inspector_" + locale, SailfishApp::pathTo("i18n").toLocalFile())) {
-        qDebug() << "Couldn't load translation";
-    }
-    app->installTranslator(&translator);
 
     QScopedPointer<QQuickView> view(SailfishApp::createView());
 

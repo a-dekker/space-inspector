@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="es_GT" sourcelanguage="en_US">
+<TS version="2.1" language="de_DE" sourcelanguage="en_US">
 <context>
     <name>ActivityIndicator</name>
     <message>
         <source>Estimating
 space usage.</source>
-        <translation>Calculando
-espacio usado.</translation>
+        <translation>Speicherplatz
+wird analysiert.</translation>
     </message>
     <message>
         <source>This might take
 a moment.</source>
-        <translation>Esto podría tomar
-un momento.</translation>
+        <translation>Dies kann einen
+Moment dauern.</translation>
     </message>
     <message>
         <source>Or two.</source>
         <extracomment>Context: This might take a moment. Or two.</extracomment>
-        <translation>O dos.</translation>
+        <translation>Oder zwei.</translation>
     </message>
 </context>
 <context>
@@ -29,7 +29,7 @@ un momento.</translation>
  %2 
  (%3)</source>
         <translation>%1
-usado de
+belegt von
 %2
 (%3)</translation>
     </message>
@@ -38,23 +38,23 @@ usado de
     <name>FileWorker</name>
     <message>
         <source>File operation already in progress</source>
-        <translation>La operación de archivo ya está en progreso</translation>
+        <translation>Dateioperation läuft bereits</translation>
     </message>
     <message>
         <source>Empty filename</source>
-        <translation>Nombre de archivo vacío</translation>
+        <translation>Dateiname leer</translation>
     </message>
     <message>
         <source>File not found</source>
-        <translation>Archivo no encontrado</translation>
+        <translation>Datei nicht gefunden</translation>
     </message>
     <message>
         <source>Folder delete failed</source>
-        <translation>Eliminación de carpeta fallida</translation>
+        <translation>Verzeichnis löschen fehlgeschlagen</translation>
     </message>
     <message>
         <source>Cancelled</source>
-        <translation>Cancelado</translation>
+        <translation>Abgebrochen</translation>
     </message>
     <message>
         <source>Source folder does not exist</source>
@@ -69,116 +69,116 @@ usado de
     <name>GlobalPushUpMenu</name>
     <message>
         <source>Info</source>
-        <translation>Acerca de</translation>
+        <translation>Info</translation>
     </message>
 </context>
 <context>
     <name>InfoPage</name>
     <message>
         <source>Version %1</source>
-        <translation>Versión %1</translation>
+        <translation>Version %1</translation>
     </message>
     <message>
         <source>Copyright © %2&lt;br&gt;Jens Klingen</source>
-        <translation>Derechos de autor © %2&lt;br&gt;Jens Klingen</translation>
+        <translation>Copyright © %2&lt;br&gt;Jens Klingen</translation>
     </message>
     <message>
         <source>Space Inspector helps to find large folders and files on your storage.</source>
-        <translation>Space-Inspector ayuda encontrar carpetas y archivos grandes en su almacenamiento</translation>
+        <translation>Space Inspector hilft Dir, große Ordner und Dateien zu lokaliseren.</translation>
     </message>
     <message>
         <source>Questions, problems, suggestions?</source>
-        <translation>Preguntas, Problemas, Sugerencias?</translation>
+        <translation>Fragen, Probleme, Vorschläge?</translation>
     </message>
     <message>
         <source>Free &amp; open source!</source>
-        <translation>Programa libre!</translation>
+        <translation>Frei &amp; open source!</translation>
     </message>
     <message>
         <source>GPL version 3</source>
-        <translation>GPL versión 3</translation>
+        <translation>GPL Version 3</translation>
     </message>
     <message>
         <source>%1 charting implementation by Imran Ghory. Also, thanks to Kari for the excellent work on %2.</source>
-        <translation>%1 implementación de gráficos por Imran Ghory. Además, gracias a Kari por el excelente trabajo en %2.</translation>
+        <translation>%1 Diagramm-Implementierung von Imran Ghory. Außerdem vielen Dank an Kari für die großartige Arbeit an %2.</translation>
     </message>
     <message>
         <source>Do you like this app?</source>
-        <translation>Te gusta esta apl?</translation>
+        <translation>Magst Du diese App?</translation>
     </message>
     <message>
         <source>Buy me a beer :)</source>
-        <translation>Cómprame una cerveza :)</translation>
+        <translation>Gib mir einen aus :)</translation>
     </message>
     <message>
         <source>Cheers!</source>
-        <translation>Saludos!</translation>
+        <translation>Prost!</translation>
     </message>
     <message>
         <source>No matter how much storage you have got - it will be full.</source>
-        <translation>No importa cuánto espacio de almacenamiento tenga, esto puede estar lleno.</translation>
+        <translation>Es ist egal, wie viel Speicherplatz Du hast - er wird voll sein.</translation>
     </message>
     <message>
         <source>[Translator credit]</source>
         <extracomment>If wanted, add translator info in your language, e.g. &quot;English translation by &lt;a href=\&quot;https://github.com/jklingen/\&quot;&gt;Jens Klingen&lt;/a&gt;&quot;</extracomment>
-        <translation>Traducción al español por &lt;a href=\&quot;https://github.com/Caballlero/\&quot;&gt;Carlos Gonzalez&lt;/a&gt;</translation>
+        <translation></translation>
     </message>
 </context>
 <context>
     <name>ListPage</name>
     <message>
         <source>Box view</source>
-        <translation>Ver en`caja</translation>
+        <translation>Kastenansicht</translation>
     </message>
     <message>
         <source>Refresh</source>
-        <translation>Refrescar</translation>
+        <translation>Aktualisieren</translation>
     </message>
     <message>
         <source>An error occurred</source>
-        <translation>Ocurrió un error</translation>
+        <translation>Ein Fehler ist aufgetreten</translation>
     </message>
     <message>
         <source>Go to...</source>
-        <translation>Ir a</translation>
+        <translation>Wechseln zu...</translation>
     </message>
 </context>
 <context>
     <name>NodeContextMenu</name>
     <message>
         <source>Collapse %1</source>
-        <translation>%1 colapsar</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Open %1</source>
-        <translation>%1 abrir</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Delete %1</source>
-        <translation>%1 borrar</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>PlacesPage</name>
     <message>
         <source>Go to...</source>
-        <translation>Ir a...</translation>
+        <translation>Wechseln zu...</translation>
     </message>
     <message>
         <source>Root directory</source>
-        <translation>Directorio raíz</translation>
+        <translation>Stammverzeichnis</translation>
     </message>
     <message>
         <source>User directory</source>
-        <translation>Directorio usuario</translation>
+        <translation>Benutzerverzeichnis</translation>
     </message>
     <message>
         <source>SD card</source>
-        <translation>Tarjeta SD</translation>
+        <translation>SD-Karte</translation>
     </message>
     <message>
         <source>Android storage</source>
-        <translation>Almacenamiento Android</translation>
+        <translation>Android-Speicher</translation>
     </message>
 </context>
 <context>
@@ -205,8 +205,8 @@ usado de
     <message numerus="yes">
         <source>%n collapsed item(s) (%1)</source>
         <translation>
-            <numerusform>%n elemento colapsado(s) (%1)</numerusform>
-            <numerusform>%n elemento colapsado(s) (%1)</numerusform>
+            <numerusform>%n ausgeblendetes Element (%1)</numerusform>
+            <numerusform>%n ausgeblendete Elemente (%1)</numerusform>
         </translation>
     </message>
 </context>
@@ -214,19 +214,19 @@ usado de
     <name>TreeMapPage</name>
     <message>
         <source>Refresh</source>
-        <translation>Refrescar</translation>
+        <translation>Aktualisieren</translation>
     </message>
     <message>
         <source>List view</source>
-        <translation>Ver en lista</translation>
+        <translation>Listenansicht</translation>
     </message>
     <message>
         <source>An error occurred</source>
-        <translation>Ocurrió un error</translation>
+        <translation>Ein Fehler ist aufgetreten</translation>
     </message>
     <message>
         <source>Go to...</source>
-        <translation>Ir a</translation>
+        <translation>Wechseln zu...</translation>
     </message>
 </context>
 </TS>
