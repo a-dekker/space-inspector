@@ -57,11 +57,11 @@ använt av
     </message>
     <message>
         <source>Source folder does not exist</source>
-        <translation type="unfinished"></translation>
+        <translation>Källmappen finns inte</translation>
     </message>
     <message>
         <source>Cannot create target folder %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Kan inte skapa målmappen %1</translation>
     </message>
 </context>
 <context>
