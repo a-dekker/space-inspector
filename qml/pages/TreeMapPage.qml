@@ -1,3 +1,5 @@
+
+
 /*
     Space Inspector - a filesystem structure visualization for SailfishOS
     Copyright (C) 2014 - 2018 Jens Klingen
@@ -15,8 +17,7 @@
     You should have received a copy of the GNU General Public License
     along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
-
-import QtQuick 2.0
+import QtQuick 2.2
 import Sailfish.Silica 1.0
 
 import "../components"
@@ -33,18 +34,40 @@ Page {
     property int collapsedSubNodesSize: 0
     property var subNodesWithSize: []
 
+    onOrientationTransitionRunningChanged: {
+        if (!orientationTransitionRunning) {
+            if (!busyIndicator.running) {
+                renderTreeMap()
+            }
+        }
+    }
+
+    onStatusChanged: {
+        // Needed if screen is rotated in nested page
+        if (status === PageStatus.Active) {
+            if (!busyIndicator.running) {
+                renderTreeMap()
+            }
+        }
+    }
+
     SilicaFlickable {
-        id:sf
+        id: sf
         anchors.fill: parent
         contentHeight: parent.height
 
-        GlobalPushUpMenu {}
-
         PullDownMenu {
+            MenuItem {
+                text: qsTr("Info")
+                onClicked: pageStack.push(Qt.resolvedUrl(
+                                              "../pages/InfoPage.qml"))
+            }
             MenuItem {
                 text: qsTr("Go to...")
                 onClicked: {
-                    pageStack.push("../pages/PlacesPage.qml",{nodeModel:nodeModel})
+                    pageStack.push("../pages/PlacesPage.qml", {
+                                       "nodeModel": nodeModel
+                                   })
                 }
             }
             MenuItem {
@@ -56,19 +79,23 @@ Page {
             MenuItem {
                 text: qsTr("List view")
                 onClicked: {
-                    pageStack.replace("../pages/ListPage.qml",{nodeModel:nodeModel})
+                    pageStack.replace("../pages/ListPage.qml", {
+                                          "nodeModel": nodeModel
+                                      })
                 }
             }
         }
 
         PageHeader {
             id: title
-            title: Util.getNodeNameFromPath(nodeModel.dir) + ' (' + Util.getHumanReadableSize(nodeModel.size) + ')'
+            title: Util.getNodeNameFromPath(
+                       nodeModel.dir) + ' (' + Util.getHumanReadableSize(
+                       nodeModel.size) + ')'
         }
 
         ActivityIndicator {
             id: busyIndicator
-            anchors.fill:parent
+            anchors.fill: parent
         }
 
         TreeMapNodeCollapsed {
@@ -80,21 +107,21 @@ Page {
             collapsedNodesSize: collapsedSubNodesSize
 
             onClick: {
-                collapsedSubNodePaths = [];
-                renderTreeMap();
+                collapsedSubNodePaths = []
+                renderTreeMap()
             }
         }
 
         Rectangle {
             id: treeMap
-            anchors.top:collapsedNodes.bottom
+            anchors.top: collapsedNodes.bottom
             width: parent.width - 1
             height: parent.height - title.height - collapsedNodes.height
-            color:'transparent'
+            color: 'transparent'
 
             function clear() {
-                for(var i=children.length-1; i>=0; i--) {
-                    children[i].destroy();
+                for (var i = children.length - 1; i >= 0; i--) {
+                    children[i].destroy()
                 }
             }
         }
@@ -105,93 +132,92 @@ Page {
         page: page
     }
 
-
     ShellConnector {
-        id:shellConnector
+        id: shellConnector
     }
 
     Connections {
         target: engine
         onWorkerErrorOccurred: {
-            console.log("FileWorker error: ", message, filename);
-            notificationPanel.showTextWithTimer(qsTr("An error occurred"), message);
+            console.log("FileWorker error: ", message, filename)
+            notificationPanel.showTextWithTimer(qsTr("An error occurred"),
+                                                message)
         }
         onFileDeleted: {
-            refreshPage();
+            refreshPage()
         }
     }
 
     function displayDirectoryList(nodesWithSize) {
-        subNodesWithSize = nodesWithSize;
-        renderTreeMap();
+        subNodesWithSize = nodesWithSize
+        renderTreeMap()
     }
 
     function collapseSubNode(nodePath) {
-        var sn = null;
-        for(var i=0; i<subNodesWithSize.length; i++) {
-            sn = subNodesWithSize[i];
-            if(sn.dir === nodePath) {
-                collapsedSubNodePaths.push(sn.dir);
-                renderTreeMap();
-                break;
+        var sn = null
+        for (var i = 0; i < subNodesWithSize.length; i++) {
+            sn = subNodesWithSize[i]
+            if (sn.dir === nodePath) {
+                collapsedSubNodePaths.push(sn.dir)
+                renderTreeMap()
+                break
             }
         }
     }
 
     function renderTreeMap() {
-        treeMap.clear();
+        treeMap.clear()
 
-        var visibleNodesWithSize = removeCollapsed(subNodesWithSize);
+        var visibleNodesWithSize = removeCollapsed(subNodesWithSize)
 
-        var sizeArr = [];
-        for(var i in visibleNodesWithSize) {
-            sizeArr.push(visibleNodesWithSize[i].size);
+        var sizeArr = []
+        for (var i in visibleNodesWithSize) {
+            sizeArr.push(visibleNodesWithSize[i].size)
         }
-        var coords = Tm.Treemap.generate(sizeArr, treeMap.width, treeMap.height);
-        var nodeComponent = Qt.createComponent('../components/TreeMapNode.qml');
-        for(var i in coords) {
-            var coord = coords[i];
-            if(nodeComponent.status === Component.Ready) {
+        var coords = Tm.Treemap.generate(sizeArr, treeMap.width, treeMap.height)
+        var nodeComponent = Qt.createComponent('../components/TreeMapNode.qml')
+        for (var i in coords) {
+            var coord = coords[i]
+            if (nodeComponent.status === Component.Ready) {
                 var nodeConfig = {
-                    nodeModel: visibleNodesWithSize[i],
-                    nodeLeft: coord[0] + 1,
-                    nodeTop: coord[1] + 1,
-                    nodeWidth: coord[2] - coord[0] - 1,
-                    nodeHeight: coord[3] - coord[1] - 1
-
-                };
-                nodeComponent.createObject(treeMap, nodeConfig);
+                    "nodeModel": visibleNodesWithSize[i],
+                    "nodeLeft": coord[0] + 1,
+                    "nodeTop": coord[1] + 1,
+                    "nodeWidth": coord[2] - coord[0] - 1,
+                    "nodeHeight": coord[3] - coord[1] - 1
+                }
+                nodeComponent.createObject(treeMap, nodeConfig)
             }
         }
-        busyIndicator.running = false;
-        busyIndicator.visible = false;
+        busyIndicator.running = false
+        busyIndicator.visible = false
     }
 
     function removeCollapsed(nodesWithSize) {
-        collapsedSubNodesSize = 0;
-        var ret = [];
-        for(var i=0; i<nodesWithSize.length; i++) {
-            var node = nodesWithSize[i];
-            var dir = node.dir;
-            if(collapsedSubNodePaths.indexOf(dir)<0) {
-                ret.push(node);
+        collapsedSubNodesSize = 0
+        var ret = []
+        for (var i = 0; i < nodesWithSize.length; i++) {
+            var node = nodesWithSize[i]
+            var dir = node.dir
+            if (collapsedSubNodePaths.indexOf(dir) < 0) {
+                ret.push(node)
             } else {
-                collapsedSubNodesSize += node.size;
+                collapsedSubNodesSize += node.size
             }
         }
-        return ret;
+        return ret
     }
 
     function createNodeModel() {
-        return {dir:engine.homeFolder(), isDir:true, size: 0}
+        return {
+            "dir": engine.homeFolder(),
+            "isDir": true,
+            "size": 0
+        }
     }
 
     function refreshPage() {
-        shellConnector.refresh();
-        renderTreeMap();
+        shellConnector.refresh()
+        renderTreeMap()
     }
-
-
 }
-
-

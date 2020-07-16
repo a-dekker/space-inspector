@@ -1,3 +1,5 @@
+
+
 /*
     Space Inspector - a filesystem structure visualization for SailfishOS
     Copyright (C) 2014 - 2018 Jens Klingen
@@ -15,8 +17,7 @@
     You should have received a copy of the GNU General Public License
     along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
-
-import QtQuick 2.0
+import QtQuick 2.2
 import Sailfish.Silica 1.0
 
 import "../components"
@@ -25,17 +26,22 @@ Page {
     id: page
 
     SilicaFlickable {
-        id:sf
+        id: sf
         anchors.fill: parent
         contentHeight: childRect.height
 
-        GlobalPushUpMenu {}
-
+        PullDownMenu {
+            MenuItem {
+                text: qsTr("Info")
+                onClicked: pageStack.push(Qt.resolvedUrl(
+                                              "../pages/InfoPage.qml"))
+            }
+        }
         Rectangle {
-            id:childRect
-            width:parent.width
-            height:childrenRect.height
-            color:'transparent'
+            id: childRect
+            width: parent.width
+            height: childrenRect.height
+            color: 'transparent'
 
             PageHeader {
                 id: title
@@ -46,25 +52,26 @@ Page {
                 anchors.top: title.bottom
                 width: parent.width
 
-
                 PlaceButton {
-                    path:'/'
+                    path: '/'
                     text: qsTr("Root directory")
+                    img: 'image://theme/icon-m-device'
                 }
                 PlaceButton {
                     path: engine.homeFolder()
                     text: qsTr("User directory")
+                    img: 'image://theme/icon-m-home'
                 }
                 PlaceButton {
                     path: engine.sdcardPath()
                     text: qsTr("SD card")
+                    img: 'image://theme/icon-m-sd-card'
                 }
                 PlaceButton {
                     path: engine.androidSdcardPath()
                     text: qsTr("Android storage")
+                    img: 'image://theme/icon-m-file-apk'
                 }
-
-
             }
         }
     }

@@ -22,6 +22,10 @@ import "pages"
 
 ApplicationWindow
 {
+    allowedOrientations: Orientation.Portrait | Orientation.Landscape
+                         | Orientation.LandscapeInverted
+    _defaultPageOrientations: Orientation.Portrait | Orientation.Landscape
+                              | Orientation.LandscapeInverted
     initialPage: Component { PlacesPage {} }
     cover: Qt.resolvedUrl("pages/CoverPage.qml")
 }

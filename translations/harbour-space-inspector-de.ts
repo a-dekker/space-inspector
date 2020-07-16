@@ -66,21 +66,10 @@ belegt von
     </message>
 </context>
 <context>
-    <name>GlobalPushUpMenu</name>
-    <message>
-        <source>Info</source>
-        <translation>Info</translation>
-    </message>
-</context>
-<context>
     <name>InfoPage</name>
     <message>
         <source>Version %1</source>
         <translation>Version %1</translation>
-    </message>
-    <message>
-        <source>Copyright © %2&lt;br&gt;Jens Klingen</source>
-        <translation>Copyright © %2&lt;br&gt;Jens Klingen</translation>
     </message>
     <message>
         <source>Space Inspector helps to find large folders and files on your storage.</source>
@@ -123,6 +112,10 @@ belegt von
         <extracomment>If wanted, add translator info in your language, e.g. &quot;English translation by &lt;a href=\&quot;https://github.com/jklingen/\&quot;&gt;Jens Klingen&lt;/a&gt;&quot;</extracomment>
         <translation></translation>
     </message>
+    <message>
+        <source>Copyright © %2&lt;br&gt;Jens Klingen/Arno Dekker</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>ListPage</name>
@@ -141,6 +134,10 @@ belegt von
     <message>
         <source>Go to...</source>
         <translation>Wechseln zu...</translation>
+    </message>
+    <message>
+        <source>Info</source>
+        <translation>Info</translation>
     </message>
 </context>
 <context>
@@ -179,6 +176,10 @@ belegt von
     <message>
         <source>Android storage</source>
         <translation>Android-Speicher</translation>
+    </message>
+    <message>
+        <source>Info</source>
+        <translation>Info</translation>
     </message>
 </context>
 <context>
@@ -227,6 +228,10 @@ belegt von
     <message>
         <source>Go to...</source>
         <translation>Wechseln zu...</translation>
+    </message>
+    <message>
+        <source>Info</source>
+        <translation>Info</translation>
     </message>
 </context>
 </TS>

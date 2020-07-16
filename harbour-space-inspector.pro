@@ -32,7 +32,6 @@ OTHER_FILES += qml/harbour-space-inspector.qml \
     harbour-space-inspector.desktop \
     qml/pages/TreeMapPage.qml \
     qml/components/TreeMapNode.qml \
-    qml/components/GlobalPushUpMenu.qml \
     qml/pages/ListPage.qml \
     cover.png \
     qml/js/IoTranslator.js \

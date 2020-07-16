@@ -65,13 +65,6 @@ använt av
     </message>
 </context>
 <context>
-    <name>GlobalPushUpMenu</name>
-    <message>
-        <source>Info</source>
-        <translation>Info</translation>
-    </message>
-</context>
-<context>
     <name>InfoPage</name>
     <message>
         <source>Version %1</source>
@@ -102,10 +95,6 @@ använt av
         <translation>%1 kartläggningsimplementering av Imran Ghory. Tack också till Kari för det utmärkta arbetet med %2.</translation>
     </message>
     <message>
-        <source>Copyright © %2&lt;br&gt;Jens Klingen</source>
-        <translation>Copyright © %2&lt;br&gt;Jens Klingen</translation>
-    </message>
-    <message>
         <source>Do you like this app?</source>
         <translation>Gillar du den här appen?</translation>
     </message>
@@ -121,6 +110,10 @@ använt av
         <source>[Translator credit]</source>
         <extracomment>If wanted, add translator info in your language, e.g. &quot;English translation by &lt;a href=\&quot;https://github.com/jklingen/\&quot;&gt;Jens Klingen&lt;/a&gt;&quot;</extracomment>
         <translation>Svensk översättning av &lt;a href=\&quot;https://svenskasprakfiler.se\&quot;&gt;eson&lt;/a&gt;</translation>
+    </message>
+    <message>
+        <source>Copyright © %2&lt;br&gt;Jens Klingen/Arno Dekker</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -140,6 +133,10 @@ använt av
     <message>
         <source>Go to...</source>
         <translation>Gå till...</translation>
+    </message>
+    <message>
+        <source>Info</source>
+        <translation>Info</translation>
     </message>
 </context>
 <context>
@@ -178,6 +175,10 @@ använt av
     <message>
         <source>Android storage</source>
         <translation>Android-lagring</translation>
+    </message>
+    <message>
+        <source>Info</source>
+        <translation>Info</translation>
     </message>
 </context>
 <context>
@@ -226,6 +227,10 @@ använt av
     <message>
         <source>Go to...</source>
         <translation>Gå till...</translation>
+    </message>
+    <message>
+        <source>Info</source>
+        <translation>Info</translation>
     </message>
 </context>
 </TS>

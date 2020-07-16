@@ -1,3 +1,5 @@
+
+
 /*
     Space Inspector - a filesystem structure visualization for SailfishOS
     Copyright (C) 2014 - 2018 Jens Klingen
@@ -15,15 +17,12 @@
     You should have received a copy of the GNU General Public License
     along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
-
-import QtQuick 2.0
+import QtQuick 2.2
 import Sailfish.Silica 1.0
 
 import "../components"
 import "../js/IoTranslator.js" as IoTranslator
 import "../js/Util.js" as Util
-
-
 
 Page {
     id: page
@@ -31,18 +30,22 @@ Page {
     property var nodeModel: createNodeModel()
 
     SilicaFlickable {
-        id:sf
+        id: sf
         anchors.fill: parent
         contentHeight: parent.height
 
-        GlobalPushUpMenu {}
-
-
         PullDownMenu {
+            MenuItem {
+                text: qsTr("Info")
+                onClicked: pageStack.push(Qt.resolvedUrl(
+                                              "../pages/InfoPage.qml"))
+            }
             MenuItem {
                 text: qsTr("Go to...")
                 onClicked: {
-                    pageStack.push("../pages/PlacesPage.qml",{nodeModel:nodeModel})
+                    pageStack.push("../pages/PlacesPage.qml", {
+                                       "nodeModel": nodeModel
+                                   })
                 }
             }
             MenuItem {
@@ -54,49 +57,54 @@ Page {
             MenuItem {
                 text: qsTr("Box view")
                 onClicked: {
-                    pageStack.replace("../pages/TreeMapPage.qml",{nodeModel:nodeModel})
+                    pageStack.replace("../pages/TreeMapPage.qml", {
+                                          "nodeModel": nodeModel
+                                      })
                 }
             }
         }
 
         PageHeader {
             id: title
-            title: Util.getNodeNameFromPath(nodeModel.dir) + ' (' + Util.getHumanReadableSize(nodeModel.size) + ')'
+            title: Util.getNodeNameFromPath(
+                       nodeModel.dir) + ' (' + Util.getHumanReadableSize(
+                       nodeModel.size) + ')'
         }
 
         ActivityIndicator {
             id: busyIndicator
-            anchors.fill:parent
+            anchors.fill: parent
         }
 
         SilicaListView {
             id: listView
-            anchors.top:title.bottom
-            contentHeight: parent.height-title.height
-            width:parent.width
-            height:parent.height-title.height
+            anchors.top: title.bottom
+            contentHeight: parent.height - title.height
+            width: parent.width
+            height: parent.height - title.height
 
             model: subDirsModel
             delegate: subDirsDelegate
 
-            VerticalScrollDecorator {}
+            VerticalScrollDecorator {
+            }
 
             ListModel {
-                id:subDirsModel
+                id: subDirsModel
             }
 
             Component {
-                id:subDirsDelegate
+                id: subDirsDelegate
                 ListItem {
 
                     id: itemDelegate
                     anchors.left: parent.left
                     width: parent.width
                     height: Theme.itemSizeSmall + contextMenu.height
-                    menu:contextMenu
+                    menu: contextMenu
 
                     Rectangle {
-                        id:itemBg
+                        id: itemBg
                         color: itemDelegate.pressed ? Theme.secondaryHighlightColor : "transparent"
                     }
 
@@ -106,8 +114,11 @@ Page {
                         anchors.leftMargin: Theme.paddingLarge
                         height: parent.height
                         verticalAlignment: Text.AlignVCenter
-                        text: Util.getNodeNameFromPath(model.dir);
-                        color: itemDelegate.pressed || !model.isDir ? Theme.highlightColor : Theme.primaryColor
+                        text: Util.getNodeNameFromPath(model.dir)
+                        width: parent.width - (Theme.paddingMedium + dirSize.width)
+                        truncationMode: TruncationMode.Fade
+                        color: itemDelegate.pressed
+                               || !model.isDir ? Theme.highlightColor : Theme.primaryColor
                     }
 
                     Label {
@@ -116,29 +127,33 @@ Page {
                         anchors.rightMargin: Theme.paddingLarge
                         height: parent.height
                         verticalAlignment: Text.AlignVCenter
-                        text: parseInt(model.size).toLocaleString(Qt.locale(), "f", 0) + " KB"
-                        color: itemDelegate.pressed || !model.isDir ? Theme.highlightColor : Theme.primaryColor
+                        text: parseInt(model.size).toLocaleString(Qt.locale(),
+                                                                  "f",
+                                                                  0) + " KB"
+                        color: itemDelegate.pressed ? Theme.highlightColor : Theme.secondaryColor
                     }
 
                     onClicked: {
-                        if(model.isDir) {
-                            pageStack.push("ListPage.qml",{nodeModel:model})
+                        if (model.isDir) {
+                            pageStack.push("ListPage.qml", {
+                                               "nodeModel": model
+                                           })
                         }
                     }
 
                     NodeContextMenu {
-                        id:contextMenu
-                        nodeModel:model
-                        remorseItem:remorseItem
-                        listViewMode:true
+                        id: contextMenu
+                        nodeModel: model
+                        remorseItem: remorseItem
+                        listViewMode: true
                     }
 
                     RemorseItem {
-                        id:remorseItem
+                        id: remorseItem
                     }
                 }
             }
-         }
+        }
     }
 
     NotificationPanel {
@@ -146,39 +161,43 @@ Page {
         page: page
     }
 
-    ShellConnector {}
+    ShellConnector {
+    }
 
     Connections {
         target: engine
         onWorkerErrorOccurred: {
-            console.log("FileWorker error: ", message, filename);
-            notificationPanel.showTextWithTimer(qsTr("An error occurred"), message);
+            console.log("FileWorker error: ", message, filename)
+            notificationPanel.showTextWithTimer(qsTr("An error occurred"),
+                                                message)
         }
         onFileDeleted: {
-            refreshPage();
+            refreshPage()
         }
     }
 
     function displayDirectoryList(subNodesWithSize) {
 
-        for(var i=0; i<subNodesWithSize.length; i++) {
-            subDirsModel.append(subNodesWithSize[i]);
+        for (var i = 0; i < subNodesWithSize.length; i++) {
+            subDirsModel.append(subNodesWithSize[i])
         }
 
-        busyIndicator.running = false;
-        busyIndicator.visible = false;
-
+        busyIndicator.running = false
+        busyIndicator.visible = false
     }
 
     function createNodeModel() {
-        return {dir:'/', isDir:true}
+        return {
+            "dir": '/',
+            "isDir": true
+        }
     }
 
     function refreshPage() {
-        if(pageStack.currentPage === page && !pageStack.busy) {
-            pageStack.replace("../pages/ListPage.qml",{nodeModel:pageStack.currentPage.nodeModel})
+        if (pageStack.currentPage === page && !pageStack.busy) {
+            pageStack.replace("../pages/ListPage.qml", {
+                                  "nodeModel": pageStack.currentPage.nodeModel
+                              })
         }
     }
 }
-
-

@@ -13,13 +13,12 @@ Name:       harbour-space-inspector
 %{!?qtc_make:%define qtc_make make}
 %{?qtc_builddir:%define _builddir %qtc_builddir}
 Summary:    Space Inspector
-Version:    0.7
-Release:    4
+Version:    0.8
+Release:    1
 Group:      Qt/Qt
 License:    GPL v3
 URL:        https://github.com/jklingen/space-inspector
 Source0:    %{name}-%{version}.tar.bz2
-Source100:  harbour-space-inspector.yaml
 Requires:   sailfishsilica-qt5 >= 0.10.9
 BuildRequires:  pkgconfig(sailfishapp) >= 0.0.10
 BuildRequires:  pkgconfig(Qt5Core)

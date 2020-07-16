@@ -16,7 +16,7 @@
     along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-import QtQuick 2.0
+import QtQuick 2.2
 import Sailfish.Silica 1.0
 
 import "../components"
@@ -60,7 +60,7 @@ Page {
                 wrapMode: Text.WordWrap
                 textFormat: Text.RichText
                 horizontalAlignment: Text.AlignRight
-                text: '<strong>' + qsTr('Version %1').arg('0.7') + '</strong><br>' +  qsTr("Copyright © %2<br>Jens Klingen").arg('2014 - 2018')
+                text: '<strong>' + qsTr('Version %1').arg('0.8') + '</strong><br>' +  qsTr("Copyright © %2<br>Jens Klingen/Arno Dekker").arg('2014 - 2020')
                 color:Theme.highlightColor
                 font.pixelSize: Theme.fontSizeSmall
             }

@@ -66,25 +66,14 @@ usado de
     </message>
 </context>
 <context>
-    <name>GlobalPushUpMenu</name>
-    <message>
-        <source>Info</source>
-        <translation>Acerca de</translation>
-    </message>
-</context>
-<context>
     <name>InfoPage</name>
     <message>
         <source>Version %1</source>
         <translation>Versión %1</translation>
     </message>
     <message>
-        <source>Copyright © %2&lt;br&gt;Jens Klingen</source>
-        <translation>Derechos de autor © %2&lt;br&gt;Jens Klingen</translation>
-    </message>
-    <message>
         <source>Space Inspector helps to find large folders and files on your storage.</source>
-        <translation>Space-Inspector ayuda encontrar carpetas y archivos grandes en su almacenamiento</translation>
+        <translation>Space-Inspector ayuda encontrar carpetas y archivos grandes en su almacenamiento.</translation>
     </message>
     <message>
         <source>Questions, problems, suggestions?</source>
@@ -123,6 +112,10 @@ usado de
         <extracomment>If wanted, add translator info in your language, e.g. &quot;English translation by &lt;a href=\&quot;https://github.com/jklingen/\&quot;&gt;Jens Klingen&lt;/a&gt;&quot;</extracomment>
         <translation>Traducción al español por &lt;a href=\&quot;https://github.com/Caballlero/\&quot;&gt;Carlos Gonzalez&lt;/a&gt;</translation>
     </message>
+    <message>
+        <source>Copyright © %2&lt;br&gt;Jens Klingen/Arno Dekker</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>ListPage</name>
@@ -140,14 +133,18 @@ usado de
     </message>
     <message>
         <source>Go to...</source>
-        <translation>Ir a</translation>
+        <translation>Ir a...</translation>
+    </message>
+    <message>
+        <source>Info</source>
+        <translation>Acerca de</translation>
     </message>
 </context>
 <context>
     <name>NodeContextMenu</name>
     <message>
         <source>Collapse %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">%n elemento colapsado(s) (%1)</translation>
     </message>
     <message>
         <source>Open %1</source>
@@ -179,6 +176,10 @@ usado de
     <message>
         <source>Android storage</source>
         <translation>Almacenamiento Android</translation>
+    </message>
+    <message>
+        <source>Info</source>
+        <translation>Acerca de</translation>
     </message>
 </context>
 <context>
@@ -226,7 +227,11 @@ usado de
     </message>
     <message>
         <source>Go to...</source>
-        <translation>Ir a</translation>
+        <translation>Ir a...</translation>
+    </message>
+    <message>
+        <source>Info</source>
+        <translation>Acerca de</translation>
     </message>
 </context>
 </TS>
