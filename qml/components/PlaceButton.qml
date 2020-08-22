@@ -43,8 +43,6 @@ MouseArea {
         source: parent.img
         x: Theme.paddingLarge
         anchors.verticalCenter: parent.verticalCenter
-        height: lbl.height
-        fillMode: Image.PreserveAspectFit
         opacity: parent.enabled ? 1.0 : 0.4
     }
 
