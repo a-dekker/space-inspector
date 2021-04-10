@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sv" sourcelanguage="zh_CN">
+<TS version="2.1" language="zh_CN" sourcelanguage="en_US">
 <context>
     <name>ActivityIndicator</name>
     <message>
@@ -79,7 +79,7 @@ a moment.</source>
     </message>
     <message>
         <source>Questions, problems, suggestions?</source>
-        <translation>疑问、问题及建议？</translation>
+        <translation>你有疑问、问题或建议？</translation>
     </message>
     <message>
         <source>Free &amp; open source!</source>
@@ -91,7 +91,7 @@ a moment.</source>
     </message>
     <message>
         <source>%1 charting implementation by Imran Ghory. Also, thanks to Kari for the excellent work on %2.</source>
-        <translation>%1 图表由 Imran Ghory %2 实现。同样，感谢 Kari 对 %2 卓越的工作。</translation>
+        <translation>%1 图表由 Imran Ghory %2 实现。同时感谢 Kari 对 %2 卓越的工作。</translation>
     </message>
     <message>
         <source>Do you like this app?</source>
@@ -184,19 +184,19 @@ a moment.</source>
     <name>QObject</name>
     <message>
         <source>%1 bytes</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 字节</translation>
     </message>
     <message>
         <source>%1 kB</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 kB</translation>
     </message>
     <message>
         <source>%1 MB</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 MB</translation>
     </message>
     <message>
         <source>%1 GB</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 GB</translation>
     </message>
 </context>
 <context>
@@ -205,7 +205,7 @@ a moment.</source>
         <source>%n collapsed item(s) (%1)</source>
         <translation>
             <numerusform>%n dolt objekt (%1)</numerusform>
-            <numerusform>%n 个崩溃项目 (%1)</numerusform>
+            <numerusform>%n 个崩溃项目(%1)</numerusform>
         </translation>
     </message>
 </context>
