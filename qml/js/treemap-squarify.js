@@ -28,10 +28,9 @@
 
 var Treemap = {};
 
-(function() {
+(function () {
     "use strict";
-    Treemap.generate = function(){
-
+    Treemap.generate = (function () {
         function Container(xoffset, yoffset, width, height) {
             this.xoffset = xoffset; // offset from the the top left hand corner
             this.yoffset = yoffset; // ditto
@@ -46,19 +45,30 @@ var Treemap = {};
             //                  return an array of their cartesian coordinates
             this.getCoordinates = function (row) {
                 var coordinates = [];
-                var subxoffset = this.xoffset, subyoffset = this.yoffset; //our offset within the container
+                var subxoffset = this.xoffset,
+                    subyoffset = this.yoffset; //our offset within the container
                 var areawidth = sumArray(row) / this.height;
                 var areaheight = sumArray(row) / this.width;
                 var i;
 
                 if (this.width >= this.height) {
                     for (i = 0; i < row.length; i++) {
-                        coordinates.push([subxoffset, subyoffset, subxoffset + areawidth, subyoffset + row[i] / areawidth]);
+                        coordinates.push([
+                            subxoffset,
+                            subyoffset,
+                            subxoffset + areawidth,
+                            subyoffset + row[i] / areawidth,
+                        ]);
                         subyoffset = subyoffset + row[i] / areawidth;
                     }
                 } else {
                     for (i = 0; i < row.length; i++) {
-                        coordinates.push([subxoffset, subyoffset, subxoffset + row[i] / areaheight, subyoffset + areaheight]);
+                        coordinates.push([
+                            subxoffset,
+                            subyoffset,
+                            subxoffset + row[i] / areaheight,
+                            subyoffset + areaheight,
+                        ]);
                         subxoffset = subxoffset + row[i] / areaheight;
                     }
                 }
@@ -74,17 +84,25 @@ var Treemap = {};
                 if (this.width >= this.height) {
                     var areawidth = area / this.height;
                     var newwidth = this.width - areawidth;
-                    newcontainer = new Container(this.xoffset + areawidth, this.yoffset, newwidth, this.height);
+                    newcontainer = new Container(
+                        this.xoffset + areawidth,
+                        this.yoffset,
+                        newwidth,
+                        this.height
+                    );
                 } else {
                     var areaheight = area / this.width;
                     var newheight = this.height - areaheight;
-                    newcontainer = new Container(this.xoffset, this.yoffset + areaheight, this.width, newheight);
+                    newcontainer = new Container(
+                        this.xoffset,
+                        this.yoffset + areaheight,
+                        this.width,
+                        newheight
+                    );
                 }
                 return newcontainer;
             };
         }
-
-
 
         // normalize - the Bruls algorithm assumes we're passing in areas that nicely fit into our
         //             container box, this method takes our raw data and normalizes the data values into
@@ -104,38 +122,74 @@ var Treemap = {};
         // treemapMultidimensional - takes multidimensional data (aka [[23,11],[11,32]] - nested array)
         //                           and recursively calls itself using treemapSingledimensional
         //                           to create a patchwork of treemaps and merge them
-        function treemapMultidimensional(data, width, height, xoffset, yoffset) {
-            xoffset = (typeof xoffset === "undefined") ? 0 : xoffset;
-            yoffset = (typeof yoffset === "undefined") ? 0 : yoffset;
+        function treemapMultidimensional(
+            data,
+            width,
+            height,
+            xoffset,
+            yoffset
+        ) {
+            xoffset = typeof xoffset === "undefined" ? 0 : xoffset;
+            yoffset = typeof yoffset === "undefined" ? 0 : yoffset;
 
             var mergeddata = [];
             var mergedtreemap;
             var results = [];
             var i;
 
-            if(isArray(data[0])) { // if we've got more dimensions of depth
-                for(i=0; i<data.length; i++) {
+            if (isArray(data[0])) {
+                // if we've got more dimensions of depth
+                for (i = 0; i < data.length; i++) {
                     mergeddata[i] = sumMultidimensionalArray(data[i]);
                 }
-                mergedtreemap = treemapSingledimensional(mergeddata, width, height, xoffset, yoffset);
+                mergedtreemap = treemapSingledimensional(
+                    mergeddata,
+                    width,
+                    height,
+                    xoffset,
+                    yoffset
+                );
 
-                for(i=0; i<data.length; i++) {
-                    results.push(treemapMultidimensional(data[i], mergedtreemap[i][2] - mergedtreemap[i][0], mergedtreemap[i][3] - mergedtreemap[i][1], mergedtreemap[i][0], mergedtreemap[i][1]));
+                for (i = 0; i < data.length; i++) {
+                    results.push(
+                        treemapMultidimensional(
+                            data[i],
+                            mergedtreemap[i][2] - mergedtreemap[i][0],
+                            mergedtreemap[i][3] - mergedtreemap[i][1],
+                            mergedtreemap[i][0],
+                            mergedtreemap[i][1]
+                        )
+                    );
                 }
             } else {
-                results = treemapSingledimensional(data,width,height, xoffset, yoffset);
+                results = treemapSingledimensional(
+                    data,
+                    width,
+                    height,
+                    xoffset,
+                    yoffset
+                );
             }
             return results;
         }
 
-
-
         // treemapSingledimensional - simple wrapper around squarify
-        function treemapSingledimensional(data, width, height, xoffset, yoffset) {
-            xoffset = (typeof xoffset === "undefined") ? 0 : xoffset;
-            yoffset = (typeof yoffset === "undefined") ? 0 : yoffset;
+        function treemapSingledimensional(
+            data,
+            width,
+            height,
+            xoffset,
+            yoffset
+        ) {
+            xoffset = typeof xoffset === "undefined" ? 0 : xoffset;
+            yoffset = typeof yoffset === "undefined" ? 0 : yoffset;
 
-            var rawtreemap = squarify(normalize(data, width * height), [], new Container(xoffset, yoffset, width, height), []);
+            var rawtreemap = squarify(
+                normalize(data, width * height),
+                [],
+                new Container(xoffset, yoffset, width, height),
+                []
+            );
             return flattenTreemap(rawtreemap);
         }
 
@@ -207,7 +261,10 @@ var Treemap = {};
             var min = Math.min.apply(Math, row);
             var max = Math.max.apply(Math, row);
             var sum = sumArray(row);
-            return Math.max(Math.pow(length, 2) * max / Math.pow(sum, 2), Math.pow(sum, 2) / (Math.pow(length, 2) * min));
+            return Math.max(
+                (Math.pow(length, 2) * max) / Math.pow(sum, 2),
+                Math.pow(sum, 2) / (Math.pow(length, 2) * min)
+            );
         }
 
         // isArray - checks if arr is an array
@@ -228,10 +285,11 @@ var Treemap = {};
 
         // sumMultidimensionalArray - sums the values in a nested array (aka [[0,1],[[2,3]]])
         function sumMultidimensionalArray(arr) {
-            var i, total = 0;
+            var i,
+                total = 0;
 
-            if(isArray(arr[0])) {
-                for(i=0; i<arr.length; i++) {
+            if (isArray(arr[0])) {
+                for (i = 0; i < arr.length; i++) {
                     total += sumMultidimensionalArray(arr[i]);
                 }
             } else {
@@ -241,5 +299,5 @@ var Treemap = {};
         }
 
         return treemapMultidimensional;
-    }();
+    })();
 })();

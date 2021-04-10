@@ -19,24 +19,26 @@
 .pragma library
 
 var SubDirsWithSize = {
-    getCommand: function(path) {
+    getCommand: function (path) {
         var command = 'du -a -k -d 1 "' + path + '"';
         //console.debug(command);
         return command;
     },
-    parseResult: function(response) {
+    parseResult: function (response) {
         //console.debug(response);
         var ret = [];
-        var dirlines = response.split('\n');
-        for(var i=0; i<dirlines.length-1; i++) {
+        var dirlines = response.split("\n");
+        for (var i = 0; i < dirlines.length - 1; i++) {
             var line = dirlines[i];
             var dirInfo = this._parseLine(line);
-            if(dirInfo !== null) {
+            if (dirInfo !== null) {
                 ret.push(dirInfo);
             }
         }
-        if(ret.length > 0) {
-            ret.sort(function(a,b){return b.size - a.size})
+        if (ret.length > 0) {
+            ret.sort(function (a, b) {
+                return b.size - a.size;
+            });
         }
         return ret;
     },
@@ -44,57 +46,57 @@ var SubDirsWithSize = {
      * @param line a single line of 'du' output
      * @returns object containg directory/file name and size, e.g. {'dir':'nemo', 'size':52347}
      */
-    _parseLine: function(line) {
+    _parseLine: function (line) {
         var ret = null;
         var warn = false;
-        if(line.match(/^[0-9]+\s+/)) {
+        if (line.match(/^[0-9]+\s+/)) {
             var firstSpaceIdx = line.search(/\s/);
             var dir = line.slice(firstSpaceIdx).trim();
-            var size = parseInt(line.slice(0,firstSpaceIdx));
-            ret = {'dir':dir, 'size':size};
+            var size = parseInt(line.slice(0, firstSpaceIdx));
+            ret = { dir: dir, size: size };
         }
         return ret;
-    }
+    },
 };
 
 var SubDirs = {
-    getCommand: function(path) {
+    getCommand: function (path) {
         var command = 'find  "' + path + '" -maxdepth 1 -type d';
         //console.debug(command);
         return command;
     },
-    parseResult: function(response) {
+    parseResult: function (response) {
         //console.debug(response);
-        return response.split('\n');
-    }
+        return response.split("\n");
+    },
 };
 
 var DirSize = {
-    getCommand: function(path) {
+    getCommand: function (path) {
         var command = 'du -s -B 1024 "' + path + '"';
         //console.debug(command);
         return command;
     },
-    parseResult: function(response) {
-        return parseInt(res.substring(0,res.search(/\s/)-1));
-    }
+    parseResult: function (response) {
+        return parseInt(res.substring(0, res.search(/\s/) - 1));
+    },
 };
 
 var FileSysInfo = {
-    getCommand: function() {
-        var command = 'df -B 1024 -h /';
+    getCommand: function () {
+        var command = "df -B 1024 -h /";
         //console.debug(command);
         return command;
     },
-    parseResult: function(response) {
+    parseResult: function (response) {
         //console.debug(response);
         var ret = {};
-        var lines = response.split('\n');
+        var lines = response.split("\n");
         var headers = lines[0].split(/\s+/);
         var values = lines[1].split(/\s+/);
-        for(var i=0; i < headers.length; i++) {
+        for (var i = 0; i < headers.length; i++) {
             ret[headers[i]] = values[i];
         }
         return ret;
-    }
+    },
 };
