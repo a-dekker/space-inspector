@@ -1,3 +1,5 @@
+
+
 /*
     Space Inspector - a filesystem structure visualization for SailfishOS
     Copyright (C) 2014 - 2018 Jens Klingen
@@ -15,7 +17,6 @@
     You should have received a copy of the GNU General Public License
     along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
-
 import QtQuick 2.2
 import Sailfish.Silica 1.0
 
@@ -25,17 +26,17 @@ Page {
     id: page
 
     SilicaFlickable {
-        id:sf
+        id: sf
         anchors.fill: parent
         contentHeight: childRect.height
 
         Rectangle {
-            id:childRect
+            id: childRect
             anchors.leftMargin: Theme.paddingLarge
             anchors.rightMargin: Theme.paddingLarge
-            width:parent.width
-            height:childrenRect.height
-            color:'transparent'
+            width: parent.width
+            height: childrenRect.height
+            color: 'transparent'
 
             PageHeader {
                 id: title
@@ -60,8 +61,11 @@ Page {
                 wrapMode: Text.WordWrap
                 textFormat: Text.RichText
                 horizontalAlignment: Text.AlignRight
-                text: '<strong>' + qsTr('Version %1').arg('0.8') + '</strong><br>' +  qsTr("Copyright © %2<br>Jens Klingen/Arno Dekker").arg('2014 - 2020')
-                color:Theme.highlightColor
+                text: '<strong>' + qsTr('Version %1').arg(
+                          '0.9') + '</strong><br>' + qsTr(
+                          "Copyright © %2<br>Jens Klingen/Arno Dekker").arg(
+                          '2014 - 2021')
+                color: Theme.highlightColor
                 font.pixelSize: Theme.fontSizeSmall
             }
 
@@ -73,7 +77,7 @@ Page {
 
                 Spacer {}
                 Label {
-                    width:parent.width
+                    width: parent.width
                     horizontalAlignment: Text.AlignHCenter
                     wrapMode: Text.WordWrap
                     textFormat: Text.RichText
@@ -82,7 +86,7 @@ Page {
                     text: qsTr("No matter how much storage you have got - it will be full.")
                 }
                 Label {
-                    width:parent.width
+                    width: parent.width
                     anchors.margins: Theme.paddingLarge
                     horizontalAlignment: Text.AlignHCenter
                     wrapMode: Text.WordWrap
@@ -102,12 +106,14 @@ Page {
                     anchors.horizontalCenter: parent.horizontalCenter
                     Button {
                         text: 'Github'
-                        onClicked: Qt.openUrlExternally("https://github.com/jklingen/space-inspector/issues");
+                        onClicked: Qt.openUrlExternally(
+                                       "https://github.com/jklingen/space-inspector/issues")
                     }
                     Spacer {}
                     Button {
                         text: 'Twitter'
-                        onClicked: Qt.openUrlExternally("https://twitter.com/jklingen");
+                        onClicked: Qt.openUrlExternally(
+                                       "https://twitter.com/jklingen")
                     }
                 }
 
@@ -123,7 +129,7 @@ Page {
                     anchors.horizontalCenter: parent.horizontalCenter
                     text: qsTr('Buy me a beer :)')
                     onClicked: {
-                        Qt.openUrlExternally("https://www.paypal.me/jklingen/3");
+                        Qt.openUrlExternally("https://www.paypal.me/jklingen/3")
                         text = qsTr('Cheers!')
                     }
                 }
@@ -140,39 +146,44 @@ Page {
                 Button {
                     anchors.horizontalCenter: parent.horizontalCenter
                     text: qsTr('GPL version 3')
-                    onClicked: Qt.openUrlExternally("http://www.gnu.org/licenses/gpl-3.0.txt");
+                    onClicked: Qt.openUrlExternally(
+                                   "http://www.gnu.org/licenses/gpl-3.0.txt")
                 }
 
                 Spacer {}
                 Label {
-                    width:parent.width
+                    width: parent.width
                     anchors.margins: Theme.paddingLarge
                     horizontalAlignment: Text.AlignHCenter
                     wrapMode: Text.WordWrap
                     color: Theme.highlightColor
                     font.pixelSize: Theme.fontSizeSmall
                     textFormat: Text.RichText
-                    onLinkActivated: function(url) {Qt.openUrlExternally(url)}
+                    onLinkActivated: function (url) {
+                        Qt.openUrlExternally(url)
+                    }
                     //: If wanted, add translator info in your language, e.g. "English translation by <a href=\"https://github.com/jklingen/\">Jens Klingen</a>"
-                    text: '<style>a:link { color: ' + Theme.primaryColor + '; }</style>' +
-                        qsTr("[Translator credit]") + ""
-                    visible:
-                        text.length > 0 && text.indexOf("[Translator credit]") == -1
+                    text: '<style>a:link { color: ' + Theme.primaryColor + '; }</style>' + qsTr(
+                              "[Translator credit]") + ""
+                    visible: text.length > 0 && text.indexOf(
+                                 "[Translator credit]") == -1
                 }
                 Label {
                     anchors.horizontalCenter: parent.horizontalCenter
                     anchors.margins: Theme.paddingLarge
-                    width:parent.width
+                    width: parent.width
                     font.pixelSize: Theme.fontSizeSmall
                     horizontalAlignment: Text.AlignHCenter
                     wrapMode: Text.WordWrap
                     textFormat: Text.RichText
-                    onLinkActivated: function(url) {Qt.openUrlExternally(url)}
+                    onLinkActivated: function (url) {
+                        Qt.openUrlExternally(url)
+                    }
                     color: Theme.secondaryHighlightColor
-                    text: '<style>a:link { color: ' + Theme.primaryColor + '; }</style>' +
-                        qsTr('%1 charting implementation by Imran Ghory. Also, thanks to Kari for the excellent work on %2.')
-                            .arg('<a href="https://github.com/imranghory/treemap-squared">Treemap Squared</a>')
-                            .arg('<a href="https://github.com/karip/harbour-file-browser">File Browser</a>')
+                    text: '<style>a:link { color: ' + Theme.primaryColor + '; }</style>' + qsTr(
+                              '%1 charting implementation by Imran Ghory. Also, thanks to Kari for the excellent work on %2.').arg(
+                              '<a href="https://github.com/imranghory/treemap-squared">Treemap Squared</a>').arg(
+                              '<a href="https://github.com/karip/harbour-file-browser">File Browser</a>')
                 }
                 Spacer {}
             }

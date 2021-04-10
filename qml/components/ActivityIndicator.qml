@@ -1,3 +1,5 @@
+
+
 /*
     Space Inspector - a filesystem structure visualization for SailfishOS
     Copyright (C) 2014 - 2018 Jens Klingen
@@ -15,51 +17,50 @@
     You should have received a copy of the GNU General Public License
     along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
-
-import QtQuick 2.0
+import QtQuick 2.2
 import Sailfish.Silica 1.0
 
 Item {
 
-    property bool running:true
+    property bool running: true
 
     Label {
-        anchors.bottom:busyIndicator.top
+        anchors.bottom: busyIndicator.top
         anchors.margins: Theme.paddingLarge
         anchors.horizontalCenter: parent.horizontalCenter
-        width:busyIndicator.width
+        width: busyIndicator.width
         horizontalAlignment: Text.AlignHCenter
-        color:Theme.highlightColor
+        color: Theme.highlightColor
         text: qsTr('Estimating\nspace usage.')
         font.pixelSize: Theme.fontSizeLarge
     }
 
     Label {
         id: patienceLabel
-        anchors.top:busyIndicator.bottom
+        anchors.top: busyIndicator.bottom
         anchors.margins: Theme.paddingLarge
         anchors.horizontalCenter: parent.horizontalCenter
-        width:busyIndicator.width
+        width: busyIndicator.width
         horizontalAlignment: Text.AlignHCenter
-        color:Theme.highlightColor
+        color: Theme.highlightColor
         text: qsTr('This might take\na moment.')
         font.pixelSize: Theme.fontSizeLarge
     }
 
     Label {
-        id:anotherPatienceLabel
-        anchors.top:patienceLabel.bottom
+        id: anotherPatienceLabel
+        anchors.top: patienceLabel.bottom
         anchors.margins: Theme.paddingLarge
         anchors.horizontalCenter: parent.horizontalCenter
-        width:busyIndicator.width
+        width: busyIndicator.width
         horizontalAlignment: Text.AlignHCenter
-        color:Theme.highlightColor
+        color: Theme.highlightColor
         opacity: 0
         //: Context: This might take a moment. Or two.
         text: qsTr('Or two.')
         font.pixelSize: Theme.fontSizeLarge
         NumberAnimation {
-            id:fadeIn
+            id: fadeIn
             target: anotherPatienceLabel
             property: "opacity"
             from: 0
@@ -70,18 +71,16 @@ Item {
         Timer {
             running: true
             interval: 5000
-            onTriggered:fadeIn.start();
+            onTriggered: fadeIn.start()
         }
-
     }
 
     BusyIndicator {
-        id:busyIndicator
+        id: busyIndicator
         anchors.centerIn: parent
-        anchors.verticalCenterOffset: - Theme.paddingLarge
+        anchors.verticalCenterOffset: -Theme.paddingLarge
         y: -40
         size: BusyIndicatorSize.Large
-        running:parent.running
+        running: parent.running
     }
-
 }

@@ -1,3 +1,5 @@
+
+
 /*
     Space Inspector - a filesystem structure visualization for SailfishOS
     Copyright (C) 2014 - 2018 Jens Klingen
@@ -15,8 +17,7 @@
     You should have received a copy of the GNU General Public License
     along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
-
-import QtQuick 2.0
+import QtQuick 2.2
 import harbour.space.inspector.shell 1.0
 import "../js/IoTranslator.js" as IoTranslator
 import "../js/Memory.js" as Memory
@@ -28,54 +29,54 @@ Item {
     property int subNodesMemoId: -1
 
     Shell {
-        id:subNodesShell
-        command:IoTranslator.SubDirsWithSize.getCommand(nodeModel.dir)
-        executeImmediately:true
+        id: subNodesShell
+        command: IoTranslator.SubDirsWithSize.getCommand(nodeModel.dir)
+        executeImmediately: true
         onExecuted: {
-            var subNodes = IoTranslator.SubDirsWithSize.parseResult(response);
+            var subNodes = IoTranslator.SubDirsWithSize.parseResult(response)
             // the response contains summarized information for the current directory, too. let's update our model with it.
-            for(var i=0; i<subNodes.length; i++) {
-                if(subNodes[i].dir === nodeModel.dir) {
-                    nodeModel = subNodes.splice(i,1)[0];
-                    break;
+            for (var i = 0; i < subNodes.length; i++) {
+                if (subNodes[i].dir === nodeModel.dir) {
+                    nodeModel = subNodes.splice(i, 1)[0]
+                    break
                 }
             }
-            subNodesMemoId = Memory.store(subNodes);
-            onSubNodeInfoReceived();
+            subNodesMemoId = Memory.store(subNodes)
+            onSubNodeInfoReceived()
         }
     }
 
     Shell {
-        id:subDirsShell
-        command:IoTranslator.SubDirs.getCommand(nodeModel.dir)
-        executeImmediately:true
+        id: subDirsShell
+        command: IoTranslator.SubDirs.getCommand(nodeModel.dir)
+        executeImmediately: true
         onExecuted: {
-            var subDirs = IoTranslator.SubDirs.parseResult(response);
-            subDirsMemoId = Memory.store(subDirs);
-            onSubNodeInfoReceived();
+            var subDirs = IoTranslator.SubDirs.parseResult(response)
+            subDirsMemoId = Memory.store(subDirs)
+            onSubNodeInfoReceived()
         }
     }
 
     function onSubNodeInfoReceived() {
-        if(subDirsMemoId > -1 &&  subNodesMemoId > -1) {
-            var subNodesWithSize = Memory.get(subNodesMemoId);
-            var subDirs = Memory.get(subDirsMemoId);
-            for(var i=0; i<subNodesWithSize.length; i++) {
-                subNodesWithSize[i].isDir = (subDirs.indexOf(subNodesWithSize[i].dir) !== -1);
+        if (subDirsMemoId > -1 && subNodesMemoId > -1) {
+            var subNodesWithSize = Memory.get(subNodesMemoId)
+            var subDirs = Memory.get(subDirsMemoId)
+            for (var i = 0; i < subNodesWithSize.length; i++) {
+                subNodesWithSize[i].isDir = (subDirs.indexOf(
+                                                 subNodesWithSize[i].dir) !== -1)
             }
 
-            displayDirectoryList(subNodesWithSize);
+            displayDirectoryList(subNodesWithSize)
 
-            Memory.clear(subDirsMemoId);
-            Memory.clear(subNodesMemoId);
-            subDirsMemoId = -1;
-            subNodesMemoId = -1;
+            Memory.clear(subDirsMemoId)
+            Memory.clear(subNodesMemoId)
+            subDirsMemoId = -1
+            subNodesMemoId = -1
         }
     }
 
     function refresh() {
-        subNodesShell.execute();
-        subDirsShell.execute();
-
+        subNodesShell.execute()
+        subDirsShell.execute()
     }
 }

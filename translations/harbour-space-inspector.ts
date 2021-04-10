@@ -185,19 +185,19 @@ använt av
     <name>QObject</name>
     <message>
         <source>%1 bytes</source>
-        <translation>%1 byte</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>%1 kB</source>
-        <translation>%1 kB</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>%1 MB</source>
-        <translation>%1 MB</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>%1 GB</source>
-        <translation>%1 GB</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

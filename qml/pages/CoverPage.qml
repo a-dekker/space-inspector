@@ -1,3 +1,5 @@
+
+
 /*
     Space Inspector - a filesystem structure visualization for SailfishOS
     Copyright (C) 2014 - 2018 Jens Klingen
@@ -15,10 +17,7 @@
     You should have received a copy of the GNU General Public License
     along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
-
-
-
-import QtQuick 2.0
+import QtQuick 2.2
 import Sailfish.Silica 1.0
 import harbour.space.inspector.shell 1.0
 import "../js/IoTranslator.js" as IoTranslator
@@ -43,7 +42,7 @@ CoverBackground {
     Image {
         source: 'qrc:/img//cover.png'
         anchors.horizontalCenter: parent.horizontalCenter
-        y:Theme.paddingSmall
+        y: Theme.paddingSmall
         width: parent.width - 2 * Theme.paddingSmall
         height: sourceSize.height * width / sourceSize.width
     }
@@ -54,26 +53,27 @@ CoverBackground {
         CoverAction {
             iconSource: "image://theme/icon-cover-refresh"
             onTriggered: {
-                refresh();
+                refresh()
             }
         }
     }
 
     function getLabelText() {
-        return fileSystemInfo
-                ? qsTr('%1 \n used of \n %2 \n (%3)').arg(fileSystemInfo.Used).arg(fileSystemInfo.Size).arg(fileSystemInfo['Use%'])
-                  : 'Space\nInspector';
+        return fileSystemInfo ? qsTr('%1 \n used of \n %2 \n (%3)').arg(
+                                    fileSystemInfo.Used).arg(
+                                    fileSystemInfo.Size).arg(
+                                    fileSystemInfo['Use%']) : 'Space\nInspector'
     }
 
     function refresh() {
-        fileSysShell.execute();
+        fileSysShell.execute()
     }
 
     Shell {
-        id:fileSysShell
-        command:IoTranslator.FileSysInfo.getCommand('/')
+        id: fileSysShell
+        command: IoTranslator.FileSysInfo.getCommand('/')
         onExecuted: {
-            fileSystemInfo = IoTranslator.FileSysInfo.parseResult(response);
+            fileSystemInfo = IoTranslator.FileSysInfo.parseResult(response)
         }
     }
 
@@ -81,10 +81,7 @@ CoverBackground {
         running: true
         interval: 5000
         onTriggered: {
-            fileSysShell.execute();
+            fileSysShell.execute()
         }
     }
-
 }
-
-

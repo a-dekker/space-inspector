@@ -133,17 +133,16 @@ QString Engine::sdcardPath() const
     // to the actual folder.
     QString sdcardFolder = "/media/sdcard";
     QFileInfo fileinfo(sdcardFolder);
-    if (fileinfo.isSymLink()) {
-        sdcardFolder = fileinfo.symLinkTarget();
-    }
+    if (fileinfo.isSymLink()) sdcardFolder = fileinfo.symLinkTarget();
 
     // get sdcard dir candidates for "/media/sdcard" (or its symlink target)
     QStringList sdcards = subdirs(sdcardFolder);
 
-    // some users may have a symlink from "/media/sdcard/nemo" (not from "/media/sdcard"), which means
-    // no sdcards are found, so also get candidates directly from "/run/media/nemo" for those users
-    if (sdcardFolder != "/run/media/nemo")
-        sdcards.append(subdirs("/run/media/nemo"));
+    // some users may have a symlink from "/media/sdcard/USER" (not from "/media/sdcard"), which means
+    // no sdcards are found, so also get candidates directly from "/run/media/USER" for those users
+    QString expectedUserFolder = QString("/run/media/") + QDir::home().dirName();
+    if (sdcardFolder != expectedUserFolder)
+        sdcards.append(subdirs(expectedUserFolder));
 
     if (sdcards.isEmpty())
         return QString();

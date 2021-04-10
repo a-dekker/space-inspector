@@ -1,4 +1,4 @@
-import QtQuick 2.0
+import QtQuick 2.2
 import Sailfish.Silica 1.0
 
 // This component displays a notification panel at top of page
@@ -13,27 +13,27 @@ Item {
 
     // shows the panel
     function showText(header, txt) {
-        headerLabel.text = header;
-        textLabel.text = txt;
-        dockedPanel.show();
+        headerLabel.text = header
+        textLabel.text = txt
+        dockedPanel.show()
     }
 
     // shows the panel, maximum 5 secs
     function showTextWithTimer(header, txt) {
-        headerLabel.text = header;
-        textLabel.text = txt;
-        dockedPanel.show();
-        timer.start();
+        headerLabel.text = header
+        textLabel.text = txt
+        dockedPanel.show()
+        timer.start()
     }
 
     // hides the panel
     function hide() {
         timer.stop()
-        dockedPanel.hide();
+        dockedPanel.hide()
     }
 
-
     //// internal
+
 
     /*InteractionBlocker {
         anchors.fill: parent
@@ -43,7 +43,6 @@ Item {
             timer.stop();
         }
     }*/
-
     DockedPanel {
         id: dockedPanel
 
@@ -52,7 +51,7 @@ Item {
 
         dock: Dock.Top
         open: false
-        onOpenChanged: page.backNavigation = !open; // disable back navigation
+        onOpenChanged: page.backNavigation = !open // disable back navigation
 
         Rectangle {
             anchors.fill: parent
@@ -63,8 +62,8 @@ Item {
             anchors.fill: parent
             enabled: true
             onClicked: {
-                dockedPanel.hide();
-                timer.stop();
+                dockedPanel.hide()
+                timer.stop()
             }
         }
         Label {
@@ -102,9 +101,8 @@ Item {
         id: timer
         interval: 5000
         onTriggered: {
-            dockedPanel.hide();
-            stop();
+            dockedPanel.hide()
+            stop()
         }
     }
 }
-

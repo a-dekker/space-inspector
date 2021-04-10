@@ -1,3 +1,5 @@
+
+
 /*
     Space Inspector - a filesystem structure visualization for SailfishOS
     Copyright (C) 2014 - 2018 Jens Klingen
@@ -15,19 +17,17 @@
     You should have received a copy of the GNU General Public License
     along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
-
-import QtQuick 2.0
+import QtQuick 2.2
 import Sailfish.Silica 1.0
 import "pages"
 
-ApplicationWindow
-{
+ApplicationWindow {
     allowedOrientations: Orientation.Portrait | Orientation.Landscape
                          | Orientation.LandscapeInverted
     _defaultPageOrientations: Orientation.Portrait | Orientation.Landscape
                               | Orientation.LandscapeInverted
-    initialPage: Component { PlacesPage {} }
+    initialPage: Component {
+        PlacesPage {}
+    }
     cover: Qt.resolvedUrl("pages/CoverPage.qml")
 }
-
-

@@ -1,4 +1,4 @@
-import QtQuick 2.0
+import QtQuick 2.2
 import Sailfish.Silica 1.0
 
 Dialog {
@@ -19,42 +19,42 @@ Dialog {
             acceptText: nodeModel.isDir ? "Delete folder" : "Delete file"
         }
 
-        Item {height: Theme.paddingLarge}
+        Item {
+            height: Theme.paddingLarge
+        }
 
         Label {
             anchors.topMargin: Theme.paddingLarge
-            text: "Do you really want to delete the following " + (nodeModel.isDir ? "folder?" : "file?")
+            text: "Do you really want to delete the following "
+                  + (nodeModel.isDir ? "folder?" : "file?")
             color: Theme.highlightColor
-            width:parent.width
+            width: parent.width
             wrapMode: Text.Wrap
         }
         Label {
             text: nodeModel.dir
             color: Theme.secondaryColor
-            width:parent.width
+            width: parent.width
             wrapMode: Text.Wrap
         }
 
         Item {
-            width:parent.width
+            width: parent.width
             height: Theme.paddingLarge
         }
 
         Label {
             text: "Always keep in mind: deleting things might break things, or even leave your phone in an unusable state. Use with caution."
             color: Theme.highlightColor
-            width:parent.width
+            width: parent.width
             wrapMode: Text.Wrap
         }
         Label {
             text: "Okay. I guess you already knew that...\nJust saying :)"
             color: Theme.secondaryColor
-            width:parent.width
+            width: parent.width
             font.pixelSize: Theme.fontSizeSmall
             wrapMode: Text.Wrap
         }
     }
-
-
-
 }

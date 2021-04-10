@@ -1,3 +1,5 @@
+
+
 /*
     Space Inspector - a filesystem structure visualization for SailfishOS
     Copyright (C) 2014 - 2018 Jens Klingen
@@ -15,16 +17,14 @@
     You should have received a copy of the GNU General Public License
     along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
-
-import QtQuick 2.0
+import QtQuick 2.2
 import Sailfish.Silica 1.0
 import "../components"
 import "../js/Util.js" as Util
 
-
 Rectangle {
 
-    id:treeMapNode
+    id: treeMapNode
     property var nodeModel
     property double nodeLeft
     property double nodeTop
@@ -39,19 +39,21 @@ Rectangle {
     color: 'transparent'
 
     Rectangle {
-        x: contextMenu.active ? nodeLeft : 0;
+        x: contextMenu.active ? nodeLeft : 0
         width: nodeWidth
         height: nodeHeight
         color: Theme.secondaryHighlightColor
-        opacity:mArea.pressed ? 0.6 : 0.3;
+        opacity: mArea.pressed ? 0.6 : 0.3
         Component.onCompleted: {
-            if(!nodeModel.isDir) {
-                color = Qt.hsla(Util.getNormalizedHash(Util.getFileExtension(nodeModel.dir)), 1, 0.5, 0.75);
+            if (!nodeModel.isDir) {
+                color = Qt.hsla(Util.getNormalizedHash(Util.getFileExtension(
+                                                           nodeModel.dir)), 1,
+                                0.5, 0.75)
             }
         }
     }
 
-    Label{
+    Label {
         id: label
         x: contextMenu.active ? nodeLeft : 0
         y: 0
@@ -59,69 +61,78 @@ Rectangle {
         height: nodeHeight
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignVCenter
-        color: mArea.pressed || (nodeModel && nodeModel.isDir) ? Theme.primaryColor : Theme.highlightColor
-        text: Util.getNodeNameFromPath(nodeModel.dir) + '\n' + Util.getHumanReadableSize(nodeModel.size)
+        color: mArea.pressed
+               || (nodeModel
+                   && nodeModel.isDir) ? Theme.primaryColor : Theme.highlightColor
+        text: Util.getNodeNameFromPath(
+                  nodeModel.dir) + '\n' + Util.getHumanReadableSize(
+                  nodeModel.size)
         // try to optimize text display for smaller rectangles...
         onPaintedWidthChanged: {
-            if(paintedWidth > parent.width) font.pixelSize = Math.floor(font.pixelSize * parent.width / paintedWidth);
-            if(paintedHeight > parent.height) text = Util.getNodeNameFromPath(nodeModel.dir);
+            if (paintedWidth > parent.width)
+                font.pixelSize = Math.floor(
+                            font.pixelSize * parent.width / paintedWidth)
+            if (paintedHeight > parent.height)
+                text = Util.getNodeNameFromPath(nodeModel.dir)
         }
         // ... if too small, rather display no text
-        visible:parent.width > 30 && parent.height > 30
+        visible: parent.width > 30 && parent.height > 30
     }
 
     MouseArea {
         id: mArea
         anchors.fill: parent
         onClicked: {
-            if(nodeModel.isDir) {
-                pageStack.push("../pages/TreeMapPage.qml",{nodeModel:nodeModel})
+            if (nodeModel.isDir) {
+                pageStack.push("../pages/TreeMapPage.qml", {
+                                   "nodeModel": nodeModel
+                               })
             }
         }
         onPressAndHold: {
-            treeMapNode.z = 1000; // ensure context menu is on top
-            contextMenu.open(treeMapNode);
+            treeMapNode.z = 1000 // ensure context menu is on top
+            contextMenu.open(treeMapNode)
         }
     }
 
     // less transparent background for contextmenu, for better readability (displayed on top of other tree nodes)
     Rectangle {
-        color:'black'
-        opacity:0.8
-        x:contextMenu.x
-        y:contextMenu.y
-        width:contextMenu.width
-        height:contextMenu.height
+        color: 'black'
+        opacity: 0.8
+        x: contextMenu.x
+        y: contextMenu.y
+        width: contextMenu.width
+        height: contextMenu.height
     }
 
     NodeContextMenu {
-        id:contextMenu
-        nodeModel:treeMapNode.nodeModel
+        id: contextMenu
+        nodeModel: treeMapNode.nodeModel
         onClosed: {
-            treeMapNode.z = 1;
+            treeMapNode.z = 1
         }
         onCollapseClicked: PropertyAnimation {
-            target:treeMapNode
-            property:"opacity"
+            target: treeMapNode
+            property: "opacity"
             from: 0.4
             to: 0
             duration: 250
             easing.type: Easing.OutCurve
             onRunningChanged: {
-                if(!running) collapseSubNode(nodeModel.dir)
+                if (!running)
+                    collapseSubNode(nodeModel.dir)
             }
         }
     }
 
-    opacity:0.6
+    opacity: 0.6
     Component.onCompleted: PropertyAnimation {
         running: true
-        target:treeMapNode
-        property:"opacity"
+        target: treeMapNode
+        property: "opacity"
         from: 0.6
         to: 1.0
         duration: 500
         easing.type: Easing.OutCurve
     }
-
 }
