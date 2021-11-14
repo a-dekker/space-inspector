@@ -62,7 +62,7 @@ Page {
                 textFormat: Text.RichText
                 horizontalAlignment: Text.AlignRight
                 text: '<strong>' + qsTr('Version %1').arg(
-                          '0.9') + '</strong><br>' + qsTr(
+                          '0.10') + '</strong><br>' + qsTr(
                           "Copyright © %2<br>Jens Klingen/Arno Dekker").arg(
                           '2014 - 2021')
                 color: Theme.highlightColor

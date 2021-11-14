@@ -22,10 +22,9 @@ import Sailfish.Silica 1.0
 import "pages"
 
 ApplicationWindow {
-    allowedOrientations: Orientation.Portrait | Orientation.Landscape
-                         | Orientation.LandscapeInverted
-    _defaultPageOrientations: Orientation.Portrait | Orientation.Landscape
-                              | Orientation.LandscapeInverted
+    allowedOrientations: defaultAllowedOrientations
+    _defaultPageOrientations: defaultAllowedOrientations
+
     initialPage: Component {
         PlacesPage {}
     }
