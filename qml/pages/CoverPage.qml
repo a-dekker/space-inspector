@@ -19,24 +19,55 @@
 */
 import QtQuick 2.2
 import Sailfish.Silica 1.0
-import harbour.space.inspector.shell 1.0
-import "../js/IoTranslator.js" as IoTranslator
-import "../js/Util.js" as Util
 
 CoverBackground {
 
     property var fileSystemInfo
 
-    Label {
-        id: label
-        font.pixelSize: Theme.fontSizeLarge
-        horizontalAlignment: Text.AlignHCenter
-        anchors.left: parent.left
-        anchors.right: parent.right
-        anchors.top: parent.top
-        anchors.margins: Theme.paddingLarge
-        wrapMode: Text.WordWrap
-        text: getLabelText()
+    Column {
+        width: parent.width
+        spacing: Theme.paddingSmall
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.horizontalCenter: parent.horizontalCenter
+        Label {
+            font.pixelSize: Theme.fontSizeMedium
+            anchors.horizontalCenter: parent.horizontalCenter
+            wrapMode: Text.WordWrap
+            text: qsTr("Root directory")
+            color: Theme.secondaryColor
+        }
+        Label {
+            font.pixelSize: Theme.fontSizeMedium
+            anchors.horizontalCenter: parent.horizontalCenter
+            wrapMode: Text.WordWrap
+            text: rootDf
+        }
+        Label {
+            font.pixelSize: Theme.fontSizeMedium
+            anchors.horizontalCenter: parent.horizontalCenter
+            wrapMode: Text.WordWrap
+            text: qsTr("User directory")
+            color: Theme.secondaryColor
+        }
+        Label {
+            font.pixelSize: Theme.fontSizeMedium
+            anchors.horizontalCenter: parent.horizontalCenter
+            wrapMode: Text.WordWrap
+            text: homeDf
+        }
+        Label {
+            font.pixelSize: Theme.fontSizeMedium
+            anchors.horizontalCenter: parent.horizontalCenter
+            wrapMode: Text.WordWrap
+            text: qsTr("SD card")
+            color: Theme.secondaryColor
+        }
+        Label {
+            font.pixelSize: Theme.fontSizeMedium
+            anchors.horizontalCenter: parent.horizontalCenter
+            wrapMode: Text.WordWrap
+            text: sdcardDf
+        }
     }
 
     Image {
@@ -45,43 +76,5 @@ CoverBackground {
         y: Theme.paddingSmall
         width: parent.width - 2 * Theme.paddingSmall
         height: sourceSize.height * width / sourceSize.width
-    }
-
-    CoverActionList {
-        id: coverAction
-
-        CoverAction {
-            iconSource: "image://theme/icon-cover-refresh"
-            onTriggered: {
-                refresh()
-            }
-        }
-    }
-
-    function getLabelText() {
-        return fileSystemInfo ? qsTr('%1 \n used of \n %2 \n (%3)').arg(
-                                    fileSystemInfo.Used).arg(
-                                    fileSystemInfo.Size).arg(
-                                    fileSystemInfo['Use%']) : 'Space\nInspector'
-    }
-
-    function refresh() {
-        fileSysShell.execute()
-    }
-
-    Shell {
-        id: fileSysShell
-        command: IoTranslator.FileSysInfo.getCommand('/')
-        onExecuted: {
-            fileSystemInfo = IoTranslator.FileSysInfo.parseResult(response)
-        }
-    }
-
-    Timer {
-        running: true
-        interval: 5000
-        onTriggered: {
-            fileSysShell.execute()
-        }
     }
 }

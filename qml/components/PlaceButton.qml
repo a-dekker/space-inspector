@@ -25,10 +25,11 @@ MouseArea {
     property string path
     property string text
     property string img
+    property string df
     property string targetPageQml: "../pages/TreeMapPage.qml"
 
     width: parent.width
-    height: lbl.height + Theme.paddingLarge * 2
+    height: lbl.height + dir.height + Theme.paddingMedium * 2
 
     onClicked: pageStack.push(targetPageQml, {
                                   "nodeModel": {
@@ -48,11 +49,33 @@ MouseArea {
 
     Label {
         id: lbl
-        anchors.verticalCenter: parent.verticalCenter
         anchors.left: image.right
         anchors.leftMargin: Theme.paddingMedium
         color: parent.pressed ? Theme.highlightColor : Theme.primaryColor
+        width: parent.width - image.width - df.width - 3 * Theme.paddingLarge
         text: parent.text
+    }
+    Label {
+        id: dir
+        anchors.top: lbl.bottom
+        anchors.left: image.right
+        text: parent.path
+        anchors.leftMargin: Theme.paddingMedium
+        width: parent.width - image.width - df.width - 3 * Theme.paddingLarge
+        color: Theme.secondaryColor
+        font.pixelSize: Theme.fontSizeExtraSmall
+        truncationMode: TruncationMode.Fade
+    }
+
+    Label {
+        id: df
+        horizontalAlignment: Text.AlignRight
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.left: lbl.right
+        anchors.leftMargin: Theme.paddingMedium
+        color: Theme.secondaryColor
+        font.pixelSize: Theme.fontSizeSmall
+        text: parent.df
     }
 
     Rectangle {

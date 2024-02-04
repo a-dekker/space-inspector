@@ -82,6 +82,7 @@ Page {
             contentHeight: parent.height - title.height
             width: parent.width
             height: parent.height - title.height
+            clip: true
 
             model: subDirsModel
             delegate: subDirsDelegate

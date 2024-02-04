@@ -83,17 +83,17 @@ var DirSize = {
 };
 
 var FileSysInfo = {
-    getCommand: function () {
-        var command = "df -B 1024 -h /";
-        //console.debug(command);
+    getCommand: function (path) {
+        var command = "df -B 1024 -h " + path;
+        // console.debug(command);
         return command;
     },
     parseResult: function (response) {
-        //console.debug(response);
+        // console.debug(response);
         var ret = {};
-        var lines = response.split("\n");
+        var lines = response.split("on\n");
         var headers = lines[0].split(/\s+/);
-        var values = lines[1].split(/\s+/);
+        var values = lines[1].split(/\s+/)
         for (var i = 0; i < headers.length; i++) {
             ret[headers[i]] = values[i];
         }

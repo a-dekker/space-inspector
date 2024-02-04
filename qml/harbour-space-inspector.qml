@@ -24,6 +24,10 @@ import "pages"
 ApplicationWindow {
     allowedOrientations: defaultAllowedOrientations
     _defaultPageOrientations: defaultAllowedOrientations
+    property string homeDf: ""
+    property string rootDf: ""
+    property string androidDf: ""
+    property string sdcardDf: ""
 
     initialPage: Component {
         PlacesPage {}
