@@ -33,6 +33,7 @@ Item {
     property double nodeTop
     property double nodeWidth
     property double nodeHeight
+    property bool canCollapse: true
 
     property bool _menuActive: !!_menuItem
     property Item _menuItem: null
@@ -74,6 +75,7 @@ Item {
         NodeContextMenu {
             id: _menuBody
             nodeModel: treeMapNode.nodeModel
+            canCollapse: treeMapNode.canCollapse
             onCollapseClicked: {
                 treeMapNode.collapseRequested(nodeModel.dir)
             }

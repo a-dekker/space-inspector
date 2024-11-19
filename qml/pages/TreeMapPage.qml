@@ -133,6 +133,7 @@ Page {
                     id: mapRoot
                     property var _coordinates: coordinates
                     property var _visibleNodes: visibleNodes
+                    property bool _canCollapse: _visibleNodes.length > 1
 
                     Repeater {
                         model: mapRoot._coordinates
@@ -144,6 +145,7 @@ Page {
                                 nodeTop: modelData[1] + 1
                                 nodeWidth: modelData[2] - modelData[0] - 1
                                 nodeHeight: modelData[3] - modelData[1] - 1
+                                canCollapse: _canCollapse
 
                                 onCollapseRequested: {
                                     console.log("COLLAPSE", nodePath)

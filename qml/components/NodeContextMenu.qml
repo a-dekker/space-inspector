@@ -15,6 +15,7 @@ ContextMenu {
 
     property var nodeModel
     property bool listViewMode: false
+    property bool canCollapse: true
 
     signal collapseClicked
 
@@ -29,7 +30,7 @@ ContextMenu {
 
     MenuItem {
         text: qsTr("Collapse")
-        visible: !listViewMode
+        visible: !listViewMode && canCollapse
         onClicked: {
             collapseClicked()
         }
