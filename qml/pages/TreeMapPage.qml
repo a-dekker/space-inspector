@@ -212,16 +212,6 @@ Page {
         return ret
     }
 
-    function createNodeModel() {
-        return {
-            "name": "/",
-            "dir": "/",
-            "isDir": true,
-            "size": 0,
-            "formattedSize": "",
-        }
-    }
-
     function refreshPage() {
         manager.refresh()
         renderTreeMap()
