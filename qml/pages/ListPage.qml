@@ -26,6 +26,7 @@ import Opal.Delegates 1.0
 import Opal.SmartScrollbar 1.0
 import Harbour.FileBrowser.Engine 1.0
 import Harbour.SpaceInspector.Constants 1.0
+import "../components/file-browser"
 import "../components"
 
 Page {
@@ -173,6 +174,15 @@ Page {
             pageStack.animatorReplace("../pages/ListPage.qml", {
                 "nodeModel": pageStack.currentPage.nodeModel
             })
+        }
+    }
+
+    AttachedPageManager {
+        page: page
+        nextPage: Component {
+            FolderInfoPage {
+                path: nodeModel.dir
+            }
         }
     }
 }

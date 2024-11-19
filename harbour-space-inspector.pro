@@ -87,7 +87,8 @@ RESOURCES += \
 lupdate_only {
 SOURCES += \
     qml/pages/*.qml \
-    qml/components/*.qml
+    qml/components/*.qml \
+    qml/components/file-browser/*.qml \
 }
 
 DISTFILES += \

@@ -25,6 +25,7 @@ import Sailfish.Silica 1.0
 import Harbour.FileBrowser.Engine 1.0
 
 import "../components"
+import "../components/file-browser"
 import "../js/treemap-squarify.js" as Tm
 
 Page {
@@ -246,6 +247,15 @@ Page {
     function refreshPage() {
         manager.refresh()
         collapsedNodes.collapsedNodePaths = collapsedSubNodePaths
+    }
+
+    AttachedPageManager {
+        page: page
+        nextPage: Component {
+            FolderInfoPage {
+                path: nodeModel.dir
+            }
+        }
     }
 
     Component.onCompleted: {
