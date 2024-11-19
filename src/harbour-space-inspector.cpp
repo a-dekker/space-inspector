@@ -26,19 +26,16 @@
 
 #include <sailfishapp.h>
 #include <QGuiApplication>
-#include <QQmlContext>
 #include <QQmlEngine>
 #include <QQuickView>
 #include <QScopedPointer>
-#include <QtQml>
-#include <QtQuick/QQuickPaintedItem>
 
 #include "requires_defines.h"
-#include "io/engine.h"
 #include "io/statfileinfo.h"
 #include "io/filedata.h"
 #include "io/bookmarks.h"
 #include "io/enumcontainer.h"
+#include "si_engine.h"
 #include "shell.h"
 
 int main(int argc, char *argv[]) {
@@ -46,12 +43,15 @@ int main(int argc, char *argv[]) {
     qRegisterMetaType<QList<StatFileInfo>>("QList<StatFileInfo>");
     qRegisterMetaType<LocationAlternative>("LocationAlternative");
     qRegisterMetaType<QList<LocationAlternative>>("QList<LocationAlternative>");
+    qRegisterMetaType<SizeInfo>("SizeInfo");
+    qRegisterMetaType<QList<SizeInfo>>("QList<SizeInfo>");
+    qRegisterMetaType<FolderSizeStatusInfo>("FolderSizeStatusInfo");
 
     qmlRegisterType<FileData>("Harbour.FileBrowser.FileData", 1, 0, "FileData");
     REGISTER_ENUMS(Bookmarks, "Harbour.FileBrowser.Bookmarks", 1, 0)
     qmlRegisterUncreatableType<BookmarkGroup>("Harbour.FileBrowser.Bookmarks", 1, 0, "BookmarkGroup", "This is only a container for an enumeration.");
     qmlRegisterType<BookmarkWatcher>("Harbour.FileBrowser.Bookmarks", 1, 0, "Bookmark");
-    qmlRegisterSingletonType<Engine>("Harbour.FileBrowser.Engine", 1, 0, "Engine", &Engine::qmlInstance);
+    qmlRegisterSingletonType<SpaceInspectorEngine>("Harbour.FileBrowser.Engine", 1, 0, "Engine", &SpaceInspectorEngine::qmlInstanceSI);
     qmlRegisterSingletonType<BookmarksModel>("Harbour.FileBrowser.Bookmarks", 1, 0, "BookmarksModel",
         [](QQmlEngine* engine, QJSEngine* scriptEngine) -> QObject* {
             Q_UNUSED(engine);

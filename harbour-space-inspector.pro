@@ -35,6 +35,7 @@ QML_IMPORT_PATH += qml/modules
 
 SOURCES += src/harbour-space-inspector.cpp \
     src/shell.cpp \
+    src/si_engine.cpp \
     src/io/bookmarks.cpp \
     src/io/configfilemonitor.cpp \
     src/io/engine.cpp \
@@ -70,6 +71,7 @@ OTHER_FILES += qml/harbour-space-inspector.qml \
 
 HEADERS += \
     src/shell.h \
+    src/si_engine.h \
     src/io/bookmarks.h \
     src/io/configfilemonitor.h \
     src/io/engine.h \
