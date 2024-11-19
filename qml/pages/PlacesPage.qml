@@ -13,6 +13,7 @@ import Harbour.FileBrowser.Bookmarks 1.0
 import Harbour.SpaceInspector.Constants 1.0
 
 import "../components"
+import "../components/file-browser"
 
 Page {
     id: root

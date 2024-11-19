@@ -25,6 +25,7 @@ import Sailfish.Silica 1.0
 import Opal.Delegates 1.0
 import Harbour.FileBrowser.Bookmarks 1.0
 import "../components"
+import "../components/file-browser"
 
 CoverBackground {
     id: root
