@@ -92,7 +92,7 @@ int SpaceInspectorEngine::requestFolderSizeInfo(const QString& folder)
 
         int files = 0;
         int dirs = 0;
-        qint64 bytes = 0;
+        qint64 bytes = QFileInfo(folder).size();
 
         auto processSubdir = [&bytes](const QString& subdir) -> SizeInfoData {
             qint64 subdirBytes = 0;
@@ -109,6 +109,7 @@ int SpaceInspectorEngine::requestFolderSizeInfo(const QString& folder)
                 subdirBytes += info.size();
             }
 
+            subdirBytes += QFileInfo(subdir).size();
             bytes += subdirBytes;
             return {QFileInfo(subdir).absoluteFilePath(), true, subdirBytes};
         };
@@ -136,13 +137,13 @@ int SpaceInspectorEngine::requestFolderSizeInfo(const QString& folder)
 
         while(!it.next().isEmpty()) {
             const auto& info = it.fileInfo();
-            bytes += info.size();
 
             if (info.isDir()) {
                 ++dirs;
                 items.append(processSubdir(info.absoluteFilePath()));
             } else {
                 ++files;
+                bytes += info.size();
                 items.append({info.absoluteFilePath(), false, info.size()});
             }
         }
