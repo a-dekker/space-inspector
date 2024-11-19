@@ -66,6 +66,7 @@ Item {
     height: nodeHeight
     x: nodeLeft
     y: nodeTop
+    z: 1
 
     Component {
         id: menu
@@ -139,7 +140,6 @@ Item {
             }
         }
         onPressAndHold: {
-            treeMapNode.z = 1000 // ensure context menu is on top
             openMenu()
         }
     }
@@ -154,6 +154,7 @@ Item {
             width: _menuItem.width
             height: nodeHeight + _menuItem.height
             x: 0
+            z: 1000  // ensure context menu is on top
         }
         PropertyChanges {
             target: background
