@@ -19,6 +19,12 @@ TARGET = harbour-space-inspector
 CONFIG += sailfishapp
 CONFIG += sailfishapp_i18n
 
+# require the C++17 standard to be able to use std::as_const and std::filesystem
+# Note: old Qt only recognizes up to "c++14" as valid config options
+CONFIG += c++1z
+
+QT += concurrent
+
 SOURCES += src/harbour-space-inspector.cpp \
     src/shell.cpp \
     src/io/bookmarks.cpp \
