@@ -61,6 +61,8 @@ Page {
                 path: model.path
             }
 
+            padding.left: Theme.horizontalPageMargin
+                          - Theme.paddingMedium
             leftItem: DelegateIconItem {
                 source: "image://theme/" + thumbnail
             }

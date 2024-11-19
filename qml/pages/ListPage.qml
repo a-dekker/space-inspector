@@ -97,6 +97,8 @@ Page {
                 }
             }
 
+            padding.left: Theme.horizontalPageMargin
+                          - Theme.paddingMedium
             leftItem: DelegateIconItem {
                 source: "image://theme/icon-m-file-" +
                         (model.isDir ? "folder" : "document")
