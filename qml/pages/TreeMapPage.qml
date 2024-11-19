@@ -62,9 +62,7 @@ Page {
             MenuItem {
                 text: qsTr("Go to...")
                 onClicked: {
-                    pageStack.animatorPush("../pages/PlacesPage.qml", {
-                        "nodeModel": nodeModel
-                    })
+                    pageStack.animatorPush("../pages/PlacesPage.qml")
                 }
             }
             MenuItem {
