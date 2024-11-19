@@ -134,6 +134,8 @@ Item {
                 pageStack.animatorPush("../pages/TreeMapPage.qml", {
                     "nodeModel": nodeModel
                 })
+            } else {
+                openMenu()
             }
         }
         onPressAndHold: {
