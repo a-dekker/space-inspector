@@ -54,9 +54,9 @@ Page {
     }
 
     SilicaFlickable {
-        id: sf
+        id: flick
         anchors.fill: parent
-        contentHeight: parent.height
+        contentHeight: page.height
 
         PullDownMenu {
             MenuItem {
@@ -196,6 +196,7 @@ Page {
     }
 
     function renderTreeMap() {
+        flick.contentY = 0
         var visibleNodesWithSize = removeCollapsed(subNodesWithSize)
 
         // Fall back to list view if there are many entries,
