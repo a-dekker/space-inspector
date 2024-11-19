@@ -21,10 +21,13 @@ CONFIG += sailfishapp_i18n
 
 SOURCES += src/harbour-space-inspector.cpp \
     src/shell.cpp \
+    src/io/bookmarks.cpp \
+    src/io/configfilemonitor.cpp \
     src/io/engine.cpp \
+    src/io/filedata.cpp \
     src/io/fileworker.cpp \
+    src/io/globals.cpp \
     src/io/statfileinfo.cpp \
-    src/io/globals.cpp
 
 OTHER_FILES += qml/harbour-space-inspector.qml \
     qml/cover/CoverPage.qml \
@@ -53,10 +56,15 @@ OTHER_FILES += qml/harbour-space-inspector.qml \
 
 HEADERS += \
     src/shell.h \
+    src/io/bookmarks.h \
+    src/io/configfilemonitor.h \
     src/io/engine.h \
+    src/io/enumcontainer.h \
+    src/io/filedata.h \
     src/io/fileworker.h \
+    src/io/globals.h \
+    src/io/property_macros.h \
     src/io/statfileinfo.h \
-    src/io/globals.h
 
 RESOURCES += \
     resources/resources.qrc
