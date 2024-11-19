@@ -14,11 +14,12 @@
 #include <QDir>
 #include <QVariant>
 
-/*
- * WARNING This code is disabled in Space Inspector to reduce dependencies.
- *
+#include <QQmlEngine>
+#include <QJSEngine>
+
+#ifndef ENGINE_NO_CLIPBOARD
 #include "fileclipboardmodel.h"
-*/
+#endif
 
 class FileWorker;
 template<typename T> class QFuture;
@@ -46,11 +47,9 @@ public:
     // async methods send signals when done or error occurs
     Q_INVOKABLE void deleteFiles(QStringList filenames);
 
-    /*
-     * WARNING This code is disabled in Space Inspector to reduce dependencies.
-     *
+#ifndef ENGINE_NO_CLIPBOARD
     Q_INVOKABLE void pasteFiles(QStringList files, QString destDirectory, FileClipMode::Enum mode);
-    */
+#endif
 
     /**
      * @brief Asynchronously calculate free/used disk space of a device.

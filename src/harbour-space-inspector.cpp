@@ -33,7 +33,7 @@
 #include <QtQml>
 #include <QtQuick/QQuickPaintedItem>
 
-// #include "requires_defines.h"
+#include "requires_defines.h"
 #include "io/engine.h"
 #include "io/statfileinfo.h"
 #include "io/filedata.h"

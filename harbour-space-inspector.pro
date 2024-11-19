@@ -25,6 +25,8 @@ CONFIG += c++1z
 
 QT += concurrent
 
+DEFINES += ENGINE_NO_CLIPBOARD
+DEFINES += FILEDATA_NO_EXIF
 
 # Enable rebuilding when defines change
 include(libs/opal-cached-defines.pri)
