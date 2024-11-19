@@ -25,6 +25,11 @@ CONFIG += c++1z
 
 QT += concurrent
 
+# _FILE_OFFSET_BITS=64 must be defined to support files
+# larger than 2 GiB on 32bit phones like Xperia X.
+DEFINES += _FILE_OFFSET_BITS=64
+
+# Disable some unused File Browser features to reduce internal dependencies.
 DEFINES += ENGINE_NO_CLIPBOARD
 DEFINES += FILEDATA_NO_EXIF
 
