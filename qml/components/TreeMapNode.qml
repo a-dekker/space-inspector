@@ -109,22 +109,25 @@ Item {
         y: 0
         width: nodeWidth
         height: nodeHeight
+        padding: 2*Theme.paddingSmall
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignVCenter
-        color: mArea.pressed
-               || (nodeModel
-                   && nodeModel.isDir) ? Theme.primaryColor : Theme.highlightColor
-        text: nodeModel.name + '\n' + nodeModel.formattedSize
-        // try to optimize text display for smaller rectangles...
-        onPaintedWidthChanged: { /// XXXXX
-            if (paintedWidth > parent.width)
-                font.pixelSize = Math.floor(
-                            font.pixelSize * parent.width / paintedWidth)
-            if (paintedHeight > parent.height)
-                text = nodeModel.name
-        }
-        // ... if too small, rather display no text
-        visible: parent.width > 30 && parent.height > 30
+
+        color: (!nodeModel || !nodeModel.isDir) ||
+               mArea.pressed || _menuActive ?
+                   Theme.highlightColor :
+                   Theme.primaryColor
+
+        // \x9C separates options in multi-length strings
+        text: [nodeModel.name + '\n' + nodeModel.formattedSize,
+               nodeModel.formattedSize].join("\x9C")
+        elide: Text.ElideRight
+        fontSizeMode: Text.Fit
+        wrapMode: Text.Wrap
+        minimumPixelSize: Theme.fontSizeTiny * 0.75
+        visible: parent.width > 30 && parent.height > 30 &&
+                 paintedWidth < width &&
+                 paintedHeight < height
     }
 
     MouseArea {

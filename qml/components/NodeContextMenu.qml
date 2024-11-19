@@ -24,7 +24,7 @@ ContextMenu {
     }
 
     MenuLabel {
-        text: nodeModel.name
+        text: "%1 (%2)".arg(nodeModel.name).arg(nodeModel.formattedSize)
     }
 
     MenuItem {
