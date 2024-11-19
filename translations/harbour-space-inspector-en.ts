@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="en">
+<TS version="2.1" language="en_US">
 <context>
     <name>AboutPage</name>
     <message>
@@ -525,7 +525,7 @@ a moment.</translation>
     <message>
         <location filename="../qml/pages/FolderInfoPage.qml" line="37"/>
         <source>Open file manager</source>
-        <translation type="unfinished"></translation>
+        <translation>Open file manager</translation>
     </message>
     <message>
         <location filename="../qml/pages/FolderInfoPage.qml" line="48"/>
@@ -570,7 +570,7 @@ a moment.</translation>
     <message>
         <location filename="../qml/pages/FolderInfoPage.qml" line="98"/>
         <source>Created</source>
-        <translation type="unfinished"></translation>
+        <translation>Created</translation>
     </message>
     <message>
         <location filename="../qml/pages/FolderInfoPage.qml" line="103"/>

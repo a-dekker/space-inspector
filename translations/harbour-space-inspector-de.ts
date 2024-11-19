@@ -525,7 +525,7 @@ Moment dauern.</translation>
     <message>
         <location filename="../qml/pages/FolderInfoPage.qml" line="37"/>
         <source>Open file manager</source>
-        <translation type="unfinished"></translation>
+        <translation>Dateiverwaltung öffnen</translation>
     </message>
     <message>
         <location filename="../qml/pages/FolderInfoPage.qml" line="48"/>
@@ -570,7 +570,7 @@ Moment dauern.</translation>
     <message>
         <location filename="../qml/pages/FolderInfoPage.qml" line="98"/>
         <source>Created</source>
-        <translation type="unfinished"></translation>
+        <translation>Erstellt</translation>
     </message>
     <message>
         <location filename="../qml/pages/FolderInfoPage.qml" line="103"/>
