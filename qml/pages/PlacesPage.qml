@@ -6,15 +6,27 @@
 
 import QtQuick 2.2
 import Sailfish.Silica 1.0
+import Nemo.Configuration 1.0
 import Opal.Delegates 1.0
 import Harbour.FileBrowser.Engine 1.0
 import Harbour.FileBrowser.Bookmarks 1.0
+import Harbour.SpaceInspector.Constants 1.0
 
 import "../components"
 
 Page {
     id: root
     allowedOrientations: Orientation.All
+
+    ConfigurationValue {
+        id: viewConfig
+        key: "/apps/harbour-captains-log/defaultView"
+        defaultValue: ViewMode.Box
+
+        property string viewPage: value === ViewMode.List ?
+            Qt.resolvedUrl("ListPage.qml") : Qt.resolvedUrl("TreeMapPage.qml")
+
+    }
 
     SilicaListView {
         id: view
@@ -38,7 +50,12 @@ Page {
             MenuItem {
                 text: qsTr("About")
                 onClicked: pageStack.animatorPush(
-                    Qt.resolvedUrl("../pages/AboutPage.qml"))
+                    Qt.resolvedUrl("AboutPage.qml"))
+            }
+            MenuItem {
+                text: qsTr("Settings")
+                onClicked: pageStack.animatorPush(
+                    Qt.resolvedUrl("SettingsPage.qml"))
             }
         }
 
@@ -81,17 +98,16 @@ Page {
 
             onClicked: {
                 console.time('PUSHED')
-
                 pageStack.animatorPush(
-                Qt.resolvedUrl("../pages/TreeMapPage.qml"), {
-                "nodeModel": {
-                    "name": name,
-                    "dir": path,
-                    "isDir": true,
-                    "size": 0,
-                    "formattedSize": "",
-                }
-            })
+                    viewConfig.viewPage, {
+                    "nodeModel": {
+                        "name": name,
+                        "dir": path,
+                        "isDir": true,
+                        "size": 0,
+                        "formattedSize": "",
+                    }
+                })
                 console.timeEnd('PUSHED')
             }
         }
