@@ -127,6 +127,11 @@ Page {
             }
         }
 
+        ViewPlaceholder {
+            enabled: fileData.filesCount == 0 && fileData.dirsCount == 0
+            text: qsTr("Empty", "as in “this folder is empty”")
+            hintText: qsTr("This folder is empty.")
+        }
     }
 
     CalculationManager {
