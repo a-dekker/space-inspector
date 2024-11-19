@@ -603,7 +603,7 @@ Moment dauern.</translation>
     <message>
         <location filename="../qml/components/NodeContextMenu.qml" line="31"/>
         <source>Collapse</source>
-        <translation>Verstecken</translation>
+        <translation>Ausblenden</translation>
     </message>
     <message>
         <location filename="../qml/components/NodeContextMenu.qml" line="40"/>
