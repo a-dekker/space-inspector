@@ -1,17 +1,34 @@
+/*
+    Space Inspector - a filesystem structure visualization for SailfishOS
+    SPDX-FileCopyrightText: Copyright (C) 2014 - 2018 Jens Klingen
+    SPDX-FileCopyrightText: 2024 Mirian Margiani
+    SPDX-License-Identifier: GPL-3.0-or-later
+*/
+
 import QtQuick 2.2
 import Sailfish.Silica 1.0
 import Harbour.FileBrowser.Engine 1.0
-import "../js/Util.js" as Util
+import Harbour.FileBrowser.FileData 1.0
 
 ContextMenu {
     id: contextMenu
+
     property var nodeModel
-    property Item remorseItem
     property bool listViewMode: false
+
     signal collapseClicked
 
+    FileData {
+        id: fileData
+        file: nodeModel.dir
+    }
+
+    MenuLabel {
+        text: nodeModel.name
+    }
+
     MenuItem {
-        text: qsTr("Collapse %1").arg(Util.getNodeNameFromPath(nodeModel.dir))
+        text: qsTr("Collapse")
         visible: !listViewMode
         onClicked: {
             collapseClicked()
@@ -19,26 +36,24 @@ ContextMenu {
     }
 
     MenuItem {
-        text: qsTr("Open %1").arg(Util.getNodeNameFromPath(nodeModel.dir))
+        visible: !fileData.isDir && fileData.isSafeToOpen
+        text: qsTr("Open")
         onClicked: {
-            console.log("Trying to open file://" + nodeModel.dir)
-            Qt.openUrlExternally("file://" + nodeModel.dir)
+            console.log("trying to open:", fileData.absoluteFilePath)
+            Qt.openUrlExternally(fileData.absoluteFilePath)
         }
-        visible: !(nodeModel.isDir)
-        enabled: Util.canHandleFile(nodeModel.dir)
     }
 
     MenuItem {
-        text: qsTr("Delete %1").arg(Util.getNodeNameFromPath(nodeModel.dir))
+        text: qsTr("Delete")
         onClicked: {
             var dialog = pageStack.push("../pages/DeleteDialog.qml", {
                                             "nodeModel": nodeModel
                                         })
-            dialog.accepted.connect(onDialogAccepted)
-        }
-        function onDialogAccepted() {
-            console.log("Deleting " + nodeModel.dir)
-            Engine.deleteFiles(nodeModel.dir)
+            dialog.accepted.connect(function(){
+                console.log("deleting:", nodeModel.dir)
+                Engine.deleteFiles(nodeModel.dir)
+            })
         }
     }
 }
