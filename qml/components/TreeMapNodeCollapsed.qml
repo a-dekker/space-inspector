@@ -1,7 +1,13 @@
+/*
+    Space Inspector - a filesystem structure visualization for SailfishOS
+    SPDX-FileCopyrightText: 2014-2018 Jens Klingen
+    SPDX-FileCopyrightText: 2024 Mirian Margiani
+    SPDX-License-Identifier: GPL-3.0-or-later
+*/
+
 import QtQuick 2.2
 import Sailfish.Silica 1.0
-
-import "../js/Util.js" as Util
+import Harbour.FileBrowser.Engine 1.0
 
 Rectangle {
 
@@ -25,8 +31,8 @@ Rectangle {
         verticalAlignment: Text.AlignVCenter
         color: mArea.pressed ? Theme.highlightColor : Theme.primaryColor
         text: qsTr("%n collapsed item(s) (%1)", "",
-                   collapsedSubNodePaths.length).arg(Util.getHumanReadableSize(
-                                                         collapsedNodesSize))
+                   collapsedSubNodePaths.length)
+              .arg(Engine.formatFileSize(collapsedNodesSize))
     }
 
     MouseArea {

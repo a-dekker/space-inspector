@@ -79,9 +79,11 @@ Page {
 
             onClicked: pageStack.push(Qt.resolvedUrl("../pages/TreeMapPage.qml"), {
                 "nodeModel": {
+                    "name": name,
                     "dir": path,
                     "isDir": true,
-                    "size": 0
+                    "size": 0,
+                    "formattedSize": "",
                 }
             })
         }

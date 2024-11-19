@@ -65,8 +65,7 @@ Rectangle {
                || (nodeModel
                    && nodeModel.isDir) ? Theme.primaryColor : Theme.highlightColor
         text: Util.getNodeNameFromPath(
-                  nodeModel.dir) + '\n' + Util.getHumanReadableSize(
-                  nodeModel.size)
+                  nodeModel.dir) + '\n' + nodeModel.formattedSize
         // try to optimize text display for smaller rectangles...
         onPaintedWidthChanged: {
             if (paintedWidth > parent.width)

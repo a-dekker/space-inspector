@@ -1,5 +1,3 @@
-
-
 /*
     Space Inspector - a filesystem structure visualization for SailfishOS
     Copyright (C) 2014 - 2018 Jens Klingen
@@ -17,6 +15,7 @@
     You should have received a copy of the GNU General Public License
     along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
+
 import QtQuick 2.2
 import Sailfish.Silica 1.0
 import Harbour.FileBrowser.Engine 1.0
@@ -84,9 +83,8 @@ Page {
 
         PageHeader {
             id: title
-            title: Util.getNodeNameFromPath(
-                       nodeModel.dir) + ' (' + Util.getHumanReadableSize(
-                       nodeModel.size) + ')'
+            title: nodeModel.name
+            description: nodeModel.formattedSize
         }
 
         ActivityIndicator {
@@ -150,15 +148,8 @@ Page {
     }
 
     function collapseSubNode(nodePath) {
-        var sn = null
-        for (var i = 0; i < subNodesWithSize.length; i++) {
-            sn = subNodesWithSize[i]
-            if (sn.dir === nodePath) {
-                collapsedSubNodePaths.push(sn.dir)
-                renderTreeMap()
-                break
-            }
-        }
+        collapsedSubNodePaths.push(nodePath)
+        renderTreeMap()
     }
 
     function renderTreeMap() {
@@ -206,9 +197,11 @@ Page {
 
     function createNodeModel() {
         return {
-            "dir": StandardPaths.home,
+            "name": "/",
+            "dir": "/",
             "isDir": true,
-            "size": 0
+            "size": 0,
+            "formattedSize": "",
         }
     }
 

@@ -62,9 +62,8 @@ Page {
 
         PageHeader {
             id: title
-            title: Util.getNodeNameFromPath(
-                       nodeModel.dir) + ' (' + Util.getHumanReadableSize(
-                       nodeModel.size) + ')'
+            title: nodeModel.name
+            description: nodeModel.formattedSize
         }
 
         ActivityIndicator {
@@ -126,7 +125,7 @@ Page {
                         verticalAlignment: Text.AlignVCenter
                         text: parseInt(model.size).toLocaleString(Qt.locale(),
                                                                   "f",
-                                                                  0) + " KB"
+                                                                  0) + " B"
                         color: itemDelegate.pressed ? Theme.highlightColor : Theme.secondaryColor
                     }
 
@@ -174,9 +173,15 @@ Page {
     }
 
     function displayDirectoryList(subNodesWithSize) {
-
-        for (var i = 0; i < subNodesWithSize.length; i++) {
-            subDirsModel.append(subNodesWithSize[i])
+        for (var i in subNodesWithSize) {
+            var node = subNodesWithSize[i]
+            subDirsModel.append({
+                name: node.name,
+                dir: node.dir,
+                isDir: node.isDir,
+                size: node.size,
+                formattedSize: node.formattedSize
+            })
         }
 
         busyIndicator.running = false
@@ -185,8 +190,11 @@ Page {
 
     function createNodeModel() {
         return {
+            "name": "/",
             "dir": '/',
-            "isDir": true
+            "isDir": true,
+            "size": 0,
+            "formattedSize": "",
         }
     }
 

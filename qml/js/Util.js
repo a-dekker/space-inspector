@@ -19,20 +19,6 @@
 .pragma library
 
 /**
- * @param kbytes data size in KB, e.g. 2248
- * @returns human-readable formatted number with unit '2.2 MB'
- */
-function getHumanReadableSize(kbytes) {
-    var units = ["MB", "GB", "TB"];
-    var unit = "KB";
-    while (kbytes > 1024) {
-        kbytes /= 1024;
-        unit = units.shift();
-    }
-    return Math.round(kbytes * 10) / 10 + " " + unit;
-}
-
-/**
  * @param path string file system path, e.g. '|home|nemo|' or '|home|nemo|asdf.txt'
  *     (imagine slashes instead of pipes, harbour RPM validator does not like hard-coded paths in comments)
  * @returns name of file or folder, e.g. 'nemo' or 'asdf.txt'
