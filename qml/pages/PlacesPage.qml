@@ -1,146 +1,89 @@
-
-
 /*
     Space Inspector - a filesystem structure visualization for SailfishOS
-    Copyright (C) 2014 - 2018 Jens Klingen
-
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with this program. If not, see <http://www.gnu.org/licenses/>.
+    SPDX-FileCopyrightText: 2024 Mirian Margiani
+    SPDX-License-Identifier: GPL-3.0-or-later
 */
+
 import QtQuick 2.2
 import Sailfish.Silica 1.0
-import harbour.space.inspector.shell 1.0
-import "../js/IoTranslator.js" as IoTranslator
+import Opal.Delegates 1.0
+import Harbour.FileBrowser.Engine 1.0
+import Harbour.FileBrowser.Bookmarks 1.0
 
 import "../components"
 
 Page {
-    id: page
+    id: root
+    allowedOrientations: Orientation.All
 
-    property string fsPath: ""
-    property var fileSystemInfo
-
-    onStatusChanged: {
-        if (status === PageStatus.Activating) {
-            fsPath = engine.homeFolder()
-            fileSysShellUser.execute()
-            fsPath = "/"
-            fileSysShellRoot.execute()
-            fsPath = engine.androidSdcardPath()
-            fileSysShellAndroid.execute()
-            fsPath = engine.sdcardPath()
-            fileSysShellSdCard.execute()
-        }
-    }
-
-    Shell {
-        id: fileSysShellUser
-        command: IoTranslator.FileSysInfo.getCommand(fsPath)
-        onExecuted: {
-            fileSystemInfo = IoTranslator.FileSysInfo.parseResult(response)
-            homeDf = fileSystemInfo ? qsTr('%1/%2 (%3)').arg(
-                                          fileSystemInfo.Used).arg(
-                                          fileSystemInfo.Size).arg(
-                                          fileSystemInfo['Use%']) : ""
-        }
-    }
-    Shell {
-        id: fileSysShellRoot
-        command: IoTranslator.FileSysInfo.getCommand(fsPath)
-        onExecuted: {
-            fileSystemInfo = IoTranslator.FileSysInfo.parseResult(response)
-            rootDf = fileSystemInfo ? qsTr('%1/%2 (%3)').arg(
-                                          fileSystemInfo.Used).arg(
-                                          fileSystemInfo.Size).arg(
-                                          fileSystemInfo['Use%']) : ""
-        }
-    }
-
-    Shell {
-        id: fileSysShellAndroid
-        command: IoTranslator.FileSysInfo.getCommand(fsPath)
-        onExecuted: {
-            fileSystemInfo = IoTranslator.FileSysInfo.parseResult(response)
-            androidDf = fileSystemInfo ? qsTr('%1/%2 (%3)').arg(
-                                             fileSystemInfo.Used).arg(
-                                             fileSystemInfo.Size).arg(
-                                             fileSystemInfo['Use%']) : ""
-        }
-    }
-    Shell {
-        id: fileSysShellSdCard
-        command: IoTranslator.FileSysInfo.getCommand(fsPath)
-        onExecuted: {
-            fileSystemInfo = IoTranslator.FileSysInfo.parseResult(response)
-            sdcardDf = fileSystemInfo ? qsTr('%1/%2 (%3)').arg(
-                                            fileSystemInfo.Used).arg(
-                                            fileSystemInfo.Size).arg(
-                                            fileSystemInfo['Use%']) : ""
-        }
-    }
-
-    SilicaFlickable {
-        id: sf
+    SilicaListView {
+        id: view
         anchors.fill: parent
-        contentHeight: childRect.height
+
+        model: BookmarksModel
+
+        header: PageHeader {
+            id: head
+            title: qsTr("Places")
+        }
+
+        footer: Item {
+            width: parent.width
+            height: Theme.horizontalPageMargin
+        }
+
+        VerticalScrollDecorator { flickable: view }
 
         PullDownMenu {
             MenuItem {
                 text: qsTr("Info")
-                onClicked: pageStack.push(Qt.resolvedUrl(
-                                              "../pages/InfoPage.qml"))
+                onClicked: pageStack.push(
+                    Qt.resolvedUrl("../pages/InfoPage.qml"))
             }
         }
-        Rectangle {
-            id: childRect
-            width: parent.width
-            height: childrenRect.height
-            color: 'transparent'
 
-            PageHeader {
-                id: title
-                title: qsTr('Go to...')
+        delegate: TwoLineDelegate {
+            id: delegate
+            text: name
+
+            textLabel {
+                font.pixelSize: Theme.fontSizeMedium
+                palette {
+                    primaryColor: Theme.primaryColor
+                    highlightColor: Theme.highlightColor
+                }
             }
 
-            Column {
-                anchors.top: title.bottom
+            StorageSizeBar {
+                id: sizeBar
+                parent: delegate.centeredContainer
                 width: parent.width
+                path: model.path
+            }
 
-                PlaceButton {
-                    path: '/'
-                    text: qsTr("Root directory")
-                    img: 'image://theme/icon-m-device'
-                    df: rootDf
-                }
-                PlaceButton {
-                    path: engine.homeFolder()
-                    text: qsTr("User directory")
-                    img: 'image://theme/icon-m-home'
-                    df: homeDf
-                }
-                PlaceButton {
-                    path: engine.sdcardPath()
-                    text: qsTr("SD card")
-                    img: 'image://theme/icon-m-sd-card'
-                    df: sdcardDf
-                }
-                PlaceButton {
-                    path: engine.androidSdcardPath()
-                    text: qsTr("Android storage")
-                    img: 'image://theme/icon-m-file-apk'
-                    df: androidDf
+            leftItem: DelegateIconItem {
+                source: "image://theme/" + thumbnail
+            }
+
+            menu: Component {
+                ContextMenu {
+                    StorageSizeMenuLabel {
+                        diskSpaceInfo: sizeBar.diskSpaceInfo
+                    }
+
+                    MenuLabel {
+                        text: path
+                    }
                 }
             }
+
+            onClicked: pageStack.push(Qt.resolvedUrl("../pages/TreeMapPage.qml"), {
+                "nodeModel": {
+                    "dir": path,
+                    "isDir": true,
+                    "size": 0
+                }
+            })
         }
     }
 }
