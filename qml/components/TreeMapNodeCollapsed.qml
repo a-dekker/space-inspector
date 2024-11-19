@@ -13,17 +13,65 @@ Item {
     id: root
 
     property var collapsedNodePaths: []
-    property int collapsedNodesSize: 0
+
+    readonly property bool _busy: _workerHandle >= 0
+    property int _workerHandle: -1
+    property int _existingCount: -1
 
     signal click
 
-    visible: collapsedNodesSize > 0
-    height: collapsedNodesSize > 0 ? label.height : 0
+    onCollapsedNodePathsChanged: {
+        if (collapsedNodePaths.length == 0) {
+            _workerHandle = -1
+            _existingCount = 0
+            label.text = ''
+        } else {
+            _existingCount = -1
+            _workerHandle = Engine.requestFileSizeInfo(collapsedNodePaths)
+            label.text = ''
+        }
+
+        console.log(">>>", collapsedNodePaths, _workerHandle)
+    }
+
+    visible: _existingCount > 0 ||
+             (_existingCount < 0 && collapsedNodePaths.length > 0)
+    height: visible ? Math.max(
+        label.height, spinner.height + 2*Theme.paddingSmall) : 0
+
+    Connections {
+        target: Engine
+        onFileSizeInfoReady: {
+            // @disable-check M325
+            if (_workerHandle == handle) {
+                _workerHandle = -1
+                _existingCount = parseInt(info[4], 10) || 0
+
+                console.log(collapsedNodePaths, info)
+
+                if (_existingCount > 0) {
+                    var size = (!!info[1] ? " (%1)".arg(info[1]) : "")
+                    label.text = qsTr("%n collapsed item(s)", "",
+                                      _existingCount) + size
+                } else {
+                    label.text = ''
+                }
+            }
+        }
+    }
 
     Rectangle {
         anchors.fill: parent
         color: Theme.secondaryHighlightColor
         opacity: mArea.pressed ? 0.4 : 0.5
+    }
+
+    BusyIndicator {
+        id: spinner
+        anchors.centerIn: parent
+        visible: root._busy
+        size: BusyIndicatorSize.ExtraSmall
+        running: visible
     }
 
     Label {
@@ -34,9 +82,6 @@ Item {
         verticalAlignment: Text.AlignVCenter
         wrapMode: Text.Wrap
         color: mArea.pressed ? Theme.highlightColor : Theme.primaryColor
-        text: qsTr("%n collapsed item(s) (%1)", "",
-                   collapsedSubNodePaths.length)
-              .arg(Engine.formatFileSize(collapsedNodesSize))
     }
 
     MouseArea {
