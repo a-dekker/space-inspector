@@ -22,9 +22,11 @@
 
 import QtQuick 2.2
 import Sailfish.Silica 1.0
+import Nemo.Configuration 1.0
 import Nemo.Notifications 1.0
 import Harbour.FileBrowser.Bookmarks 1.0
 import Harbour.FileBrowser.Engine 1.0
+import Harbour.SpaceInspector.Constants 1.0
 import "pages"
 
 ApplicationWindow {
@@ -33,12 +35,47 @@ ApplicationWindow {
     readonly property string appName: "Space Inspector"
     readonly property string appVersion: "0.11"
 
+    readonly property var _initialNode: ({
+        // optional, only used when set from CLI
+        "name": initialFolder,
+        "dir": initialFolder,
+        "isDir": true,
+        "size": 0,
+        "formattedSize": "",
+    })
+
     allowedOrientations: defaultAllowedOrientations
     _defaultPageOrientations: defaultAllowedOrientations
 
     cover: Qt.resolvedUrl("pages/CoverPage.qml")
-    initialPage: Component {
+    initialPage: {
+        if (!!initialFolder) {
+            if (viewConfig.value === ViewMode.List) listPage
+            else treePage
+        } else {
+            placesPage
+        }
+    }
+
+    Component {
+        id: placesPage
         PlacesPage {}
+    }
+
+    Component {
+        id: treePage
+        TreeMapPage { nodeModel: _initialNode }
+    }
+
+    Component {
+        id: listPage
+        ListPage { nodeModel: _initialNode }
+    }
+
+    ConfigurationValue {
+        id: viewConfig
+        key: "/apps/harbour-captains-log/defaultView"
+        defaultValue: ViewMode.Box
     }
 
     Notification {

@@ -29,6 +29,7 @@
 #include <QQmlEngine>
 #include <QQuickView>
 #include <QScopedPointer>
+#include <QFileInfo>
 
 #include "requires_defines.h"
 #include "constants.h"
@@ -78,6 +79,20 @@ int main(int argc, char *argv[]) {
 
     // add module search path so Opal modules can be found
     view->engine()->addImportPath(SailfishApp::pathTo("qml/modules").toString());
+
+    if (argc >= 2) {
+        QFileInfo initialInfo(QString::fromUtf8(argv[1]));
+
+        if (initialInfo.exists() && initialInfo.isDir()) {
+            view->rootContext()->setContextProperty("initialFolder", initialInfo.absoluteFilePath());
+            qDebug() << "initial directory set from command line:" << initialInfo.absoluteFilePath();
+        } else {
+            qDebug() << "cannot set invalid directory from command line:" << argv[1];
+            view->rootContext()->setContextProperty("initialFolder", QLatin1Literal(""));
+        }
+    } else {
+        view->rootContext()->setContextProperty("initialFolder", QLatin1Literal(""));
+    }
 
     // view->rootContext()->setContextProperty("APP_VERSION", QStringLiteral(APP_VERSION));
     // view->rootContext()->setContextProperty("APP_RELEASE", QStringLiteral(APP_RELEASE));

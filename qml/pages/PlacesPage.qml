@@ -25,7 +25,6 @@ Page {
 
         property string viewPage: value === ViewMode.List ?
             Qt.resolvedUrl("ListPage.qml") : Qt.resolvedUrl("TreeMapPage.qml")
-
     }
 
     SilicaListView {
