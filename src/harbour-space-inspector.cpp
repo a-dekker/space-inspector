@@ -56,7 +56,7 @@ int main(int argc, char *argv[]) {
         [](QQmlEngine* engine, QJSEngine* scriptEngine) -> QObject* {
             Q_UNUSED(engine);
             Q_UNUSED(scriptEngine);
-            return new Engine;
+            return new BookmarksModel;
      });
 
     qmlRegisterType<Shell>("harbour.space.inspector.shell", 1, 0, "Shell");
