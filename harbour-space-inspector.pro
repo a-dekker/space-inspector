@@ -65,7 +65,7 @@ OTHER_FILES += qml/harbour-space-inspector.qml \
     qml/components/TreeMapNodeCollapsed.qml\
     qml/components/Spacer.qml \
     qml/pages/PlacesPage.qml \
-    qml/components/PlaceButton.qml
+    qml/components/InfoGridItem.qml
 
 HEADERS += \
     src/si_engine.h \

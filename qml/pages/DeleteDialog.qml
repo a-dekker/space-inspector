@@ -7,6 +7,9 @@
 
 import QtQuick 2.2
 import Sailfish.Silica 1.0
+import Harbour.FileBrowser.FileData 1.0
+import QtQuick.Layouts 1.1
+import "../components"
 
 Dialog {
     id: root
@@ -14,58 +17,101 @@ Dialog {
 
     property var nodeModel
 
+    FileData {
+        id: fileData
+        file: nodeModel.dir
 
-
-    Column {
-        id: column
-        anchors.left: parent.left
-        anchors.right: parent.right
-        anchors.leftMargin: Theme.paddingLarge
-        anchors.rightMargin: Theme.paddingLarge
-        spacing: Theme.paddingLarge
-
-        DialogHeader {
-            id: dialogHeader
-            title: "Confirm delete"
-            acceptText: nodeModel.isDir ? "Delete folder" : "Delete file"
+        onExistsChanged: {
+            if (!exists) {
+                reject()
+            }
         }
+    }
 
-        Item {
-            height: Theme.paddingLarge
-        }
+    SilicaFlickable {
+        anchors.fill: parent
+        contentHeight: column.height
 
-        Label {
-            anchors.topMargin: Theme.paddingLarge
-            text: "Do you really want to delete the following "
-                  + (nodeModel.isDir ? "folder?" : "file?")
-            color: Theme.highlightColor
+        Column {
+            id: column
             width: parent.width
-            wrapMode: Text.Wrap
-        }
-        Label {
-            text: nodeModel.dir
-            color: Theme.secondaryColor
-            width: parent.width
-            wrapMode: Text.Wrap
-        }
+            spacing: 2*Theme.paddingLarge
 
-        Item {
-            width: parent.width
-            height: Theme.paddingLarge
-        }
+            DialogHeader {
+                id: dialogHeader
+                title: qsTr("Confirm deletion")
+                acceptText: fileData.isDir ? qsTr("Delete folder") : qsTr("Delete file")
+            }
 
-        Label {
-            text: "Always keep in mind: deleting things might break things, or even leave your phone in an unusable state. Use with caution."
-            color: Theme.highlightColor
-            width: parent.width
-            wrapMode: Text.Wrap
-        }
-        Label {
-            text: "Okay. I guess you already knew that...\nJust saying :)"
-            color: Theme.secondaryColor
-            width: parent.width
-            font.pixelSize: Theme.fontSizeSmall
-            wrapMode: Text.Wrap
+            Label {
+                width: parent.width - 2*x
+                x: Theme.horizontalPageMargin
+                wrapMode: Text.Wrap
+                color: Theme.highlightColor
+                text: fileData.isDir ?
+                          qsTr("Are you sure that you want " +
+                               "to delete this folder " +
+                               "and all its contents?") :
+                          qsTr("Are you sure that you want " +
+                               "to delete this element?")
+            }
+
+            GridLayout {
+                id: grid
+                width: parent.width - 2*x
+                x: Theme.horizontalPageMargin
+                columns: 2
+                columnSpacing: Theme.paddingMedium
+                rowSpacing: Theme.paddingMedium
+
+                // note: GridLayout items are added upside down,
+                // from bottom to top.
+
+                InfoGridItem {
+                    grid: grid
+                    label: qsTr("Size")
+                    value: fileData.isDir ? [
+                               qsTr("%n file(s)", "", fileData.filesCount),
+                               qsTr("%n folder(s)", "", fileData.dirsCount)
+                           ].join("\n") :
+                           fileData.size
+                }
+                InfoGridItem {
+                    grid: grid
+                    label: qsTr("Type", "as in “file type” but very short")
+                    value: fileData.isDir ? qsTr("Folder") : qsTr("File")
+                }
+                InfoGridItem {
+                    grid: grid
+                    label: qsTr("Path", "as in “file path but very short")
+                    value: fileData.absolutePath
+                }
+                InfoGridItem {
+                    grid: grid
+                    label: qsTr("Name", "as in “file name” but very short")
+                    value: fileData.name
+                }
+            }
+
+            Rectangle {
+                width: parent.width - 2*x
+                x: Theme.horizontalPageMargin
+
+                height: warningLabel.height + 2*x
+                color: Theme.highlightDimmerColor
+                radius: 30
+
+                Label {
+                    id: warningLabel
+                    anchors.verticalCenter: parent.verticalCenter
+                    width: parent.width - 2*x
+                    x: Theme.horizontalPageMargin
+                    wrapMode: Text.Wrap
+                    color: Theme.highlightColor
+                    text: qsTr("Warning: deleting files might break things, " +
+                               "or even leave your phone in an unusable state.")
+                }
+            }
         }
     }
 }
