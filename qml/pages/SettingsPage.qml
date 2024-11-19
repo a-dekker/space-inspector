@@ -32,7 +32,8 @@ Page {
             width: parent.width
 
             // This avoid stuttering when opening the combo box
-            height: Math.max(root.height, childrenRect.height)
+            height: Math.max(root.height - Theme.horizontalPageMargin,
+                             childrenRect.height)
 
             PageHeader {
                 title: qsTr("Settings")
