@@ -79,7 +79,8 @@ Item {
 
             Rectangle {
                 parent: _menuBody
-                color: 'black'
+                color: Theme.colorScheme === Theme.LightOnDark ?
+                           'black' : 'white'
                 opacity: 0.8
                 anchors.fill: parent
                 z: -1000
