@@ -521,6 +521,64 @@ Moment dauern.</translation>
     </message>
 </context>
 <context>
+    <name>FolderInfoPage</name>
+    <message>
+        <location filename="../qml/pages/FolderInfoPage.qml" line="37"/>
+        <source>Open file manager</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/FolderInfoPage.qml" line="48"/>
+        <source>Root</source>
+        <translation type="unfinished">Stammverzeichnis</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/FolderInfoPage.qml" line="69"/>
+        <source>Location</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/FolderInfoPage.qml" line="73"/>
+        <source>Type</source>
+        <translation type="unfinished">Typ</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/FolderInfoPage.qml" line="76"/>
+        <source>Unknown (link target not found)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/FolderInfoPage.qml" line="77"/>
+        <source>Link to %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/FolderInfoPage.qml" line="84"/>
+        <source>Permissions</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/FolderInfoPage.qml" line="88"/>
+        <source>Owner</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/FolderInfoPage.qml" line="93"/>
+        <source>Group</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/FolderInfoPage.qml" line="98"/>
+        <source>Created</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/FolderInfoPage.qml" line="103"/>
+        <source>Last modified</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>ImageMetaData</name>
     <message>
         <location filename="../src/io/filedata.cpp" line="346"/>
@@ -551,33 +609,33 @@ Moment dauern.</translation>
 <context>
     <name>ListPage</name>
     <message>
-        <location filename="../qml/pages/ListPage.qml" line="80"/>
+        <location filename="../qml/pages/ListPage.qml" line="82"/>
         <source>Box view</source>
         <translation>Kastenansicht</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ListPage.qml" line="127"/>
+        <location filename="../qml/pages/ListPage.qml" line="129"/>
         <source>Empty</source>
         <comment>as in “this folder is empty”</comment>
         <translation>Leer</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ListPage.qml" line="128"/>
+        <location filename="../qml/pages/ListPage.qml" line="130"/>
         <source>This folder is empty.</source>
         <translation>Dieser Ordner ist leer.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ListPage.qml" line="74"/>
+        <location filename="../qml/pages/ListPage.qml" line="76"/>
         <source>Refresh</source>
         <translation>Aktualisieren</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ListPage.qml" line="46"/>
+        <location filename="../qml/pages/ListPage.qml" line="48"/>
         <source>Root</source>
         <translation>Stammverzeichnis</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ListPage.qml" line="68"/>
+        <location filename="../qml/pages/ListPage.qml" line="70"/>
         <source>Go to...</source>
         <translation>Wechseln zu...</translation>
     </message>
@@ -585,17 +643,17 @@ Moment dauern.</translation>
 <context>
     <name>NodeContextMenu</name>
     <message>
-        <location filename="../qml/components/NodeContextMenu.qml" line="32"/>
+        <location filename="../qml/components/NodeContextMenu.qml" line="33"/>
         <source>Collapse</source>
         <translation>Ausblenden</translation>
     </message>
     <message>
-        <location filename="../qml/components/NodeContextMenu.qml" line="41"/>
+        <location filename="../qml/components/NodeContextMenu.qml" line="42"/>
         <source>Open</source>
         <translation>Öffnen</translation>
     </message>
     <message>
-        <location filename="../qml/components/NodeContextMenu.qml" line="49"/>
+        <location filename="../qml/components/NodeContextMenu.qml" line="50"/>
         <source>Delete</source>
         <translation>Löschen</translation>
     </message>
@@ -806,22 +864,22 @@ Moment dauern.</translation>
 <context>
     <name>SettingsPage</name>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="38"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="39"/>
         <source>Settings</source>
         <translation>Einstellungen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="42"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="43"/>
         <source>Default view</source>
         <translation>Standardansicht</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="52"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="53"/>
         <source>Box view</source>
         <translation>Kastenansicht</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="56"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="57"/>
         <source>List view</source>
         <translation>Listenansicht</translation>
     </message>
@@ -859,7 +917,41 @@ Moment dauern.</translation>
             <numerusform>%n Ordner</numerusform>
         </translation>
     </message>
+    <message>
+        <location filename="../qml/components/file-browser/SizeDetailItem.qml" line="35"/>
+        <source>Size</source>
+        <translation type="unfinished">Größe</translation>
+    </message>
+    <message>
+        <location filename="../qml/components/file-browser/SizeDetailItem.qml" line="56"/>
+        <source>size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/components/file-browser/SizeDetailItem.qml" line="63"/>
+        <source>directories</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/components/file-browser/SizeDetailItem.qml" line="70"/>
+        <source>files</source>
+        <translation type="unfinished">Dateien</translation>
+    </message>
+    <message>
+        <location filename="../qml/components/file-browser/SizeDetailItem.qml" line="80"/>
+        <source>unknown size</source>
+        <translation type="unfinished"></translation>
+    </message>
     <message numerus="yes">
+        <location filename="../qml/components/file-browser/SizeDetailItem.qml" line="84"/>
+        <source>%n directories</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../qml/components/file-browser/SizeDetailItem.qml" line="92"/>
         <location filename="../qml/components/SizeDetailItem.qml" line="55"/>
         <source>%n file(s)</source>
         <translation>
@@ -871,7 +963,7 @@ Moment dauern.</translation>
 <context>
     <name>StorageSizeBar</name>
     <message>
-        <location filename="../qml/components/StorageSizeBar.qml" line="86"/>
+        <location filename="../qml/components/file-browser/StorageSizeBar.qml" line="86"/>
         <source>%1 free</source>
         <translation>%1 frei</translation>
     </message>
@@ -879,7 +971,7 @@ Moment dauern.</translation>
 <context>
     <name>StorageSizeMenuLabel</name>
     <message>
-        <location filename="../qml/components/StorageSizeMenuLabel.qml" line="14"/>
+        <location filename="../qml/components/file-browser/StorageSizeMenuLabel.qml" line="14"/>
         <source>%1 full (%2%)</source>
         <comment>as in “15 of 20 GiB [%1] of this device are filled with data, which is 75% [%2] of its capacity”</comment>
         <translation>%1 belegt (%2%)</translation>
@@ -899,33 +991,33 @@ Moment dauern.</translation>
 <context>
     <name>TreeMapPage</name>
     <message>
-        <location filename="../qml/pages/TreeMapPage.qml" line="69"/>
+        <location filename="../qml/pages/TreeMapPage.qml" line="70"/>
         <source>Refresh</source>
         <translation>Aktualisieren</translation>
     </message>
     <message>
-        <location filename="../qml/pages/TreeMapPage.qml" line="75"/>
+        <location filename="../qml/pages/TreeMapPage.qml" line="76"/>
         <source>List view</source>
         <translation>Listenansicht</translation>
     </message>
     <message>
-        <location filename="../qml/pages/TreeMapPage.qml" line="86"/>
+        <location filename="../qml/pages/TreeMapPage.qml" line="87"/>
         <source>Root</source>
         <translation>Stammverzeichnis</translation>
     </message>
     <message>
-        <location filename="../qml/pages/TreeMapPage.qml" line="165"/>
+        <location filename="../qml/pages/TreeMapPage.qml" line="166"/>
         <source>Empty</source>
         <comment>as in “this folder is empty”</comment>
         <translation>Leer</translation>
     </message>
     <message>
-        <location filename="../qml/pages/TreeMapPage.qml" line="166"/>
+        <location filename="../qml/pages/TreeMapPage.qml" line="167"/>
         <source>This folder is empty.</source>
         <translation>Dieser Ordner ist leer.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/TreeMapPage.qml" line="63"/>
+        <location filename="../qml/pages/TreeMapPage.qml" line="64"/>
         <source>Go to...</source>
         <translation>Wechseln zu...</translation>
     </message>
@@ -933,7 +1025,7 @@ Moment dauern.</translation>
 <context>
     <name>harbour-space-inspector</name>
     <message>
-        <location filename="../qml/harbour-space-inspector.qml" line="47"/>
+        <location filename="../qml/harbour-space-inspector.qml" line="84"/>
         <source>An error occurred</source>
         <translation>Ein Fehler ist aufgetreten</translation>
     </message>
