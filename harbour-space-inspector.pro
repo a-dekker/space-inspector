@@ -59,7 +59,7 @@ OTHER_FILES += qml/harbour-space-inspector.qml \
     qml/components/CalculationManager.qml \
     qml/pages/CoverPage.qml \
     qml/components/ActivityIndicator.qml \
-    qml/pages/InfoPage.qml \
+    qml/pages/AboutPage.qml \
     qml/pages/DeleteDialog.qml \
     qml/components/NodeContextMenu.qml \
     qml/components/TreeMapNodeCollapsed.qml\

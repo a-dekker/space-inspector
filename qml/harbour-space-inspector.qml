@@ -30,7 +30,8 @@ import "pages"
 ApplicationWindow {
     id: main
 
-    property string appName: "Space Inspector"
+    readonly property string appName: "Space Inspector"
+    readonly property string appVersion: "0.11"
 
     allowedOrientations: defaultAllowedOrientations
     _defaultPageOrientations: defaultAllowedOrientations
@@ -38,6 +39,7 @@ ApplicationWindow {
     cover: Qt.resolvedUrl("pages/CoverPage.qml")
     initialPage: Component {
         PlacesPage {}
+    }
 
     Notification {
         id: workerErrorNotification
