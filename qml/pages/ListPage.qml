@@ -28,7 +28,7 @@ import "../js/Util.js" as Util
 Page {
     id: page
 
-    property var nodeModel: createNodeModel()
+    property alias nodeModel: manager.nodeModel
 
     SilicaFlickable {
         id: sf
@@ -157,7 +157,9 @@ Page {
         page: page
     }
 
-    ShellConnector {
+    CalculationManager {
+        id: manager
+        onResultReady: displayDirectoryList(info)
     }
 
     Connections {

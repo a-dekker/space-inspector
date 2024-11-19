@@ -57,7 +57,7 @@ OTHER_FILES += qml/harbour-space-inspector.qml \
     qml/js/Memory.js \
     qml/js/Util.js \
     qml/js/treemap-squarify.js \
-    qml/components/ShellConnector.qml \
+    qml/components/CalculationManager.qml \
     qml/pages/CoverPage.qml \
     qml/components/ActivityIndicator.qml \
     qml/pages/InfoPage.qml \

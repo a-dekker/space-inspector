@@ -29,7 +29,7 @@ import "../js/Memory.js" as Memory
 Page {
     id: page
 
-    property var nodeModel: createNodeModel()
+    property alias nodeModel: manager.nodeModel
     property var collapsedSubNodePaths: []
     property int collapsedSubNodesSize: 0
     property var subNodesWithSize: []
@@ -126,8 +126,9 @@ Page {
         page: page
     }
 
-    ShellConnector {
-        id: shellConnector
+    CalculationManager {
+        id: manager
+        onResultReady: displayDirectoryList(info)
     }
 
     Connections {
@@ -215,7 +216,7 @@ Page {
     }
 
     function refreshPage() {
-        shellConnector.refresh()
+        manager.refresh()
         renderTreeMap()
     }
 }
