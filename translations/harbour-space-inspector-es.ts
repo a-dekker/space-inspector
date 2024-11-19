@@ -498,7 +498,7 @@ un momento.</translation>
     <message>
         <location filename="../src/io/fileworker.cpp" line="413"/>
         <source>Failed to remove source folder “%1” after moving.</source>
-        <translation type="unfinished"></translation>
+        <translation>No se pudo eliminar la carpeta de origen “ %1 ” después de moverla.</translation>
     </message>
     <message>
         <location filename="../src/io/fileworker.cpp" line="178"/>
@@ -530,42 +530,42 @@ un momento.</translation>
     <message>
         <location filename="../qml/pages/FolderInfoPage.qml" line="48"/>
         <source>Root</source>
-        <translation type="unfinished">Raíz</translation>
+        <translation>Raíz</translation>
     </message>
     <message>
         <location filename="../qml/pages/FolderInfoPage.qml" line="69"/>
         <source>Location</source>
-        <translation type="unfinished"></translation>
+        <translation>Ubicación</translation>
     </message>
     <message>
         <location filename="../qml/pages/FolderInfoPage.qml" line="73"/>
         <source>Type</source>
-        <translation type="unfinished">Tipo</translation>
+        <translation>Tipo</translation>
     </message>
     <message>
         <location filename="../qml/pages/FolderInfoPage.qml" line="76"/>
         <source>Unknown (link target not found)</source>
-        <translation type="unfinished"></translation>
+        <translation>Desconocido (destino de enlace no encontrado)</translation>
     </message>
     <message>
         <location filename="../qml/pages/FolderInfoPage.qml" line="77"/>
         <source>Link to %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Enlace a %1</translation>
     </message>
     <message>
         <location filename="../qml/pages/FolderInfoPage.qml" line="84"/>
         <source>Permissions</source>
-        <translation type="unfinished"></translation>
+        <translation>Permisos</translation>
     </message>
     <message>
         <location filename="../qml/pages/FolderInfoPage.qml" line="88"/>
         <source>Owner</source>
-        <translation type="unfinished"></translation>
+        <translation>Propietario</translation>
     </message>
     <message>
         <location filename="../qml/pages/FolderInfoPage.qml" line="93"/>
         <source>Group</source>
-        <translation type="unfinished"></translation>
+        <translation>Grupo</translation>
     </message>
     <message>
         <location filename="../qml/pages/FolderInfoPage.qml" line="98"/>
@@ -575,7 +575,7 @@ un momento.</translation>
     <message>
         <location filename="../qml/pages/FolderInfoPage.qml" line="103"/>
         <source>Last modified</source>
-        <translation type="unfinished"></translation>
+        <translation>Última actualización</translation>
     </message>
 </context>
 <context>
@@ -632,7 +632,7 @@ un momento.</translation>
     <message>
         <location filename="../qml/pages/ListPage.qml" line="48"/>
         <source>Root</source>
-        <translation type="unfinished">Raíz</translation>
+        <translation>Raíz</translation>
     </message>
     <message>
         <location filename="../qml/pages/ListPage.qml" line="70"/>
@@ -840,7 +840,7 @@ un momento.</translation>
     <message>
         <location filename="../qml/pages/PlacesPage.qml" line="56"/>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Ajustes</translation>
     </message>
 </context>
 <context>
@@ -866,7 +866,7 @@ un momento.</translation>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="39"/>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Ajustes</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="43"/>
@@ -896,7 +896,7 @@ un momento.</translation>
         <location filename="../qml/components/SizeDetailItem.qml" line="24"/>
         <source>files</source>
         <comment>generic form for unknown number of items</comment>
-        <translation type="unfinished"></translation>
+        <translation>archivos</translation>
     </message>
     <message>
         <location filename="../qml/components/SizeDetailItem.qml" line="25"/>
@@ -907,12 +907,12 @@ un momento.</translation>
         <location filename="../qml/components/SizeDetailItem.qml" line="31"/>
         <source>Size</source>
         <comment>as in “file size” but very short</comment>
-        <translation type="unfinished">Tamaño</translation>
+        <translation>Tamaño</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/SizeDetailItem.qml" line="50"/>
         <source>%n folder(s)</source>
-        <translation type="unfinished">
+        <translation>
             <numerusform>%n carpeta</numerusform>
             <numerusform>%n carpetas</numerusform>
         </translation>
@@ -920,41 +920,41 @@ un momento.</translation>
     <message>
         <location filename="../qml/components/file-browser/SizeDetailItem.qml" line="35"/>
         <source>Size</source>
-        <translation type="unfinished">Tamaño</translation>
+        <translation>Tamaño</translation>
     </message>
     <message>
         <location filename="../qml/components/file-browser/SizeDetailItem.qml" line="56"/>
         <source>size</source>
-        <translation type="unfinished"></translation>
+        <translation>tamaño</translation>
     </message>
     <message>
         <location filename="../qml/components/file-browser/SizeDetailItem.qml" line="63"/>
         <source>directories</source>
-        <translation type="unfinished"></translation>
+        <translation>directorios</translation>
     </message>
     <message>
         <location filename="../qml/components/file-browser/SizeDetailItem.qml" line="70"/>
         <source>files</source>
-        <translation type="unfinished"></translation>
+        <translation>archivos</translation>
     </message>
     <message>
         <location filename="../qml/components/file-browser/SizeDetailItem.qml" line="80"/>
         <source>unknown size</source>
-        <translation type="unfinished"></translation>
+        <translation>tamaño desconocido</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/file-browser/SizeDetailItem.qml" line="84"/>
         <source>%n directories</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n directorio</numerusform>
+            <numerusform>%n directorios</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/file-browser/SizeDetailItem.qml" line="92"/>
         <location filename="../qml/components/SizeDetailItem.qml" line="55"/>
         <source>%n file(s)</source>
-        <translation type="unfinished">
+        <translation>
             <numerusform>%n archivo</numerusform>
             <numerusform>%n archivos</numerusform>
         </translation>
@@ -1003,7 +1003,7 @@ un momento.</translation>
     <message>
         <location filename="../qml/pages/TreeMapPage.qml" line="87"/>
         <source>Root</source>
-        <translation type="unfinished">Raíz</translation>
+        <translation>Raíz</translation>
     </message>
     <message>
         <location filename="../qml/pages/TreeMapPage.qml" line="166"/>

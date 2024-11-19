@@ -100,34 +100,34 @@ a moment.</source>
     <message>
         <location filename="../src/io/bookmarks.cpp" line="507"/>
         <source>Memory card</source>
-        <translation type="unfinished"></translation>
+        <translation>Muistikortti</translation>
     </message>
     <message>
         <location filename="../src/io/bookmarks.cpp" line="509"/>
         <source>Attached folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Liitetty kansio</translation>
     </message>
     <message>
         <location filename="../src/io/bookmarks.cpp" line="511"/>
         <source>Remote folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Etäkansio</translation>
     </message>
     <message>
         <location filename="../src/io/bookmarks.cpp" line="514"/>
         <source>Removable media</source>
-        <translation type="unfinished"></translation>
+        <translation>Irroitettava media</translation>
     </message>
     <message>
         <location filename="../src/io/bookmarks.cpp" line="601"/>
         <location filename="../src/io/bookmarks.cpp" line="1094"/>
         <source>Internal storage</source>
-        <translation type="unfinished"></translation>
+        <translation>Sisäinen tallennustila</translation>
     </message>
     <message>
         <location filename="../src/io/bookmarks.cpp" line="609"/>
         <source>“%1” on “%2”</source>
         <extracomment>as in &quot;the folder “Music” on the storage named “SD Card”&quot;</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>”%1” ”%2”:ssa/lla</translation>
     </message>
     <message>
         <location filename="../src/io/bookmarks.cpp" line="664"/>
@@ -139,7 +139,7 @@ a moment.</source>
         <location filename="../src/io/bookmarks.cpp" line="666"/>
         <location filename="../src/io/bookmarks.cpp" line="1029"/>
         <source>Downloads</source>
-        <translation type="unfinished"></translation>
+        <translation>Lataukset</translation>
     </message>
     <message>
         <location filename="../src/io/bookmarks.cpp" line="668"/>
@@ -162,18 +162,18 @@ a moment.</source>
     <message>
         <location filename="../src/io/bookmarks.cpp" line="1009"/>
         <source>Home</source>
-        <translation type="unfinished">Koti</translation>
+        <translation>Koti</translation>
     </message>
     <message>
         <location filename="../src/io/bookmarks.cpp" line="1069"/>
         <location filename="../src/io/bookmarks.cpp" line="1095"/>
         <source>Android storage</source>
-        <translation type="unfinished"></translation>
+        <translation>Android tallennustila</translation>
     </message>
     <message>
         <location filename="../src/io/bookmarks.cpp" line="1079"/>
         <source>Root</source>
-        <translation type="unfinished">Juurihakemisto</translation>
+        <translation>Juurihakemisto</translation>
     </message>
 </context>
 <context>
@@ -293,17 +293,17 @@ a moment.</source>
     <message>
         <location filename="../src/io/engine.cpp" line="310"/>
         <source>Binary file preview clipped at %1 kB</source>
-        <translation type="unfinished"></translation>
+        <translation>Binääritiedoston esikatselu on rajoitettu %1 kB</translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="329"/>
         <source>Text file preview clipped at %1 lines</source>
-        <translation type="unfinished"></translation>
+        <translation>Tekstitiedoston esikatselu on rajoitettu %1 riviin</translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="331"/>
         <source>Text file preview clipped at %1 kB</source>
-        <translation type="unfinished"></translation>
+        <translation>Tekstitiedoston esikatselu on rajoitettu %1 kB</translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="350"/>
@@ -318,12 +318,12 @@ a moment.</source>
     <message>
         <location filename="../src/io/engine.cpp" line="368"/>
         <source>No permissions to create “%1” in “%2”</source>
-        <translation type="unfinished"></translation>
+        <translation>Ei oikeuksia luoda ” %1” ”%2” sisälle</translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="379"/>
         <source>Cannot create file “%1” in “%2”</source>
-        <translation type="unfinished"></translation>
+        <translation>Ei voida luoda tiedostoa ”%1” ”%2”n sisälle</translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="415"/>
@@ -333,27 +333,27 @@ a moment.</source>
     <message>
         <location filename="../src/io/engine.cpp" line="432"/>
         <source>Source “%1” is not a symbolic link</source>
-        <translation type="unfinished"></translation>
+        <translation>Lähde ”%1” ei ole symboolinen linkki</translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="441"/>
         <source>No permissions to change contents of “%1”</source>
-        <translation type="unfinished"></translation>
+        <translation>Ei oikeuksia muokata ”%1” sisältöä</translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="449"/>
         <source>Failed to remove old link “%1” pointing to “%2”</source>
-        <translation type="unfinished"></translation>
+        <translation>Linkin poistaminen ”%1”, joka johtaa ”%2” epäonnistui</translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="455"/>
         <source>Failed to revert link “%1” pointing to “%2” after failing to change target to “%3”</source>
-        <translation type="unfinished"></translation>
+        <translation>Linkin siirtäminen ”%1” joka johtaa ”%2” epäonnistui yrittäessä vaihtaa kohteeksi ”%3”</translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="462"/>
         <source>Failed to change link target of “%1” to “%2”</source>
-        <translation type="unfinished"></translation>
+        <translation>Linkin kohteen vaihtaminen kohteesta ”%1” kohteeseen ”%2” epäonnistui</translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="488"/>
@@ -367,14 +367,14 @@ a moment.</source>
         <location filename="../src/io/filedata.cpp" line="87"/>
         <source>empty</source>
         <extracomment>as in &quot;this folder is empty&quot;, but as short as possible</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>tyhjä</translation>
     </message>
     <message numerus="yes">
         <location filename="../src/io/filedata.cpp" line="88"/>
         <source>%n item(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n asia</numerusform>
+            <numerusform>%n asiaa</numerusform>
         </translation>
     </message>
     <message>
@@ -405,7 +405,7 @@ a moment.</source>
     <message>
         <location filename="../src/io/filedata.cpp" line="314"/>
         <source>folder</source>
-        <translation type="unfinished">kansio</translation>
+        <translation>kansio</translation>
     </message>
     <message>
         <location filename="../src/io/filedata.cpp" line="320"/>
@@ -423,42 +423,42 @@ a moment.</source>
     <message>
         <location filename="../src/io/globals.cpp" line="80"/>
         <source>KiB</source>
-        <translation type="unfinished"></translation>
+        <translation>KiB</translation>
     </message>
     <message>
         <location filename="../src/io/globals.cpp" line="81"/>
         <source>MiB</source>
-        <translation type="unfinished"></translation>
+        <translation>MiB</translation>
     </message>
     <message>
         <location filename="../src/io/globals.cpp" line="82"/>
         <source>GiB</source>
-        <translation type="unfinished"></translation>
+        <translation>GiB</translation>
     </message>
     <message>
         <location filename="../src/io/globals.cpp" line="83"/>
         <source>TiB</source>
-        <translation type="unfinished"></translation>
+        <translation>TiB</translation>
     </message>
     <message>
         <location filename="../src/io/globals.cpp" line="84"/>
         <source>PiB</source>
-        <translation type="unfinished"></translation>
+        <translation>PiB</translation>
     </message>
     <message>
         <location filename="../src/io/globals.cpp" line="85"/>
         <source>EiB</source>
-        <translation type="unfinished"></translation>
+        <translation>EiB</translation>
     </message>
     <message>
         <location filename="../src/io/globals.cpp" line="86"/>
         <source>ZiB</source>
-        <translation type="unfinished"></translation>
+        <translation>ZiB</translation>
     </message>
     <message>
         <location filename="../src/io/globals.cpp" line="87"/>
         <source>YiB</source>
-        <translation type="unfinished"></translation>
+        <translation>YiB</translation>
     </message>
     <message>
         <location filename="../src/io/globals.cpp" line="107"/>
@@ -515,7 +515,7 @@ a moment.</source>
     <message>
         <location filename="../src/io/fileworker.cpp" line="413"/>
         <source>Failed to remove source folder “%1” after moving.</source>
-        <translation type="unfinished"></translation>
+        <translation>Lähdekansion ”%1” poistaminen epäonnistui siirtämisen jälkeen.</translation>
     </message>
 </context>
 <context>
@@ -528,42 +528,42 @@ a moment.</source>
     <message>
         <location filename="../qml/pages/FolderInfoPage.qml" line="48"/>
         <source>Root</source>
-        <translation type="unfinished">Juurihakemisto</translation>
+        <translation>Juurihakemisto</translation>
     </message>
     <message>
         <location filename="../qml/pages/FolderInfoPage.qml" line="69"/>
         <source>Location</source>
-        <translation type="unfinished"></translation>
+        <translation>Sijainti</translation>
     </message>
     <message>
         <location filename="../qml/pages/FolderInfoPage.qml" line="73"/>
         <source>Type</source>
-        <translation type="unfinished">Tyyppi</translation>
+        <translation>Tyyppi</translation>
     </message>
     <message>
         <location filename="../qml/pages/FolderInfoPage.qml" line="76"/>
         <source>Unknown (link target not found)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tuntematon (linkin kohdetta ei löydetty)</translation>
     </message>
     <message>
         <location filename="../qml/pages/FolderInfoPage.qml" line="77"/>
         <source>Link to %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Linkki kohteeseen %1</translation>
     </message>
     <message>
         <location filename="../qml/pages/FolderInfoPage.qml" line="84"/>
         <source>Permissions</source>
-        <translation type="unfinished"></translation>
+        <translation>Oikeudet</translation>
     </message>
     <message>
         <location filename="../qml/pages/FolderInfoPage.qml" line="88"/>
         <source>Owner</source>
-        <translation type="unfinished"></translation>
+        <translation>Omistaja</translation>
     </message>
     <message>
         <location filename="../qml/pages/FolderInfoPage.qml" line="93"/>
         <source>Group</source>
-        <translation type="unfinished"></translation>
+        <translation>Ryhmä</translation>
     </message>
     <message>
         <location filename="../qml/pages/FolderInfoPage.qml" line="98"/>
@@ -573,7 +573,7 @@ a moment.</source>
     <message>
         <location filename="../qml/pages/FolderInfoPage.qml" line="103"/>
         <source>Last modified</source>
-        <translation type="unfinished"></translation>
+        <translation>Viimeksi muokattu</translation>
     </message>
 </context>
 <context>
@@ -609,7 +609,7 @@ a moment.</source>
     <message>
         <location filename="../qml/pages/ListPage.qml" line="48"/>
         <source>Root</source>
-        <translation type="unfinished">Juurihakemisto</translation>
+        <translation>Juurihakemisto</translation>
     </message>
     <message>
         <location filename="../qml/pages/ListPage.qml" line="70"/>
@@ -630,7 +630,7 @@ a moment.</source>
         <location filename="../qml/pages/ListPage.qml" line="129"/>
         <source>Empty</source>
         <comment>as in “this folder is empty”</comment>
-        <translation type="unfinished">Tyhjä</translation>
+        <translation>Tyhjä</translation>
     </message>
     <message>
         <location filename="../qml/pages/ListPage.qml" line="130"/>
@@ -838,7 +838,7 @@ a moment.</source>
     <message>
         <location filename="../qml/pages/PlacesPage.qml" line="56"/>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Asetukset</translation>
     </message>
 </context>
 <context>
@@ -864,7 +864,7 @@ a moment.</source>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="39"/>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Asetukset</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="43"/>
@@ -905,7 +905,7 @@ a moment.</source>
         <location filename="../qml/components/SizeDetailItem.qml" line="31"/>
         <source>Size</source>
         <comment>as in “file size” but very short</comment>
-        <translation type="unfinished">Koko</translation>
+        <translation>Koko</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/SizeDetailItem.qml" line="50"/>
@@ -918,12 +918,12 @@ a moment.</source>
     <message>
         <location filename="../qml/components/file-browser/SizeDetailItem.qml" line="35"/>
         <source>Size</source>
-        <translation type="unfinished">Koko</translation>
+        <translation>Koko</translation>
     </message>
     <message>
         <location filename="../qml/components/file-browser/SizeDetailItem.qml" line="56"/>
         <source>size</source>
-        <translation type="unfinished"></translation>
+        <translation>koko</translation>
     </message>
     <message>
         <location filename="../qml/components/file-browser/SizeDetailItem.qml" line="63"/>
@@ -1006,13 +1006,13 @@ a moment.</source>
     <message>
         <location filename="../qml/pages/TreeMapPage.qml" line="87"/>
         <source>Root</source>
-        <translation type="unfinished">Juurihakemisto</translation>
+        <translation>Juurihakemisto</translation>
     </message>
     <message>
         <location filename="../qml/pages/TreeMapPage.qml" line="166"/>
         <source>Empty</source>
         <comment>as in “this folder is empty”</comment>
-        <translation type="unfinished">Tyhjä</translation>
+        <translation>Tyhjä</translation>
     </message>
     <message>
         <location filename="../qml/pages/TreeMapPage.qml" line="167"/>

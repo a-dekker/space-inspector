@@ -534,37 +534,37 @@ a moment.</source>
     <message>
         <location filename="../qml/pages/FolderInfoPage.qml" line="69"/>
         <source>Location</source>
-        <translation type="unfinished"></translation>
+        <translation>Umístění</translation>
     </message>
     <message>
         <location filename="../qml/pages/FolderInfoPage.qml" line="73"/>
         <source>Type</source>
-        <translation type="unfinished">Typ</translation>
+        <translation>Typ</translation>
     </message>
     <message>
         <location filename="../qml/pages/FolderInfoPage.qml" line="76"/>
         <source>Unknown (link target not found)</source>
-        <translation type="unfinished"></translation>
+        <translation>Neznámý (cíl odkazu nenalezen)</translation>
     </message>
     <message>
         <location filename="../qml/pages/FolderInfoPage.qml" line="77"/>
         <source>Link to %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Odkázat do %1</translation>
     </message>
     <message>
         <location filename="../qml/pages/FolderInfoPage.qml" line="84"/>
         <source>Permissions</source>
-        <translation type="unfinished"></translation>
+        <translation>Oprávnění</translation>
     </message>
     <message>
         <location filename="../qml/pages/FolderInfoPage.qml" line="88"/>
         <source>Owner</source>
-        <translation type="unfinished"></translation>
+        <translation>Vlastník</translation>
     </message>
     <message>
         <location filename="../qml/pages/FolderInfoPage.qml" line="93"/>
         <source>Group</source>
-        <translation type="unfinished"></translation>
+        <translation>Skupina</translation>
     </message>
     <message>
         <location filename="../qml/pages/FolderInfoPage.qml" line="98"/>
@@ -574,7 +574,7 @@ a moment.</source>
     <message>
         <location filename="../qml/pages/FolderInfoPage.qml" line="103"/>
         <source>Last modified</source>
-        <translation type="unfinished"></translation>
+        <translation>Poslední změna</translation>
     </message>
 </context>
 <context>
@@ -841,7 +841,7 @@ a moment.</source>
     <message>
         <location filename="../qml/pages/PlacesPage.qml" line="56"/>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nastavení</translation>
     </message>
 </context>
 <context>
@@ -867,7 +867,7 @@ a moment.</source>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="39"/>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nastavení</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="43"/>
@@ -897,7 +897,7 @@ a moment.</source>
         <location filename="../qml/components/SizeDetailItem.qml" line="24"/>
         <source>files</source>
         <comment>generic form for unknown number of items</comment>
-        <translation type="unfinished"></translation>
+        <translation>soubory</translation>
     </message>
     <message>
         <location filename="../qml/components/SizeDetailItem.qml" line="25"/>
@@ -913,7 +913,7 @@ a moment.</source>
     <message numerus="yes">
         <location filename="../qml/components/SizeDetailItem.qml" line="50"/>
         <source>%n folder(s)</source>
-        <translation type="unfinished">
+        <translation>
             <numerusform>%n složka</numerusform>
             <numerusform>%n složek</numerusform>
             <numerusform>%n složek</numerusform>
@@ -927,37 +927,37 @@ a moment.</source>
     <message>
         <location filename="../qml/components/file-browser/SizeDetailItem.qml" line="56"/>
         <source>size</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">velikost</translation>
     </message>
     <message>
         <location filename="../qml/components/file-browser/SizeDetailItem.qml" line="63"/>
         <source>directories</source>
-        <translation type="unfinished"></translation>
+        <translation>složky</translation>
     </message>
     <message>
         <location filename="../qml/components/file-browser/SizeDetailItem.qml" line="70"/>
         <source>files</source>
-        <translation type="unfinished"></translation>
+        <translation>soubory</translation>
     </message>
     <message>
         <location filename="../qml/components/file-browser/SizeDetailItem.qml" line="80"/>
         <source>unknown size</source>
-        <translation type="unfinished"></translation>
+        <translation>neznámá velikost</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/file-browser/SizeDetailItem.qml" line="84"/>
         <source>%n directories</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n složka</numerusform>
+            <numerusform>%n složek</numerusform>
+            <numerusform>%n složek</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/file-browser/SizeDetailItem.qml" line="92"/>
         <location filename="../qml/components/SizeDetailItem.qml" line="55"/>
         <source>%n file(s)</source>
-        <translation type="unfinished">
+        <translation>
             <numerusform>%n soubor</numerusform>
             <numerusform>%n souborů</numerusform>
             <numerusform>%n souborů</numerusform>

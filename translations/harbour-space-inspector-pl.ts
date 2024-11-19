@@ -534,37 +534,37 @@ a moment.</source>
     <message>
         <location filename="../qml/pages/FolderInfoPage.qml" line="69"/>
         <source>Location</source>
-        <translation type="unfinished"></translation>
+        <translation>Lokalizacja</translation>
     </message>
     <message>
         <location filename="../qml/pages/FolderInfoPage.qml" line="73"/>
         <source>Type</source>
-        <translation type="unfinished">Typ</translation>
+        <translation>Typ</translation>
     </message>
     <message>
         <location filename="../qml/pages/FolderInfoPage.qml" line="76"/>
         <source>Unknown (link target not found)</source>
-        <translation type="unfinished"></translation>
+        <translation>‎Nieznany (nie znaleziono obiektu docelowego łącza)‎</translation>
     </message>
     <message>
         <location filename="../qml/pages/FolderInfoPage.qml" line="77"/>
         <source>Link to %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Link do %1</translation>
     </message>
     <message>
         <location filename="../qml/pages/FolderInfoPage.qml" line="84"/>
         <source>Permissions</source>
-        <translation type="unfinished"></translation>
+        <translation>Uprawnienia</translation>
     </message>
     <message>
         <location filename="../qml/pages/FolderInfoPage.qml" line="88"/>
         <source>Owner</source>
-        <translation type="unfinished"></translation>
+        <translation>Właściciel</translation>
     </message>
     <message>
         <location filename="../qml/pages/FolderInfoPage.qml" line="93"/>
         <source>Group</source>
-        <translation type="unfinished"></translation>
+        <translation>Grupa</translation>
     </message>
     <message>
         <location filename="../qml/pages/FolderInfoPage.qml" line="98"/>
@@ -574,7 +574,7 @@ a moment.</source>
     <message>
         <location filename="../qml/pages/FolderInfoPage.qml" line="103"/>
         <source>Last modified</source>
-        <translation type="unfinished"></translation>
+        <translation>Ostatnio modyfikowane</translation>
     </message>
 </context>
 <context>
@@ -841,7 +841,7 @@ a moment.</source>
     <message>
         <location filename="../qml/pages/PlacesPage.qml" line="56"/>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ustawienia</translation>
     </message>
 </context>
 <context>
@@ -867,7 +867,7 @@ a moment.</source>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="39"/>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ustawienia</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="43"/>
@@ -897,7 +897,7 @@ a moment.</source>
         <location filename="../qml/components/SizeDetailItem.qml" line="24"/>
         <source>files</source>
         <comment>generic form for unknown number of items</comment>
-        <translation type="unfinished"></translation>
+        <translation>pliki</translation>
     </message>
     <message>
         <location filename="../qml/components/SizeDetailItem.qml" line="25"/>
@@ -908,7 +908,7 @@ a moment.</source>
         <location filename="../qml/components/SizeDetailItem.qml" line="31"/>
         <source>Size</source>
         <comment>as in “file size” but very short</comment>
-        <translation type="unfinished">Rozmiar</translation>
+        <translation>Rozmiar</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/SizeDetailItem.qml" line="50"/>
@@ -922,12 +922,12 @@ a moment.</source>
     <message>
         <location filename="../qml/components/file-browser/SizeDetailItem.qml" line="35"/>
         <source>Size</source>
-        <translation type="unfinished">Rozmiar</translation>
+        <translation>Rozmiar</translation>
     </message>
     <message>
         <location filename="../qml/components/file-browser/SizeDetailItem.qml" line="56"/>
         <source>size</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">rozmiar</translation>
     </message>
     <message>
         <location filename="../qml/components/file-browser/SizeDetailItem.qml" line="63"/>
@@ -937,12 +937,12 @@ a moment.</source>
     <message>
         <location filename="../qml/components/file-browser/SizeDetailItem.qml" line="70"/>
         <source>files</source>
-        <translation type="unfinished"></translation>
+        <translation>pliki</translation>
     </message>
     <message>
         <location filename="../qml/components/file-browser/SizeDetailItem.qml" line="80"/>
         <source>unknown size</source>
-        <translation type="unfinished"></translation>
+        <translation>nieznany rozmiar</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/file-browser/SizeDetailItem.qml" line="84"/>

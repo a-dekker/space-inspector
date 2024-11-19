@@ -498,7 +498,7 @@ Moment dauern.</translation>
     <message>
         <location filename="../src/io/fileworker.cpp" line="413"/>
         <source>Failed to remove source folder “%1” after moving.</source>
-        <translation type="unfinished"></translation>
+        <translation>Quellordner “%1” konnte nach dem Verschieben nicht entfernt werden.</translation>
     </message>
     <message>
         <location filename="../src/io/fileworker.cpp" line="178"/>
@@ -530,42 +530,42 @@ Moment dauern.</translation>
     <message>
         <location filename="../qml/pages/FolderInfoPage.qml" line="48"/>
         <source>Root</source>
-        <translation type="unfinished">Stammverzeichnis</translation>
+        <translation>Stammverzeichnis</translation>
     </message>
     <message>
         <location filename="../qml/pages/FolderInfoPage.qml" line="69"/>
         <source>Location</source>
-        <translation type="unfinished"></translation>
+        <translation>Ort</translation>
     </message>
     <message>
         <location filename="../qml/pages/FolderInfoPage.qml" line="73"/>
         <source>Type</source>
-        <translation type="unfinished">Typ</translation>
+        <translation>Typ</translation>
     </message>
     <message>
         <location filename="../qml/pages/FolderInfoPage.qml" line="76"/>
         <source>Unknown (link target not found)</source>
-        <translation type="unfinished"></translation>
+        <translation>Unbekannt (Verknüfungsziel nicht gefunden)</translation>
     </message>
     <message>
         <location filename="../qml/pages/FolderInfoPage.qml" line="77"/>
         <source>Link to %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Link zu %1</translation>
     </message>
     <message>
         <location filename="../qml/pages/FolderInfoPage.qml" line="84"/>
         <source>Permissions</source>
-        <translation type="unfinished"></translation>
+        <translation>Berechtigungen</translation>
     </message>
     <message>
         <location filename="../qml/pages/FolderInfoPage.qml" line="88"/>
         <source>Owner</source>
-        <translation type="unfinished"></translation>
+        <translation>Besitzer</translation>
     </message>
     <message>
         <location filename="../qml/pages/FolderInfoPage.qml" line="93"/>
         <source>Group</source>
-        <translation type="unfinished"></translation>
+        <translation>Gruppe</translation>
     </message>
     <message>
         <location filename="../qml/pages/FolderInfoPage.qml" line="98"/>
@@ -575,7 +575,7 @@ Moment dauern.</translation>
     <message>
         <location filename="../qml/pages/FolderInfoPage.qml" line="103"/>
         <source>Last modified</source>
-        <translation type="unfinished"></translation>
+        <translation>Zuletzt geändert</translation>
     </message>
 </context>
 <context>
@@ -920,34 +920,34 @@ Moment dauern.</translation>
     <message>
         <location filename="../qml/components/file-browser/SizeDetailItem.qml" line="35"/>
         <source>Size</source>
-        <translation type="unfinished">Größe</translation>
+        <translation>Größe</translation>
     </message>
     <message>
         <location filename="../qml/components/file-browser/SizeDetailItem.qml" line="56"/>
         <source>size</source>
-        <translation type="unfinished"></translation>
+        <translation>Größe</translation>
     </message>
     <message>
         <location filename="../qml/components/file-browser/SizeDetailItem.qml" line="63"/>
         <source>directories</source>
-        <translation type="unfinished"></translation>
+        <translation>Ordner</translation>
     </message>
     <message>
         <location filename="../qml/components/file-browser/SizeDetailItem.qml" line="70"/>
         <source>files</source>
-        <translation type="unfinished">Dateien</translation>
+        <translation>Dateien</translation>
     </message>
     <message>
         <location filename="../qml/components/file-browser/SizeDetailItem.qml" line="80"/>
         <source>unknown size</source>
-        <translation type="unfinished"></translation>
+        <translation>unbekannte Größe</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/file-browser/SizeDetailItem.qml" line="84"/>
         <source>%n directories</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n Ordner</numerusform>
+            <numerusform>%n Ordner</numerusform>
         </translation>
     </message>
     <message numerus="yes">

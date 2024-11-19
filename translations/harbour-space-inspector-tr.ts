@@ -121,13 +121,13 @@ a moment.</source>
         <location filename="../src/io/bookmarks.cpp" line="601"/>
         <location filename="../src/io/bookmarks.cpp" line="1094"/>
         <source>Internal storage</source>
-        <translation type="unfinished"></translation>
+        <translation>Dahili depolama</translation>
     </message>
     <message>
         <location filename="../src/io/bookmarks.cpp" line="609"/>
         <source>“%1” on “%2”</source>
         <extracomment>as in &quot;the folder “Music” on the storage named “SD Card”&quot;</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>&quot;%2&quot;de olan &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../src/io/bookmarks.cpp" line="664"/>
@@ -333,17 +333,17 @@ a moment.</source>
     <message>
         <location filename="../src/io/engine.cpp" line="432"/>
         <source>Source “%1” is not a symbolic link</source>
-        <translation type="unfinished"></translation>
+        <translation>Kaynak &quot;%1&quot; bir sembolik bağlantı değil</translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="441"/>
         <source>No permissions to change contents of “%1”</source>
-        <translation type="unfinished"></translation>
+        <translation>&quot;%1&quot;in içeriğini değiştirmeye izin bulunmamakta</translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="449"/>
         <source>Failed to remove old link “%1” pointing to “%2”</source>
-        <translation type="unfinished"></translation>
+        <translation>&quot;%2&quot;e işaret eden eski &quot;%1&quot; bağlantısının kaldırması başarısız oldu</translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="455"/>
@@ -527,42 +527,42 @@ a moment.</source>
     <message>
         <location filename="../qml/pages/FolderInfoPage.qml" line="48"/>
         <source>Root</source>
-        <translation type="unfinished">Root</translation>
+        <translation>Root</translation>
     </message>
     <message>
         <location filename="../qml/pages/FolderInfoPage.qml" line="69"/>
         <source>Location</source>
-        <translation type="unfinished"></translation>
+        <translation>Konum</translation>
     </message>
     <message>
         <location filename="../qml/pages/FolderInfoPage.qml" line="73"/>
         <source>Type</source>
-        <translation type="unfinished">Tür</translation>
+        <translation>Tür</translation>
     </message>
     <message>
         <location filename="../qml/pages/FolderInfoPage.qml" line="76"/>
         <source>Unknown (link target not found)</source>
-        <translation type="unfinished"></translation>
+        <translation>Bilinmiyor (bağlantı hedefi bulunamadı)</translation>
     </message>
     <message>
         <location filename="../qml/pages/FolderInfoPage.qml" line="77"/>
         <source>Link to %1</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 bağlantısı</translation>
     </message>
     <message>
         <location filename="../qml/pages/FolderInfoPage.qml" line="84"/>
         <source>Permissions</source>
-        <translation type="unfinished"></translation>
+        <translation>İzinler</translation>
     </message>
     <message>
         <location filename="../qml/pages/FolderInfoPage.qml" line="88"/>
         <source>Owner</source>
-        <translation type="unfinished"></translation>
+        <translation>Sahip</translation>
     </message>
     <message>
         <location filename="../qml/pages/FolderInfoPage.qml" line="93"/>
         <source>Group</source>
-        <translation type="unfinished"></translation>
+        <translation>Grup</translation>
     </message>
     <message>
         <location filename="../qml/pages/FolderInfoPage.qml" line="98"/>
@@ -572,7 +572,7 @@ a moment.</source>
     <message>
         <location filename="../qml/pages/FolderInfoPage.qml" line="103"/>
         <source>Last modified</source>
-        <translation type="unfinished"></translation>
+        <translation>Son değiştirme</translation>
     </message>
 </context>
 <context>
@@ -608,7 +608,7 @@ a moment.</source>
     <message>
         <location filename="../qml/pages/ListPage.qml" line="48"/>
         <source>Root</source>
-        <translation type="unfinished">Root</translation>
+        <translation>Root</translation>
     </message>
     <message>
         <location filename="../qml/pages/ListPage.qml" line="70"/>
@@ -835,7 +835,7 @@ a moment.</source>
     <message>
         <location filename="../qml/pages/PlacesPage.qml" line="56"/>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ayarlar</translation>
     </message>
 </context>
 <context>
@@ -861,7 +861,7 @@ a moment.</source>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="39"/>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ayarlar</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="43"/>
@@ -891,7 +891,7 @@ a moment.</source>
         <location filename="../qml/components/SizeDetailItem.qml" line="24"/>
         <source>files</source>
         <comment>generic form for unknown number of items</comment>
-        <translation type="unfinished"></translation>
+        <translation>dosyalar</translation>
     </message>
     <message>
         <location filename="../qml/components/SizeDetailItem.qml" line="25"/>
@@ -907,7 +907,7 @@ a moment.</source>
     <message numerus="yes">
         <location filename="../qml/components/SizeDetailItem.qml" line="50"/>
         <source>%n folder(s)</source>
-        <translation type="unfinished">
+        <translation>
             <numerusform>%n dizin</numerusform>
         </translation>
     </message>
@@ -919,35 +919,35 @@ a moment.</source>
     <message>
         <location filename="../qml/components/file-browser/SizeDetailItem.qml" line="56"/>
         <source>size</source>
-        <translation type="unfinished"></translation>
+        <translation>boyut</translation>
     </message>
     <message>
         <location filename="../qml/components/file-browser/SizeDetailItem.qml" line="63"/>
         <source>directories</source>
-        <translation type="unfinished"></translation>
+        <translation>dizinler</translation>
     </message>
     <message>
         <location filename="../qml/components/file-browser/SizeDetailItem.qml" line="70"/>
         <source>files</source>
-        <translation type="unfinished"></translation>
+        <translation>dosyalar</translation>
     </message>
     <message>
         <location filename="../qml/components/file-browser/SizeDetailItem.qml" line="80"/>
         <source>unknown size</source>
-        <translation type="unfinished"></translation>
+        <translation>bilinmeyen boyut</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/file-browser/SizeDetailItem.qml" line="84"/>
         <source>%n directories</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n dizin</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/file-browser/SizeDetailItem.qml" line="92"/>
         <location filename="../qml/components/SizeDetailItem.qml" line="55"/>
         <source>%n file(s)</source>
-        <translation type="unfinished">
+        <translation>
             <numerusform>%n dosya</numerusform>
         </translation>
     </message>
@@ -999,7 +999,7 @@ a moment.</source>
     <message>
         <location filename="../qml/pages/TreeMapPage.qml" line="87"/>
         <source>Root</source>
-        <translation type="unfinished">Root</translation>
+        <translation>Root</translation>
     </message>
     <message>
         <location filename="../qml/pages/TreeMapPage.qml" line="166"/>
