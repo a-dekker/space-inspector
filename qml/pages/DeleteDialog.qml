@@ -86,7 +86,7 @@ Dialog {
                 InfoGridItem {
                     grid: grid
                     label: qsTr("Path", "as in “file path but very short")
-                    value: fileData.absolutePath
+                    value: fileData.absoluteFilePath
                 }
                 InfoGridItem {
                     grid: grid
