@@ -6,10 +6,12 @@
 
 import QtQuick 2.6
 import Harbour.FileBrowser.Engine 1.0
+import Harbour.FileBrowser.FileData 1.0
 
 Item {
     id: root
 
+    readonly property alias fileData: fileData
     property var nodeModel: ({
         "name": "/",
         "dir": '/',
@@ -21,6 +23,11 @@ Item {
     property int _sizeInfoHandle: -1
 
     signal resultReady(var info)
+
+    FileData {
+        id: fileData
+        file: nodeModel.dir
+    }
 
     Connections {
         target: Engine

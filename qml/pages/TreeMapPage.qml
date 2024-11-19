@@ -23,7 +23,6 @@
 import QtQuick 2.2
 import Sailfish.Silica 1.0
 import Harbour.FileBrowser.Engine 1.0
-import Harbour.FileBrowser.FileData 1.0
 
 import "../components"
 import "../js/treemap-squarify.js" as Tm
@@ -51,11 +50,6 @@ Page {
                 renderTreeMap()
             }
         }
-    }
-
-    FileData {
-        id: fileData
-        file: nodeModel.dir
     }
 
     SilicaFlickable {
@@ -128,7 +122,8 @@ Page {
         }
 
         ViewPlaceholder {
-            enabled: fileData.filesCount == 0 && fileData.dirsCount == 0
+            enabled: manager.fileData.filesCount == 0 &&
+                     manager.fileData.dirsCount == 0
             text: qsTr("Empty", "as in “this folder is empty”")
             hintText: qsTr("This folder is empty.")
         }
