@@ -37,11 +37,6 @@ Page {
 
         PullDownMenu {
             MenuItem {
-                text: qsTr("Info")
-                onClicked: pageStack.push(Qt.resolvedUrl(
-                                              "../pages/InfoPage.qml"))
-            }
-            MenuItem {
                 text: qsTr("Go to...")
                 onClicked: {
                     pageStack.push("../pages/PlacesPage.qml", {
