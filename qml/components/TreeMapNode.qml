@@ -92,15 +92,10 @@ Item {
         x: 0
         width: nodeWidth
         height: nodeHeight
-        color: Theme.secondaryHighlightColor
+        color: !nodeModel || nodeModel.isDir ?
+                   Theme.secondaryHighlightColor :
+                   Util.colorForFile(nodeModel.name)
         opacity: mArea.pressed ? 0.6 : 0.3
-        Component.onCompleted: {
-            if (!nodeModel.isDir) {
-                color = Qt.hsla(Util.getNormalizedHash(
-                    Util.getFileExtension(nodeModel.name)),
-                    1, 0.5, 0.75)
-            }
-        }
     }
 
     Label {
