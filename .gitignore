@@ -4,3 +4,5 @@ Thumbs.db
 harbour-space-inspector.pro.user*
 translations/space-inspector_*.qm
 
+libs/opal-translations
+libs/opal-docs
