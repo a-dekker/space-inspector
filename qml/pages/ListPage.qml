@@ -23,6 +23,7 @@
 import QtQuick 2.2
 import Sailfish.Silica 1.0
 import Opal.Delegates 1.0
+import Opal.SmartScrollbar 1.0
 import Harbour.FileBrowser.Engine 1.0
 import Harbour.FileBrowser.FileData 1.0
 import "../components"
@@ -51,8 +52,16 @@ Page {
             description: nodeModel.formattedSize
         }
 
+        cacheBuffer: page.height * 3
         model: ListModel { id: subDirsModel }
-        VerticalScrollDecorator { flickable: listView }
+
+        SmartScrollbar {
+            flickable: listView
+            smartWhen: listView.count > 100
+            readonly property int scrollIndex: !!flickable ?
+                flickable.indexAt(flickable.contentX, flickable.contentY) : -1
+            text: "%1 / %2".arg(scrollIndex + 2).arg(flickable.count)
+        }
 
         PullDownMenu {
             MenuItem {
