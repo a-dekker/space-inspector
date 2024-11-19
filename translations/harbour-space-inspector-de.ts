@@ -183,27 +183,27 @@ Moment dauern.</translation>
     <message>
         <location filename="../qml/pages/DeleteDialog.qml" line="42"/>
         <source>Confirm deletion</source>
-        <translation type="unfinished"></translation>
+        <translation>Löschen bestätigen</translation>
     </message>
     <message>
         <location filename="../qml/pages/DeleteDialog.qml" line="43"/>
         <source>Delete folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Ordner löschen</translation>
     </message>
     <message>
         <location filename="../qml/pages/DeleteDialog.qml" line="43"/>
         <source>Delete file</source>
-        <translation type="unfinished"></translation>
+        <translation>Datei löschen</translation>
     </message>
     <message>
         <location filename="../qml/pages/DeleteDialog.qml" line="52"/>
         <source>Are you sure that you want to delete this folder and all its contents?</source>
-        <translation type="unfinished"></translation>
+        <translation>Sind Sie sich sicher, dass Sie diesen Ordner mitsamt seinem Inhalt löschen möchten?</translation>
     </message>
     <message>
         <location filename="../qml/pages/DeleteDialog.qml" line="55"/>
         <source>Are you sure that you want to delete this element?</source>
-        <translation type="unfinished"></translation>
+        <translation>Sind Sie sich sicher, dass Sie dieses Element löschen möchten?</translation>
     </message>
     <message>
         <location filename="../qml/pages/DeleteDialog.qml" line="72"/>
@@ -235,18 +235,18 @@ Moment dauern.</translation>
     <message>
         <location filename="../qml/pages/DeleteDialog.qml" line="82"/>
         <source>Folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Ordner</translation>
     </message>
     <message>
         <location filename="../qml/pages/DeleteDialog.qml" line="82"/>
         <source>File</source>
-        <translation type="unfinished"></translation>
+        <translation>Datei</translation>
     </message>
     <message>
         <location filename="../qml/pages/DeleteDialog.qml" line="86"/>
         <source>Path</source>
         <comment>as in “file path but very short</comment>
-        <translation type="unfinished"></translation>
+        <translation>Pfad</translation>
     </message>
     <message>
         <location filename="../qml/pages/DeleteDialog.qml" line="91"/>
@@ -257,7 +257,7 @@ Moment dauern.</translation>
     <message>
         <location filename="../qml/pages/DeleteDialog.qml" line="111"/>
         <source>Warning: deleting files might break things, or even leave your phone in an unusable state.</source>
-        <translation type="unfinished"></translation>
+        <translation>Warnung: Dateien zu löschen kann Probleme verursachen und sogar dazu führen, dass das Gerät unbenutzbar wird.</translation>
     </message>
 </context>
 <context>
@@ -585,7 +585,7 @@ Moment dauern.</translation>
     <message>
         <location filename="../qml/pages/ListPage.qml" line="126"/>
         <source>This folder is empty.</source>
-        <translation type="unfinished"></translation>
+        <translation>Dieser Ordner ist leer.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ListPage.qml" line="74"/>
@@ -603,7 +603,7 @@ Moment dauern.</translation>
     <message>
         <location filename="../qml/components/NodeContextMenu.qml" line="31"/>
         <source>Collapse</source>
-        <translation type="unfinished"></translation>
+        <translation>Verstecken</translation>
     </message>
     <message>
         <location filename="../qml/components/NodeContextMenu.qml" line="40"/>
@@ -863,7 +863,7 @@ Moment dauern.</translation>
     <message>
         <location filename="../qml/pages/TreeMapPage.qml" line="127"/>
         <source>This folder is empty.</source>
-        <translation type="unfinished"></translation>
+        <translation>Dieser Ordner ist leer.</translation>
     </message>
     <message>
         <location filename="../qml/pages/TreeMapPage.qml" line="63"/>
@@ -876,7 +876,7 @@ Moment dauern.</translation>
     <message>
         <location filename="../qml/harbour-space-inspector.qml" line="47"/>
         <source>An error occurred</source>
-        <translation type="unfinished">Ein Fehler ist aufgetreten</translation>
+        <translation>Ein Fehler ist aufgetreten</translation>
     </message>
 </context>
 </TS>
