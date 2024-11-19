@@ -32,8 +32,8 @@ Page {
     allowedOrientations: Orientation.All
 
     property alias nodeModel: manager.nodeModel
-    property var collapsedSubNodePaths: []
-    property int collapsedSubNodesSize: 0
+    property var collapsedSubNodePaths: ([])
+    property var collapsedSubNodePathsMap: ({})
     property var subNodesWithSize: []
 
     onOrientationTransitionRunningChanged: {
@@ -97,11 +97,12 @@ Page {
             anchors.top: title.bottom
             x: 1
             width: parent.width - 2
-            collapsedNodePaths: collapsedSubNodePaths
-            collapsedNodesSize: collapsedSubNodesSize
+            collapsedNodePaths: []
 
             onClick: {
+                collapsedNodePaths = []
                 collapsedSubNodePaths = []
+                collapsedSubNodePathsMap = {}
                 renderTreeMap()
             }
         }
@@ -188,7 +189,9 @@ Page {
     }
 
     function collapseSubNode(nodePath) {
+        collapsedSubNodePaths[nodePath] = 1
         collapsedSubNodePaths.push(nodePath)
+        collapsedNodes.collapsedNodePaths = collapsedSubNodePaths  // notify
         renderTreeMap()
     }
 
@@ -232,22 +235,16 @@ Page {
     }
 
     function removeCollapsed(nodesWithSize) {
-        collapsedSubNodesSize = 0
-        var ret = []
-        for (var i = 0; i < nodesWithSize.length; i++) {
-            var node = nodesWithSize[i]
-            var dir = node.dir
-            if (collapsedSubNodePaths.indexOf(dir) < 0) {
-                ret.push(node)
-            } else {
-                collapsedSubNodesSize += node.kilobytes
-            }
-        }
+        var ret = nodesWithSize.filter(function(e){
+            return !collapsedSubNodePaths.hasOwnProperty(e.dir)
+        })
+
         return ret
     }
 
     function refreshPage() {
         manager.refresh()
+        collapsedNodes.collapsedNodePaths = collapsedSubNodePaths
     }
 
     Component.onCompleted: {
