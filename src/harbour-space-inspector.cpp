@@ -36,7 +36,6 @@
 #include "io/bookmarks.h"
 #include "io/enumcontainer.h"
 #include "si_engine.h"
-#include "shell.h"
 
 int main(int argc, char *argv[]) {
     qRegisterMetaType<StatFileInfo>("StatFileInfo");
@@ -58,8 +57,6 @@ int main(int argc, char *argv[]) {
             Q_UNUSED(scriptEngine);
             return new BookmarksModel;
      });
-
-    qmlRegisterType<Shell>("harbour.space.inspector.shell", 1, 0, "Shell");
 
     QScopedPointer<QGuiApplication> app(SailfishApp::application(argc, argv));
     app->setOrganizationName("harbour-space-inspector"); // needed for Sailjail

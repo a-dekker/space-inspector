@@ -34,7 +34,6 @@ include(libs/opal-cached-defines.pri)
 QML_IMPORT_PATH += qml/modules
 
 SOURCES += src/harbour-space-inspector.cpp \
-    src/shell.cpp \
     src/si_engine.cpp \
     src/io/bookmarks.cpp \
     src/io/configfilemonitor.cpp \
@@ -70,7 +69,6 @@ OTHER_FILES += qml/harbour-space-inspector.qml \
     qml/components/PlaceButton.qml
 
 HEADERS += \
-    src/shell.h \
     src/si_engine.h \
     src/io/bookmarks.h \
     src/io/configfilemonitor.h \
