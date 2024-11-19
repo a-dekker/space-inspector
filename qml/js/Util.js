@@ -19,43 +19,12 @@
 .pragma library
 
 /**
- * @param path string file system path, e.g. '|home|nemo|' or '|home|nemo|asdf.txt'
- *     (imagine slashes instead of pipes, harbour RPM validator does not like hard-coded paths in comments)
- * @returns name of file or folder, e.g. 'nemo' or 'asdf.txt'
- */
-function getNodeNameFromPath(path) {
-    if (!path) throw "Path may not be null";
-    if (path === "/") return path;
-    var arr = path.split("/");
-    var last = arr.pop();
-    if (last.length === 0) last = arr.pop();
-    return last;
-}
-
-/**
- * Decides whether we can assume that the file will be handled by the operating system, depending solely on file extension.
- */
-function canHandleFile(path) {
-    if (!path) throw "Path may not be null";
-    var supported = ["mp3", "mp4", "jpeg", "jpg", "pdf", "html"];
-    var ext = getFileExtension(path);
-    if (ext && ext.length < 5) {
-        ext = ext.toLowerCase();
-        for (var i = 0; i < supported.length; i++) {
-            if (supported[i] === ext) return true;
-        }
-    }
-    return false;
-}
-
-/**
  * Extracts file extension from path.
  * The portion after the last "." in the filename is considered to be an extension,
  * (ecxept when the last dot is the first character of the filename.
  * Returns null if the file does not have an extension.
  */
-function getFileExtension(path) {
-    var nodeName = getNodeNameFromPath(path);
+function getFileExtension(nodeName) {
     var dotIdx = nodeName.lastIndexOf(".");
     return dotIdx > 0 ? nodeName.substring(dotIdx + 1) : null;
 }

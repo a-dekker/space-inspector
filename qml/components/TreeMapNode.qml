@@ -46,9 +46,9 @@ Rectangle {
         opacity: mArea.pressed ? 0.6 : 0.3
         Component.onCompleted: {
             if (!nodeModel.isDir) {
-                color = Qt.hsla(Util.getNormalizedHash(Util.getFileExtension(
-                                                           nodeModel.dir)), 1,
-                                0.5, 0.75)
+                color = Qt.hsla(Util.getNormalizedHash(
+                    Util.getFileExtension(nodeModel.name)),
+                    1, 0.5, 0.75)
             }
         }
     }
@@ -64,15 +64,14 @@ Rectangle {
         color: mArea.pressed
                || (nodeModel
                    && nodeModel.isDir) ? Theme.primaryColor : Theme.highlightColor
-        text: Util.getNodeNameFromPath(
-                  nodeModel.dir) + '\n' + nodeModel.formattedSize
+        text: nodeModel.name + '\n' + nodeModel.formattedSize
         // try to optimize text display for smaller rectangles...
         onPaintedWidthChanged: {
             if (paintedWidth > parent.width)
                 font.pixelSize = Math.floor(
                             font.pixelSize * parent.width / paintedWidth)
             if (paintedHeight > parent.height)
-                text = Util.getNodeNameFromPath(nodeModel.dir)
+                text = nodeModel.name
         }
         // ... if too small, rather display no text
         visible: parent.width > 30 && parent.height > 30

@@ -51,9 +51,6 @@ OTHER_FILES += qml/harbour-space-inspector.qml \
     qml/components/TreeMapNode.qml \
     qml/pages/ListPage.qml \
     cover.png \
-    qml/js/IoTranslator.js \
-    qml/js/IoTranslator.js \
-    qml/js/Memory.js \
     qml/js/Util.js \
     qml/js/treemap-squarify.js \
     qml/components/CalculationManager.qml \
@@ -63,7 +60,6 @@ OTHER_FILES += qml/harbour-space-inspector.qml \
     qml/pages/DeleteDialog.qml \
     qml/components/NodeContextMenu.qml \
     qml/components/TreeMapNodeCollapsed.qml\
-    qml/components/Spacer.qml \
     qml/pages/PlacesPage.qml \
     qml/components/InfoGridItem.qml
 
