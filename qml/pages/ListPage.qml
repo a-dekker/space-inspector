@@ -19,6 +19,7 @@
 */
 import QtQuick 2.2
 import Sailfish.Silica 1.0
+import Harbour.FileBrowser.Engine 1.0
 
 import "../components"
 import "../js/IoTranslator.js" as IoTranslator
@@ -166,7 +167,7 @@ Page {
     }
 
     Connections {
-        target: engine
+        target: Engine
         onWorkerErrorOccurred: {
             console.log("FileWorker error: ", message, filename)
             notificationPanel.showTextWithTimer(qsTr("An error occurred"),

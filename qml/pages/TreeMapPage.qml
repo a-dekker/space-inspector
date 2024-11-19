@@ -206,7 +206,7 @@ Page {
 
     function createNodeModel() {
         return {
-            "dir": engine.homeFolder(),
+            "dir": StandardPaths.home,
             "isDir": true,
             "size": 0
         }
