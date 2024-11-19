@@ -141,8 +141,12 @@ Page {
     }
 
     function displayDirectoryList(nodesWithSize) {
+        console.time('DISPLAY')
         subNodesWithSize = nodesWithSize
         renderTreeMap()
+        console.timeEnd('DISPLAY')
+
+        console.timeEnd('TOTAL')
     }
 
     function collapseSubNode(nodePath) {
@@ -168,11 +172,19 @@ Page {
             return
         }
 
+        console.time('SIZES')
         var sizeArr = []
         for (var i in visibleNodesWithSize) {
             sizeArr.push(visibleNodesWithSize[i].size)
         }
+        console.timeEnd('SIZES')
+
+
+        console.time('COORDS')
         var coords = Tm.Treemap.generate(sizeArr, treeMap.width, treeMap.height)
+        console.timeEnd('COORDS')
+
+        console.time('ITEMS')
         var nodeComponent = Qt.createComponent('../components/TreeMapNode.qml')
         for (var i in coords) {
             var coord = coords[i]
@@ -187,6 +199,8 @@ Page {
                 nodeComponent.createObject(treeMap, nodeConfig)
             }
         }
+        console.timeEnd('ITEMS')
+
         busyIndicator.running = false
         busyIndicator.visible = false
     }

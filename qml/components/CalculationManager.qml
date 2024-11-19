@@ -34,6 +34,7 @@ Item {
         onFolderSizeInfoReady: {
             // @disable-check M325
             if (handle != _sizeInfoHandle) {
+                console.log("ignoring unknown handle", handle)
                 return
             }
 
@@ -44,15 +45,24 @@ Item {
             nodeModel = nodeModel
 
             console.log("size calculated:", status)
+            console.timeEnd('INFO REQUESTED')
+
+            console.time('INFO NOTIFIED')
+            console.timeEnd('name')
             resultReady(info)
+            console.timeEnd('INFO NOTIFIED')
         }
     }
 
     function refresh() {
+        console.time('INFO REQUESTED')
         _sizeInfoHandle = Engine.requestFolderSizeInfo(nodeModel.dir)
     }
 
     Component.onCompleted: {
+        console.time('TOTAL')
+        console.time('INITIAL REFRESH')
         refresh()
+        console.timeEnd('INITIAL REFRESH')
     }
 }

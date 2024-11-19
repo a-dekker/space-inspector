@@ -77,7 +77,10 @@ Page {
                 }
             }
 
-            onClicked: pageStack.animatorReplaceAbove(null,
+            onClicked: {
+                console.time('PUSHED')
+
+                pageStack.animatorPush(
                 Qt.resolvedUrl("../pages/TreeMapPage.qml"), {
                 "nodeModel": {
                     "name": name,
@@ -87,6 +90,8 @@ Page {
                     "formattedSize": "",
                 }
             })
+                console.timeEnd('PUSHED')
+            }
         }
     }
 }
