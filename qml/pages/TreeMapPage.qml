@@ -23,6 +23,7 @@
 import QtQuick 2.2
 import Sailfish.Silica 1.0
 import Harbour.FileBrowser.Engine 1.0
+import Harbour.FileBrowser.FileData 1.0
 
 import "../components"
 import "../js/treemap-squarify.js" as Tm
@@ -50,6 +51,11 @@ Page {
                 renderTreeMap()
             }
         }
+    }
+
+    FileData {
+        id: fileData
+        file: nodeModel.dir
     }
 
     SilicaFlickable {
@@ -156,6 +162,10 @@ Page {
             pageStack.replace("../pages/ListPage.qml", {
                 "nodeModel": nodeModel
             })
+            return
+        } else if (visibleNodesWithSize.length === 0) {
+            busyIndicator.running = false
+            busyIndicator.visible = false
             return
         }
 
