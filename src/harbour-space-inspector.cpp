@@ -31,20 +31,23 @@
 #include <QScopedPointer>
 
 #include "requires_defines.h"
+#include "constants.h"
+#include "si_engine.h"
 #include "io/statfileinfo.h"
 #include "io/filedata.h"
 #include "io/bookmarks.h"
 #include "io/enumcontainer.h"
-#include "si_engine.h"
+
+DEFINE_ENUM_REGISTRATION_FUNCTION(SpaceInspector) {
+    REGISTER_ENUM_CONTAINER(ViewMode)
+}
 
 int main(int argc, char *argv[]) {
+    // File Browser types
     qRegisterMetaType<StatFileInfo>("StatFileInfo");
     qRegisterMetaType<QList<StatFileInfo>>("QList<StatFileInfo>");
     qRegisterMetaType<LocationAlternative>("LocationAlternative");
     qRegisterMetaType<QList<LocationAlternative>>("QList<LocationAlternative>");
-    qRegisterMetaType<SizeInfo>("SizeInfo");
-    qRegisterMetaType<QList<SizeInfo>>("QList<SizeInfo>");
-    qRegisterMetaType<FolderSizeStatusInfo>("FolderSizeStatusInfo");
 
     qmlRegisterType<FileData>("Harbour.FileBrowser.FileData", 1, 0, "FileData");
     REGISTER_ENUMS(Bookmarks, "Harbour.FileBrowser.Bookmarks", 1, 0)
@@ -58,6 +61,15 @@ int main(int argc, char *argv[]) {
             return new BookmarksModel;
      });
 
+    // Space Inspector types
+    REGISTER_ENUMS(SpaceInspector, "Harbour.SpaceInspector.Constants", 1, 0)
+    qmlRegisterUncreatableType<ViewMode>("Harbour.SpaceInspector.Constants", 1, 0, "ViewMode", "This is only a container for an enumeration.");
+
+    qRegisterMetaType<SizeInfo>("SizeInfo");
+    qRegisterMetaType<QList<SizeInfo>>("QList<SizeInfo>");
+    qRegisterMetaType<FolderSizeStatusInfo>("FolderSizeStatusInfo");
+
+    // App setup
     QScopedPointer<QGuiApplication> app(SailfishApp::application(argc, argv));
     app->setOrganizationName("harbour-space-inspector"); // needed for Sailjail
     app->setApplicationName("harbour-space-inspector");

@@ -70,6 +70,7 @@ OTHER_FILES += qml/harbour-space-inspector.qml \
 
 HEADERS += \
     src/si_engine.h \
+    src/constants.h \
     src/io/bookmarks.h \
     src/io/configfilemonitor.h \
     src/io/engine.h \
