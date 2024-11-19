@@ -43,7 +43,7 @@ Page {
         anchors.fill: parent
 
         header: PageHeader {
-            title: nodeModel.name
+            title: nodeModel.name || qsTr("Root")
             description: nodeModel.formattedSize
         }
 

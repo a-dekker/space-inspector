@@ -83,8 +83,8 @@ Page {
 
         PageHeader {
             id: title
-            title: nodeModel.name
-            description: nodeModel.formattedSize
+            title: nodeModel.name || qsTr("Root")
+            description: manager.nodeModel.formattedSize
         }
 
         ActivityIndicator {
