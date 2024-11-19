@@ -61,9 +61,8 @@ int main(int argc, char *argv[]) {
     qmlRegisterType<Shell>("harbour.space.inspector.shell", 1, 0, "Shell");
 
     QScopedPointer<QGuiApplication> app(SailfishApp::application(argc, argv));
-
-    QTranslator translator;
-    QString locale = QLocale::system().name();
+    app->setOrganizationName("harbour-space-inspector"); // needed for Sailjail
+    app->setApplicationName("harbour-space-inspector");
 
     QScopedPointer<QQuickView> view(SailfishApp::createView());
 
@@ -75,10 +74,8 @@ int main(int argc, char *argv[]) {
     QVariant engineVariant = qVariantFromValue(engine.data());
     qApp->setProperty("engine", engineVariant);
 
-    view->setSource(SailfishApp::pathTo("qml/harbour-space-inspector.qml"));
+    view->setSource(SailfishApp::pathToMainQml());
     view->show();
 
     return app->exec();
-
-    // return SailfishApp::main(argc, argv);
 }
