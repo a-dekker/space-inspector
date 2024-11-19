@@ -8,6 +8,7 @@
 import QtQuick 2.2
 import Sailfish.Silica 1.0
 import Harbour.FileBrowser.FileData 1.0
+import Harbour.FileBrowser.Engine 1.0
 import QtQuick.Layouts 1.1
 import "../components"
 
@@ -16,6 +17,11 @@ Dialog {
     allowedOrientations: Orientation.All
 
     property var nodeModel
+
+    onAccepted: {
+        console.log("deleting:", nodeModel.dir)
+        Engine.deleteFiles([nodeModel.dir])
+    }
 
     FileData {
         id: fileData
