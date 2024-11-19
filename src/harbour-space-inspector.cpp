@@ -66,13 +66,7 @@ int main(int argc, char *argv[]) {
 
     QScopedPointer<QQuickView> view(SailfishApp::createView());
 
-    // QML global engine object
-    QScopedPointer<Engine> engine(new Engine);
-    view->rootContext()->setContextProperty("engine", engine.data());
 
-    // store pointer to engine to access it in any class, to make it a singleton
-    QVariant engineVariant = qVariantFromValue(engine.data());
-    qApp->setProperty("engine", engineVariant);
 
     view->setSource(SailfishApp::pathToMainQml());
     view->show();
