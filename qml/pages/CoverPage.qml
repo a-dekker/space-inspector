@@ -62,14 +62,6 @@ CoverBackground {
                 }
             }
 
-            /*rightItemAlignment: Qt.AlignVCenter
-            rightItem: DelegateInfoItem {
-                minWidth: 0
-                alignment: Qt.AlignRight
-                text: "%1%".arg(sizeBar.diskSpaceInfo[1])
-                textLabel.font.pixelSize: Theme.fontSizeMedium
-            }*/
-
             StorageSizeBar {
                 id: sizeBar
                 parent: delegate.bodyColumn
