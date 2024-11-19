@@ -68,7 +68,7 @@ int main(int argc, char *argv[]) {
     QScopedPointer<QQuickView> view(SailfishApp::createView());
 
     // add module search path so Opal modules can be found
-    // view->engine()->addImportPath(SailfishApp::pathTo("qml/modules").toString());
+    view->engine()->addImportPath(SailfishApp::pathTo("qml/modules").toString());
 
     // view->rootContext()->setContextProperty("APP_VERSION", QStringLiteral(APP_VERSION));
     // view->rootContext()->setContextProperty("APP_RELEASE", QStringLiteral(APP_RELEASE));
