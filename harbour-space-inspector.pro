@@ -89,8 +89,4 @@ DISTFILES += \
 
 SAILFISHAPP_ICONS = 86x86 108x108 128x128 172x172 256x256
 
-TRANSLATIONS = \
-    translations/$${TARGET}-de.ts \
-    translations/$${TARGET}-es.ts \
-    translations/$${TARGET}-zh_CN.ts \
-    translations/$${TARGET}-sv.ts
+TRANSLATIONS = translations/$${TARGET}-*.ts
