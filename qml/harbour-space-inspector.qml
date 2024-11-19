@@ -22,17 +22,42 @@
 
 import QtQuick 2.2
 import Sailfish.Silica 1.0
+import Nemo.Notifications 1.0
 import Harbour.FileBrowser.Bookmarks 1.0
+import Harbour.FileBrowser.Engine 1.0
 import "pages"
 
 ApplicationWindow {
+    id: main
+
+    property string appName: "Space Inspector"
+
     allowedOrientations: defaultAllowedOrientations
     _defaultPageOrientations: defaultAllowedOrientations
 
+    cover: Qt.resolvedUrl("pages/CoverPage.qml")
     initialPage: Component {
         PlacesPage {}
+
+    Notification {
+        id: workerErrorNotification
+        appIcon: "image://theme/icon-lock-warning"
+        previewSummary: qsTr("An error occurred")
+        appName: main.appName
+
+        summary: previewSummary
+        previewBody: ""
+        body: ""
     }
-    cover: Qt.resolvedUrl("pages/CoverPage.qml")
+
+    Connections {
+        target: Engine
+        onWorkerErrorOccurred: {
+            console.warn("FileWorker error: ", message, filename)
+            workerErrorNotification.body = message + "\n" + filename
+            workerErrorNotification.publish()
+        }
+    }
 
     Component.onCompleted: {
         BookmarksModel.sortFilter([BookmarkGroup.Device])

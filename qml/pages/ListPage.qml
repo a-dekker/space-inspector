@@ -150,11 +150,7 @@ Page {
                 }
             }
         }
-    }
 
-    NotificationPanel {
-        id: notificationPanel
-        page: page
     }
 
     CalculationManager {
@@ -164,11 +160,6 @@ Page {
 
     Connections {
         target: Engine
-        onWorkerErrorOccurred: {
-            console.log("FileWorker error: ", message, filename)
-            notificationPanel.showTextWithTimer(qsTr("An error occurred"),
-                                                message)
-        }
         onFileDeleted: {
             refreshPage()
         }
@@ -201,7 +192,7 @@ Page {
     }
 
     function refreshPage() {
-        if (pageStack.currentPage === page && !pageStack.busy) {
+        if (pageStack.currentPage == page && !pageStack.busy) {
             pageStack.replace("../pages/ListPage.qml", {
                                   "nodeModel": pageStack.currentPage.nodeModel
                               })

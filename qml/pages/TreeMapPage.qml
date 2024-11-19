@@ -120,11 +120,7 @@ Page {
                 }
             }
         }
-    }
 
-    NotificationPanel {
-        id: notificationPanel
-        page: page
     }
 
     CalculationManager {
@@ -134,11 +130,6 @@ Page {
 
     Connections {
         target: Engine
-        onWorkerErrorOccurred: {
-            console.log("FileWorker error: ", message, filename)
-            notificationPanel.showTextWithTimer(qsTr("An error occurred"),
-                                                message)
-        }
         onFileDeleted: {
             refreshPage()
         }
