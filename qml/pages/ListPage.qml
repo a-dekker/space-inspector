@@ -86,9 +86,11 @@ Page {
             text: model.name
             opacity: model.isDir ? 1.0 : 0.75
 
-            menu: NodeContextMenu {
-                nodeModel: model
-                listViewMode: true
+            menu: Component {
+                NodeContextMenu {
+                    nodeModel: model
+                    listViewMode: true
+                }
             }
 
             leftItem: DelegateIconItem {
