@@ -9,12 +9,13 @@ import QtQuick 2.2
 import Sailfish.Silica 1.0
 import Harbour.FileBrowser.Engine 1.0
 import Harbour.FileBrowser.FileData 1.0
+import Harbour.SpaceInspector.Constants 1.0
 
 ContextMenu {
     id: contextMenu
 
     property var nodeModel
-    property bool listViewMode: false
+    property int viewMode: ViewMode.Box
     property bool canCollapse: true
 
     signal collapseClicked
@@ -30,7 +31,7 @@ ContextMenu {
 
     MenuItem {
         text: qsTr("Collapse")
-        visible: !listViewMode && canCollapse
+        visible: viewMode == ViewMode.Box && canCollapse
         onClicked: {
             collapseClicked()
         }

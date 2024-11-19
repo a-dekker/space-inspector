@@ -25,6 +25,7 @@ import Sailfish.Silica 1.0
 import Opal.Delegates 1.0
 import Opal.SmartScrollbar 1.0
 import Harbour.FileBrowser.Engine 1.0
+import Harbour.SpaceInspector.Constants 1.0
 import "../components"
 
 Page {
@@ -93,7 +94,7 @@ Page {
             menu: Component {
                 NodeContextMenu {
                     nodeModel: model
-                    listViewMode: true
+                    viewMode: ViewMode.List
                 }
             }
 
