@@ -116,8 +116,10 @@ Item {
                    Theme.primaryColor
 
         // \x9C separates options in multi-length strings
-        text: [nodeModel.name + '\n' + nodeModel.formattedSize,
-               nodeModel.formattedSize].join("\x9C")
+        text: !!nodeModel ?
+                  [nodeModel.name + '\n' + nodeModel.formattedSize,
+                   nodeModel.formattedSize].join("\x9C") :
+                  ''
         elide: Text.ElideRight
         fontSizeMode: Text.Fit
         wrapMode: Text.Wrap
