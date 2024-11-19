@@ -179,83 +179,60 @@ a moment.</source>
 <context>
     <name>DeleteDialog</name>
     <message>
-        <location filename="../qml/pages/DeleteDialog.qml" line="42"/>
+        <location filename="../qml/pages/DeleteDialog.qml" line="48"/>
         <source>Confirm deletion</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/DeleteDialog.qml" line="43"/>
+        <location filename="../qml/pages/DeleteDialog.qml" line="49"/>
         <source>Delete folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/DeleteDialog.qml" line="43"/>
+        <location filename="../qml/pages/DeleteDialog.qml" line="49"/>
         <source>Delete file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/DeleteDialog.qml" line="52"/>
+        <location filename="../qml/pages/DeleteDialog.qml" line="58"/>
         <source>Are you sure that you want to delete this folder and all its contents?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/DeleteDialog.qml" line="55"/>
+        <location filename="../qml/pages/DeleteDialog.qml" line="61"/>
         <source>Are you sure that you want to delete this element?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/DeleteDialog.qml" line="72"/>
-        <source>Size</source>
-        <translation>Розмір</translation>
-    </message>
-    <message numerus="yes">
-        <location filename="../qml/pages/DeleteDialog.qml" line="74"/>
-        <source>%n file(s)</source>
-        <translation>
-            <numerusform>%n файл</numerusform>
-            <numerusform>%n файли</numerusform>
-            <numerusform>%n файлів</numerusform>
-        </translation>
-    </message>
-    <message numerus="yes">
-        <location filename="../qml/pages/DeleteDialog.qml" line="75"/>
-        <source>%n folder(s)</source>
-        <translation>
-            <numerusform>%n тека</numerusform>
-            <numerusform>%n теки</numerusform>
-            <numerusform>%n тек</numerusform>
-        </translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/DeleteDialog.qml" line="81"/>
+        <location filename="../qml/pages/DeleteDialog.qml" line="83"/>
         <source>Type</source>
         <comment>as in “file type” but very short</comment>
         <translation>Тип</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DeleteDialog.qml" line="82"/>
+        <location filename="../qml/pages/DeleteDialog.qml" line="84"/>
         <source>Folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/DeleteDialog.qml" line="82"/>
+        <location filename="../qml/pages/DeleteDialog.qml" line="84"/>
         <source>File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/DeleteDialog.qml" line="86"/>
+        <location filename="../qml/pages/DeleteDialog.qml" line="88"/>
         <source>Path</source>
         <comment>as in “file path but very short</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/DeleteDialog.qml" line="91"/>
+        <location filename="../qml/pages/DeleteDialog.qml" line="93"/>
         <source>Name</source>
         <comment>as in “file name” but very short</comment>
         <translation>Ім&apos;ям</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DeleteDialog.qml" line="111"/>
+        <location filename="../qml/pages/DeleteDialog.qml" line="113"/>
         <source>Warning: deleting files might break things, or even leave your phone in an unusable state.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -283,103 +260,103 @@ a moment.</source>
         <translation>Неможливо перемістити/скопіювати до себе</translation>
     </message>
     <message>
-        <location filename="../src/io/engine.cpp" line="248"/>
+        <location filename="../src/io/engine.cpp" line="258"/>
         <source>File does not exist</source>
         <translation>Файлу не існує</translation>
     </message>
     <message>
-        <location filename="../src/io/engine.cpp" line="250"/>
+        <location filename="../src/io/engine.cpp" line="260"/>
         <source>Broken symbolic link</source>
         <translation>Зламане символічне посилання</translation>
     </message>
     <message>
-        <location filename="../src/io/engine.cpp" line="255"/>
+        <location filename="../src/io/engine.cpp" line="265"/>
         <source>Cannot read this type of file</source>
         <translation>Не вдається прочитати цей тип файлів</translation>
     </message>
     <message>
-        <location filename="../src/io/engine.cpp" line="261"/>
+        <location filename="../src/io/engine.cpp" line="271"/>
         <source>No permission to read the file</source>
         <translation>Немає дозволу на читання файлу</translation>
     </message>
     <message>
-        <location filename="../src/io/engine.cpp" line="265"/>
-        <location filename="../src/io/engine.cpp" line="271"/>
+        <location filename="../src/io/engine.cpp" line="275"/>
+        <location filename="../src/io/engine.cpp" line="281"/>
         <source>Error reading file</source>
         <translation>Помилка читання файлу</translation>
     </message>
     <message>
-        <location filename="../src/io/engine.cpp" line="274"/>
+        <location filename="../src/io/engine.cpp" line="284"/>
         <source>Empty file</source>
         <translation>Порожній файл</translation>
     </message>
     <message>
-        <location filename="../src/io/engine.cpp" line="300"/>
+        <location filename="../src/io/engine.cpp" line="310"/>
         <source>Binary file preview clipped at %1 kB</source>
         <translation>Попередній перегляд бінарного файлу за посиланням %1 кб</translation>
     </message>
     <message>
-        <location filename="../src/io/engine.cpp" line="319"/>
+        <location filename="../src/io/engine.cpp" line="329"/>
         <source>Text file preview clipped at %1 lines</source>
         <translation>Попередній перегляд текстового файлу обрізано на %1 рядків</translation>
     </message>
     <message>
-        <location filename="../src/io/engine.cpp" line="321"/>
+        <location filename="../src/io/engine.cpp" line="331"/>
         <source>Text file preview clipped at %1 kB</source>
         <translation>Попередній перегляд текстового файлу за посиланням %1 кб</translation>
     </message>
     <message>
-        <location filename="../src/io/engine.cpp" line="340"/>
+        <location filename="../src/io/engine.cpp" line="350"/>
         <source>No permissions to create %1</source>
         <translation>Немає дозволів на створення %1</translation>
     </message>
     <message>
-        <location filename="../src/io/engine.cpp" line="342"/>
+        <location filename="../src/io/engine.cpp" line="352"/>
         <source>Cannot create folder %1</source>
         <translation>Не вдається створити теку %1</translation>
     </message>
     <message>
-        <location filename="../src/io/engine.cpp" line="358"/>
+        <location filename="../src/io/engine.cpp" line="368"/>
         <source>No permissions to create “%1” in “%2”</source>
         <translation>Немає дозволів на створення &quot;%1&quot; в &quot;%2&quot;</translation>
     </message>
     <message>
-        <location filename="../src/io/engine.cpp" line="369"/>
+        <location filename="../src/io/engine.cpp" line="379"/>
         <source>Cannot create file “%1” in “%2”</source>
         <translation>Не вдається створити файл &quot;%1&quot; в &quot;%2&quot;</translation>
     </message>
     <message>
-        <location filename="../src/io/engine.cpp" line="405"/>
+        <location filename="../src/io/engine.cpp" line="415"/>
         <source>Cannot rename %1</source>
         <translation>Неможливо перейменувати %1</translation>
     </message>
     <message>
-        <location filename="../src/io/engine.cpp" line="422"/>
+        <location filename="../src/io/engine.cpp" line="432"/>
         <source>Source “%1” is not a symbolic link</source>
         <translation>Джерело &quot;%1&quot; не є символічним посиланням</translation>
     </message>
     <message>
-        <location filename="../src/io/engine.cpp" line="431"/>
+        <location filename="../src/io/engine.cpp" line="441"/>
         <source>No permissions to change contents of “%1”</source>
         <translation>Немає дозволів на зміну вмісту &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../src/io/engine.cpp" line="439"/>
+        <location filename="../src/io/engine.cpp" line="449"/>
         <source>Failed to remove old link “%1” pointing to “%2”</source>
         <translation>Не вдалося видалити старе посилання &quot;%1&quot;, що вказує на &quot;%2&quot;</translation>
     </message>
     <message>
-        <location filename="../src/io/engine.cpp" line="445"/>
+        <location filename="../src/io/engine.cpp" line="455"/>
         <source>Failed to revert link “%1” pointing to “%2” after failing to change target to “%3”</source>
         <translation>Не вдалося повернути посилання &quot;%1&quot;, що вказує на &quot;%2&quot;, після невдалої спроби змінити ціль на &quot;%3&quot;</translation>
     </message>
     <message>
-        <location filename="../src/io/engine.cpp" line="452"/>
+        <location filename="../src/io/engine.cpp" line="462"/>
         <source>Failed to change link target of “%1” to “%2”</source>
         <translation>Не вдалося змінити ціль посилання з &quot;%1&quot; на &quot;%2&quot;</translation>
     </message>
     <message>
-        <location filename="../src/io/engine.cpp" line="478"/>
+        <location filename="../src/io/engine.cpp" line="488"/>
         <source>Cannot change permissions</source>
         <translation>Неможливо змінити дозволи</translation>
     </message>
@@ -573,6 +550,11 @@ a moment.</source>
 <context>
     <name>ListPage</name>
     <message>
+        <location filename="../qml/pages/ListPage.qml" line="46"/>
+        <source>Root</source>
+        <translation type="unfinished">Root</translation>
+    </message>
+    <message>
         <location filename="../qml/pages/ListPage.qml" line="68"/>
         <source>Go to...</source>
         <translation type="unfinished"></translation>
@@ -588,13 +570,13 @@ a moment.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/ListPage.qml" line="125"/>
+        <location filename="../qml/pages/ListPage.qml" line="127"/>
         <source>Empty</source>
         <comment>as in “this folder is empty”</comment>
         <translation>Порожньо</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ListPage.qml" line="126"/>
+        <location filename="../qml/pages/ListPage.qml" line="128"/>
         <source>This folder is empty.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -602,17 +584,17 @@ a moment.</source>
 <context>
     <name>NodeContextMenu</name>
     <message>
-        <location filename="../qml/components/NodeContextMenu.qml" line="31"/>
+        <location filename="../qml/components/NodeContextMenu.qml" line="32"/>
         <source>Collapse</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/NodeContextMenu.qml" line="40"/>
+        <location filename="../qml/components/NodeContextMenu.qml" line="41"/>
         <source>Open</source>
         <translation>Відкрити</translation>
     </message>
     <message>
-        <location filename="../qml/components/NodeContextMenu.qml" line="48"/>
+        <location filename="../qml/components/NodeContextMenu.qml" line="49"/>
         <source>Delete</source>
         <translation>Видалити</translation>
     </message>
@@ -789,14 +771,19 @@ a moment.</source>
 <context>
     <name>PlacesPage</name>
     <message>
-        <location filename="../qml/pages/PlacesPage.qml" line="27"/>
+        <location filename="../qml/pages/PlacesPage.qml" line="39"/>
         <source>Places</source>
         <translation>Місця</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlacesPage.qml" line="39"/>
+        <location filename="../qml/pages/PlacesPage.qml" line="51"/>
         <source>About</source>
         <translation>Про застосунок</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/PlacesPage.qml" line="56"/>
+        <source>Settings</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -815,6 +802,73 @@ a moment.</source>
         <location filename="../src/io/globals.cpp" line="126"/>
         <source>dd.MM.yy, hh:mm</source>
         <translation>dd.MM.yy, hh:mm</translation>
+    </message>
+</context>
+<context>
+    <name>SettingsPage</name>
+    <message>
+        <location filename="../qml/pages/SettingsPage.qml" line="38"/>
+        <source>Settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingsPage.qml" line="42"/>
+        <source>Default view</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingsPage.qml" line="52"/>
+        <source>Box view</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingsPage.qml" line="56"/>
+        <source>List view</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>SizeDetailItem</name>
+    <message>
+        <location filename="../qml/components/SizeDetailItem.qml" line="23"/>
+        <source>folders</source>
+        <comment>generic form for unknown number of items</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/components/SizeDetailItem.qml" line="24"/>
+        <source>files</source>
+        <comment>generic form for unknown number of items</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/components/SizeDetailItem.qml" line="25"/>
+        <source></source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../qml/components/SizeDetailItem.qml" line="31"/>
+        <source>Size</source>
+        <comment>as in “file size” but very short</comment>
+        <translation type="unfinished">Розмір</translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../qml/components/SizeDetailItem.qml" line="50"/>
+        <source>%n folder(s)</source>
+        <translation type="unfinished">
+            <numerusform>%n тека</numerusform>
+            <numerusform>%n теки</numerusform>
+            <numerusform>%n тек</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../qml/components/SizeDetailItem.qml" line="55"/>
+        <source>%n file(s)</source>
+        <translation type="unfinished">
+            <numerusform>%n файл</numerusform>
+            <numerusform>%n файли</numerusform>
+            <numerusform>%n файлів</numerusform>
+        </translation>
     </message>
 </context>
 <context>
@@ -837,8 +891,8 @@ a moment.</source>
 <context>
     <name>TreeMapNodeCollapsed</name>
     <message numerus="yes">
-        <location filename="../qml/components/TreeMapNodeCollapsed.qml" line="33"/>
-        <source>%n collapsed item(s) (%1)</source>
+        <location filename="../qml/components/TreeMapNodeCollapsed.qml" line="50"/>
+        <source>%n collapsed item(s)</source>
         <translation type="unfinished">
             <numerusform></numerusform>
             <numerusform></numerusform>
@@ -864,13 +918,18 @@ a moment.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/TreeMapPage.qml" line="126"/>
+        <location filename="../qml/pages/TreeMapPage.qml" line="86"/>
+        <source>Root</source>
+        <translation type="unfinished">Root</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/TreeMapPage.qml" line="165"/>
         <source>Empty</source>
         <comment>as in “this folder is empty”</comment>
         <translation>Порожньо</translation>
     </message>
     <message>
-        <location filename="../qml/pages/TreeMapPage.qml" line="127"/>
+        <location filename="../qml/pages/TreeMapPage.qml" line="166"/>
         <source>This folder is empty.</source>
         <translation type="unfinished"></translation>
     </message>

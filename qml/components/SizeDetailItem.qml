@@ -22,7 +22,7 @@ Item {
     property string _placeholder: fileData.isDir ?
         [qsTr("folders", "generic form for unknown number of items"),
          qsTr("files", "generic form for unknown number of items"),
-         qsTr("")].join("\n") : ""
+         ""].join("\n") : ""
     property string _value: ""
 
     InfoGridItem {

@@ -181,81 +181,60 @@ Moment dauern.</translation>
 <context>
     <name>DeleteDialog</name>
     <message>
-        <location filename="../qml/pages/DeleteDialog.qml" line="42"/>
+        <location filename="../qml/pages/DeleteDialog.qml" line="48"/>
         <source>Confirm deletion</source>
         <translation>Löschen bestätigen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DeleteDialog.qml" line="43"/>
+        <location filename="../qml/pages/DeleteDialog.qml" line="49"/>
         <source>Delete folder</source>
         <translation>Ordner löschen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DeleteDialog.qml" line="43"/>
+        <location filename="../qml/pages/DeleteDialog.qml" line="49"/>
         <source>Delete file</source>
         <translation>Datei löschen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DeleteDialog.qml" line="52"/>
+        <location filename="../qml/pages/DeleteDialog.qml" line="58"/>
         <source>Are you sure that you want to delete this folder and all its contents?</source>
         <translation>Sind Sie sich sicher, dass Sie diesen Ordner mitsamt seinem Inhalt löschen möchten?</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DeleteDialog.qml" line="55"/>
+        <location filename="../qml/pages/DeleteDialog.qml" line="61"/>
         <source>Are you sure that you want to delete this element?</source>
         <translation>Sind Sie sich sicher, dass Sie dieses Element löschen möchten?</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DeleteDialog.qml" line="72"/>
-        <source>Size</source>
-        <translation>Größe</translation>
-    </message>
-    <message numerus="yes">
-        <location filename="../qml/pages/DeleteDialog.qml" line="74"/>
-        <source>%n file(s)</source>
-        <translation>
-            <numerusform>%n Datei</numerusform>
-            <numerusform>%n Dateien</numerusform>
-        </translation>
-    </message>
-    <message numerus="yes">
-        <location filename="../qml/pages/DeleteDialog.qml" line="75"/>
-        <source>%n folder(s)</source>
-        <translation>
-            <numerusform>%n Ordner</numerusform>
-            <numerusform>%n Ordner</numerusform>
-        </translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/DeleteDialog.qml" line="81"/>
+        <location filename="../qml/pages/DeleteDialog.qml" line="83"/>
         <source>Type</source>
         <comment>as in “file type” but very short</comment>
         <translation>Typ</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DeleteDialog.qml" line="82"/>
+        <location filename="../qml/pages/DeleteDialog.qml" line="84"/>
         <source>Folder</source>
         <translation>Ordner</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DeleteDialog.qml" line="82"/>
+        <location filename="../qml/pages/DeleteDialog.qml" line="84"/>
         <source>File</source>
         <translation>Datei</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DeleteDialog.qml" line="86"/>
+        <location filename="../qml/pages/DeleteDialog.qml" line="88"/>
         <source>Path</source>
         <comment>as in “file path but very short</comment>
         <translation>Pfad</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DeleteDialog.qml" line="91"/>
+        <location filename="../qml/pages/DeleteDialog.qml" line="93"/>
         <source>Name</source>
         <comment>as in “file name” but very short</comment>
         <translation>Name</translation>
     </message>
     <message>
-        <location filename="../qml/pages/DeleteDialog.qml" line="111"/>
+        <location filename="../qml/pages/DeleteDialog.qml" line="113"/>
         <source>Warning: deleting files might break things, or even leave your phone in an unusable state.</source>
         <translation>Warnung: Dateien zu löschen kann Probleme verursachen und sogar dazu führen, dass das Gerät unbenutzbar wird.</translation>
     </message>
@@ -283,103 +262,103 @@ Moment dauern.</translation>
         <translation>Kann nicht in sich selbst verschoben/kopiert werden</translation>
     </message>
     <message>
-        <location filename="../src/io/engine.cpp" line="248"/>
+        <location filename="../src/io/engine.cpp" line="258"/>
         <source>File does not exist</source>
         <translation>Datei existiert nicht</translation>
     </message>
     <message>
-        <location filename="../src/io/engine.cpp" line="250"/>
+        <location filename="../src/io/engine.cpp" line="260"/>
         <source>Broken symbolic link</source>
         <translation>Symbolische Verknüpfung defekt</translation>
     </message>
     <message>
-        <location filename="../src/io/engine.cpp" line="255"/>
+        <location filename="../src/io/engine.cpp" line="265"/>
         <source>Cannot read this type of file</source>
         <translation>Kann dieses Dateiformat nicht lesen</translation>
     </message>
     <message>
-        <location filename="../src/io/engine.cpp" line="261"/>
+        <location filename="../src/io/engine.cpp" line="271"/>
         <source>No permission to read the file</source>
         <translation>Keine Berechtigung zum Lesen der Datei</translation>
     </message>
     <message>
-        <location filename="../src/io/engine.cpp" line="265"/>
-        <location filename="../src/io/engine.cpp" line="271"/>
+        <location filename="../src/io/engine.cpp" line="275"/>
+        <location filename="../src/io/engine.cpp" line="281"/>
         <source>Error reading file</source>
         <translation>Fehler beim Lesen der Datei</translation>
     </message>
     <message>
-        <location filename="../src/io/engine.cpp" line="274"/>
+        <location filename="../src/io/engine.cpp" line="284"/>
         <source>Empty file</source>
         <translation>Leere Datei</translation>
     </message>
     <message>
-        <location filename="../src/io/engine.cpp" line="300"/>
+        <location filename="../src/io/engine.cpp" line="310"/>
         <source>Binary file preview clipped at %1 kB</source>
         <translation>Binärdatei-Vorschau auf %1 kB begrenzt</translation>
     </message>
     <message>
-        <location filename="../src/io/engine.cpp" line="319"/>
+        <location filename="../src/io/engine.cpp" line="329"/>
         <source>Text file preview clipped at %1 lines</source>
         <translation>Textdatei-Vorschau auf %1 Zeilen begrenzt</translation>
     </message>
     <message>
-        <location filename="../src/io/engine.cpp" line="321"/>
+        <location filename="../src/io/engine.cpp" line="331"/>
         <source>Text file preview clipped at %1 kB</source>
         <translation>Textdatei-Vorschau auf %1 kB begrenzt</translation>
     </message>
     <message>
-        <location filename="../src/io/engine.cpp" line="340"/>
+        <location filename="../src/io/engine.cpp" line="350"/>
         <source>No permissions to create %1</source>
         <translation>Keine Berechtigung zum Erstellen von %1</translation>
     </message>
     <message>
-        <location filename="../src/io/engine.cpp" line="342"/>
+        <location filename="../src/io/engine.cpp" line="352"/>
         <source>Cannot create folder %1</source>
         <translation>Kann Verzeichnis %1 nicht erstellen</translation>
     </message>
     <message>
-        <location filename="../src/io/engine.cpp" line="358"/>
+        <location filename="../src/io/engine.cpp" line="368"/>
         <source>No permissions to create “%1” in “%2”</source>
         <translation>Keine Berechtigung zum Erstellen von „%1“ in „%2“</translation>
     </message>
     <message>
-        <location filename="../src/io/engine.cpp" line="369"/>
+        <location filename="../src/io/engine.cpp" line="379"/>
         <source>Cannot create file “%1” in “%2”</source>
         <translation>Die Datei „%1“ kann nicht in „%2“ erstellt werden</translation>
     </message>
     <message>
-        <location filename="../src/io/engine.cpp" line="405"/>
+        <location filename="../src/io/engine.cpp" line="415"/>
         <source>Cannot rename %1</source>
         <translation>Kann %1 nicht umbenennen</translation>
     </message>
     <message>
-        <location filename="../src/io/engine.cpp" line="422"/>
+        <location filename="../src/io/engine.cpp" line="432"/>
         <source>Source “%1” is not a symbolic link</source>
         <translation>Quelle „%1“ ist keine Verknüpfung</translation>
     </message>
     <message>
-        <location filename="../src/io/engine.cpp" line="431"/>
+        <location filename="../src/io/engine.cpp" line="441"/>
         <source>No permissions to change contents of “%1”</source>
         <translation>Keine Berechtigung zum Ändern des Inhalts von „%1“</translation>
     </message>
     <message>
-        <location filename="../src/io/engine.cpp" line="439"/>
+        <location filename="../src/io/engine.cpp" line="449"/>
         <source>Failed to remove old link “%1” pointing to “%2”</source>
         <translation>Konnte die alte Verknüpfung von „%1“ auf „%2“ nicht entfernen</translation>
     </message>
     <message>
-        <location filename="../src/io/engine.cpp" line="445"/>
+        <location filename="../src/io/engine.cpp" line="455"/>
         <source>Failed to revert link “%1” pointing to “%2” after failing to change target to “%3”</source>
         <translation>Konnte die Verknüpfung „%1“ auf „%2“ nicht zurücksetzen, nachdem das Ändern des Ziels auf „%3“ fehlschlug</translation>
     </message>
     <message>
-        <location filename="../src/io/engine.cpp" line="452"/>
+        <location filename="../src/io/engine.cpp" line="462"/>
         <source>Failed to change link target of “%1” to “%2”</source>
         <translation>Konnte das Verknüpfungsziel von „%1“ nicht zu „%2“ ändern</translation>
     </message>
     <message>
-        <location filename="../src/io/engine.cpp" line="478"/>
+        <location filename="../src/io/engine.cpp" line="488"/>
         <source>Cannot change permissions</source>
         <translation>Kann Berechtigungen nicht anpassen</translation>
     </message>
@@ -577,13 +556,13 @@ Moment dauern.</translation>
         <translation>Kastenansicht</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ListPage.qml" line="125"/>
+        <location filename="../qml/pages/ListPage.qml" line="127"/>
         <source>Empty</source>
         <comment>as in “this folder is empty”</comment>
         <translation>Leer</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ListPage.qml" line="126"/>
+        <location filename="../qml/pages/ListPage.qml" line="128"/>
         <source>This folder is empty.</source>
         <translation>Dieser Ordner ist leer.</translation>
     </message>
@@ -591,6 +570,11 @@ Moment dauern.</translation>
         <location filename="../qml/pages/ListPage.qml" line="74"/>
         <source>Refresh</source>
         <translation>Aktualisieren</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ListPage.qml" line="46"/>
+        <source>Root</source>
+        <translation>Stammverzeichnis</translation>
     </message>
     <message>
         <location filename="../qml/pages/ListPage.qml" line="68"/>
@@ -601,17 +585,17 @@ Moment dauern.</translation>
 <context>
     <name>NodeContextMenu</name>
     <message>
-        <location filename="../qml/components/NodeContextMenu.qml" line="31"/>
+        <location filename="../qml/components/NodeContextMenu.qml" line="32"/>
         <source>Collapse</source>
         <translation>Ausblenden</translation>
     </message>
     <message>
-        <location filename="../qml/components/NodeContextMenu.qml" line="40"/>
+        <location filename="../qml/components/NodeContextMenu.qml" line="41"/>
         <source>Open</source>
         <translation>Öffnen</translation>
     </message>
     <message>
-        <location filename="../qml/components/NodeContextMenu.qml" line="48"/>
+        <location filename="../qml/components/NodeContextMenu.qml" line="49"/>
         <source>Delete</source>
         <translation>Löschen</translation>
     </message>
@@ -786,14 +770,19 @@ Moment dauern.</translation>
 <context>
     <name>PlacesPage</name>
     <message>
-        <location filename="../qml/pages/PlacesPage.qml" line="27"/>
+        <location filename="../qml/pages/PlacesPage.qml" line="39"/>
         <source>Places</source>
         <translation>Orte</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlacesPage.qml" line="39"/>
+        <location filename="../qml/pages/PlacesPage.qml" line="51"/>
         <source>About</source>
         <translation>Über</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/PlacesPage.qml" line="56"/>
+        <source>Settings</source>
+        <translation>Einstellungen</translation>
     </message>
 </context>
 <context>
@@ -812,6 +801,71 @@ Moment dauern.</translation>
         <location filename="../src/io/globals.cpp" line="126"/>
         <source>dd.MM.yy, hh:mm</source>
         <translation>d. M. yy, hh:mm</translation>
+    </message>
+</context>
+<context>
+    <name>SettingsPage</name>
+    <message>
+        <location filename="../qml/pages/SettingsPage.qml" line="38"/>
+        <source>Settings</source>
+        <translation>Einstellungen</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingsPage.qml" line="42"/>
+        <source>Default view</source>
+        <translation>Standardansicht</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingsPage.qml" line="52"/>
+        <source>Box view</source>
+        <translation>Kastenansicht</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingsPage.qml" line="56"/>
+        <source>List view</source>
+        <translation>Listenansicht</translation>
+    </message>
+</context>
+<context>
+    <name>SizeDetailItem</name>
+    <message>
+        <location filename="../qml/components/SizeDetailItem.qml" line="23"/>
+        <source>folders</source>
+        <comment>generic form for unknown number of items</comment>
+        <translation>Ordner</translation>
+    </message>
+    <message>
+        <location filename="../qml/components/SizeDetailItem.qml" line="24"/>
+        <source>files</source>
+        <comment>generic form for unknown number of items</comment>
+        <translation>Dateien</translation>
+    </message>
+    <message>
+        <location filename="../qml/components/SizeDetailItem.qml" line="25"/>
+        <source></source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../qml/components/SizeDetailItem.qml" line="31"/>
+        <source>Size</source>
+        <comment>as in “file size” but very short</comment>
+        <translation>Größe</translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../qml/components/SizeDetailItem.qml" line="50"/>
+        <source>%n folder(s)</source>
+        <translation>
+            <numerusform>%n Ordner</numerusform>
+            <numerusform>%n Ordner</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../qml/components/SizeDetailItem.qml" line="55"/>
+        <source>%n file(s)</source>
+        <translation>
+            <numerusform>%n Datei</numerusform>
+            <numerusform>%n Dateien</numerusform>
+        </translation>
     </message>
 </context>
 <context>
@@ -834,11 +888,11 @@ Moment dauern.</translation>
 <context>
     <name>TreeMapNodeCollapsed</name>
     <message numerus="yes">
-        <location filename="../qml/components/TreeMapNodeCollapsed.qml" line="33"/>
-        <source>%n collapsed item(s) (%1)</source>
+        <location filename="../qml/components/TreeMapNodeCollapsed.qml" line="50"/>
+        <source>%n collapsed item(s)</source>
         <translation>
-            <numerusform>%n ausgeblendetes Element (%1)</numerusform>
-            <numerusform>%n ausgeblendete Elemente (%1)</numerusform>
+            <numerusform>%n ausgeblendete Datei</numerusform>
+            <numerusform>%n ausgeblendete Dateien</numerusform>
         </translation>
     </message>
 </context>
@@ -855,13 +909,18 @@ Moment dauern.</translation>
         <translation>Listenansicht</translation>
     </message>
     <message>
-        <location filename="../qml/pages/TreeMapPage.qml" line="126"/>
+        <location filename="../qml/pages/TreeMapPage.qml" line="86"/>
+        <source>Root</source>
+        <translation>Stammverzeichnis</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/TreeMapPage.qml" line="165"/>
         <source>Empty</source>
         <comment>as in “this folder is empty”</comment>
         <translation>Leer</translation>
     </message>
     <message>
-        <location filename="../qml/pages/TreeMapPage.qml" line="127"/>
+        <location filename="../qml/pages/TreeMapPage.qml" line="166"/>
         <source>This folder is empty.</source>
         <translation>Dieser Ordner ist leer.</translation>
     </message>
