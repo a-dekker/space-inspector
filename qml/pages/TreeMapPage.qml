@@ -157,6 +157,15 @@ Page {
 
         var visibleNodesWithSize = removeCollapsed(subNodesWithSize)
 
+        // Fall back to list view if there are many entries,
+        // instead of freezing and possibly crashing the app.
+        if (visibleNodesWithSize.length > 1000) {
+            pageStack.replace("../pages/ListPage.qml", {
+                "nodeModel": nodeModel
+            })
+            return
+        }
+
         var sizeArr = []
         for (var i in visibleNodesWithSize) {
             sizeArr.push(visibleNodesWithSize[i].size)
