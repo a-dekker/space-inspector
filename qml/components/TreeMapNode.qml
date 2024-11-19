@@ -96,7 +96,7 @@ Item {
         color: !nodeModel || nodeModel.isDir ?
                    Theme.secondaryHighlightColor :
                    Util.colorForFile(nodeModel.name)
-        opacity: mArea.pressed ? 0.6 : 0.3
+        opacity: mArea.pressed || _menuActive ? 0.2 : 0.3
     }
 
     Label {
@@ -105,7 +105,7 @@ Item {
         y: 0
         width: nodeWidth
         height: nodeHeight
-        padding: 2*Theme.paddingSmall
+        padding: Theme.paddingSmall
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignVCenter
 
