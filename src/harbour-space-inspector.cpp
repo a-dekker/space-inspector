@@ -33,6 +33,7 @@
 #include <QtQml>
 #include <QtQuick/QQuickPaintedItem>
 
+// #include "requires_defines.h"
 #include "io/engine.h"
 #include "io/statfileinfo.h"
 #include "io/filedata.h"
@@ -66,7 +67,11 @@ int main(int argc, char *argv[]) {
 
     QScopedPointer<QQuickView> view(SailfishApp::createView());
 
+    // add module search path so Opal modules can be found
+    // view->engine()->addImportPath(SailfishApp::pathTo("qml/modules").toString());
 
+    // view->rootContext()->setContextProperty("APP_VERSION", QStringLiteral(APP_VERSION));
+    // view->rootContext()->setContextProperty("APP_RELEASE", QStringLiteral(APP_RELEASE));
 
     view->setSource(SailfishApp::pathToMainQml());
     view->show();
