@@ -14,6 +14,7 @@ Item {
     property GridLayout grid
     property string label
     property string value
+    property bool busy: false
 
     // note: GridLayout items are added upside down,
     // from bottom to top.
@@ -21,12 +22,24 @@ Item {
     Label {
         id: valueLabel
         parent: grid
+        leftPadding: root.busy ? spinner.width + Theme.paddingMedium : 0
         Layout.fillWidth: true
         Layout.alignment: Qt.AlignLeft | Qt.AlignTop
         text: value
         color: Theme.highlightColor
         font.pixelSize: Theme.fontSizeMedium
         wrapMode: Text.Wrap
+
+        BusyIndicator {
+            id: spinner
+            anchors {
+                left: parent.left
+                bottom: parent.baseline
+            }
+            visible: root.busy
+            size: BusyIndicatorSize.ExtraSmall
+            running: visible
+        }
     }
 
     Label {

@@ -67,14 +67,10 @@ Dialog {
                 // note: GridLayout items are added upside down,
                 // from bottom to top.
 
-                InfoGridItem {
+                SizeDetailItem {
                     grid: grid
-                    label: qsTr("Size")
-                    value: fileData.isDir ? [
-                               qsTr("%n file(s)", "", fileData.filesCount),
-                               qsTr("%n folder(s)", "", fileData.dirsCount)
-                           ].join("\n") :
-                           fileData.size
+                    fileData: fileData
+                    path: fileData.absoluteFilePath
                 }
                 InfoGridItem {
                     grid: grid
