@@ -29,6 +29,7 @@ import "../components"
 
 Page {
     id: page
+    allowedOrientations: Orientation.All
 
     property alias nodeModel: manager.nodeModel
 

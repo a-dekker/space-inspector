@@ -24,6 +24,7 @@ import "../components"
 
 Page {
     id: page
+    allowedOrientations: Orientation.All
 
     SilicaFlickable {
         id: sf

@@ -1,9 +1,20 @@
+/*
+    Space Inspector - a filesystem structure visualization for SailfishOS
+    SPDX-FileCopyrightText: 2014-2018 Jens Klingen
+    SPDX-FileCopyrightText: 2024 Mirian Margiani
+    SPDX-License-Identifier: GPL-3.0-or-later
+*/
+
 import QtQuick 2.2
 import Sailfish.Silica 1.0
 
 Dialog {
+    id: root
+    allowedOrientations: Orientation.All
 
     property var nodeModel
+
+
 
     Column {
         id: column

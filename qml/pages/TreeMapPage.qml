@@ -29,6 +29,7 @@ import "../js/treemap-squarify.js" as Tm
 
 Page {
     id: page
+    allowedOrientations: Orientation.All
 
     property alias nodeModel: manager.nodeModel
     property var collapsedSubNodePaths: []
