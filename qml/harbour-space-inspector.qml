@@ -1,8 +1,10 @@
-
-
 /*
     Space Inspector - a filesystem structure visualization for SailfishOS
-    Copyright (C) 2014 - 2018 Jens Klingen
+
+    SPDX-FileCopyrightText: Copyright (C) 2014 - 2018 Jens Klingen
+    SPDX-FileCopyrightText: 2024 Mirian Margiani
+
+    SPDX-License-Identifier: GPL-3.0-or-later
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +19,7 @@
     You should have received a copy of the GNU General Public License
     along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
+
 import QtQuick 2.2
 import Sailfish.Silica 1.0
 import Harbour.FileBrowser.Bookmarks 1.0
@@ -25,10 +28,6 @@ import "pages"
 ApplicationWindow {
     allowedOrientations: defaultAllowedOrientations
     _defaultPageOrientations: defaultAllowedOrientations
-    property string homeDf: ""
-    property string rootDf: ""
-    property string androidDf: ""
-    property string sdcardDf: ""
 
     initialPage: Component {
         PlacesPage {}

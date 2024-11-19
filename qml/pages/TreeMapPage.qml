@@ -1,6 +1,10 @@
 /*
     Space Inspector - a filesystem structure visualization for SailfishOS
-    Copyright (C) 2014 - 2018 Jens Klingen
+
+    SPDX-FileCopyrightText: Copyright (C) 2014 - 2018 Jens Klingen
+    SPDX-FileCopyrightText: 2024 Mirian Margiani
+
+    SPDX-License-Identifier: GPL-3.0-or-later
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -21,10 +25,7 @@ import Sailfish.Silica 1.0
 import Harbour.FileBrowser.Engine 1.0
 
 import "../components"
-
 import "../js/treemap-squarify.js" as Tm
-import "../js/Util.js" as Util
-import "../js/Memory.js" as Memory
 
 Page {
     id: page
