@@ -34,10 +34,8 @@ Item {
         onFolderSizeInfoReady: {
             // @disable-check M325
             if (handle != _sizeInfoHandle) {
-                console.log("ignoring unknown handle", handle)
                 return
             }
-
 
             nodeModel.name = status.name
             nodeModel.path = status.path
@@ -48,7 +46,6 @@ Item {
             console.timeEnd('INFO REQUESTED')
 
             console.time('INFO NOTIFIED')
-            console.timeEnd('name')
             resultReady(info)
             console.timeEnd('INFO NOTIFIED')
         }
