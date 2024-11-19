@@ -209,7 +209,7 @@ Page {
         console.time('SIZES')
         var sizeArr = []
         for (var i in visibleNodesWithSize) {
-            sizeArr.push(visibleNodesWithSize[i].size)
+            sizeArr.push(visibleNodesWithSize[i].kilobytes)
         }
         console.timeEnd('SIZES')
 
@@ -237,7 +237,7 @@ Page {
             if (collapsedSubNodePaths.indexOf(dir) < 0) {
                 ret.push(node)
             } else {
-                collapsedSubNodesSize += node.size
+                collapsedSubNodesSize += node.kilobytes
             }
         }
         return ret

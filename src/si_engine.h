@@ -15,13 +15,13 @@ class SizeInfo {
     RO_PROPERTY_GADGET(QString, name, "");
     RO_PROPERTY_GADGET(QString, dir, ""); // TODO rename to "path"
     RO_PROPERTY_GADGET(bool, isDir, false);
-    RO_PROPERTY_GADGET(qint64, size, 0); // TODO rename to "bytes"
-    RO_PROPERTY_GADGET(QString, formattedSize, ""); // TODO rename to "size"
+    RO_PROPERTY_GADGET(qint64, kilobytes, 0);
+    RO_PROPERTY_GADGET(QString, formattedSize, "");
 
 public:
     SizeInfo() = default;
     SizeInfo(QString name, QString path, bool isDir, qint64 bytes, QString formatted)
-        : m_name(name), m_dir(path), m_isDir(isDir), m_size(bytes), m_formattedSize(formatted) {}
+        : m_name(name), m_dir(path), m_isDir(isDir), m_kilobytes(bytes/1024), m_formattedSize(formatted) {}
     ~SizeInfo() = default;
 };
 
@@ -32,12 +32,12 @@ class FolderSizeStatusInfo {
     RO_PROPERTY_GADGET(QString, path, "");
     RO_PROPERTY_GADGET(qint64, folders, 0);
     RO_PROPERTY_GADGET(qint64, files, 0);
-    RO_PROPERTY_GADGET(QString, size, "-");  // human readable size
+    RO_PROPERTY_GADGET(QString, formattedSize, "-");  // human readable size
 
 public:
     FolderSizeStatusInfo() = default;
-    FolderSizeStatusInfo(bool ok, QString name, QString path, qint64 files, qint64 folders, QString size)
-        : m_ok(ok), m_name(name), m_path(path), m_folders(folders), m_files(files), m_size(size) {}
+    FolderSizeStatusInfo(bool ok, QString name, QString path, qint64 files, qint64 folders, QString formattedSize)
+        : m_ok(ok), m_name(name), m_path(path), m_folders(folders), m_files(files), m_formattedSize(formattedSize) {}
     ~FolderSizeStatusInfo() = default;
 };
 
@@ -54,10 +54,15 @@ public:
 
     /**
      * @brief Format bytes as human-readable file size.
-     * @param bytes
+     *
+     * @note The size is passed in KiB because QML does not
+     * properly support 64bit integers. Sizes in bytes
+     * quickly overflow.
+     *
+     * @param kilobytes Size in kilobytes (actually kibibytes, KiB)
      * @return e.g. "61.3 GiB"
      */
-    Q_INVOKABLE QString formatFileSize(qint64 bytes);
+    Q_INVOKABLE QString formatFileSize(qint64 kilobytes);
 
     /**
      * @brief Asynchronously calculate sizes of folder contents.

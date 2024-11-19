@@ -146,7 +146,7 @@ Page {
                 name: node.name,
                 dir: node.dir,
                 isDir: node.isDir,
-                size: node.size,
+                kilobytes: node.kilobytes,
                 formattedSize: node.formattedSize
             })
         }

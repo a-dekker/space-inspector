@@ -20,8 +20,8 @@ SpaceInspectorEngine::SpaceInspectorEngine(QObject *parent) :
 
 SpaceInspectorEngine::~SpaceInspectorEngine() {}
 
-QString SpaceInspectorEngine::formatFileSize(qint64 bytes) {
-    return filesizeToString(bytes);
+QString SpaceInspectorEngine::formatFileSize(qint64 kilobytes) {
+    return filesizeToString(kilobytes * 1024);
 }
 
 int SpaceInspectorEngine::requestFolderSizeInfo(const QString& folder)

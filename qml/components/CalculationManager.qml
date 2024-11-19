@@ -41,7 +41,7 @@ Item {
 
             nodeModel.name = status.name
             nodeModel.path = status.path
-            nodeModel.formattedSize = status.size
+            nodeModel.formattedSize = status.formattedSize
             nodeModel = nodeModel
 
             console.log("size calculated:", status)
