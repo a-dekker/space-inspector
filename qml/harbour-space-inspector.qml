@@ -19,6 +19,7 @@
 */
 import QtQuick 2.2
 import Sailfish.Silica 1.0
+import Harbour.FileBrowser.Bookmarks 1.0
 import "pages"
 
 ApplicationWindow {
@@ -33,4 +34,8 @@ ApplicationWindow {
         PlacesPage {}
     }
     cover: Qt.resolvedUrl("pages/CoverPage.qml")
+
+    Component.onCompleted: {
+        BookmarksModel.sortFilter(BookmarkGroup.Device)
+    }
 }
