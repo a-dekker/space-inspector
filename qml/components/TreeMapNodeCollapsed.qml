@@ -30,8 +30,6 @@ Item {
             _workerHandle = Engine.requestFileSizeInfo(collapsedNodePaths)
             label.text = ''
         }
-
-        console.log(">>>", collapsedNodePaths, _workerHandle)
     }
 
     visible: _existingCount > 0 ||
@@ -46,8 +44,6 @@ Item {
             if (_workerHandle == handle) {
                 _workerHandle = -1
                 _existingCount = parseInt(info[4], 10) || 0
-
-                console.log(collapsedNodePaths, info)
 
                 if (_existingCount > 0) {
                     var size = (!!info[1] ? " (%1)".arg(info[1]) : "")
