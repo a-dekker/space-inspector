@@ -47,12 +47,6 @@ Item {
         _menuItem.open(treeMapNode)
     }
 
-    function closeMenu() {
-        if (!!_menuItem) {
-            _menuItem.close()
-        }
-    }
-
     function _initMenuItem() {
         if (!!_menuItem) {
             return
