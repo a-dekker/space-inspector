@@ -211,4 +211,13 @@ Page {
         manager.refresh()
         renderTreeMap()
     }
+
+    Component.onCompleted: {
+        if (manager.fileData.filesCount > 1000 ||
+                manager.fileData.dirsCount > 1000) {
+            pageStack.animatorReplace("../pages/ListPage.qml", {
+                "nodeModel": nodeModel
+            })
+        }
+    }
 }

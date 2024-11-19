@@ -77,7 +77,8 @@ Page {
                 }
             }
 
-            onClicked: pageStack.animatorReplaceAbove(null, Qt.resolvedUrl("../pages/TreeMapPage.qml"), {
+            onClicked: pageStack.animatorReplaceAbove(null,
+                Qt.resolvedUrl("../pages/TreeMapPage.qml"), {
                 "nodeModel": {
                     "name": name,
                     "dir": path,
