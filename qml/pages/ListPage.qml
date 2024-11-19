@@ -1,8 +1,10 @@
-
-
 /*
     Space Inspector - a filesystem structure visualization for SailfishOS
-    Copyright (C) 2014 - 2018 Jens Klingen
+
+    SPDX-FileCopyrightText: Copyright (C) 2014 - 2018 Jens Klingen
+    SPDX-FileCopyrightText: 2024 Mirian Margiani
+
+    SPDX-License-Identifier: GPL-3.0-or-later
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,31 +19,48 @@
     You should have received a copy of the GNU General Public License
     along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
+
 import QtQuick 2.2
 import Sailfish.Silica 1.0
+import Opal.Delegates 1.0
 import Harbour.FileBrowser.Engine 1.0
-
+import Harbour.FileBrowser.FileData 1.0
 import "../components"
-import "../js/IoTranslator.js" as IoTranslator
-import "../js/Util.js" as Util
 
 Page {
     id: page
 
     property alias nodeModel: manager.nodeModel
 
-    SilicaFlickable {
-        id: sf
+    FileData {
+        id: fileData
+        file: nodeModel.dir
+    }
+
+    ActivityIndicator {
+        id: busyIndicator
         anchors.fill: parent
-        contentHeight: parent.height
+    }
+
+    SilicaListView {
+        id: listView
+        anchors.fill: parent
+
+        header: PageHeader {
+            title: nodeModel.name
+            description: nodeModel.formattedSize
+        }
+
+        model: ListModel { id: subDirsModel }
+        VerticalScrollDecorator { flickable: listView }
 
         PullDownMenu {
             MenuItem {
                 text: qsTr("Go to...")
                 onClicked: {
                     pageStack.push("../pages/PlacesPage.qml", {
-                                       "nodeModel": nodeModel
-                                   })
+                        "nodeModel": nodeModel
+                    })
                 }
             }
             MenuItem {
@@ -54,103 +73,48 @@ Page {
                 text: qsTr("Box view")
                 onClicked: {
                     pageStack.replace("../pages/TreeMapPage.qml", {
-                                          "nodeModel": nodeModel
-                                      })
+                        "nodeModel": nodeModel
+                    })
                 }
             }
         }
 
-        PageHeader {
-            id: title
-            title: nodeModel.name
-            description: nodeModel.formattedSize
-        }
+        delegate: OneLineDelegate {
+            text: model.name
+            opacity: model.isDir ? 1.0 : 0.75
 
-        ActivityIndicator {
-            id: busyIndicator
-            anchors.fill: parent
-        }
-
-        SilicaListView {
-            id: listView
-            anchors.top: title.bottom
-            contentHeight: parent.height - title.height
-            width: parent.width
-            height: parent.height - title.height
-            clip: true
-
-            model: subDirsModel
-            delegate: subDirsDelegate
-
-            VerticalScrollDecorator {
+            menu: NodeContextMenu {
+                nodeModel: model
+                listViewMode: true
             }
 
-            ListModel {
-                id: subDirsModel
+            leftItem: DelegateIconItem {
+                source: "image://theme/icon-m-file-" +
+                        (model.isDir ? "folder" : "document")
             }
 
-            Component {
-                id: subDirsDelegate
-                ListItem {
+            rightItem: DelegateInfoItem {
+                alignment: Qt.AlignRight
+                text: model.formattedSize
+                textLabel.font.pixelSize: Theme.fontSizeMedium
+            }
 
-                    id: itemDelegate
-                    anchors.left: parent.left
-                    width: parent.width
-                    height: Theme.itemSizeSmall + contextMenu.height
-                    menu: contextMenu
-
-                    Rectangle {
-                        id: itemBg
-                        color: itemDelegate.pressed ? Theme.secondaryHighlightColor : "transparent"
-                    }
-
-                    Label {
-                        id: dirName
-                        anchors.left: parent.left
-                        anchors.leftMargin: Theme.paddingLarge
-                        height: parent.height
-                        verticalAlignment: Text.AlignVCenter
-                        text: Util.getNodeNameFromPath(model.dir)
-                        width: parent.width - (Theme.paddingMedium + dirSize.width)
-                        truncationMode: TruncationMode.Fade
-                        color: itemDelegate.pressed
-                               || !model.isDir ? Theme.highlightColor : Theme.primaryColor
-                    }
-
-                    Label {
-                        id: dirSize
-                        anchors.right: parent.right
-                        anchors.rightMargin: Theme.paddingLarge
-                        height: parent.height
-                        verticalAlignment: Text.AlignVCenter
-                        text: parseInt(model.size).toLocaleString(Qt.locale(),
-                                                                  "f",
-                                                                  0) + " B"
-                        color: itemDelegate.pressed ? Theme.highlightColor : Theme.secondaryColor
-                    }
-
-                    onClicked: {
-                        if (model.isDir) {
-                            pageStack.push("ListPage.qml", {
-                                               "nodeModel": model
-                                           })
-                        }
-                    }
-
-                    NodeContextMenu {
-                        id: contextMenu
-                        nodeModel: model
-                        remorseItem: remorseItem
-                        listViewMode: true
-                    }
-
-                    RemorseItem {
-                        id: remorseItem
-                    }
+            onClicked: {
+                if (model.isDir) {
+                    pageStack.push("ListPage.qml", {
+                        "nodeModel": model
+                    })
+                } else {
+                    openMenu()
                 }
             }
         }
 
+        ViewPlaceholder {
+            enabled: fileData.filesCount == 0 && fileData.dirsCount == 0
+            text: qsTr("Empty", "as in “this folder is empty”")
+            hintText: qsTr("This folder is empty.")
+        }
     }
 
     CalculationManager {
