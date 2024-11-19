@@ -46,6 +46,11 @@ Page {
             description: nodeModel.formattedSize
         }
 
+        footer: Item {
+            width: page.width
+            height: Theme.horizontalPageMargin
+        }
+
         cacheBuffer: page.height * 3
         model: ListModel { id: subDirsModel }
 
