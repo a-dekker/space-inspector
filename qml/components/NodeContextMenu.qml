@@ -1,5 +1,6 @@
 import QtQuick 2.2
 import Sailfish.Silica 1.0
+import Harbour.FileBrowser.Engine 1.0
 import "../js/Util.js" as Util
 
 ContextMenu {
@@ -37,7 +38,7 @@ ContextMenu {
         }
         function onDialogAccepted() {
             console.log("Deleting " + nodeModel.dir)
-            engine.deleteFiles(nodeModel.dir)
+            Engine.deleteFiles(nodeModel.dir)
         }
     }
 }
