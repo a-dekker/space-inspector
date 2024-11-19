@@ -25,6 +25,10 @@ CONFIG += c++1z
 
 QT += concurrent
 
+
+# Enable rebuilding when defines change
+include(libs/opal-cached-defines.pri)
+
 SOURCES += src/harbour-space-inspector.cpp \
     src/shell.cpp \
     src/io/bookmarks.cpp \
