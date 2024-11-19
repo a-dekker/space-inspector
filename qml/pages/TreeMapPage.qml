@@ -203,6 +203,7 @@ Page {
             })
             return
         } else if (visibleNodesWithSize.length === 0) {
+            mapLoader.unload()
             busyIndicator.running = false
             busyIndicator.visible = false
             return
@@ -247,7 +248,6 @@ Page {
 
     function refreshPage() {
         manager.refresh()
-        renderTreeMap()
     }
 
     Component.onCompleted: {
