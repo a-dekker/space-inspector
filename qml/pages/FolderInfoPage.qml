@@ -29,6 +29,16 @@ Page {
 
         VerticalScrollDecorator { flickable: flick }
 
+        PullDownMenu {
+            enabled: fileData.isDir
+            visible: enabled
+
+            MenuItem {
+                text: qsTr("Open file manager")
+                onClicked: Qt.openUrlExternally(fileData.absoluteFilePath)
+            }
+        }
+
         Column {
             id: column
             width: parent.width
