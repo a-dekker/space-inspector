@@ -4,6 +4,7 @@ X-Nemo-Application-Type=silica-qt5
 Name=Space Inspector
 Icon=harbour-space-inspector
 Exec=harbour-space-inspector
+MimeType=inode/directory;
 
 [X-Sailjail]
 Sandboxing=Disabled
