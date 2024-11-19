@@ -100,80 +100,80 @@ a moment.</source>
     <message>
         <location filename="../src/io/bookmarks.cpp" line="507"/>
         <source>Memory card</source>
-        <translation type="unfinished"></translation>
+        <translation>Pamäťová karta</translation>
     </message>
     <message>
         <location filename="../src/io/bookmarks.cpp" line="509"/>
         <source>Attached folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Pripojená zložka</translation>
     </message>
     <message>
         <location filename="../src/io/bookmarks.cpp" line="511"/>
         <source>Remote folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Vzdialená zložka</translation>
     </message>
     <message>
         <location filename="../src/io/bookmarks.cpp" line="514"/>
         <source>Removable media</source>
-        <translation type="unfinished"></translation>
+        <translation>Vymeniteľný nosič dát</translation>
     </message>
     <message>
         <location filename="../src/io/bookmarks.cpp" line="601"/>
         <location filename="../src/io/bookmarks.cpp" line="1094"/>
         <source>Internal storage</source>
-        <translation type="unfinished"></translation>
+        <translation>Vlastný ukladací priestor</translation>
     </message>
     <message>
         <location filename="../src/io/bookmarks.cpp" line="609"/>
         <source>“%1” on “%2”</source>
         <extracomment>as in &quot;the folder “Music” on the storage named “SD Card”&quot;</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>“%1” v “%2”</translation>
     </message>
     <message>
         <location filename="../src/io/bookmarks.cpp" line="664"/>
         <location filename="../src/io/bookmarks.cpp" line="1019"/>
         <source>Documents</source>
-        <translation type="unfinished"></translation>
+        <translation>Dokumenty</translation>
     </message>
     <message>
         <location filename="../src/io/bookmarks.cpp" line="666"/>
         <location filename="../src/io/bookmarks.cpp" line="1029"/>
         <source>Downloads</source>
-        <translation type="unfinished"></translation>
+        <translation>Stiahnutia</translation>
     </message>
     <message>
         <location filename="../src/io/bookmarks.cpp" line="668"/>
         <location filename="../src/io/bookmarks.cpp" line="1039"/>
         <source>Pictures</source>
-        <translation type="unfinished"></translation>
+        <translation>Obrázky</translation>
     </message>
     <message>
         <location filename="../src/io/bookmarks.cpp" line="670"/>
         <location filename="../src/io/bookmarks.cpp" line="1049"/>
         <source>Videos</source>
-        <translation type="unfinished"></translation>
+        <translation>Videá</translation>
     </message>
     <message>
         <location filename="../src/io/bookmarks.cpp" line="672"/>
         <location filename="../src/io/bookmarks.cpp" line="1059"/>
         <source>Music</source>
-        <translation type="unfinished"></translation>
+        <translation>Hudba</translation>
     </message>
     <message>
         <location filename="../src/io/bookmarks.cpp" line="1009"/>
         <source>Home</source>
-        <translation type="unfinished"></translation>
+        <translation>Domov</translation>
     </message>
     <message>
         <location filename="../src/io/bookmarks.cpp" line="1069"/>
         <location filename="../src/io/bookmarks.cpp" line="1095"/>
         <source>Android storage</source>
-        <translation type="unfinished"></translation>
+        <translation>Ukladací priestor Android</translation>
     </message>
     <message>
         <location filename="../src/io/bookmarks.cpp" line="1079"/>
         <source>Root</source>
-        <translation type="unfinished"></translation>
+        <translation>Koreň</translation>
     </message>
 </context>
 <context>
@@ -206,31 +206,31 @@ a moment.</source>
     <message>
         <location filename="../qml/pages/DeleteDialog.qml" line="72"/>
         <source>Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Veľkosť</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/DeleteDialog.qml" line="74"/>
         <source>%n file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n súbor</numerusform>
+            <numerusform>%n súbory</numerusform>
+            <numerusform>%n súborov</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/DeleteDialog.qml" line="75"/>
         <source>%n folder(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n zložka</numerusform>
+            <numerusform>%n zložky</numerusform>
+            <numerusform>%n zložiek</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/pages/DeleteDialog.qml" line="81"/>
         <source>Type</source>
         <comment>as in “file type” but very short</comment>
-        <translation type="unfinished"></translation>
+        <translation>Typ</translation>
     </message>
     <message>
         <location filename="../qml/pages/DeleteDialog.qml" line="82"/>
@@ -252,7 +252,7 @@ a moment.</source>
         <location filename="../qml/pages/DeleteDialog.qml" line="91"/>
         <source>Name</source>
         <comment>as in “file name” but very short</comment>
-        <translation type="unfinished"></translation>
+        <translation>Názov</translation>
     </message>
     <message>
         <location filename="../qml/pages/DeleteDialog.qml" line="111"/>
@@ -265,123 +265,123 @@ a moment.</source>
     <message>
         <location filename="../src/io/engine.cpp" line="70"/>
         <source>No files to paste</source>
-        <translation type="unfinished"></translation>
+        <translation>Žiaden súbor na prilepenie</translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="78"/>
         <source>Destination does not exist</source>
-        <translation type="unfinished"></translation>
+        <translation>Cieľ neexistuje</translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="89"/>
         <source>Cannot overwrite itself</source>
-        <translation type="unfinished"></translation>
+        <translation>Nemožno prepísať seba</translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="95"/>
         <source>Cannot move/copy to itself</source>
-        <translation type="unfinished"></translation>
+        <translation>Nemožno presunúť/kopírovať do seba</translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="248"/>
         <source>File does not exist</source>
-        <translation type="unfinished"></translation>
+        <translation>Súbor neexistuje</translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="250"/>
         <source>Broken symbolic link</source>
-        <translation type="unfinished"></translation>
+        <translation>Porušený symbolický odkaz</translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="255"/>
         <source>Cannot read this type of file</source>
-        <translation type="unfinished"></translation>
+        <translation>Nemožno prečítať tento typ súboru</translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="261"/>
         <source>No permission to read the file</source>
-        <translation type="unfinished"></translation>
+        <translation>Nie sú oprávnenia na čítanie súboru</translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="265"/>
         <location filename="../src/io/engine.cpp" line="271"/>
         <source>Error reading file</source>
-        <translation type="unfinished"></translation>
+        <translation>Chyba čítania súboru</translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="274"/>
         <source>Empty file</source>
-        <translation type="unfinished"></translation>
+        <translation>Prázdny súbor</translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="300"/>
         <source>Binary file preview clipped at %1 kB</source>
-        <translation type="unfinished"></translation>
+        <translation>Náhľad binárneho súboru bol orezaný na %1 kB</translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="319"/>
         <source>Text file preview clipped at %1 lines</source>
-        <translation type="unfinished"></translation>
+        <translation>Náhľad textového súboru bol orezaný na %1 riadkov</translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="321"/>
         <source>Text file preview clipped at %1 kB</source>
-        <translation type="unfinished"></translation>
+        <translation>Náhľad textového súboru bol orezaný na %1 kB</translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="340"/>
         <source>No permissions to create %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Nie sú oprávnenia na vytvorenie %1</translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="342"/>
         <source>Cannot create folder %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Nemožno vytvoriť zložku %1</translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="358"/>
         <source>No permissions to create “%1” in “%2”</source>
-        <translation type="unfinished"></translation>
+        <translation>Žiadne oprávnenia na vytvorenie „%1“ v „%2“</translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="369"/>
         <source>Cannot create file “%1” in “%2”</source>
-        <translation type="unfinished"></translation>
+        <translation>Nemožno vytvoriť súbor „%1“ v „%2“</translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="405"/>
         <source>Cannot rename %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Nemožno premenovať %1</translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="422"/>
         <source>Source “%1” is not a symbolic link</source>
-        <translation type="unfinished"></translation>
+        <translation>Zdroj “%1” nie je symbolický odkaz</translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="431"/>
         <source>No permissions to change contents of “%1”</source>
-        <translation type="unfinished"></translation>
+        <translation>Žiadne oprávnenia na zmenu obsahu “%1”</translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="439"/>
         <source>Failed to remove old link “%1” pointing to “%2”</source>
-        <translation type="unfinished"></translation>
+        <translation>Zlyhalo odstránenie starého odkazu “%1” odkazujúceho na “%2”</translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="445"/>
         <source>Failed to revert link “%1” pointing to “%2” after failing to change target to “%3”</source>
-        <translation type="unfinished"></translation>
+        <translation>Nepodarilo vrátiť späť odkaz “%1” odkazujúci na “%2” po neúspešnej zmene cieľa na “%3”</translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="452"/>
         <source>Failed to change link target of “%1” to “%2”</source>
-        <translation type="unfinished"></translation>
+        <translation>Nepodarilo sa zmeniť cieľ odkazu “%1” na “%2”</translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="478"/>
         <source>Cannot change permissions</source>
-        <translation type="unfinished"></translation>
+        <translation>Nemožno zmeniť oprávnenia</translation>
     </message>
 </context>
 <context>
@@ -390,51 +390,51 @@ a moment.</source>
         <location filename="../src/io/filedata.cpp" line="87"/>
         <source>empty</source>
         <extracomment>as in &quot;this folder is empty&quot;, but as short as possible</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>prázdny</translation>
     </message>
     <message numerus="yes">
         <location filename="../src/io/filedata.cpp" line="88"/>
         <source>%n item(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n položka</numerusform>
+            <numerusform>%n položky</numerusform>
+            <numerusform>%n položiek</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../src/io/filedata.cpp" line="248"/>
         <source>File does not exist</source>
-        <translation type="unfinished"></translation>
+        <translation>Súbor neexistuje</translation>
     </message>
     <message>
         <location filename="../src/io/filedata.cpp" line="298"/>
         <source>block device</source>
-        <translation type="unfinished"></translation>
+        <translation>blokovať zariadenie</translation>
     </message>
     <message>
         <location filename="../src/io/filedata.cpp" line="302"/>
         <source>character device</source>
-        <translation type="unfinished"></translation>
+        <translation>znakové zariadenie</translation>
     </message>
     <message>
         <location filename="../src/io/filedata.cpp" line="306"/>
         <source>pipe</source>
-        <translation type="unfinished"></translation>
+        <translation>potrubie</translation>
     </message>
     <message>
         <location filename="../src/io/filedata.cpp" line="310"/>
         <source>socket</source>
-        <translation type="unfinished"></translation>
+        <translation>zásuvka</translation>
     </message>
     <message>
         <location filename="../src/io/filedata.cpp" line="314"/>
         <source>folder</source>
-        <translation type="unfinished"></translation>
+        <translation>zložka</translation>
     </message>
     <message>
         <location filename="../src/io/filedata.cpp" line="320"/>
         <source>unknown</source>
-        <translation type="unfinished"></translation>
+        <translation>neznámy</translation>
     </message>
 </context>
 <context>
@@ -442,54 +442,54 @@ a moment.</source>
     <message>
         <location filename="../src/io/globals.cpp" line="79"/>
         <source>B</source>
-        <translation type="unfinished"></translation>
+        <translation>B</translation>
     </message>
     <message>
         <location filename="../src/io/globals.cpp" line="80"/>
         <source>KiB</source>
-        <translation type="unfinished"></translation>
+        <translation>kB</translation>
     </message>
     <message>
         <location filename="../src/io/globals.cpp" line="81"/>
         <source>MiB</source>
-        <translation type="unfinished"></translation>
+        <translation>MB</translation>
     </message>
     <message>
         <location filename="../src/io/globals.cpp" line="82"/>
         <source>GiB</source>
-        <translation type="unfinished"></translation>
+        <translation>GB</translation>
     </message>
     <message>
         <location filename="../src/io/globals.cpp" line="83"/>
         <source>TiB</source>
-        <translation type="unfinished"></translation>
+        <translation>TB</translation>
     </message>
     <message>
         <location filename="../src/io/globals.cpp" line="84"/>
         <source>PiB</source>
-        <translation type="unfinished"></translation>
+        <translation>PB</translation>
     </message>
     <message>
         <location filename="../src/io/globals.cpp" line="85"/>
         <source>EiB</source>
-        <translation type="unfinished"></translation>
+        <translation>EB</translation>
     </message>
     <message>
         <location filename="../src/io/globals.cpp" line="86"/>
         <source>ZiB</source>
-        <translation type="unfinished"></translation>
+        <translation>ZB</translation>
     </message>
     <message>
         <location filename="../src/io/globals.cpp" line="87"/>
         <source>YiB</source>
-        <translation type="unfinished"></translation>
+        <translation>YB</translation>
     </message>
     <message>
         <location filename="../src/io/globals.cpp" line="107"/>
         <location filename="../src/io/globals.cpp" line="111"/>
         <source>%1 %2</source>
         <extracomment>1=file size (number), 2=unit (e.g. KiB)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>%1 %2</translation>
     </message>
 </context>
 <context>
@@ -500,12 +500,12 @@ a moment.</source>
         <location filename="../src/io/fileworker.cpp" line="100"/>
         <location filename="../src/io/fileworker.cpp" line="117"/>
         <source>File operation already in progress</source>
-        <translation type="unfinished"></translation>
+        <translation>Operácia so súbormi prebieha</translation>
     </message>
     <message>
         <location filename="../src/io/fileworker.cpp" line="159"/>
         <source>Empty filename</source>
-        <translation type="unfinished"></translation>
+        <translation>Prázdny názov súboru</translation>
     </message>
     <message>
         <location filename="../src/io/fileworker.cpp" line="178"/>
@@ -514,27 +514,27 @@ a moment.</source>
         <location filename="../src/io/fileworker.cpp" line="374"/>
         <location filename="../src/io/fileworker.cpp" line="397"/>
         <source>Cancelled</source>
-        <translation type="unfinished"></translation>
+        <translation>Odvolaný</translation>
     </message>
     <message>
         <location filename="../src/io/fileworker.cpp" line="216"/>
         <source>File not found</source>
-        <translation type="unfinished"></translation>
+        <translation>Súbor nenájdený</translation>
     </message>
     <message>
         <location filename="../src/io/fileworker.cpp" line="230"/>
         <source>Folder delete failed</source>
-        <translation type="unfinished"></translation>
+        <translation>Zmazanie zložky zlyhalo</translation>
     </message>
     <message>
         <location filename="../src/io/fileworker.cpp" line="353"/>
         <source>Source folder does not exist</source>
-        <translation type="unfinished"></translation>
+        <translation>Zdrojová zložka neexistuje</translation>
     </message>
     <message>
         <location filename="../src/io/fileworker.cpp" line="362"/>
         <source>Cannot create target folder %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Nemožno vytvoriť cieľovú zložku %1</translation>
     </message>
     <message>
         <location filename="../src/io/fileworker.cpp" line="413"/>
@@ -547,19 +547,19 @@ a moment.</source>
     <message>
         <location filename="../src/io/filedata.cpp" line="346"/>
         <source>Image Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Veľkosť obrázka</translation>
     </message>
     <message>
         <location filename="../src/io/filedata.cpp" line="352"/>
         <source>%1 x %2</source>
         <extracomment>image size description without aspect ratio: 1=width, 2=height</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>%1 x %2</translation>
     </message>
     <message>
         <location filename="../src/io/filedata.cpp" line="356"/>
         <source>%1 x %2 (%3)</source>
         <extracomment>image size description: 1=width, 2=height, 3=aspect ratio, e.g. 16:9</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>%1 x %2 (%3)</translation>
     </message>
 </context>
 <context>
@@ -591,7 +591,7 @@ a moment.</source>
         <location filename="../qml/pages/ListPage.qml" line="125"/>
         <source>Empty</source>
         <comment>as in “this folder is empty”</comment>
-        <translation type="unfinished"></translation>
+        <translation>Prázdny</translation>
     </message>
     <message>
         <location filename="../qml/pages/ListPage.qml" line="126"/>
@@ -609,12 +609,12 @@ a moment.</source>
     <message>
         <location filename="../qml/components/NodeContextMenu.qml" line="40"/>
         <source>Open</source>
-        <translation type="unfinished"></translation>
+        <translation>Otvoriť</translation>
     </message>
     <message>
         <location filename="../qml/components/NodeContextMenu.qml" line="48"/>
         <source>Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>Zmazať</translation>
     </message>
 </context>
 <context>
@@ -791,7 +791,7 @@ a moment.</source>
     <message>
         <location filename="../qml/pages/PlacesPage.qml" line="27"/>
         <source>Places</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Miesta</translation>
     </message>
     <message>
         <location filename="../qml/pages/PlacesPage.qml" line="39"/>
@@ -804,17 +804,17 @@ a moment.</source>
     <message>
         <location filename="../src/io/globals.cpp" line="121"/>
         <source>hh:mm:ss</source>
-        <translation type="unfinished"></translation>
+        <translation>hh:mm:ss</translation>
     </message>
     <message>
         <location filename="../src/io/globals.cpp" line="124"/>
         <source>dd MMM yyyy, hh:mm:ss t</source>
-        <translation type="unfinished"></translation>
+        <translation>dd MMM yyyy, hh:mm:ss</translation>
     </message>
     <message>
         <location filename="../src/io/globals.cpp" line="126"/>
         <source>dd.MM.yy, hh:mm</source>
-        <translation type="unfinished"></translation>
+        <translation>dd.MM.yy, hh:mm</translation>
     </message>
 </context>
 <context>
@@ -822,7 +822,7 @@ a moment.</source>
     <message>
         <location filename="../qml/components/StorageSizeBar.qml" line="86"/>
         <source>%1 free</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 voľné</translation>
     </message>
 </context>
 <context>
@@ -867,7 +867,7 @@ a moment.</source>
         <location filename="../qml/pages/TreeMapPage.qml" line="126"/>
         <source>Empty</source>
         <comment>as in “this folder is empty”</comment>
-        <translation type="unfinished"></translation>
+        <translation>Prázdny</translation>
     </message>
     <message>
         <location filename="../qml/pages/TreeMapPage.qml" line="127"/>

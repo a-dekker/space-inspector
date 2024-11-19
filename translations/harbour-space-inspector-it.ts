@@ -100,80 +100,80 @@ a moment.</source>
     <message>
         <location filename="../src/io/bookmarks.cpp" line="507"/>
         <source>Memory card</source>
-        <translation type="unfinished"></translation>
+        <translation>Scheda di memoria</translation>
     </message>
     <message>
         <location filename="../src/io/bookmarks.cpp" line="509"/>
         <source>Attached folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Cartella attaccata</translation>
     </message>
     <message>
         <location filename="../src/io/bookmarks.cpp" line="511"/>
         <source>Remote folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Cartella remota</translation>
     </message>
     <message>
         <location filename="../src/io/bookmarks.cpp" line="514"/>
         <source>Removable media</source>
-        <translation type="unfinished"></translation>
+        <translation>Media rimovibile</translation>
     </message>
     <message>
         <location filename="../src/io/bookmarks.cpp" line="601"/>
         <location filename="../src/io/bookmarks.cpp" line="1094"/>
         <source>Internal storage</source>
-        <translation type="unfinished"></translation>
+        <translation>Memoria interna</translation>
     </message>
     <message>
         <location filename="../src/io/bookmarks.cpp" line="609"/>
         <source>“%1” on “%2”</source>
         <extracomment>as in &quot;the folder “Music” on the storage named “SD Card”&quot;</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>“%1” su “%2”</translation>
     </message>
     <message>
         <location filename="../src/io/bookmarks.cpp" line="664"/>
         <location filename="../src/io/bookmarks.cpp" line="1019"/>
         <source>Documents</source>
-        <translation type="unfinished"></translation>
+        <translation>Documenti</translation>
     </message>
     <message>
         <location filename="../src/io/bookmarks.cpp" line="666"/>
         <location filename="../src/io/bookmarks.cpp" line="1029"/>
         <source>Downloads</source>
-        <translation type="unfinished"></translation>
+        <translation>Scaricamenti</translation>
     </message>
     <message>
         <location filename="../src/io/bookmarks.cpp" line="668"/>
         <location filename="../src/io/bookmarks.cpp" line="1039"/>
         <source>Pictures</source>
-        <translation type="unfinished"></translation>
+        <translation>Immagini</translation>
     </message>
     <message>
         <location filename="../src/io/bookmarks.cpp" line="670"/>
         <location filename="../src/io/bookmarks.cpp" line="1049"/>
         <source>Videos</source>
-        <translation type="unfinished"></translation>
+        <translation>Video</translation>
     </message>
     <message>
         <location filename="../src/io/bookmarks.cpp" line="672"/>
         <location filename="../src/io/bookmarks.cpp" line="1059"/>
         <source>Music</source>
-        <translation type="unfinished"></translation>
+        <translation>Musica</translation>
     </message>
     <message>
         <location filename="../src/io/bookmarks.cpp" line="1009"/>
         <source>Home</source>
-        <translation type="unfinished"></translation>
+        <translation>Home</translation>
     </message>
     <message>
         <location filename="../src/io/bookmarks.cpp" line="1069"/>
         <location filename="../src/io/bookmarks.cpp" line="1095"/>
         <source>Android storage</source>
-        <translation type="unfinished"></translation>
+        <translation>Memoria android</translation>
     </message>
     <message>
         <location filename="../src/io/bookmarks.cpp" line="1079"/>
         <source>Root</source>
-        <translation type="unfinished"></translation>
+        <translation>Radice</translation>
     </message>
 </context>
 <context>
@@ -206,29 +206,29 @@ a moment.</source>
     <message>
         <location filename="../qml/pages/DeleteDialog.qml" line="72"/>
         <source>Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Dimensione</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/DeleteDialog.qml" line="74"/>
         <source>%n file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n file</numerusform>
+            <numerusform>%n file</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/DeleteDialog.qml" line="75"/>
         <source>%n folder(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n cartella</numerusform>
+            <numerusform>%n cartelle</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/pages/DeleteDialog.qml" line="81"/>
         <source>Type</source>
         <comment>as in “file type” but very short</comment>
-        <translation type="unfinished"></translation>
+        <translation>Tipo</translation>
     </message>
     <message>
         <location filename="../qml/pages/DeleteDialog.qml" line="82"/>
@@ -250,7 +250,7 @@ a moment.</source>
         <location filename="../qml/pages/DeleteDialog.qml" line="91"/>
         <source>Name</source>
         <comment>as in “file name” but very short</comment>
-        <translation type="unfinished"></translation>
+        <translation>Nome</translation>
     </message>
     <message>
         <location filename="../qml/pages/DeleteDialog.qml" line="111"/>
@@ -263,123 +263,123 @@ a moment.</source>
     <message>
         <location filename="../src/io/engine.cpp" line="70"/>
         <source>No files to paste</source>
-        <translation type="unfinished"></translation>
+        <translation>Nessun file da incollare</translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="78"/>
         <source>Destination does not exist</source>
-        <translation type="unfinished"></translation>
+        <translation>La destinazione non esiste</translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="89"/>
         <source>Cannot overwrite itself</source>
-        <translation type="unfinished"></translation>
+        <translation>Impossibile sovrascrivere se stesso</translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="95"/>
         <source>Cannot move/copy to itself</source>
-        <translation type="unfinished"></translation>
+        <translation>Impossibile spostare/copiare su se stesso</translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="248"/>
         <source>File does not exist</source>
-        <translation type="unfinished"></translation>
+        <translation>File inesistente</translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="250"/>
         <source>Broken symbolic link</source>
-        <translation type="unfinished"></translation>
+        <translation>Link simbolico rotto</translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="255"/>
         <source>Cannot read this type of file</source>
-        <translation type="unfinished"></translation>
+        <translation>Impossibile leggere questo tipo di file</translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="261"/>
         <source>No permission to read the file</source>
-        <translation type="unfinished"></translation>
+        <translation>Mancano i permessi per leggere il file</translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="265"/>
         <location filename="../src/io/engine.cpp" line="271"/>
         <source>Error reading file</source>
-        <translation type="unfinished"></translation>
+        <translation>Errore nella lettura del file</translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="274"/>
         <source>Empty file</source>
-        <translation type="unfinished"></translation>
+        <translation>File vuoto</translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="300"/>
         <source>Binary file preview clipped at %1 kB</source>
-        <translation type="unfinished"></translation>
+        <translation>Anteprima dei file binari cappata a %1 kB</translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="319"/>
         <source>Text file preview clipped at %1 lines</source>
-        <translation type="unfinished"></translation>
+        <translation>Anteprima dei file di testo cappate ad %1 linee</translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="321"/>
         <source>Text file preview clipped at %1 kB</source>
-        <translation type="unfinished"></translation>
+        <translation>Anteprima dei file di testo cappata a %1 kB</translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="340"/>
         <source>No permissions to create %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Mancano i permessi per creare %1</translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="342"/>
         <source>Cannot create folder %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Impossibile creare la cartella %1</translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="358"/>
         <source>No permissions to create “%1” in “%2”</source>
-        <translation type="unfinished"></translation>
+        <translation>Nessun permesso per creare “%1” su “%2”</translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="369"/>
         <source>Cannot create file “%1” in “%2”</source>
-        <translation type="unfinished"></translation>
+        <translation>Non posso creare il file “%1” su “%2”</translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="405"/>
         <source>Cannot rename %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Impossibile rinominare %1</translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="422"/>
         <source>Source “%1” is not a symbolic link</source>
-        <translation type="unfinished"></translation>
+        <translation>Sorgente &quot;%1&quot; non è un collegamento simbolico</translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="431"/>
         <source>No permissions to change contents of “%1”</source>
-        <translation type="unfinished"></translation>
+        <translation>Non hai i permessi per cambiare i contenuti di &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="439"/>
         <source>Failed to remove old link “%1” pointing to “%2”</source>
-        <translation type="unfinished"></translation>
+        <translation>Rimozione fallita del vecchio collegamento &quot;%1&quot; che porta a &quot;%2&quot;</translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="445"/>
         <source>Failed to revert link “%1” pointing to “%2” after failing to change target to “%3”</source>
-        <translation type="unfinished"></translation>
+        <translation>Ripristino fallito del collegamento &quot;%1&quot; che portava a &quot;%2&quot; dopo aver fallito il cambio destinazione a &quot;%3&quot;</translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="452"/>
         <source>Failed to change link target of “%1” to “%2”</source>
-        <translation type="unfinished"></translation>
+        <translation>Cambio di destinazione del collegamento &quot;%1&quot; a &quot;%2&quot; fallito</translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="478"/>
         <source>Cannot change permissions</source>
-        <translation type="unfinished"></translation>
+        <translation>Impossibile modificare i permessi</translation>
     </message>
 </context>
 <context>
@@ -388,50 +388,50 @@ a moment.</source>
         <location filename="../src/io/filedata.cpp" line="87"/>
         <source>empty</source>
         <extracomment>as in &quot;this folder is empty&quot;, but as short as possible</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>vuoto</translation>
     </message>
     <message numerus="yes">
         <location filename="../src/io/filedata.cpp" line="88"/>
         <source>%n item(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n oggetto</numerusform>
+            <numerusform>%n oggetti</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../src/io/filedata.cpp" line="248"/>
         <source>File does not exist</source>
-        <translation type="unfinished"></translation>
+        <translation>Il file non esiste</translation>
     </message>
     <message>
         <location filename="../src/io/filedata.cpp" line="298"/>
         <source>block device</source>
-        <translation type="unfinished"></translation>
+        <translation>Dispositivo a blocchi</translation>
     </message>
     <message>
         <location filename="../src/io/filedata.cpp" line="302"/>
         <source>character device</source>
-        <translation type="unfinished"></translation>
+        <translation>Dispositivo a caratteri</translation>
     </message>
     <message>
         <location filename="../src/io/filedata.cpp" line="306"/>
         <source>pipe</source>
-        <translation type="unfinished"></translation>
+        <translation>Pipe</translation>
     </message>
     <message>
         <location filename="../src/io/filedata.cpp" line="310"/>
         <source>socket</source>
-        <translation type="unfinished"></translation>
+        <translation>Socket</translation>
     </message>
     <message>
         <location filename="../src/io/filedata.cpp" line="314"/>
         <source>folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Cartella</translation>
     </message>
     <message>
         <location filename="../src/io/filedata.cpp" line="320"/>
         <source>unknown</source>
-        <translation type="unfinished"></translation>
+        <translation>sconosciuto</translation>
     </message>
 </context>
 <context>
@@ -439,54 +439,54 @@ a moment.</source>
     <message>
         <location filename="../src/io/globals.cpp" line="79"/>
         <source>B</source>
-        <translation type="unfinished"></translation>
+        <translation>B</translation>
     </message>
     <message>
         <location filename="../src/io/globals.cpp" line="80"/>
         <source>KiB</source>
-        <translation type="unfinished"></translation>
+        <translation>KiB</translation>
     </message>
     <message>
         <location filename="../src/io/globals.cpp" line="81"/>
         <source>MiB</source>
-        <translation type="unfinished"></translation>
+        <translation>MiB</translation>
     </message>
     <message>
         <location filename="../src/io/globals.cpp" line="82"/>
         <source>GiB</source>
-        <translation type="unfinished"></translation>
+        <translation>GiB</translation>
     </message>
     <message>
         <location filename="../src/io/globals.cpp" line="83"/>
         <source>TiB</source>
-        <translation type="unfinished"></translation>
+        <translation>TiB</translation>
     </message>
     <message>
         <location filename="../src/io/globals.cpp" line="84"/>
         <source>PiB</source>
-        <translation type="unfinished"></translation>
+        <translation>PiB</translation>
     </message>
     <message>
         <location filename="../src/io/globals.cpp" line="85"/>
         <source>EiB</source>
-        <translation type="unfinished"></translation>
+        <translation>EiB</translation>
     </message>
     <message>
         <location filename="../src/io/globals.cpp" line="86"/>
         <source>ZiB</source>
-        <translation type="unfinished"></translation>
+        <translation>ZiB</translation>
     </message>
     <message>
         <location filename="../src/io/globals.cpp" line="87"/>
         <source>YiB</source>
-        <translation type="unfinished"></translation>
+        <translation>YiB</translation>
     </message>
     <message>
         <location filename="../src/io/globals.cpp" line="107"/>
         <location filename="../src/io/globals.cpp" line="111"/>
         <source>%1 %2</source>
         <extracomment>1=file size (number), 2=unit (e.g. KiB)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>%1 %2</translation>
     </message>
 </context>
 <context>
@@ -497,12 +497,12 @@ a moment.</source>
         <location filename="../src/io/fileworker.cpp" line="100"/>
         <location filename="../src/io/fileworker.cpp" line="117"/>
         <source>File operation already in progress</source>
-        <translation type="unfinished"></translation>
+        <translation>Operazione sui file già in corso</translation>
     </message>
     <message>
         <location filename="../src/io/fileworker.cpp" line="159"/>
         <source>Empty filename</source>
-        <translation type="unfinished"></translation>
+        <translation>Nome file vuoto</translation>
     </message>
     <message>
         <location filename="../src/io/fileworker.cpp" line="178"/>
@@ -511,27 +511,27 @@ a moment.</source>
         <location filename="../src/io/fileworker.cpp" line="374"/>
         <location filename="../src/io/fileworker.cpp" line="397"/>
         <source>Cancelled</source>
-        <translation type="unfinished"></translation>
+        <translation>Annullato</translation>
     </message>
     <message>
         <location filename="../src/io/fileworker.cpp" line="216"/>
         <source>File not found</source>
-        <translation type="unfinished"></translation>
+        <translation>File non trovato</translation>
     </message>
     <message>
         <location filename="../src/io/fileworker.cpp" line="230"/>
         <source>Folder delete failed</source>
-        <translation type="unfinished"></translation>
+        <translation>Cancellazione cartella fallita</translation>
     </message>
     <message>
         <location filename="../src/io/fileworker.cpp" line="353"/>
         <source>Source folder does not exist</source>
-        <translation type="unfinished"></translation>
+        <translation>La cartella origine non esiste</translation>
     </message>
     <message>
         <location filename="../src/io/fileworker.cpp" line="362"/>
         <source>Cannot create target folder %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Impossibile creare la cartella destinazione %1</translation>
     </message>
     <message>
         <location filename="../src/io/fileworker.cpp" line="413"/>
@@ -544,19 +544,19 @@ a moment.</source>
     <message>
         <location filename="../src/io/filedata.cpp" line="346"/>
         <source>Image Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Dimensione Immangine</translation>
     </message>
     <message>
         <location filename="../src/io/filedata.cpp" line="352"/>
         <source>%1 x %2</source>
         <extracomment>image size description without aspect ratio: 1=width, 2=height</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>%1 x %2</translation>
     </message>
     <message>
         <location filename="../src/io/filedata.cpp" line="356"/>
         <source>%1 x %2 (%3)</source>
         <extracomment>image size description: 1=width, 2=height, 3=aspect ratio, e.g. 16:9</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>%1 x %2 (%3)</translation>
     </message>
 </context>
 <context>
@@ -588,7 +588,7 @@ a moment.</source>
         <location filename="../qml/pages/ListPage.qml" line="125"/>
         <source>Empty</source>
         <comment>as in “this folder is empty”</comment>
-        <translation type="unfinished"></translation>
+        <translation>Vuoto</translation>
     </message>
     <message>
         <location filename="../qml/pages/ListPage.qml" line="126"/>
@@ -606,12 +606,12 @@ a moment.</source>
     <message>
         <location filename="../qml/components/NodeContextMenu.qml" line="40"/>
         <source>Open</source>
-        <translation type="unfinished"></translation>
+        <translation>Apri</translation>
     </message>
     <message>
         <location filename="../qml/components/NodeContextMenu.qml" line="48"/>
         <source>Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>Elimina</translation>
     </message>
 </context>
 <context>
@@ -786,7 +786,7 @@ a moment.</source>
     <message>
         <location filename="../qml/pages/PlacesPage.qml" line="27"/>
         <source>Places</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Posizioni</translation>
     </message>
     <message>
         <location filename="../qml/pages/PlacesPage.qml" line="39"/>
@@ -799,17 +799,17 @@ a moment.</source>
     <message>
         <location filename="../src/io/globals.cpp" line="121"/>
         <source>hh:mm:ss</source>
-        <translation type="unfinished"></translation>
+        <translation>oo:mm:ss</translation>
     </message>
     <message>
         <location filename="../src/io/globals.cpp" line="124"/>
         <source>dd MMM yyyy, hh:mm:ss t</source>
-        <translation type="unfinished"></translation>
+        <translation>gg MMM aaaa, oo:mm:ss t</translation>
     </message>
     <message>
         <location filename="../src/io/globals.cpp" line="126"/>
         <source>dd.MM.yy, hh:mm</source>
-        <translation type="unfinished"></translation>
+        <translation>gg.MM.yy, oo:mm</translation>
     </message>
 </context>
 <context>
@@ -817,7 +817,7 @@ a moment.</source>
     <message>
         <location filename="../qml/components/StorageSizeBar.qml" line="86"/>
         <source>%1 free</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 libero</translation>
     </message>
 </context>
 <context>
@@ -861,7 +861,7 @@ a moment.</source>
         <location filename="../qml/pages/TreeMapPage.qml" line="126"/>
         <source>Empty</source>
         <comment>as in “this folder is empty”</comment>
-        <translation type="unfinished"></translation>
+        <translation>Vuoto</translation>
     </message>
     <message>
         <location filename="../qml/pages/TreeMapPage.qml" line="127"/>

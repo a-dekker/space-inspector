@@ -162,7 +162,7 @@ a moment.</source>
     <message>
         <location filename="../src/io/bookmarks.cpp" line="1009"/>
         <source>Home</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Koti</translation>
     </message>
     <message>
         <location filename="../src/io/bookmarks.cpp" line="1069"/>
@@ -173,7 +173,7 @@ a moment.</source>
     <message>
         <location filename="../src/io/bookmarks.cpp" line="1079"/>
         <source>Root</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Juurihakemisto</translation>
     </message>
 </context>
 <context>
@@ -206,7 +206,7 @@ a moment.</source>
     <message>
         <location filename="../qml/pages/DeleteDialog.qml" line="72"/>
         <source>Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Koko</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/DeleteDialog.qml" line="74"/>
@@ -228,7 +228,7 @@ a moment.</source>
         <location filename="../qml/pages/DeleteDialog.qml" line="81"/>
         <source>Type</source>
         <comment>as in “file type” but very short</comment>
-        <translation type="unfinished"></translation>
+        <translation>Tyyppi</translation>
     </message>
     <message>
         <location filename="../qml/pages/DeleteDialog.qml" line="82"/>
@@ -263,53 +263,53 @@ a moment.</source>
     <message>
         <location filename="../src/io/engine.cpp" line="70"/>
         <source>No files to paste</source>
-        <translation type="unfinished"></translation>
+        <translation>Ei liitettäviä tiedostoja</translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="78"/>
         <source>Destination does not exist</source>
-        <translation type="unfinished"></translation>
+        <translation>Kohdekansiota ei ole olemassa</translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="89"/>
         <source>Cannot overwrite itself</source>
-        <translation type="unfinished"></translation>
+        <translation>Ei voi kirjoittaa itsensä päälle</translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="95"/>
         <source>Cannot move/copy to itself</source>
-        <translation type="unfinished"></translation>
+        <translation>Ei voi siirtää/kopioida itsensä päälle</translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="248"/>
         <source>File does not exist</source>
-        <translation type="unfinished"></translation>
+        <translation>Tiedostoa ei ole olemassa</translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="250"/>
         <source>Broken symbolic link</source>
-        <translation type="unfinished"></translation>
+        <translation>Hajonnut symbolinen linkki</translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="255"/>
         <source>Cannot read this type of file</source>
-        <translation type="unfinished"></translation>
+        <translation>Tätä tiedostotyyppiä ei voi lukea</translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="261"/>
         <source>No permission to read the file</source>
-        <translation type="unfinished"></translation>
+        <translation>Ei oikeuksia lukea tiedostoa</translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="265"/>
         <location filename="../src/io/engine.cpp" line="271"/>
         <source>Error reading file</source>
-        <translation type="unfinished"></translation>
+        <translation>Virhe luettaessa tiedostoa</translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="274"/>
         <source>Empty file</source>
-        <translation type="unfinished"></translation>
+        <translation>Tyhjä tiedosto</translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="300"/>
@@ -329,12 +329,12 @@ a moment.</source>
     <message>
         <location filename="../src/io/engine.cpp" line="340"/>
         <source>No permissions to create %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Ei oikeuksia luoda kohdetta %1</translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="342"/>
         <source>Cannot create folder %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Kansiota %1 ei voitu luoda</translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="358"/>
@@ -349,7 +349,7 @@ a moment.</source>
     <message>
         <location filename="../src/io/engine.cpp" line="405"/>
         <source>Cannot rename %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Uudelleennimeäminen epäonnistui %1</translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="422"/>
@@ -379,7 +379,7 @@ a moment.</source>
     <message>
         <location filename="../src/io/engine.cpp" line="478"/>
         <source>Cannot change permissions</source>
-        <translation type="unfinished"></translation>
+        <translation>Oikeuksia ei voi muuttaa</translation>
     </message>
 </context>
 <context>
@@ -401,7 +401,7 @@ a moment.</source>
     <message>
         <location filename="../src/io/filedata.cpp" line="248"/>
         <source>File does not exist</source>
-        <translation type="unfinished"></translation>
+        <translation>Tiedostoa ei ole olemassa</translation>
     </message>
     <message>
         <location filename="../src/io/filedata.cpp" line="298"/>
@@ -421,17 +421,17 @@ a moment.</source>
     <message>
         <location filename="../src/io/filedata.cpp" line="310"/>
         <source>socket</source>
-        <translation type="unfinished"></translation>
+        <translation>socket</translation>
     </message>
     <message>
         <location filename="../src/io/filedata.cpp" line="314"/>
         <source>folder</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">kansio</translation>
     </message>
     <message>
         <location filename="../src/io/filedata.cpp" line="320"/>
         <source>unknown</source>
-        <translation type="unfinished"></translation>
+        <translation>tuntematon</translation>
     </message>
 </context>
 <context>
@@ -439,7 +439,7 @@ a moment.</source>
     <message>
         <location filename="../src/io/globals.cpp" line="79"/>
         <source>B</source>
-        <translation type="unfinished"></translation>
+        <translation>t</translation>
     </message>
     <message>
         <location filename="../src/io/globals.cpp" line="80"/>
@@ -486,7 +486,7 @@ a moment.</source>
         <location filename="../src/io/globals.cpp" line="111"/>
         <source>%1 %2</source>
         <extracomment>1=file size (number), 2=unit (e.g. KiB)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>%1 %2</translation>
     </message>
 </context>
 <context>
@@ -497,12 +497,12 @@ a moment.</source>
         <location filename="../src/io/fileworker.cpp" line="100"/>
         <location filename="../src/io/fileworker.cpp" line="117"/>
         <source>File operation already in progress</source>
-        <translation type="unfinished"></translation>
+        <translation>Tiedosto-operaatio on jo käynnissä</translation>
     </message>
     <message>
         <location filename="../src/io/fileworker.cpp" line="159"/>
         <source>Empty filename</source>
-        <translation type="unfinished"></translation>
+        <translation>Tyhjä tiedoston nimi</translation>
     </message>
     <message>
         <location filename="../src/io/fileworker.cpp" line="178"/>
@@ -511,27 +511,27 @@ a moment.</source>
         <location filename="../src/io/fileworker.cpp" line="374"/>
         <location filename="../src/io/fileworker.cpp" line="397"/>
         <source>Cancelled</source>
-        <translation type="unfinished"></translation>
+        <translation>Peruttu</translation>
     </message>
     <message>
         <location filename="../src/io/fileworker.cpp" line="216"/>
         <source>File not found</source>
-        <translation type="unfinished"></translation>
+        <translation>Tiedosto ei löydy</translation>
     </message>
     <message>
         <location filename="../src/io/fileworker.cpp" line="230"/>
         <source>Folder delete failed</source>
-        <translation type="unfinished"></translation>
+        <translation>Kansion poisto epäonnistui</translation>
     </message>
     <message>
         <location filename="../src/io/fileworker.cpp" line="353"/>
         <source>Source folder does not exist</source>
-        <translation type="unfinished"></translation>
+        <translation>Lähdekansiota ei ole olemassa</translation>
     </message>
     <message>
         <location filename="../src/io/fileworker.cpp" line="362"/>
         <source>Cannot create target folder %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Kohdekansiota ei voi luoda %1</translation>
     </message>
     <message>
         <location filename="../src/io/fileworker.cpp" line="413"/>
@@ -544,19 +544,19 @@ a moment.</source>
     <message>
         <location filename="../src/io/filedata.cpp" line="346"/>
         <source>Image Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Kuvan koko</translation>
     </message>
     <message>
         <location filename="../src/io/filedata.cpp" line="352"/>
         <source>%1 x %2</source>
         <extracomment>image size description without aspect ratio: 1=width, 2=height</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>%1 x %2</translation>
     </message>
     <message>
         <location filename="../src/io/filedata.cpp" line="356"/>
         <source>%1 x %2 (%3)</source>
         <extracomment>image size description: 1=width, 2=height, 3=aspect ratio, e.g. 16:9</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>%1 x %2 (%3)</translation>
     </message>
 </context>
 <context>
@@ -588,7 +588,7 @@ a moment.</source>
         <location filename="../qml/pages/ListPage.qml" line="125"/>
         <source>Empty</source>
         <comment>as in “this folder is empty”</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tyhjä</translation>
     </message>
     <message>
         <location filename="../qml/pages/ListPage.qml" line="126"/>
@@ -606,12 +606,12 @@ a moment.</source>
     <message>
         <location filename="../qml/components/NodeContextMenu.qml" line="40"/>
         <source>Open</source>
-        <translation type="unfinished"></translation>
+        <translation>Avaa</translation>
     </message>
     <message>
         <location filename="../qml/components/NodeContextMenu.qml" line="48"/>
         <source>Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>Poista</translation>
     </message>
 </context>
 <context>
@@ -861,7 +861,7 @@ a moment.</source>
         <location filename="../qml/pages/TreeMapPage.qml" line="126"/>
         <source>Empty</source>
         <comment>as in “this folder is empty”</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tyhjä</translation>
     </message>
     <message>
         <location filename="../qml/pages/TreeMapPage.qml" line="127"/>
