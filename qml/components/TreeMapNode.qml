@@ -83,9 +83,9 @@ Rectangle {
         anchors.fill: parent
         onClicked: {
             if (nodeModel.isDir) {
-                pageStack.push("../pages/TreeMapPage.qml", {
-                                   "nodeModel": nodeModel
-                               })
+                pageStack.animatorPush("../pages/TreeMapPage.qml", {
+                    "nodeModel": nodeModel
+                })
             }
         }
         onPressAndHold: {

@@ -48,8 +48,8 @@ ContextMenu {
         text: qsTr("Delete")
         onClicked: {
             var dialog = pageStack.push("../pages/DeleteDialog.qml", {
-                                            "nodeModel": nodeModel
-                                        })
+                "nodeModel": nodeModel
+            })
             dialog.accepted.connect(function(){
                 console.log("deleting:", nodeModel.dir)
                 Engine.deleteFiles(nodeModel.dir)

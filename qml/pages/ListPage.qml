@@ -58,7 +58,7 @@ Page {
             MenuItem {
                 text: qsTr("Go to...")
                 onClicked: {
-                    pageStack.push("../pages/PlacesPage.qml", {
+                    pageStack.animatorPush("../pages/PlacesPage.qml", {
                         "nodeModel": nodeModel
                     })
                 }
@@ -72,7 +72,7 @@ Page {
             MenuItem {
                 text: qsTr("Box view")
                 onClicked: {
-                    pageStack.replace("../pages/TreeMapPage.qml", {
+                    pageStack.animatorReplace("../pages/TreeMapPage.qml", {
                         "nodeModel": nodeModel
                     })
                 }
@@ -101,7 +101,7 @@ Page {
 
             onClicked: {
                 if (model.isDir) {
-                    pageStack.push("ListPage.qml", {
+                    pageStack.animatorPush("ListPage.qml", {
                         "nodeModel": model
                     })
                 } else {
@@ -157,9 +157,9 @@ Page {
 
     function refreshPage() {
         if (pageStack.currentPage == page && !pageStack.busy) {
-            pageStack.replace("../pages/ListPage.qml", {
-                                  "nodeModel": pageStack.currentPage.nodeModel
-                              })
+            pageStack.animatorReplace("../pages/ListPage.qml", {
+                "nodeModel": pageStack.currentPage.nodeModel
+            })
         }
     }
 }

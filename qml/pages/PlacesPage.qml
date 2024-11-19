@@ -37,7 +37,7 @@ Page {
         PullDownMenu {
             MenuItem {
                 text: qsTr("Info")
-                onClicked: pageStack.push(
+                onClicked: pageStack.animatorPush(
                     Qt.resolvedUrl("../pages/InfoPage.qml"))
             }
         }
@@ -77,7 +77,7 @@ Page {
                 }
             }
 
-            onClicked: pageStack.push(Qt.resolvedUrl("../pages/TreeMapPage.qml"), {
+            onClicked: pageStack.animatorReplaceAbove(null, Qt.resolvedUrl("../pages/TreeMapPage.qml"), {
                 "nodeModel": {
                     "name": name,
                     "dir": path,

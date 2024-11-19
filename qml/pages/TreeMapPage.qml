@@ -67,9 +67,9 @@ Page {
             MenuItem {
                 text: qsTr("Go to...")
                 onClicked: {
-                    pageStack.push("../pages/PlacesPage.qml", {
-                                       "nodeModel": nodeModel
-                                   })
+                    pageStack.animatorPush("../pages/PlacesPage.qml", {
+                        "nodeModel": nodeModel
+                    })
                 }
             }
             MenuItem {
@@ -81,9 +81,9 @@ Page {
             MenuItem {
                 text: qsTr("List view")
                 onClicked: {
-                    pageStack.replace("../pages/ListPage.qml", {
-                                          "nodeModel": nodeModel
-                                      })
+                    pageStack.animatorReplace("../pages/ListPage.qml", {
+                        "nodeModel": nodeModel
+                    })
                 }
             }
         }
@@ -164,7 +164,7 @@ Page {
         // Fall back to list view if there are many entries,
         // instead of freezing and possibly crashing the app.
         if (visibleNodesWithSize.length > 1000) {
-            pageStack.replace("../pages/ListPage.qml", {
+            pageStack.animatorReplace("../pages/ListPage.qml", {
                 "nodeModel": nodeModel
             })
             return
