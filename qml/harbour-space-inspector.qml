@@ -36,6 +36,6 @@ ApplicationWindow {
     cover: Qt.resolvedUrl("pages/CoverPage.qml")
 
     Component.onCompleted: {
-        BookmarksModel.sortFilter(BookmarkGroup.Device)
+        BookmarksModel.sortFilter([BookmarkGroup.Device])
     }
 }
