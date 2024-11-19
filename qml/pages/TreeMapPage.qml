@@ -106,16 +106,52 @@ Page {
             }
         }
 
-        Rectangle {
-            id: treeMap
+        Loader {
+            id: mapLoader
             anchors.top: collapsedNodes.bottom
             width: parent.width - 1
             height: parent.height - title.height - collapsedNodes.height
-            color: 'transparent'
 
-            function clear() {
-                for (var i = children.length - 1; i >= 0; i--) {
-                    children[i].destroy()
+            property var visibleNodes
+            property var coordinates
+
+            function unload() {
+                sourceComponent = null
+            }
+
+            function reload() {
+                sourceComponent = null
+                sourceComponent = mapComponent
+            }
+
+            sourceComponent: null
+
+            Component {
+                id: mapComponent
+
+                Item {
+                    id: mapRoot
+                    property var _coordinates: coordinates
+                    property var _visibleNodes: visibleNodes
+
+                    Repeater {
+                        model: mapRoot._coordinates
+
+                        delegate: Component {
+                            TreeMapNode {
+                                nodeModel: _visibleNodes[index]
+                                nodeLeft: modelData[0] + 1
+                                nodeTop: modelData[1] + 1
+                                nodeWidth: modelData[2] - modelData[0] - 1
+                                nodeHeight: modelData[3] - modelData[1] - 1
+
+                                onCollapseRequested: {
+                                    console.log("COLLAPSE", nodePath)
+                                    collapseSubNode(nodePath)
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -155,8 +191,6 @@ Page {
     }
 
     function renderTreeMap() {
-        treeMap.clear()
-
         var visibleNodesWithSize = removeCollapsed(subNodesWithSize)
 
         // Fall back to list view if there are many entries,
@@ -179,26 +213,15 @@ Page {
         }
         console.timeEnd('SIZES')
 
-
         console.time('COORDS')
-        var coords = Tm.Treemap.generate(sizeArr, treeMap.width, treeMap.height)
+        var coords = Tm.Treemap.generate(sizeArr, mapLoader.width, mapLoader.height)
         console.timeEnd('COORDS')
 
         console.time('ITEMS')
-        var nodeComponent = Qt.createComponent('../components/TreeMapNode.qml')
-        for (var i in coords) {
-            var coord = coords[i]
-            if (nodeComponent.status === Component.Ready) {
-                var nodeConfig = {
-                    "nodeModel": visibleNodesWithSize[i],
-                    "nodeLeft": coord[0] + 1,
-                    "nodeTop": coord[1] + 1,
-                    "nodeWidth": coord[2] - coord[0] - 1,
-                    "nodeHeight": coord[3] - coord[1] - 1
-                }
-                nodeComponent.createObject(treeMap, nodeConfig)
-            }
-        }
+        mapLoader.unload()
+        mapLoader.visibleNodes = visibleNodesWithSize
+        mapLoader.coordinates = coords
+        mapLoader.reload()
         console.timeEnd('ITEMS')
 
         busyIndicator.running = false
