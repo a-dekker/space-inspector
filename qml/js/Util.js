@@ -1,6 +1,10 @@
 /*
     Space Inspector - a filesystem structure visualization for SailfishOS
-    Copyright (C) 2014 - 2018 Jens Klingen
+
+    SPDX-FileCopyrightText: Copyright (C) 2014 - 2018 Jens Klingen
+    SPDX-FileCopyrightText: 2024 Mirian Margiani
+
+    SPDX-License-Identifier: GPL-3.0-or-later
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -18,48 +22,16 @@
 
 .pragma library
 
-/**
- * @param kbytes data size in KB, e.g. 2248
- * @returns human-readable formatted number with unit '2.2 MB'
- */
-function getHumanReadableSize(kbytes) {
-    var units = ["MB", "GB", "TB"];
-    var unit = "KB";
-    while (kbytes > 1024) {
-        kbytes /= 1024;
-        unit = units.shift();
-    }
-    return Math.round(kbytes * 10) / 10 + " " + unit;
-}
+var _colorCache = {}
+function colorForFile(nodeName) {
+    var ext = getFileExtension(nodeName)
 
-/**
- * @param path string file system path, e.g. '|home|nemo|' or '|home|nemo|asdf.txt'
- *     (imagine slashes instead of pipes, harbour RPM validator does not like hard-coded paths in comments)
- * @returns name of file or folder, e.g. 'nemo' or 'asdf.txt'
- */
-function getNodeNameFromPath(path) {
-    if (!path) throw "Path may not be null";
-    if (path === "/") return path;
-    var arr = path.split("/");
-    var last = arr.pop();
-    if (last.length === 0) last = arr.pop();
-    return last;
-}
-
-/**
- * Decides whether we can assume that the file will be handled by the operating system, depending solely on file extension.
- */
-function canHandleFile(path) {
-    if (!path) throw "Path may not be null";
-    var supported = ["mp3", "mp4", "jpeg", "jpg", "pdf", "html"];
-    var ext = getFileExtension(path);
-    if (ext && ext.length < 5) {
-        ext = ext.toLowerCase();
-        for (var i = 0; i < supported.length; i++) {
-            if (supported[i] === ext) return true;
-        }
+    if (!_colorCache.hasOwnProperty(ext)) {
+        _colorCache[ext] = Qt.hsla(getNormalizedHash(ext),
+                                   1, 0.5, 0.75)
     }
-    return false;
+
+    return _colorCache[ext]
 }
 
 /**
@@ -68,8 +40,7 @@ function canHandleFile(path) {
  * (ecxept when the last dot is the first character of the filename.
  * Returns null if the file does not have an extension.
  */
-function getFileExtension(path) {
-    var nodeName = getNodeNameFromPath(path);
+function getFileExtension(nodeName) {
     var dotIdx = nodeName.lastIndexOf(".");
     return dotIdx > 0 ? nodeName.substring(dotIdx + 1) : null;
 }
@@ -77,24 +48,30 @@ function getFileExtension(path) {
 /**
  * Hashes a string to a number where 0 <= ret < 1
  */
+var _hashCache = {}
 function getNormalizedHash(str) {
-    var ret = 0;
-    if (str) {
-        str = str.toLowerCase();
+    if (!_hashCache.hasOwnProperty(str)) {
+        var ret = 0;
+        if (str) {
+            str = str.toLowerCase();
 
-        for (var i = 0; i < str.length; i++) {
-            var c = str.charCodeAt(i);
-            if (c >= 97 && c < 123) c -= 97;
-            //a-z will be 0-25
-            else if (c >= 48 && c < 58) c -= 18; // 0-9 will be 26-35
-            //console.log("should be between 0 and 35: "+c)
-            c = (c / 35) * 0.9; // normalize each to be between 0 and 0.9
-            //console.log("should be between 0 and 0.9: "+c)
-            c /= Math.pow(10, i); // 1st letter has more influence than 2nd
-            //console.log(c);
-            ret += c;
+            for (var i = 0; i < str.length; i++) {
+                var c = str.charCodeAt(i);
+                if (c >= 97 && c < 123) c -= 97;
+                //a-z will be 0-25
+                else if (c >= 48 && c < 58) c -= 18; // 0-9 will be 26-35
+                //console.log("should be between 0 and 35: "+c)
+                c = (c / 35) * 0.9; // normalize each to be between 0 and 0.9
+                //console.log("should be between 0 and 0.9: "+c)
+                c /= Math.pow(10, i); // 1st letter has more influence than 2nd
+                //console.log(c);
+                ret += c;
+            }
         }
+
+        //console.log(str+"--->"+ret)
+        _hashCache[str] = ret;
     }
-    //console.log(str+"--->"+ret)
-    return ret;
+
+    return _hashCache[str];
 }

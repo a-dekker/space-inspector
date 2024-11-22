@@ -1,6 +1,10 @@
 /*
     Space Inspector - a filesystem structure visualization for SailfishOS
-    Copyright (C) 2014 - 2018 Jens Klingen
+
+    SPDX-FileCopyrightText: Copyright (C) 2014 - 2018 Jens Klingen
+    SPDX-FileCopyrightText: 2024 Mirian Margiani
+
+    SPDX-License-Identifier: GPL-3.0-or-later
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -19,41 +23,82 @@
 #ifdef QT_QML_DEBUG
 #include <QtQuick>
 #endif
-#include <sailfishapp.h>
 
+#include <sailfishapp.h>
 #include <QGuiApplication>
-#include <QQmlContext>
 #include <QQmlEngine>
 #include <QQuickView>
 #include <QScopedPointer>
-#include <QtQml>
-#include <QtQuick/QQuickPaintedItem>
+#include <QFileInfo>
 
-#include "io/engine.h"
-#include "shell.h"
+#include "requires_defines.h"
+#include "constants.h"
+#include "si_engine.h"
+#include "io/statfileinfo.h"
+#include "io/filedata.h"
+#include "io/bookmarks.h"
+#include "io/enumcontainer.h"
+
+DEFINE_ENUM_REGISTRATION_FUNCTION(SpaceInspector) {
+    REGISTER_ENUM_CONTAINER(ViewMode)
+}
 
 int main(int argc, char *argv[]) {
-    qmlRegisterType<Shell>("harbour.space.inspector.shell", 1, 0, "Shell");
+    // File Browser types
+    qRegisterMetaType<StatFileInfo>("StatFileInfo");
+    qRegisterMetaType<QList<StatFileInfo>>("QList<StatFileInfo>");
+    qRegisterMetaType<LocationAlternative>("LocationAlternative");
+    qRegisterMetaType<QList<LocationAlternative>>("QList<LocationAlternative>");
 
+    qmlRegisterType<FileData>("Harbour.FileBrowser.FileData", 1, 0, "FileData");
+    REGISTER_ENUMS(Bookmarks, "Harbour.FileBrowser.Bookmarks", 1, 0)
+    qmlRegisterUncreatableType<BookmarkGroup>("Harbour.FileBrowser.Bookmarks", 1, 0, "BookmarkGroup", "This is only a container for an enumeration.");
+    qmlRegisterType<BookmarkWatcher>("Harbour.FileBrowser.Bookmarks", 1, 0, "Bookmark");
+    qmlRegisterSingletonType<SpaceInspectorEngine>("Harbour.FileBrowser.Engine", 1, 0, "Engine", &SpaceInspectorEngine::qmlInstanceSI);
+    qmlRegisterSingletonType<BookmarksModel>("Harbour.FileBrowser.Bookmarks", 1, 0, "BookmarksModel",
+        [](QQmlEngine* engine, QJSEngine* scriptEngine) -> QObject* {
+            Q_UNUSED(engine);
+            Q_UNUSED(scriptEngine);
+            return new BookmarksModel;
+     });
+
+    // Space Inspector types
+    REGISTER_ENUMS(SpaceInspector, "Harbour.SpaceInspector.Constants", 1, 0)
+    qmlRegisterUncreatableType<ViewMode>("Harbour.SpaceInspector.Constants", 1, 0, "ViewMode", "This is only a container for an enumeration.");
+
+    qRegisterMetaType<SizeInfo>("SizeInfo");
+    qRegisterMetaType<QList<SizeInfo>>("QList<SizeInfo>");
+    qRegisterMetaType<FolderSizeStatusInfo>("FolderSizeStatusInfo");
+
+    // App setup
     QScopedPointer<QGuiApplication> app(SailfishApp::application(argc, argv));
-
-    QTranslator translator;
-    QString locale = QLocale::system().name();
+    app->setOrganizationName("harbour-space-inspector"); // needed for Sailjail
+    app->setApplicationName("harbour-space-inspector");
 
     QScopedPointer<QQuickView> view(SailfishApp::createView());
 
-    // QML global engine object
-    QScopedPointer<Engine> engine(new Engine);
-    view->rootContext()->setContextProperty("engine", engine.data());
+    // add module search path so Opal modules can be found
+    view->engine()->addImportPath(SailfishApp::pathTo("qml/modules").toString());
 
-    // store pointer to engine to access it in any class, to make it a singleton
-    QVariant engineVariant = qVariantFromValue(engine.data());
-    qApp->setProperty("engine", engineVariant);
+    if (argc >= 2) {
+        QFileInfo initialInfo(QString::fromUtf8(argv[1]));
 
-    view->setSource(SailfishApp::pathTo("qml/harbour-space-inspector.qml"));
+        if (initialInfo.exists() && initialInfo.isDir()) {
+            view->rootContext()->setContextProperty("initialFolder", initialInfo.absoluteFilePath());
+            qDebug() << "initial directory set from command line:" << initialInfo.absoluteFilePath();
+        } else {
+            qDebug() << "cannot set invalid directory from command line:" << argv[1];
+            view->rootContext()->setContextProperty("initialFolder", QLatin1Literal(""));
+        }
+    } else {
+        view->rootContext()->setContextProperty("initialFolder", QLatin1Literal(""));
+    }
+
+    // view->rootContext()->setContextProperty("APP_VERSION", QStringLiteral(APP_VERSION));
+    // view->rootContext()->setContextProperty("APP_RELEASE", QStringLiteral(APP_RELEASE));
+
+    view->setSource(SailfishApp::pathToMainQml());
     view->show();
 
     return app->exec();
-
-    // return SailfishApp::main(argc, argv);
 }

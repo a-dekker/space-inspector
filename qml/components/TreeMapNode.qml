@@ -1,8 +1,10 @@
-
-
 /*
     Space Inspector - a filesystem structure visualization for SailfishOS
-    Copyright (C) 2014 - 2018 Jens Klingen
+
+    SPDX-FileCopyrightText: Copyright (C) 2014 - 2018 Jens Klingen
+    SPDX-FileCopyrightText: 2024 Mirian Margiani
+
+    SPDX-License-Identifier: GPL-3.0-or-later
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,66 +19,110 @@
     You should have received a copy of the GNU General Public License
     along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
+
 import QtQuick 2.2
 import Sailfish.Silica 1.0
 import "../components"
 import "../js/Util.js" as Util
 
-Rectangle {
-
+Item {
     id: treeMapNode
+
     property var nodeModel
     property double nodeLeft
     property double nodeTop
     property double nodeWidth
     property double nodeHeight
-    // we want a full width context menu for a fixed size rectangle, need some tricks for this
-    width: contextMenu.active ? contextMenu.width : nodeWidth
-    height: nodeHeight + contextMenu.height
-    x: contextMenu.active ? 0 : nodeLeft
+    property bool canCollapse: true
+
+    property bool _menuActive: !!_menuItem
+    property Item _menuItem: null
+
+    signal collapseRequested(var nodePath)
+
+    function openMenu() {
+        if (!_menuItem) {
+            _initMenuItem()
+        }
+        _menuItem.open(treeMapNode)
+    }
+
+    function _initMenuItem() {
+        if (!!_menuItem) {
+            return
+        }
+
+        var result = menu.createObject(treeMapNode)
+        result.closed.connect(function() { _menuItem.destroy() })
+        _menuItem = result
+    }
+
+    width: nodeWidth
+    height: nodeHeight
+    x: nodeLeft
     y: nodeTop
+    z: 1
 
-    color: 'transparent'
+    Component {
+        id: menu
 
-    Rectangle {
-        x: contextMenu.active ? nodeLeft : 0
-        width: nodeWidth
-        height: nodeHeight
-        color: Theme.secondaryHighlightColor
-        opacity: mArea.pressed ? 0.6 : 0.3
-        Component.onCompleted: {
-            if (!nodeModel.isDir) {
-                color = Qt.hsla(Util.getNormalizedHash(Util.getFileExtension(
-                                                           nodeModel.dir)), 1,
-                                0.5, 0.75)
+        NodeContextMenu {
+            id: _menuBody
+            nodeModel: treeMapNode.nodeModel
+            canCollapse: treeMapNode.canCollapse
+            onCollapseClicked: {
+                treeMapNode.collapseRequested(nodeModel.dir)
+            }
+
+            Rectangle {
+                parent: _menuBody
+                color: Theme.colorScheme === Theme.LightOnDark ?
+                           'black' : 'white'
+                opacity: 0.8
+                anchors.fill: parent
+                z: -1000
             }
         }
     }
 
+    Rectangle {
+        id: background
+        x: 0
+        width: nodeWidth
+        height: nodeHeight
+        color: !nodeModel || nodeModel.isDir ?
+                   Theme.secondaryHighlightColor :
+                   Util.colorForFile(nodeModel.name)
+        opacity: mArea.pressed || _menuActive ? 0.2 : 0.3
+    }
+
     Label {
         id: label
-        x: contextMenu.active ? nodeLeft : 0
+        x: 0
         y: 0
         width: nodeWidth
         height: nodeHeight
+        padding: Theme.paddingSmall
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignVCenter
-        color: mArea.pressed
-               || (nodeModel
-                   && nodeModel.isDir) ? Theme.primaryColor : Theme.highlightColor
-        text: Util.getNodeNameFromPath(
-                  nodeModel.dir) + '\n' + Util.getHumanReadableSize(
-                  nodeModel.size)
-        // try to optimize text display for smaller rectangles...
-        onPaintedWidthChanged: {
-            if (paintedWidth > parent.width)
-                font.pixelSize = Math.floor(
-                            font.pixelSize * parent.width / paintedWidth)
-            if (paintedHeight > parent.height)
-                text = Util.getNodeNameFromPath(nodeModel.dir)
-        }
-        // ... if too small, rather display no text
-        visible: parent.width > 30 && parent.height > 30
+
+        color: (!nodeModel || !nodeModel.isDir) ||
+               mArea.pressed || _menuActive ?
+                   Theme.highlightColor :
+                   Theme.primaryColor
+
+        // \x9C separates options in multi-length strings
+        text: !!nodeModel ?
+                  [nodeModel.name + '\n' + nodeModel.formattedSize,
+                   nodeModel.formattedSize].join("\x9C") :
+                  ''
+        elide: Text.ElideRight
+        fontSizeMode: Text.Fit
+        wrapMode: Text.Wrap
+        minimumPixelSize: Theme.fontSizeTiny * 0.75
+        visible: parent.width > 30 && parent.height > 30 &&
+                 paintedWidth < width &&
+                 paintedHeight < height
     }
 
     MouseArea {
@@ -84,55 +130,37 @@ Rectangle {
         anchors.fill: parent
         onClicked: {
             if (nodeModel.isDir) {
-                pageStack.push("../pages/TreeMapPage.qml", {
-                                   "nodeModel": nodeModel
-                               })
+                pageStack.animatorPush("../pages/TreeMapPage.qml", {
+                    "nodeModel": nodeModel
+                })
+            } else {
+                openMenu()
             }
         }
         onPressAndHold: {
-            treeMapNode.z = 1000 // ensure context menu is on top
-            contextMenu.open(treeMapNode)
+            openMenu()
         }
     }
 
-    // less transparent background for contextmenu, for better readability (displayed on top of other tree nodes)
-    Rectangle {
-        color: 'black'
-        opacity: 0.8
-        x: contextMenu.x
-        y: contextMenu.y
-        width: contextMenu.width
-        height: contextMenu.height
-    }
+    states: State {
+        // Some tricks are needed to allow having a full-width
+        // context menu on a fixed-width rectangle.
+        when: _menuActive
 
-    NodeContextMenu {
-        id: contextMenu
-        nodeModel: treeMapNode.nodeModel
-        onClosed: {
-            treeMapNode.z = 1
-        }
-        onCollapseClicked: PropertyAnimation {
+        PropertyChanges {
             target: treeMapNode
-            property: "opacity"
-            from: 0.4
-            to: 0
-            duration: 250
-            easing.type: Easing.OutCurve
-            onRunningChanged: {
-                if (!running)
-                    collapseSubNode(nodeModel.dir)
-            }
+            width: _menuItem.width
+            height: nodeHeight + _menuItem.height
+            x: 0
+            z: 1000  // ensure context menu is on top
         }
-    }
-
-    opacity: 0.6
-    Component.onCompleted: PropertyAnimation {
-        running: true
-        target: treeMapNode
-        property: "opacity"
-        from: 0.6
-        to: 1.0
-        duration: 500
-        easing.type: Easing.OutCurve
+        PropertyChanges {
+            target: background
+            x: nodeLeft
+        }
+        PropertyChanges {
+            target: label
+            x: nodeLeft
+        }
     }
 }

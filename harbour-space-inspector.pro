@@ -19,12 +19,34 @@ TARGET = harbour-space-inspector
 CONFIG += sailfishapp
 CONFIG += sailfishapp_i18n
 
+# require the C++17 standard to be able to use std::as_const and std::filesystem
+# Note: old Qt only recognizes up to "c++14" as valid config options
+CONFIG += c++1z
+
+QT += concurrent
+
+# _FILE_OFFSET_BITS=64 must be defined to support files
+# larger than 2 GiB on 32bit phones like Xperia X.
+DEFINES += _FILE_OFFSET_BITS=64
+
+# Disable some unused File Browser features to reduce internal dependencies.
+DEFINES += ENGINE_NO_CLIPBOARD
+DEFINES += FILEDATA_NO_EXIF
+
+# Enable rebuilding when defines change
+include(libs/opal-cached-defines.pri)
+
+QML_IMPORT_PATH += qml/modules
+
 SOURCES += src/harbour-space-inspector.cpp \
-    src/shell.cpp \
+    src/si_engine.cpp \
+    src/io/bookmarks.cpp \
+    src/io/configfilemonitor.cpp \
     src/io/engine.cpp \
+    src/io/filedata.cpp \
     src/io/fileworker.cpp \
+    src/io/globals.cpp \
     src/io/statfileinfo.cpp \
-    src/io/globals.cpp
 
 OTHER_FILES += qml/harbour-space-inspector.qml \
     qml/cover/CoverPage.qml \
@@ -34,29 +56,30 @@ OTHER_FILES += qml/harbour-space-inspector.qml \
     qml/components/TreeMapNode.qml \
     qml/pages/ListPage.qml \
     cover.png \
-    qml/js/IoTranslator.js \
-    qml/js/IoTranslator.js \
-    qml/js/Memory.js \
     qml/js/Util.js \
     qml/js/treemap-squarify.js \
-    qml/components/ShellConnector.qml \
+    qml/components/CalculationManager.qml \
     qml/pages/CoverPage.qml \
     qml/components/ActivityIndicator.qml \
-    qml/pages/InfoPage.qml \
-    qml/components/NotificationPanel.qml \
+    qml/pages/AboutPage.qml \
     qml/pages/DeleteDialog.qml \
     qml/components/NodeContextMenu.qml \
     qml/components/TreeMapNodeCollapsed.qml\
-    qml/components/Spacer.qml \
     qml/pages/PlacesPage.qml \
-    qml/components/PlaceButton.qml
+    qml/components/InfoGridItem.qml
 
 HEADERS += \
-    src/shell.h \
+    src/si_engine.h \
+    src/constants.h \
+    src/io/bookmarks.h \
+    src/io/configfilemonitor.h \
     src/io/engine.h \
+    src/io/enumcontainer.h \
+    src/io/filedata.h \
     src/io/fileworker.h \
+    src/io/globals.h \
+    src/io/property_macros.h \
     src/io/statfileinfo.h \
-    src/io/globals.h
 
 RESOURCES += \
     resources/resources.qrc
@@ -64,7 +87,8 @@ RESOURCES += \
 lupdate_only {
 SOURCES += \
     qml/pages/*.qml \
-    qml/components/*.qml
+    qml/components/*.qml \
+    qml/components/file-browser/*.qml \
 }
 
 DISTFILES += \
@@ -72,8 +96,4 @@ DISTFILES += \
 
 SAILFISHAPP_ICONS = 86x86 108x108 128x128 172x172 256x256
 
-TRANSLATIONS = \
-    translations/$${TARGET}-de.ts \
-    translations/$${TARGET}-es.ts \
-    translations/$${TARGET}-zh_CN.ts \
-    translations/$${TARGET}-sv.ts
+TRANSLATIONS = translations/$${TARGET}-*.ts

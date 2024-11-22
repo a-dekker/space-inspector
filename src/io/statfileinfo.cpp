@@ -1,4 +1,27 @@
+/*
+ * This file is part of File Browser.
+ *
+ * SPDX-FileCopyrightText: 2014 Kari Pihkala
+ * SPDX-FileCopyrightText: 2019-2022 Mirian Margiani
+ *
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ *
+ * File Browser is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later
+ * version.
+ *
+ * File Browser is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along with
+ * this program. If not, see <https://www.gnu.org/licenses/>.
+ */
+
 #include "statfileinfo.h"
+
+#include <QDebug>
 
 StatFileInfo::StatFileInfo() :
     m_filename(""), m_selected(false)
@@ -6,7 +29,7 @@ StatFileInfo::StatFileInfo() :
     refresh();
 }
 
-StatFileInfo::StatFileInfo(QString filename) :
+StatFileInfo::StatFileInfo(const QString& filename) :
     m_filename(filename), m_selected(false)
 {
     refresh();
@@ -34,6 +57,18 @@ QString StatFileInfo::kind() const
     return "?";
 }
 
+uint StatFileInfo::dirSize() const
+{
+    if (!isDirAtEnd()) return 0;
+    return QDir(m_fileInfo.absoluteFilePath(),
+                QLatin1String(""),
+                QDir::NoSort,
+                QDir::AllEntries |
+                QDir::System | /* System is not included in AllEntries */
+                QDir::NoDotAndDotDot |
+                QDir::Hidden).count();
+}
+
 bool StatFileInfo::exists() const
 {
     return m_fileInfo.exists();
@@ -49,11 +84,26 @@ bool StatFileInfo::isSafeToRead() const
     return isFileAtEnd();
 }
 
+QString StatFileInfo::symLinkTargetFolder() const
+{
+    if (!m_fileInfo.isSymLink()) return QStringLiteral("");
+
+    auto target = QFileInfo(QFileInfo(m_fileInfo.symLinkTarget()).absolutePath());
+
+    if (target.exists()) {
+        return target.absoluteFilePath();
+    }
+
+    return QStringLiteral("");
+}
+
 bool StatFileInfo::isSymLinkBroken() const
 {
     // if it is a symlink but it doesn't exist, then it is broken
-    if (m_fileInfo.isSymLink() && !m_fileInfo.exists())
+    if (m_fileInfo.isSymLink() && !m_fileInfo.exists()) {
         return true;
+    }
+
     return false;
 }
 
@@ -68,8 +118,10 @@ void StatFileInfo::refresh()
     memset(&m_lstat, 0, sizeof(m_lstat));
 
     m_fileInfo = QFileInfo(m_filename);
-    if (m_filename.isEmpty())
+
+    if (m_filename.isEmpty()) {
         return;
+    }
 
     QByteArray ba = m_filename.toUtf8();
     char *fn = ba.data();
@@ -78,18 +130,18 @@ void StatFileInfo::refresh()
     int res = lstat(fn, &m_lstat);
     if (res != 0) { // if error, then set to undefined
         m_lstat.st_mode = 0;
+        qDebug() << "lstat failed for" << m_filename << res << errno << (errno == EOVERFLOW);
     }
-    // if not symlink, then just copy lstat data to stat
-    if (!S_ISLNK(m_lstat.st_mode)) {
+
+    if (S_ISLNK(m_lstat.st_mode)) {
+        // check the file after following possible symlinks
+        res = stat(fn, &m_stat);
+        if (res != 0) { // if error, then set to undefined
+            m_stat.st_mode = 0;
+            qDebug() << "stat failed for" << m_filename << res << errno << (errno == EOVERFLOW);
+        }
+    } else {
+        // if not symlink, then just copy lstat data to stat
         memcpy(&m_stat, &m_lstat, sizeof(m_stat));
-        return;
     }
-
-    // check the file after following possible symlinks
-    res = stat(fn, &m_stat);
-    if (res != 0) { // if error, then set to undefined
-        m_stat.st_mode = 0;
-    }
-
 }
-

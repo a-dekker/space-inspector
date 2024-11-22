@@ -1,7 +1,23 @@
 /*
-    From Kari's excellent File Browser, which has been released into the public domain.
-    See https://github.com/karip/harbour-file-browser
-*/
+ * This file is part of File Browser.
+ *
+ * SPDX-FileCopyrightText: 2014 Kari Pihkala
+ * SPDX-FileCopyrightText: 2019-2022 Mirian Margiani
+ *
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ *
+ * File Browser is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later
+ * version.
+ *
+ * File Browser is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along with
+ * this program. If not, see <https://www.gnu.org/licenses/>.
+ */
 
 #ifndef STATFILEINFO_H
 #define STATFILEINFO_H
@@ -18,18 +34,21 @@ class StatFileInfo
 {
 public:
     explicit StatFileInfo();
-    explicit StatFileInfo(QString filename);
+    explicit StatFileInfo(const QString &filename);
     ~StatFileInfo();
 
     void setFile(QString filename);
     QString fileName() const { return m_fileInfo.fileName(); }
+    const QString& rawFileName() const { return m_filename; }
+
+    const QFileInfo& getQFileInfo() const { return m_fileInfo; }
 
     // these inspect the file itself without following symlinks
 
     // directory
-    bool isDir() const { return S_ISDIR(m_lstat.st_mode); }
+    bool isDir() const { return m_fileInfo.isDir(); /*S_ISDIR(m_lstat.st_mode);*/ }
     // symbolic link
-    bool isSymLink() const { return S_ISLNK(m_lstat.st_mode); }
+    bool isSymLink() const { return m_fileInfo.isSymLink(); /*return S_ISLNK(m_lstat.st_mode);*/ }
     // block special file
     bool isBlk() const { return S_ISBLK(m_lstat.st_mode); }
     // character special file
@@ -47,7 +66,7 @@ public:
     // these inspect the file or if it is a symlink, then its target end point
 
     // directory
-    bool isDirAtEnd() const { return S_ISDIR(m_stat.st_mode); }
+    bool isDirAtEnd() const { return m_fileInfo.isDir(); /*S_ISDIR(m_stat.st_mode);*/ }
     // block special file
     bool isBlkAtEnd() const { return S_ISBLK(m_stat.st_mode); }
     // character special file
@@ -65,11 +84,24 @@ public:
 
     QString kind() const;
     QFile::Permissions permissions() const { return m_fileInfo.permissions(); }
+    bool isWritable() const { return m_fileInfo.isWritable(); }
+    bool isReadable() const { return m_fileInfo.isReadable(); }
+    bool isExecutable() const { return m_fileInfo.isExecutable(); }
     QString group() const { return m_fileInfo.group(); }
     uint groupId() const { return m_fileInfo.groupId(); }
     QString owner() const { return m_fileInfo.owner(); }
     uint ownerId() const { return m_fileInfo.ownerId(); }
     qint64 size() const { return m_fileInfo.size(); }
+    uint dirSize() const;
+    qint64 lastModifiedStat() const { return m_stat.st_mtime; }
+    timespec lastModifiedTimespec() const {
+        // Get modification date without following symlinks.
+        return m_lstat.st_mtim;
+    }
+    timespec lastAccessTimespec() const {
+        // Get access date without following symlinks.
+        return m_lstat.st_atim;
+    }
     QDateTime lastModified() const { return m_fileInfo.lastModified(); }
     QDateTime created() const { return m_fileInfo.created(); }
     bool exists() const;
@@ -82,7 +114,14 @@ public:
     QString absoluteFilePath() const { return m_fileInfo.absoluteFilePath(); }
     QString suffix() const { return m_fileInfo.suffix(); }
     QString symLinkTarget() const { return m_fileInfo.symLinkTarget(); }
+    QString symLinkTargetFolder() const;
     bool isSymLinkBroken() const;
+
+    // Doomed paths will become invalid soon because the file
+    // is being moved or deleted. This is not real file metadata
+    // and must be set manually.
+    bool isDoomed() const { return m_doomed; }
+    void setDoomed(bool doomed) { m_doomed = doomed; }
 
     // selection
     void setSelected(bool selected);
@@ -96,6 +135,31 @@ private:
     struct stat m_stat; // after following possible symlinks
     struct stat m_lstat; // file itself without following symlinks
     bool m_selected;
+    bool m_doomed = {false};
 };
+
+inline bool operator==(const StatFileInfo& f1, const StatFileInfo& f2)
+{
+    // Don't compare other properties like size or modification time,
+    // as they are are not really indicators for the represented
+    // file's identity. If they differ, then it is time to call "refresh()".
+    return (f1.fileName() == f2.fileName() &&
+            f1.isSymLink() == f2.isSymLink() &&
+            f1.isDirAtEnd() == f2.isDirAtEnd());
+}
+
+// #include <QDebug>
+inline uint qHash(const StatFileInfo& key, uint seed=10)
+{
+    QByteArray result;
+    result.reserve(15);
+    result.append(QByteArray::number(qHash(key.getQFileInfo().filePath(), seed)));
+    result.append('#');
+    result.append(key.isSymLink());
+    result.append('#');
+    result.append(key.isDirAtEnd());
+    // qDebug() << (result.size() > 15) << "hashed" << key.getQFileInfo().filePath() << "to" << result << "(" << result.size() << ")";
+    return qHash(result, seed);
+}
 
 #endif // STATFILEINFO_H
