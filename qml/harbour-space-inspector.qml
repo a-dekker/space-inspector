@@ -33,7 +33,7 @@ ApplicationWindow {
     id: main
 
     readonly property string appName: "Space Inspector"
-    readonly property string appVersion: "0.11"
+    readonly property string appVersion: "1.00"
 
     readonly property var _initialNode: ({
         // optional, only used when set from CLI
