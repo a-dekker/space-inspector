@@ -16,7 +16,7 @@ Page {
 
     ConfigurationGroup {
         id: config
-        path: "/apps/harbour-captains-log"
+        path: "/apps/harbour-space-inspector"
         property int defaultView: ViewMode.Box
     }
 

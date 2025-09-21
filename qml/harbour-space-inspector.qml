@@ -74,7 +74,7 @@ ApplicationWindow {
 
     ConfigurationValue {
         id: viewConfig
-        key: "/apps/harbour-captains-log/defaultView"
+        key: "/apps/harbour-space-inspector/defaultView"
         defaultValue: ViewMode.Box
     }
 

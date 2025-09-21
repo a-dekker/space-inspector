@@ -21,7 +21,7 @@ Page {
 
     ConfigurationValue {
         id: viewConfig
-        key: "/apps/harbour-captains-log/defaultView"
+        key: "/apps/harbour-space-inspector/defaultView"
         defaultValue: ViewMode.Box
 
         property string viewPage: value === ViewMode.List ?
