@@ -4,72 +4,72 @@
 <context>
     <name>AboutPage</name>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="26"/>
+        <location filename="../qml/pages/AboutPage.qml" line="25"/>
         <source>Do you like this app?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="27"/>
+        <location filename="../qml/pages/AboutPage.qml" line="26"/>
         <source>Buy me a beer :)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="35"/>
+        <location filename="../qml/pages/AboutPage.qml" line="34"/>
         <source>No matter how much storage you have got - it will be full.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="37"/>
+        <location filename="../qml/pages/AboutPage.qml" line="36"/>
         <source>Space Inspector helps to find large folders and files on your storage.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="47"/>
+        <location filename="../qml/pages/AboutPage.qml" line="46"/>
         <source>Questions, problems, suggestions?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="79"/>
+        <location filename="../qml/pages/AboutPage.qml" line="78"/>
         <source>Development</source>
         <translation>Développement</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="82"/>
+        <location filename="../qml/pages/AboutPage.qml" line="81"/>
         <source>Programming</source>
         <translation>Programmation</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="89"/>
+        <location filename="../qml/pages/AboutPage.qml" line="88"/>
         <source>Icon Design</source>
         <translation>Design de l&apos;icône</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="95"/>
+        <location filename="../qml/pages/AboutPage.qml" line="94"/>
         <source>Translations</source>
         <translation>Traductions</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="98"/>
+        <location filename="../qml/pages/AboutPage.qml" line="97"/>
         <source>Swedish</source>
         <translation>suédois</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="104"/>
+        <location filename="../qml/pages/AboutPage.qml" line="103"/>
         <source>Spanish</source>
         <translation>espagnol</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="110"/>
+        <location filename="../qml/pages/AboutPage.qml" line="109"/>
         <source>German</source>
         <translation>allemand</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="118"/>
+        <location filename="../qml/pages/AboutPage.qml" line="117"/>
         <source>English</source>
         <translation>anglais</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="125"/>
+        <location filename="../qml/pages/AboutPage.qml" line="124"/>
         <source>Chinese</source>
         <translation>chinois</translation>
     </message>
@@ -98,80 +98,80 @@ a moment.</source>
 <context>
     <name>BookmarksModel</name>
     <message>
-        <location filename="../src/io/bookmarks.cpp" line="507"/>
+        <location filename="../src/io/bookmarks.cpp" line="535"/>
         <source>Memory card</source>
         <translation>Carte mémoire</translation>
     </message>
     <message>
-        <location filename="../src/io/bookmarks.cpp" line="509"/>
+        <location filename="../src/io/bookmarks.cpp" line="537"/>
         <source>Attached folder</source>
         <translation>Dossier joint</translation>
     </message>
     <message>
-        <location filename="../src/io/bookmarks.cpp" line="511"/>
+        <location filename="../src/io/bookmarks.cpp" line="539"/>
         <source>Remote folder</source>
         <translation>Répertoire en ligne</translation>
     </message>
     <message>
-        <location filename="../src/io/bookmarks.cpp" line="514"/>
+        <location filename="../src/io/bookmarks.cpp" line="542"/>
         <source>Removable media</source>
         <translation>Support amovible</translation>
     </message>
     <message>
-        <location filename="../src/io/bookmarks.cpp" line="601"/>
-        <location filename="../src/io/bookmarks.cpp" line="1094"/>
+        <location filename="../src/io/bookmarks.cpp" line="629"/>
+        <location filename="../src/io/bookmarks.cpp" line="1152"/>
         <source>Internal storage</source>
         <translation>Stockage interne</translation>
     </message>
     <message>
-        <location filename="../src/io/bookmarks.cpp" line="609"/>
+        <location filename="../src/io/bookmarks.cpp" line="637"/>
         <source>“%1” on “%2”</source>
         <extracomment>as in &quot;the folder “Music” on the storage named “SD Card”&quot;</extracomment>
         <translation>“%1” sur “%2”</translation>
     </message>
     <message>
-        <location filename="../src/io/bookmarks.cpp" line="664"/>
-        <location filename="../src/io/bookmarks.cpp" line="1019"/>
+        <location filename="../src/io/bookmarks.cpp" line="692"/>
+        <location filename="../src/io/bookmarks.cpp" line="1077"/>
         <source>Documents</source>
         <translation>Documents</translation>
     </message>
     <message>
-        <location filename="../src/io/bookmarks.cpp" line="666"/>
-        <location filename="../src/io/bookmarks.cpp" line="1029"/>
+        <location filename="../src/io/bookmarks.cpp" line="694"/>
+        <location filename="../src/io/bookmarks.cpp" line="1087"/>
         <source>Downloads</source>
         <translation type="unfinished">Téléchargements</translation>
     </message>
     <message>
-        <location filename="../src/io/bookmarks.cpp" line="668"/>
-        <location filename="../src/io/bookmarks.cpp" line="1039"/>
+        <location filename="../src/io/bookmarks.cpp" line="696"/>
+        <location filename="../src/io/bookmarks.cpp" line="1097"/>
         <source>Pictures</source>
         <translation>Images</translation>
     </message>
     <message>
-        <location filename="../src/io/bookmarks.cpp" line="670"/>
-        <location filename="../src/io/bookmarks.cpp" line="1049"/>
+        <location filename="../src/io/bookmarks.cpp" line="698"/>
+        <location filename="../src/io/bookmarks.cpp" line="1107"/>
         <source>Videos</source>
         <translation>Vidéos</translation>
     </message>
     <message>
-        <location filename="../src/io/bookmarks.cpp" line="672"/>
-        <location filename="../src/io/bookmarks.cpp" line="1059"/>
+        <location filename="../src/io/bookmarks.cpp" line="700"/>
+        <location filename="../src/io/bookmarks.cpp" line="1117"/>
         <source>Music</source>
         <translation>Musique</translation>
     </message>
     <message>
-        <location filename="../src/io/bookmarks.cpp" line="1009"/>
+        <location filename="../src/io/bookmarks.cpp" line="1067"/>
         <source>Home</source>
         <translation>Répertoire personnel</translation>
     </message>
     <message>
-        <location filename="../src/io/bookmarks.cpp" line="1069"/>
-        <location filename="../src/io/bookmarks.cpp" line="1095"/>
+        <location filename="../src/io/bookmarks.cpp" line="1127"/>
+        <location filename="../src/io/bookmarks.cpp" line="1153"/>
         <source>Android storage</source>
         <translation type="unfinished">Stockage Android</translation>
     </message>
     <message>
-        <location filename="../src/io/bookmarks.cpp" line="1079"/>
+        <location filename="../src/io/bookmarks.cpp" line="1137"/>
         <source>Root</source>
         <translation type="unfinished">Racine</translation>
     </message>
@@ -359,6 +359,19 @@ a moment.</source>
         <location filename="../src/io/engine.cpp" line="488"/>
         <source>Cannot change permissions</source>
         <translation>Impossible de changer les permissions</translation>
+    </message>
+</context>
+<context>
+    <name>ExternalUrlPage</name>
+    <message>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="87"/>
+        <source>Swipe left to preview.</source>
+        <translation>Balayez vers la gauche pour prévisualiser.</translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="87"/>
+        <source>You are using a mobile data connection.</source>
+        <translation>Vous utilisez une connexion via données mobile.</translation>
     </message>
 </context>
 <context>
@@ -659,29 +672,29 @@ a moment.</source>
 <context>
     <name>Opal.About</name>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="56"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="58"/>
         <source>About</source>
         <translation>À propos</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="85"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="87"/>
         <source>Version %1</source>
         <translation>Version %1</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="101"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="103"/>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="24"/>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="33"/>
         <source>Development</source>
         <translation>Développement</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="104"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="106"/>
         <source>show contributors</source>
         <translation>afficher les contributeurs</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="106"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="108"/>
         <location filename="../qml/modules/Opal/About/private/ContributorsAttributionRepeater.qml" line="18"/>
         <location filename="../qml/modules/Opal/About/private/ContributorsAttributionRepeater.qml" line="24"/>
         <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="47"/>
@@ -689,18 +702,18 @@ a moment.</source>
         <translation>Page d&apos;accueil</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="109"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="111"/>
         <location filename="../qml/modules/Opal/About/private/ChangelogPage.qml" line="16"/>
         <source>Changelog</source>
         <translation>Journal des modifications</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="112"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="114"/>
         <source>Translations</source>
         <translation>Traductions</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="115"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="117"/>
         <location filename="../qml/modules/Opal/About/private/ContributorsAttributionRepeater.qml" line="17"/>
         <location filename="../qml/modules/Opal/About/private/ContributorsAttributionRepeater.qml" line="25"/>
         <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="50"/>
@@ -708,17 +721,17 @@ a moment.</source>
         <translation>Code source</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="124"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="126"/>
         <source>Donations</source>
         <translation>Dons</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="130"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="132"/>
         <source>License</source>
         <translation>Licence</translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="135"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="137"/>
         <source>show license(s)</source>
         <translation>
             <numerusform>Afficher la licence</numerusform>
@@ -736,7 +749,7 @@ a moment.</source>
         <translation>Changements depuis la version %1</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/InfoSection.qml" line="15"/>
+        <location filename="../qml/modules/Opal/About/InfoSection.qml" line="16"/>
         <source>show details</source>
         <translation>afficher les détails</translation>
     </message>
@@ -747,7 +760,7 @@ a moment.</source>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ContributorsAttributionRepeater.qml" line="15"/>
-        <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="34"/>
+        <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="45"/>
         <source>Details</source>
         <translation>Détails</translation>
     </message>
@@ -762,37 +775,22 @@ a moment.</source>
         <translation>Remerciements</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="15"/>
-        <source>External Link</source>
-        <translation>Lien externe</translation>
-    </message>
-    <message>
-        <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="32"/>
-        <source>Open in browser</source>
-        <translation>Ouvrir dans le navigateur</translation>
-    </message>
-    <message>
-        <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="36"/>
-        <source>Copied to clipboard: %1</source>
-        <translation>Copié dans le presse-papiers&amp;nbsp;: %1</translation>
-    </message>
-    <message>
-        <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="41"/>
-        <source>Copy to clipboard</source>
-        <translation>Copier dans le presse-papiers</translation>
-    </message>
-    <message>
         <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="120"/>
         <source>Please refer to &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt;</source>
         <translation>Veuillez vous référer à &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt;</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="28"/>
+        <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="37"/>
         <source>Download license texts</source>
         <translation>Télécharger les textes des licences</translation>
     </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="40"/>
+        <source>You are using a mobile data connection.</source>
+        <translation>Vous utilisez une connexion via données mobile.</translation>
+    </message>
     <message numerus="yes">
-        <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="34"/>
+        <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="45"/>
         <source>License(s)</source>
         <translation>
             <numerusform>Licence</numerusform>
@@ -800,7 +798,7 @@ a moment.</source>
         </translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="44"/>
+        <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="55"/>
         <source>Note: please check the source code for most accurate information.</source>
         <translation>Note&amp;nbsp;: veuillez consulter le code source pour obtenir des informations plus précises.</translation>
     </message>
@@ -824,6 +822,64 @@ a moment.</source>
     </message>
 </context>
 <context>
+    <name>Opal.LinkHandler</name>
+    <message>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="36"/>
+        <source>Copied to clipboard: %1</source>
+        <translation>Copié dans le presse-papiers&amp;nbsp;: %1</translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="47"/>
+        <source>Share link</source>
+        <translation>Partager lien</translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="51"/>
+        <source>Phone number</source>
+        <translation>Numéro de téléphone</translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="51"/>
+        <source>External link</source>
+        <translation>Lien externe</translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="73"/>
+        <source>Copy link</source>
+        <translation>Copier lien</translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="75"/>
+        <source>Copy text</source>
+        <translation>Copier texte</translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="79"/>
+        <source>Share</source>
+        <translation>Partager</translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="84"/>
+        <source>Open in browser</source>
+        <translation>Ouvrir dans le navigateur</translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="84"/>
+        <source>Open externally</source>
+        <translation>Ouvrir extérieurement</translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/LinkHandler/private/PreviewPage.qml" line="27"/>
+        <source>No preview available.</source>
+        <translation>Pas d’aperçu disponible.</translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/LinkHandler/private/PreviewPage.qml" line="28"/>
+        <source>The page is taking too long to load.</source>
+        <translation>La page prend trop de temps à être chargée.</translation>
+    </message>
+</context>
+<context>
     <name>PlacesPage</name>
     <message>
         <location filename="../qml/pages/PlacesPage.qml" line="39"/>
@@ -844,19 +900,22 @@ a moment.</source>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../src/io/globals.cpp" line="121"/>
+        <location filename="../src/io/globals.cpp" line="122"/>
         <source>hh:mm:ss</source>
-        <translation>hh:mm:ss</translation>
+        <comment>Time format. Use what&apos;s common in your language. See https://doc.qt.io/archives/qt-5.15/qml-qtqml-date.html#format-strings for details.</comment>
+        <translation type="unfinished">hh:mm:ss</translation>
     </message>
     <message>
-        <location filename="../src/io/globals.cpp" line="124"/>
+        <location filename="../src/io/globals.cpp" line="125"/>
         <source>dd MMM yyyy, hh:mm:ss t</source>
-        <translation>dd MMM yyyy, hh:mm:ss t</translation>
+        <comment>Date and time format. Use what&apos;s common in your language. See https://doc.qt.io/archives/qt-5.15/qml-qtqml-date.html#format-strings for details.</comment>
+        <translation type="unfinished">dd MMM yyyy, hh:mm:ss t</translation>
     </message>
     <message>
-        <location filename="../src/io/globals.cpp" line="126"/>
+        <location filename="../src/io/globals.cpp" line="127"/>
         <source>dd.MM.yy, hh:mm</source>
-        <translation>dd.MM.yy, hh:mm</translation>
+        <comment>Date and format. Use what&apos;s common in your language. See https://doc.qt.io/archives/qt-5.15/qml-qtqml-date.html#format-strings for details.</comment>
+        <translation type="unfinished">dd.MM.yy, hh:mm</translation>
     </message>
 </context>
 <context>

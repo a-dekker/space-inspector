@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sk">
+<TS version="2.1" language="ar">
 <context>
     <name>AboutPage</name>
     <message>
@@ -31,47 +31,47 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="78"/>
         <source>Development</source>
-        <translation>Vývoj</translation>
+        <translation>تطوير</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="81"/>
         <source>Programming</source>
-        <translation>Programovanie</translation>
+        <translation>برمجة</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="88"/>
         <source>Icon Design</source>
-        <translation>Návrh ikon</translation>
+        <translation>تصميم الأيقونات</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="94"/>
         <source>Translations</source>
-        <translation>Preklady</translation>
+        <translation>الترجمات</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="97"/>
         <source>Swedish</source>
-        <translation>Švédčina</translation>
+        <translation>السويدية</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="103"/>
         <source>Spanish</source>
-        <translation>Španielčina</translation>
+        <translation>الاسبانية</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="109"/>
         <source>German</source>
-        <translation>Nemčina</translation>
+        <translation>الالمانية</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="117"/>
         <source>English</source>
-        <translation>Angličtina</translation>
+        <translation>الانجليزية</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="124"/>
         <source>Chinese</source>
-        <translation>Čínština</translation>
+        <translation>الصينية</translation>
     </message>
 </context>
 <context>
@@ -100,80 +100,80 @@ a moment.</source>
     <message>
         <location filename="../src/io/bookmarks.cpp" line="535"/>
         <source>Memory card</source>
-        <translation>Pamäťová karta</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/io/bookmarks.cpp" line="537"/>
         <source>Attached folder</source>
-        <translation>Pripojená zložka</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/io/bookmarks.cpp" line="539"/>
         <source>Remote folder</source>
-        <translation>Vzdialená zložka</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/io/bookmarks.cpp" line="542"/>
         <source>Removable media</source>
-        <translation>Vymeniteľný nosič dát</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/io/bookmarks.cpp" line="629"/>
         <location filename="../src/io/bookmarks.cpp" line="1152"/>
         <source>Internal storage</source>
-        <translation>Vlastný ukladací priestor</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/io/bookmarks.cpp" line="637"/>
         <source>“%1” on “%2”</source>
         <extracomment>as in &quot;the folder “Music” on the storage named “SD Card”&quot;</extracomment>
-        <translation>“%1” v “%2”</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/io/bookmarks.cpp" line="692"/>
         <location filename="../src/io/bookmarks.cpp" line="1077"/>
         <source>Documents</source>
-        <translation>Dokumenty</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/io/bookmarks.cpp" line="694"/>
         <location filename="../src/io/bookmarks.cpp" line="1087"/>
         <source>Downloads</source>
-        <translation>Stiahnutia</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/io/bookmarks.cpp" line="696"/>
         <location filename="../src/io/bookmarks.cpp" line="1097"/>
         <source>Pictures</source>
-        <translation>Obrázky</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/io/bookmarks.cpp" line="698"/>
         <location filename="../src/io/bookmarks.cpp" line="1107"/>
         <source>Videos</source>
-        <translation>Videá</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/io/bookmarks.cpp" line="700"/>
         <location filename="../src/io/bookmarks.cpp" line="1117"/>
         <source>Music</source>
-        <translation>Hudba</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/io/bookmarks.cpp" line="1067"/>
         <source>Home</source>
-        <translation>Domov</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/io/bookmarks.cpp" line="1127"/>
         <location filename="../src/io/bookmarks.cpp" line="1153"/>
         <source>Android storage</source>
-        <translation>Ukladací priestor Android</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/io/bookmarks.cpp" line="1137"/>
         <source>Root</source>
-        <translation>Koreň</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -207,7 +207,7 @@ a moment.</source>
         <location filename="../qml/pages/DeleteDialog.qml" line="83"/>
         <source>Type</source>
         <comment>as in “file type” but very short</comment>
-        <translation>Typ</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/DeleteDialog.qml" line="84"/>
@@ -229,7 +229,7 @@ a moment.</source>
         <location filename="../qml/pages/DeleteDialog.qml" line="93"/>
         <source>Name</source>
         <comment>as in “file name” but very short</comment>
-        <translation>Názov</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/DeleteDialog.qml" line="113"/>
@@ -242,123 +242,123 @@ a moment.</source>
     <message>
         <location filename="../src/io/engine.cpp" line="70"/>
         <source>No files to paste</source>
-        <translation>Žiaden súbor na prilepenie</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="78"/>
         <source>Destination does not exist</source>
-        <translation>Cieľ neexistuje</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="89"/>
         <source>Cannot overwrite itself</source>
-        <translation>Nemožno prepísať seba</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="95"/>
         <source>Cannot move/copy to itself</source>
-        <translation>Nemožno presunúť/kopírovať do seba</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="258"/>
         <source>File does not exist</source>
-        <translation>Súbor neexistuje</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="260"/>
         <source>Broken symbolic link</source>
-        <translation>Porušený symbolický odkaz</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="265"/>
         <source>Cannot read this type of file</source>
-        <translation>Nemožno prečítať tento typ súboru</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="271"/>
         <source>No permission to read the file</source>
-        <translation>Nie sú oprávnenia na čítanie súboru</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="275"/>
         <location filename="../src/io/engine.cpp" line="281"/>
         <source>Error reading file</source>
-        <translation>Chyba čítania súboru</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="284"/>
         <source>Empty file</source>
-        <translation>Prázdny súbor</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="310"/>
         <source>Binary file preview clipped at %1 kB</source>
-        <translation>Náhľad binárneho súboru bol orezaný na %1 kB</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="329"/>
         <source>Text file preview clipped at %1 lines</source>
-        <translation>Náhľad textového súboru bol orezaný na %1 riadkov</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="331"/>
         <source>Text file preview clipped at %1 kB</source>
-        <translation>Náhľad textového súboru bol orezaný na %1 kB</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="350"/>
         <source>No permissions to create %1</source>
-        <translation>Nie sú oprávnenia na vytvorenie %1</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="352"/>
         <source>Cannot create folder %1</source>
-        <translation>Nemožno vytvoriť zložku %1</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="368"/>
         <source>No permissions to create “%1” in “%2”</source>
-        <translation>Žiadne oprávnenia na vytvorenie „%1“ v „%2“</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="379"/>
         <source>Cannot create file “%1” in “%2”</source>
-        <translation>Nemožno vytvoriť súbor „%1“ v „%2“</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="415"/>
         <source>Cannot rename %1</source>
-        <translation>Nemožno premenovať %1</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="432"/>
         <source>Source “%1” is not a symbolic link</source>
-        <translation>Zdroj “%1” nie je symbolický odkaz</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="441"/>
         <source>No permissions to change contents of “%1”</source>
-        <translation>Žiadne oprávnenia na zmenu obsahu “%1”</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="449"/>
         <source>Failed to remove old link “%1” pointing to “%2”</source>
-        <translation>Zlyhalo odstránenie starého odkazu “%1” odkazujúceho na “%2”</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="455"/>
         <source>Failed to revert link “%1” pointing to “%2” after failing to change target to “%3”</source>
-        <translation>Nepodarilo vrátiť späť odkaz “%1” odkazujúci na “%2” po neúspešnej zmene cieľa na “%3”</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="462"/>
         <source>Failed to change link target of “%1” to “%2”</source>
-        <translation>Nepodarilo sa zmeniť cieľ odkazu “%1” na “%2”</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/io/engine.cpp" line="488"/>
         <source>Cannot change permissions</source>
-        <translation>Nemožno zmeniť oprávnenia</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -380,51 +380,54 @@ a moment.</source>
         <location filename="../src/io/filedata.cpp" line="87"/>
         <source>empty</source>
         <extracomment>as in &quot;this folder is empty&quot;, but as short as possible</extracomment>
-        <translation>prázdny</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
         <location filename="../src/io/filedata.cpp" line="88"/>
         <source>%n item(s)</source>
-        <translation>
-            <numerusform>%n položka</numerusform>
-            <numerusform>%n položky</numerusform>
-            <numerusform>%n položiek</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
         <location filename="../src/io/filedata.cpp" line="248"/>
         <source>File does not exist</source>
-        <translation>Súbor neexistuje</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/io/filedata.cpp" line="298"/>
         <source>block device</source>
-        <translation>blokovať zariadenie</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/io/filedata.cpp" line="302"/>
         <source>character device</source>
-        <translation>znakové zariadenie</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/io/filedata.cpp" line="306"/>
         <source>pipe</source>
-        <translation>potrubie</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/io/filedata.cpp" line="310"/>
         <source>socket</source>
-        <translation>zásuvka</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/io/filedata.cpp" line="314"/>
         <source>folder</source>
-        <translation>zložka</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/io/filedata.cpp" line="320"/>
         <source>unknown</source>
-        <translation>neznámy</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -432,54 +435,54 @@ a moment.</source>
     <message>
         <location filename="../src/io/globals.cpp" line="79"/>
         <source>B</source>
-        <translation>B</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/io/globals.cpp" line="80"/>
         <source>KiB</source>
-        <translation>kB</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/io/globals.cpp" line="81"/>
         <source>MiB</source>
-        <translation>MB</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/io/globals.cpp" line="82"/>
         <source>GiB</source>
-        <translation>GB</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/io/globals.cpp" line="83"/>
         <source>TiB</source>
-        <translation>TB</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/io/globals.cpp" line="84"/>
         <source>PiB</source>
-        <translation>PB</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/io/globals.cpp" line="85"/>
         <source>EiB</source>
-        <translation>EB</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/io/globals.cpp" line="86"/>
         <source>ZiB</source>
-        <translation>ZB</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/io/globals.cpp" line="87"/>
         <source>YiB</source>
-        <translation>YB</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/io/globals.cpp" line="107"/>
         <location filename="../src/io/globals.cpp" line="111"/>
         <source>%1 %2</source>
         <extracomment>1=file size (number), 2=unit (e.g. KiB)</extracomment>
-        <translation>%1 %2</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -490,12 +493,12 @@ a moment.</source>
         <location filename="../src/io/fileworker.cpp" line="100"/>
         <location filename="../src/io/fileworker.cpp" line="117"/>
         <source>File operation already in progress</source>
-        <translation>Operácia so súbormi prebieha</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/io/fileworker.cpp" line="159"/>
         <source>Empty filename</source>
-        <translation>Prázdny názov súboru</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/io/fileworker.cpp" line="178"/>
@@ -504,32 +507,32 @@ a moment.</source>
         <location filename="../src/io/fileworker.cpp" line="374"/>
         <location filename="../src/io/fileworker.cpp" line="397"/>
         <source>Cancelled</source>
-        <translation>Odvolaný</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/io/fileworker.cpp" line="216"/>
         <source>File not found</source>
-        <translation>Súbor nenájdený</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/io/fileworker.cpp" line="230"/>
         <source>Folder delete failed</source>
-        <translation>Zmazanie zložky zlyhalo</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/io/fileworker.cpp" line="353"/>
         <source>Source folder does not exist</source>
-        <translation>Zdrojová zložka neexistuje</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/io/fileworker.cpp" line="362"/>
         <source>Cannot create target folder %1</source>
-        <translation>Nemožno vytvoriť cieľovú zložku %1</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/io/fileworker.cpp" line="413"/>
         <source>Failed to remove source folder “%1” after moving.</source>
-        <translation>Odstránenie zložky “%1” po presúvaní zlyhalo.</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -542,42 +545,42 @@ a moment.</source>
     <message>
         <location filename="../qml/pages/FolderInfoPage.qml" line="48"/>
         <source>Root</source>
-        <translation>Koreň</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/FolderInfoPage.qml" line="69"/>
         <source>Location</source>
-        <translation>Poloha</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/FolderInfoPage.qml" line="73"/>
         <source>Type</source>
-        <translation>Typ</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/FolderInfoPage.qml" line="76"/>
         <source>Unknown (link target not found)</source>
-        <translation>Neznámy (cieľový odkaz nebol nájdený)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/FolderInfoPage.qml" line="77"/>
         <source>Link to %1</source>
-        <translation>Odkaz na %1</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/FolderInfoPage.qml" line="84"/>
         <source>Permissions</source>
-        <translation>Oprávnenia</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/FolderInfoPage.qml" line="88"/>
         <source>Owner</source>
-        <translation>Vlastník</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/FolderInfoPage.qml" line="93"/>
         <source>Group</source>
-        <translation>Skupina</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/FolderInfoPage.qml" line="98"/>
@@ -587,7 +590,7 @@ a moment.</source>
     <message>
         <location filename="../qml/pages/FolderInfoPage.qml" line="103"/>
         <source>Last modified</source>
-        <translation>Naposledy upravovaný</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -595,19 +598,19 @@ a moment.</source>
     <message>
         <location filename="../src/io/filedata.cpp" line="346"/>
         <source>Image Size</source>
-        <translation>Veľkosť obrázka</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/io/filedata.cpp" line="352"/>
         <source>%1 x %2</source>
         <extracomment>image size description without aspect ratio: 1=width, 2=height</extracomment>
-        <translation>%1 x %2</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/io/filedata.cpp" line="356"/>
         <source>%1 x %2 (%3)</source>
         <extracomment>image size description: 1=width, 2=height, 3=aspect ratio, e.g. 16:9</extracomment>
-        <translation>%1 x %2 (%3)</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -615,7 +618,7 @@ a moment.</source>
     <message>
         <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="119"/>
         <source>License text</source>
-        <translation>Znenie licencie</translation>
+        <translation>نص الرخصة</translation>
     </message>
 </context>
 <context>
@@ -623,7 +626,7 @@ a moment.</source>
     <message>
         <location filename="../qml/pages/ListPage.qml" line="48"/>
         <source>Root</source>
-        <translation>Koreň</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/ListPage.qml" line="70"/>
@@ -644,7 +647,7 @@ a moment.</source>
         <location filename="../qml/pages/ListPage.qml" line="129"/>
         <source>Empty</source>
         <comment>as in “this folder is empty”</comment>
-        <translation>Prázdny</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/ListPage.qml" line="130"/>
@@ -662,12 +665,12 @@ a moment.</source>
     <message>
         <location filename="../qml/components/NodeContextMenu.qml" line="42"/>
         <source>Open</source>
-        <translation>Otvoriť</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/components/NodeContextMenu.qml" line="50"/>
         <source>Delete</source>
-        <translation>Zmazať</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -675,24 +678,24 @@ a moment.</source>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="58"/>
         <source>About</source>
-        <translation>O aplikácii</translation>
+        <translation>عن</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="87"/>
         <source>Version %1</source>
-        <translation>Verzia %1</translation>
+        <translation>النسخة %1</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="103"/>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="24"/>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="33"/>
         <source>Development</source>
-        <translation>Vývoj</translation>
+        <translation>تطوير</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="106"/>
         <source>show contributors</source>
-        <translation>zobraziť prispievateľov</translation>
+        <translation>عرض المساهمين</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="108"/>
@@ -700,18 +703,18 @@ a moment.</source>
         <location filename="../qml/modules/Opal/About/private/ContributorsAttributionRepeater.qml" line="24"/>
         <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="47"/>
         <source>Homepage</source>
-        <translation>Domovská stránka</translation>
+        <translation>الصفحة الرئيسية</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="111"/>
         <location filename="../qml/modules/Opal/About/private/ChangelogPage.qml" line="16"/>
         <source>Changelog</source>
-        <translation>Protokol zmien</translation>
+        <translation>سجل التغييرات</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="114"/>
         <source>Translations</source>
-        <translation>Preklady</translation>
+        <translation>الترجمات</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="117"/>
@@ -719,72 +722,75 @@ a moment.</source>
         <location filename="../qml/modules/Opal/About/private/ContributorsAttributionRepeater.qml" line="25"/>
         <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="50"/>
         <source>Source Code</source>
-        <translation>Zdrojový text</translation>
+        <translation>كود المصدر</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="126"/>
         <source>Donations</source>
-        <translation>Dary</translation>
+        <translation>التبرعات</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="132"/>
         <source>License</source>
-        <translation>Licencia</translation>
+        <translation>الرخصة</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="137"/>
         <source>show license(s)</source>
-        <translation>
-            <numerusform>zobraziť licenciu</numerusform>
-            <numerusform>zobraziť licencie</numerusform>
-            <numerusform>zobraziť licencií</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/ChangelogNews.qml" line="61"/>
         <source>News</source>
-        <translation>Správy</translation>
+        <translation>الأخبار</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/ChangelogNews.qml" line="62"/>
         <source>Changes since version %1</source>
-        <translation>Zmeny od verzie %1</translation>
+        <translation>التغييرات منذ الإصدار %1</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/InfoSection.qml" line="16"/>
         <source>show details</source>
-        <translation>zobraziť podrobnosti</translation>
+        <translation>اظهر التفاصيل</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ContributorsAttributionRepeater.qml" line="11"/>
         <source>Thank you!</source>
-        <translation>Ďakujeme!</translation>
+        <translation>شكرا لك!</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ContributorsAttributionRepeater.qml" line="15"/>
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="45"/>
         <source>Details</source>
-        <translation>Podrobnosti</translation>
+        <translation>تفاصيل</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="23"/>
         <source>Contributors</source>
-        <translation>Prispievatelia</translation>
+        <translation>المساهمين</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="39"/>
         <source>Acknowledgements</source>
-        <translation>Poďakovania</translation>
+        <translation>مع الشكر والتقدير</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="120"/>
         <source>Please refer to &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt;</source>
-        <translation>Pozrite si prosím &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt;</translation>
+        <translation>يرجى الرجوع إلى &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt;</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="37"/>
         <source>Download license texts</source>
-        <translation>Stiahnuť text licencie</translation>
+        <translation>تحميل نصوص الترخيص</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="40"/>
@@ -795,15 +801,18 @@ a moment.</source>
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="45"/>
         <source>License(s)</source>
         <translation>
-            <numerusform>Licencia</numerusform>
-            <numerusform>Licencie</numerusform>
-            <numerusform>Licencií</numerusform>
+            <numerusform>صفر</numerusform>
+            <numerusform>واحد</numerusform>
+            <numerusform>اثنين</numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="55"/>
         <source>Note: please check the source code for most accurate information.</source>
-        <translation>Poznámka: Najpresnejšie informácie nájdete v zdrojovom texte.</translation>
+        <translation>ملاحظة: يرجى فحص كود المصدر لمعلومات اكثر دقة.</translation>
     </message>
 </context>
 <context>
@@ -811,17 +820,17 @@ a moment.</source>
     <message>
         <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="7"/>
         <source>If you want to support my work, you can buy me a cup of coffee.</source>
-        <translation>Ak chcete podporiť moju prácu, môžete mi kúpiť šálku kávy.</translation>
+        <translation>إذا أحببت دعم عملي، يمكنك شراء فنجان قهوة لي</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="8"/>
         <source>You can support this project by contributing, or by donating using any of these services.</source>
-        <translation>Tento projekt môžete podporiť príspevkom alebo darom pomocou ktorejkoľvek z týchto služieb.</translation>
+        <translation>يمكنك دعم هذا المشروع من خلال التطوع أو التبرع باستخدام أي من هذه الخدمات.</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/DonationsGroup.qml" line="9"/>
         <source>Your contributions to translations or code would be most welcome.</source>
-        <translation>Vaša pomoc s prekladom alebo programovaním by bola veľmi vítaná.</translation>
+        <translation>مساهمتك في الترجمات أو البرمجة ستكون محل ترحيب كبير.</translation>
     </message>
 </context>
 <context>
@@ -829,12 +838,12 @@ a moment.</source>
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="36"/>
         <source>Copied to clipboard: %1</source>
-        <translation>Kopírovať do schránky: %1</translation>
+        <translation>تم النسخ الى الحافظة: %1</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="47"/>
         <source>Share link</source>
-        <translation>Zdieľať odkaz</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="51"/>
@@ -844,7 +853,7 @@ a moment.</source>
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="51"/>
         <source>External link</source>
-        <translation>Externý odkaz</translation>
+        <translation>رابط خارجي</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="73"/>
@@ -859,17 +868,17 @@ a moment.</source>
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="79"/>
         <source>Share</source>
-        <translation>Zdielať</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="84"/>
         <source>Open in browser</source>
-        <translation>Otvoriť v prehliadači</translation>
+        <translation>افتح في المتصفح</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="84"/>
         <source>Open externally</source>
-        <translation>Otvoriť zvonku</translation>
+        <translation>الفتح عبر برنامج آخر</translation>
     </message>
     <message>
         <location filename="../qml/modules/Opal/LinkHandler/private/PreviewPage.qml" line="27"/>
@@ -887,17 +896,17 @@ a moment.</source>
     <message>
         <location filename="../qml/pages/PlacesPage.qml" line="39"/>
         <source>Places</source>
-        <translation>Miesta</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/PlacesPage.qml" line="51"/>
         <source>About</source>
-        <translation>O aplikácii</translation>
+        <translation>عن</translation>
     </message>
     <message>
         <location filename="../qml/pages/PlacesPage.qml" line="56"/>
         <source>Settings</source>
-        <translation>Nastavenia</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -906,19 +915,19 @@ a moment.</source>
         <location filename="../src/io/globals.cpp" line="122"/>
         <source>hh:mm:ss</source>
         <comment>Time format. Use what&apos;s common in your language. See https://doc.qt.io/archives/qt-5.15/qml-qtqml-date.html#format-strings for details.</comment>
-        <translation type="unfinished">hh:mm:ss</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/io/globals.cpp" line="125"/>
         <source>dd MMM yyyy, hh:mm:ss t</source>
         <comment>Date and time format. Use what&apos;s common in your language. See https://doc.qt.io/archives/qt-5.15/qml-qtqml-date.html#format-strings for details.</comment>
-        <translation type="unfinished">dd MMM yyyy, hh:mm:ss</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/io/globals.cpp" line="127"/>
         <source>dd.MM.yy, hh:mm</source>
         <comment>Date and format. Use what&apos;s common in your language. See https://doc.qt.io/archives/qt-5.15/qml-qtqml-date.html#format-strings for details.</comment>
-        <translation type="unfinished">dd.MM.yy, hh:mm</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -926,7 +935,7 @@ a moment.</source>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="39"/>
         <source>Settings</source>
-        <translation>Nastavenia</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="43"/>
@@ -956,7 +965,7 @@ a moment.</source>
         <location filename="../qml/components/SizeDetailItem.qml" line="24"/>
         <source>files</source>
         <comment>generic form for unknown number of items</comment>
-        <translation>súbory</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/components/SizeDetailItem.qml" line="25"/>
@@ -967,59 +976,68 @@ a moment.</source>
         <location filename="../qml/components/SizeDetailItem.qml" line="31"/>
         <source>Size</source>
         <comment>as in “file size” but very short</comment>
-        <translation>Veľkosť</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/SizeDetailItem.qml" line="50"/>
         <source>%n folder(s)</source>
-        <translation>
-            <numerusform>%n zložka</numerusform>
-            <numerusform>%n zložky</numerusform>
-            <numerusform>%n zložiek</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/components/file-browser/SizeDetailItem.qml" line="35"/>
         <source>Size</source>
-        <translation>Veľkosť</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/components/file-browser/SizeDetailItem.qml" line="56"/>
         <source>size</source>
-        <translation>veľkosť</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/components/file-browser/SizeDetailItem.qml" line="63"/>
         <source>directories</source>
-        <translation>adresáre</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/components/file-browser/SizeDetailItem.qml" line="70"/>
         <source>files</source>
-        <translation>súbory</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/components/file-browser/SizeDetailItem.qml" line="80"/>
         <source>unknown size</source>
-        <translation>neznáma veľkosť</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/file-browser/SizeDetailItem.qml" line="84"/>
         <source>%n directories</source>
-        <translation>
-            <numerusform>%n adresár</numerusform>
-            <numerusform>%n adresáre</numerusform>
-            <numerusform>%n adresárov</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/file-browser/SizeDetailItem.qml" line="92"/>
         <location filename="../qml/components/SizeDetailItem.qml" line="55"/>
         <source>%n file(s)</source>
-        <translation>
-            <numerusform>%n súbor</numerusform>
-            <numerusform>%n súbory</numerusform>
-            <numerusform>%n súborov</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
 </context>
@@ -1028,7 +1046,7 @@ a moment.</source>
     <message>
         <location filename="../qml/components/file-browser/StorageSizeBar.qml" line="86"/>
         <source>%1 free</source>
-        <translation>%1 voľné</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1037,7 +1055,7 @@ a moment.</source>
         <location filename="../qml/components/file-browser/StorageSizeMenuLabel.qml" line="14"/>
         <source>%1 full (%2%)</source>
         <comment>as in “15 of 20 GiB [%1] of this device are filled with data, which is 75% [%2] of its capacity”</comment>
-        <translation>%1 zaplnené (%2%)</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1046,6 +1064,9 @@ a moment.</source>
         <location filename="../qml/components/TreeMapNodeCollapsed.qml" line="50"/>
         <source>%n collapsed item(s)</source>
         <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
             <numerusform></numerusform>
             <numerusform></numerusform>
             <numerusform></numerusform>
@@ -1072,13 +1093,13 @@ a moment.</source>
     <message>
         <location filename="../qml/pages/TreeMapPage.qml" line="87"/>
         <source>Root</source>
-        <translation>Koreň</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/TreeMapPage.qml" line="166"/>
         <source>Empty</source>
         <comment>as in “this folder is empty”</comment>
-        <translation>Prázdny</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/TreeMapPage.qml" line="167"/>
