@@ -16,7 +16,6 @@ A.AboutPageBase {
     appVersion: main.appVersion
     appRelease: ""
 
-    allowDownloadingLicenses: false
     // sourcesUrl: "https://github.com/jklingen/space-inspector"
     // homepageUrl: "https://forum.sailfishos.org/t/..."
     // translationsUrl: "https://hosted.weblate.org/projects/%1".arg(Qt.application.name)
@@ -37,8 +36,8 @@ A.AboutPageBase {
                  qsTr("Space Inspector helps to find large folders and files on your storage.")
     mainAttributions: [
         "2014-2018 Jens Klingen",
-        "2020-2024 Arno Dekker",
-        "2024 Mirian Margiani"
+        "2020-2026 Arno Dekker",
+        "2024-2026 Mirian Margiani"
     ]
     autoAddOpalAttributions: true
 
@@ -49,7 +48,7 @@ A.AboutPageBase {
             buttons: [
                 A.InfoButton {
                     text: "Github"
-                    onClicked: openOrCopyUrl("https://github.com/jklingen/space-inspector")
+                    onClicked: openOrCopyUrl("https://github.com/a-dekker/space-inspector")
                 },
                 A.InfoButton {
                     text: "Twitter"
@@ -62,7 +61,7 @@ A.AboutPageBase {
     attributions: [
         A.Attribution {
             name: "File Browser core"
-            entries: ["2019-2024 Mirian Margiani", "2013-2019 karip"]
+            entries: ["2019-2026 Mirian Margiani", "2013-2019 karip"]
             licenses: A.License { spdxId: "GPL-3.0-or-later" }
             sources: "https://github.com/ichthyosaurus/harbour-file-browser"
         },

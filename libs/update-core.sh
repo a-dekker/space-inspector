@@ -47,4 +47,8 @@ for i in "$cCORE_FILES_DIR/"*.{cpp,h}; do
     fi
 done
 
+year="$(date +%Y)"
+sed -Ei "s@entries: \[\"2019-[0-9]{4} Mirian Margiani\", \"2013-2019 karip\"\]@entries: [\"2019-$year Mirian Margiani\", \"2013-2019 karip\"]@g" \
+    qml/pages/AboutPage.qml
+
 exit 0
