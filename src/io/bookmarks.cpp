@@ -1,6 +1,6 @@
 /*
  * This file is part of File Browser.
- * SPDX-FileCopyrightText: 2020-2024 Mirian Margiani
+ * SPDX-FileCopyrightText: 2020-2025 Mirian Margiani
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
@@ -173,7 +173,7 @@ BookmarksModel::BookmarksModel(QObject *parent) :
     reloadIgnoredMounts(); // must be called after m_ignoredMountsMonitor has a file
 
     m_bookmarksMonitor->reset(bookmarksFile);
-    connect(m_bookmarksMonitor, &ConfigFileMonitor::configChanged, this, &BookmarksModel::reload);
+    connect(m_bookmarksMonitor, &ConfigFileMonitor::configChanged, this, [&](){ reload(); });
 
     if (!QFile::exists(bookmarksFile)) {
         // must be called after m_bookmarksMonitor has a file
@@ -337,7 +337,7 @@ void BookmarksModel::selectAlternative(const QModelIndex& idx, QString alternati
     }
 }
 
-void BookmarksModel::rename(QString path, QString newName)
+void BookmarksModel::rename(QString path, QString newName, bool saveImmediately)
 {
     if (newName.isEmpty()) return;
     int idx = findUserDefinedIndex(path);
@@ -348,8 +348,36 @@ void BookmarksModel::rename(QString path, QString newName)
     QModelIndex bottomRight = index(idx, 0);
     emit dataChanged(topLeft, bottomRight, {BookmarkRole::nameRole});
 
-    save();
     notifyWatchers(path);
+
+    if (saveImmediately) {
+        save();
+    }
+}
+
+void BookmarksModel::reset(QString path, QString newPath, bool saveImmediately)
+{
+    int idx = findUserDefinedIndex(path);
+    if (idx < 0) return;
+
+    m_entries[idx].path = newPath;
+    QModelIndex modelIndex = index(idx, 0);
+    emit dataChanged(modelIndex, modelIndex, {BookmarkRole::pathRole});
+
+    if (m_watchers.contains(path)) {
+        m_watchers.insert(newPath, m_watchers.value(path));
+        m_watchers.remove(path);
+
+        for (const auto& i : m_watchers.value(path)) {
+            i->setPath(newPath);
+        }
+    }
+
+    notifyWatchers(newPath);
+
+    if (saveImmediately) {
+        save();
+    }
 }
 
 bool BookmarksModel::hasBookmark(QString path) const
@@ -675,7 +703,7 @@ void BookmarksModel::updateStandardLocations(const QList<LocationAlternative>& n
     }
 }
 
-void BookmarksModel::reload()
+void BookmarksModel::reload(bool keepTemporary)
 {
     m_mountsPollingTimer->stop();
 
@@ -684,10 +712,22 @@ void BookmarksModel::reload()
     newEntries.insert(BookmarkGroup::Location, getStandardLocations());
     newEntries.insert(BookmarkGroup::External, {}); // loaded when m_mountsPollingTimer triggers
     newEntries.insert(BookmarkGroup::Bookmark, {}); // loaded below
-    newEntries.insert(BookmarkGroup::Temporary, {}); // reset on reload
+
+    if (keepTemporary) {
+        QList<BookmarkItem> temporary;
+        for (const auto& i : m_entries) {
+            if (i.group == BookmarkGroup::Temporary) {
+                temporary.append(i);
+            }
+        }
+
+        newEntries.insert(BookmarkGroup::Temporary, temporary);
+    } else {
+        newEntries.insert(BookmarkGroup::Temporary, {}); // reset on reload
+    }
 
     // load user defined bookmarks
-    const auto value = m_bookmarksMonitor->readJson(QStringLiteral("1"));
+    const auto value = m_bookmarksMonitor->readJson(1, QJsonArray());
 
     if (value.isArray()) {
         const auto array = value.toArray();
@@ -744,50 +784,73 @@ void BookmarksModel::reloadIgnoredMounts()
         return;
     }
 
-    if (!QFile::exists(m_ignoredMountsMonitor->file())) {
-        qDebug() << "mount point ignore list not found at" << m_ignoredMountsMonitor->file()
-                 << "- creating file with default ignore list...";
-
-        // All mount points that exactly match one of these paths are ignored.
-        const static QJsonArray defaultIgnoredFullPaths {
-            {QStringLiteral("/")},
-            {QStringLiteral("/persist")},
-            {QStringLiteral("/protect_s")},
-            {QStringLiteral("/protect_f")},
-            {QStringLiteral("/dsp")},
-            {QStringLiteral("/odm")},
-            {QStringLiteral("/opt")},
-            {QStringLiteral("/home")},
-            {QStringLiteral("/firmware")},
-            {QStringLiteral("/bt_firmware")},
-            {QStringLiteral("/firmware_mnt")},
-            {QStringLiteral("/metadata")},
-            {QStringLiteral("/mnt/vendor/persist")},
-        };
-
-        // All mount points below these paths are ignored.
-        const static QJsonArray defaultIgnoredBasePaths {
-            {QStringLiteral("/opt/alien/")},
-            {QStringLiteral("/apex/")},
-            {QStringLiteral("/opt/appsupport/")},
-            {QStringLiteral("/vendor/")},
-            {QStringLiteral("/home/")},
-            {QStringLiteral("/dsp/")},
-            {QStringLiteral("/firmware/")},
-            {QStringLiteral("/bt_firmware/")},
-            {QStringLiteral("/firmware_mnt/")},
-            {QStringLiteral("/persist/")},
-        };
-
-        QJsonObject object;
-        object.insert(QStringLiteral("fullPaths"), defaultIgnoredFullPaths);
-        object.insert(QStringLiteral("basePaths"), defaultIgnoredBasePaths);
-        m_ignoredMountsMonitor->writeJson(object, QStringLiteral("1"));
-
-        qDebug() << "saved default ignore list:" << object;
+    if (!m_ignoredMountsMonitor->fileExists()) {
+        m_ignoredMountsMonitor->writeJson({}, 0);
     }
 
-    const auto value = m_ignoredMountsMonitor->readJson(QStringLiteral("1"));
+    const auto value = m_ignoredMountsMonitor->readJson(
+        [&](int& version, QJsonValue& data){
+            if (version <= 0) {
+                qDebug() << "creating default mount point ignore list at" << m_ignoredMountsMonitor->file();
+
+                // All mount points that exactly match one of these paths are ignored.
+                const static QJsonArray defaultIgnoredFullPaths {
+                    {QStringLiteral("/")},
+                    {QStringLiteral("/persist")},
+                    {QStringLiteral("/protect_s")},
+                    {QStringLiteral("/protect_f")},
+                    {QStringLiteral("/dsp")},
+                    {QStringLiteral("/odm")},
+                    {QStringLiteral("/opt")},
+                    {QStringLiteral("/home")},
+                    {QStringLiteral("/firmware")},
+                    {QStringLiteral("/bt_firmware")},
+                    {QStringLiteral("/firmware_mnt")},
+                    {QStringLiteral("/metadata")},
+                };
+
+                // All mount points below these paths are ignored.
+                const static QJsonArray defaultIgnoredBasePaths {
+                    {QStringLiteral("/opt/alien/")},
+                    {QStringLiteral("/apex/")},
+                    {QStringLiteral("/opt/appsupport/")},
+                    {QStringLiteral("/vendor/")},
+                    {QStringLiteral("/home/")},
+                    {QStringLiteral("/dsp/")},
+                    {QStringLiteral("/firmware/")},
+                    {QStringLiteral("/bt_firmware/")},
+                    {QStringLiteral("/firmware_mnt/")},
+                    {QStringLiteral("/persist/")},
+                };
+
+                QJsonObject object;
+                object.insert(QStringLiteral("fullPaths"), defaultIgnoredFullPaths);
+                object.insert(QStringLiteral("basePaths"), defaultIgnoredBasePaths);
+
+                data = object;
+                version = 1;
+            }
+
+            if (version == 1) {
+                QJsonObject object = data.toObject();
+                QJsonArray fullPaths = object.value("fullPaths").toArray();
+                QJsonArray basePaths = object.value("basePaths").toArray();
+
+                fullPaths.append(QStringLiteral("/blackbox"));
+                basePaths.append(QStringLiteral("/mnt/vendor/"));
+
+                object.insert(QStringLiteral("fullPaths"), fullPaths);
+                object.insert(QStringLiteral("basePaths"), basePaths);
+                data = object;
+                version = 2;
+            }
+
+            if (version == 2) {
+                return true;  // final version
+            }
+
+            return false;  // got an unsupported version
+    });
 
     if (value.isObject()) {
         const QJsonObject object = value.toObject();
@@ -842,7 +905,7 @@ void BookmarksModel::save()
         array.append(item);
     }
 
-    m_bookmarksMonitor->writeJson(array, QStringLiteral("1"));
+    m_bookmarksMonitor->writeJson(array, 1);
 }
 
 QStringList BookmarksModel::pathsForIndexes(const QModelIndexList& indexes)
@@ -944,7 +1007,7 @@ void BookmarksModel::removeUserDefined(QString path, bool permanent)
     }
 }
 
-int BookmarksModel::findUserDefinedIndex(QString path)
+int BookmarksModel::findUserDefinedIndex(QString path) const
 {
     if (path.isEmpty() || !m_userDefinedLookup.contains(path)) return -1;
 
@@ -995,11 +1058,6 @@ void BookmarksModel::move(int fromIndex, int toIndex, bool saveImmediately)
     if (saveImmediately) {
         save();
     }
-}
-
-QString BookmarksModel::loadBookmarksFile()
-{
-    return m_bookmarksMonitor->readFile();
 }
 
 QList<BookmarksModel::BookmarkItem> BookmarksModel::getStandardLocations()
