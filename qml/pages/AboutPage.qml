@@ -16,7 +16,7 @@ A.AboutPageBase {
     appVersion: main.appVersion
     appRelease: ""
 
-    // sourcesUrl: "https://github.com/jklingen/space-inspector"
+    // sourcesUrl: "https://github.com/a-dekker/space-inspector"
     // homepageUrl: "https://forum.sailfishos.org/t/..."
     // translationsUrl: "https://hosted.weblate.org/projects/%1".arg(Qt.application.name)
     // changelogList: Qt.resolvedUrl("../Changelog.qml")
