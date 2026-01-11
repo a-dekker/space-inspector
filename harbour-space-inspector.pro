@@ -79,7 +79,6 @@ HEADERS += \
     src/io/filedata.h \
     src/io/fileworker.h \
     src/io/globals.h \
-    src/io/property_macros.h \
     src/io/statfileinfo.h \
 
 RESOURCES += \
