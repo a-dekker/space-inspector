@@ -80,6 +80,7 @@ HEADERS += \
     src/io/fileworker.h \
     src/io/globals.h \
     src/io/statfileinfo.h \
+    src/io/quiet_logging.h \
 
 RESOURCES += \
     resources/resources.qrc
