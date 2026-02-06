@@ -4,74 +4,74 @@
 <context>
     <name>AboutPage</name>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="26"/>
+        <location filename="../qml/pages/AboutPage.qml" line="25"/>
         <source>Do you like this app?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="27"/>
+        <location filename="../qml/pages/AboutPage.qml" line="26"/>
         <source>Buy me a beer :)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="35"/>
+        <location filename="../qml/pages/AboutPage.qml" line="34"/>
         <source>No matter how much storage you have got - it will be full.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="37"/>
+        <location filename="../qml/pages/AboutPage.qml" line="36"/>
         <source>Space Inspector helps to find large folders and files on your storage.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="47"/>
+        <location filename="../qml/pages/AboutPage.qml" line="46"/>
         <source>Questions, problems, suggestions?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="79"/>
+        <location filename="../qml/pages/AboutPage.qml" line="78"/>
         <source>Development</source>
         <translation>Arendus</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="82"/>
+        <location filename="../qml/pages/AboutPage.qml" line="81"/>
         <source>Programming</source>
         <translation>Koodi kirjutamine</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="89"/>
+        <location filename="../qml/pages/AboutPage.qml" line="88"/>
         <source>Icon Design</source>
         <translation>Ikooni kujundus</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="95"/>
+        <location filename="../qml/pages/AboutPage.qml" line="94"/>
         <source>Translations</source>
         <translation>Tõlked</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="98"/>
+        <location filename="../qml/pages/AboutPage.qml" line="97"/>
         <source>Swedish</source>
-        <translation>rootsi</translation>
+        <translation>rootsi keel</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="104"/>
+        <location filename="../qml/pages/AboutPage.qml" line="103"/>
         <source>Spanish</source>
-        <translation>hispaania</translation>
+        <translation>hispaania keel</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="110"/>
+        <location filename="../qml/pages/AboutPage.qml" line="109"/>
         <source>German</source>
-        <translation>saksa</translation>
+        <translation>saksa keel</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="118"/>
+        <location filename="../qml/pages/AboutPage.qml" line="117"/>
         <source>English</source>
-        <translation>inglise</translation>
+        <translation>inglise keel</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="125"/>
+        <location filename="../qml/pages/AboutPage.qml" line="124"/>
         <source>Chinese</source>
-        <translation>hiina</translation>
+        <translation>hiina keel</translation>
     </message>
 </context>
 <context>
@@ -98,80 +98,80 @@ a moment.</source>
 <context>
     <name>BookmarksModel</name>
     <message>
-        <location filename="../src/io/bookmarks.cpp" line="507"/>
+        <location filename="../src/io/bookmarks.cpp" line="535"/>
         <source>Memory card</source>
         <translation>Mälukaart</translation>
     </message>
     <message>
-        <location filename="../src/io/bookmarks.cpp" line="509"/>
+        <location filename="../src/io/bookmarks.cpp" line="537"/>
         <source>Attached folder</source>
         <translation>Seotud kaust</translation>
     </message>
     <message>
-        <location filename="../src/io/bookmarks.cpp" line="511"/>
+        <location filename="../src/io/bookmarks.cpp" line="539"/>
         <source>Remote folder</source>
         <translation>Kaugkaust</translation>
     </message>
     <message>
-        <location filename="../src/io/bookmarks.cpp" line="514"/>
+        <location filename="../src/io/bookmarks.cpp" line="542"/>
         <source>Removable media</source>
         <translation>Eemaldatav meedia</translation>
     </message>
     <message>
-        <location filename="../src/io/bookmarks.cpp" line="601"/>
-        <location filename="../src/io/bookmarks.cpp" line="1094"/>
+        <location filename="../src/io/bookmarks.cpp" line="629"/>
+        <location filename="../src/io/bookmarks.cpp" line="1152"/>
         <source>Internal storage</source>
         <translation>Sisemine andmehoidla</translation>
     </message>
     <message>
-        <location filename="../src/io/bookmarks.cpp" line="609"/>
+        <location filename="../src/io/bookmarks.cpp" line="637"/>
         <source>“%1” on “%2”</source>
         <extracomment>as in &quot;the folder “Music” on the storage named “SD Card”&quot;</extracomment>
         <translation>„%1“ asukohas „%2“</translation>
     </message>
     <message>
-        <location filename="../src/io/bookmarks.cpp" line="664"/>
-        <location filename="../src/io/bookmarks.cpp" line="1019"/>
+        <location filename="../src/io/bookmarks.cpp" line="692"/>
+        <location filename="../src/io/bookmarks.cpp" line="1077"/>
         <source>Documents</source>
         <translation>Dokumendid</translation>
     </message>
     <message>
-        <location filename="../src/io/bookmarks.cpp" line="666"/>
-        <location filename="../src/io/bookmarks.cpp" line="1029"/>
+        <location filename="../src/io/bookmarks.cpp" line="694"/>
+        <location filename="../src/io/bookmarks.cpp" line="1087"/>
         <source>Downloads</source>
         <translation>Allalaadimised</translation>
     </message>
     <message>
-        <location filename="../src/io/bookmarks.cpp" line="668"/>
-        <location filename="../src/io/bookmarks.cpp" line="1039"/>
+        <location filename="../src/io/bookmarks.cpp" line="696"/>
+        <location filename="../src/io/bookmarks.cpp" line="1097"/>
         <source>Pictures</source>
         <translation>Pildid</translation>
     </message>
     <message>
-        <location filename="../src/io/bookmarks.cpp" line="670"/>
-        <location filename="../src/io/bookmarks.cpp" line="1049"/>
+        <location filename="../src/io/bookmarks.cpp" line="698"/>
+        <location filename="../src/io/bookmarks.cpp" line="1107"/>
         <source>Videos</source>
         <translation>Videod</translation>
     </message>
     <message>
-        <location filename="../src/io/bookmarks.cpp" line="672"/>
-        <location filename="../src/io/bookmarks.cpp" line="1059"/>
+        <location filename="../src/io/bookmarks.cpp" line="700"/>
+        <location filename="../src/io/bookmarks.cpp" line="1117"/>
         <source>Music</source>
         <translation>Muusika</translation>
     </message>
     <message>
-        <location filename="../src/io/bookmarks.cpp" line="1009"/>
+        <location filename="../src/io/bookmarks.cpp" line="1067"/>
         <source>Home</source>
         <translation>Kodukaust</translation>
     </message>
     <message>
-        <location filename="../src/io/bookmarks.cpp" line="1069"/>
-        <location filename="../src/io/bookmarks.cpp" line="1095"/>
+        <location filename="../src/io/bookmarks.cpp" line="1127"/>
+        <location filename="../src/io/bookmarks.cpp" line="1153"/>
         <source>Android storage</source>
         <translation>Androidi andmeruum</translation>
     </message>
     <message>
-        <location filename="../src/io/bookmarks.cpp" line="1079"/>
+        <location filename="../src/io/bookmarks.cpp" line="1137"/>
         <source>Root</source>
         <translation>Juurkaust</translation>
     </message>
@@ -359,6 +359,19 @@ a moment.</source>
         <location filename="../src/io/engine.cpp" line="488"/>
         <source>Cannot change permissions</source>
         <translation>Õiguste muutmine ei õnnestu</translation>
+    </message>
+</context>
+<context>
+    <name>ExternalUrlPage</name>
+    <message>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="87"/>
+        <source>Swipe left to preview.</source>
+        <translation>Eelvaateks viipa vasakule.</translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="87"/>
+        <source>You are using a mobile data connection.</source>
+        <translation>Sa kasutad mobiilset andmesideühendust.</translation>
     </message>
 </context>
 <context>
@@ -659,29 +672,29 @@ a moment.</source>
 <context>
     <name>Opal.About</name>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="56"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="58"/>
         <source>About</source>
         <translation>Rakenduse teave</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="85"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="87"/>
         <source>Version %1</source>
         <translation>Versioon %1</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="101"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="103"/>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="24"/>
         <location filename="../qml/modules/Opal/About/private/ContributorsPage.qml" line="33"/>
         <source>Development</source>
         <translation>Arendus</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="104"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="106"/>
         <source>show contributors</source>
         <translation>näita kaasautoreid</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="106"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="108"/>
         <location filename="../qml/modules/Opal/About/private/ContributorsAttributionRepeater.qml" line="18"/>
         <location filename="../qml/modules/Opal/About/private/ContributorsAttributionRepeater.qml" line="24"/>
         <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="47"/>
@@ -689,18 +702,18 @@ a moment.</source>
         <translation>Avaleht</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="109"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="111"/>
         <location filename="../qml/modules/Opal/About/private/ChangelogPage.qml" line="16"/>
         <source>Changelog</source>
         <translation>Muudatuste logi</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="112"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="114"/>
         <source>Translations</source>
         <translation>Tõlked</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="115"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="117"/>
         <location filename="../qml/modules/Opal/About/private/ContributorsAttributionRepeater.qml" line="17"/>
         <location filename="../qml/modules/Opal/About/private/ContributorsAttributionRepeater.qml" line="25"/>
         <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="50"/>
@@ -708,17 +721,17 @@ a moment.</source>
         <translation>Lähtekood</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="124"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="126"/>
         <source>Donations</source>
         <translation>Rahalised toetused</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="130"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="132"/>
         <source>License</source>
         <translation>Litsents</translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="135"/>
+        <location filename="../qml/modules/Opal/About/AboutPageBase.qml" line="137"/>
         <source>show license(s)</source>
         <translation>
             <numerusform>näita litsentsi</numerusform>
@@ -736,7 +749,7 @@ a moment.</source>
         <translation>Muudatused alates versioonist %1</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/InfoSection.qml" line="15"/>
+        <location filename="../qml/modules/Opal/About/InfoSection.qml" line="16"/>
         <source>show details</source>
         <translation>näita üksikasju</translation>
     </message>
@@ -747,7 +760,7 @@ a moment.</source>
     </message>
     <message>
         <location filename="../qml/modules/Opal/About/private/ContributorsAttributionRepeater.qml" line="15"/>
-        <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="34"/>
+        <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="45"/>
         <source>Details</source>
         <translation>Lisateave</translation>
     </message>
@@ -762,37 +775,22 @@ a moment.</source>
         <translation>Tänuavaldused</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="15"/>
-        <source>External Link</source>
-        <translation>Väline link</translation>
-    </message>
-    <message>
-        <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="32"/>
-        <source>Open in browser</source>
-        <translation>Ava veebibrauseris</translation>
-    </message>
-    <message>
-        <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="36"/>
-        <source>Copied to clipboard: %1</source>
-        <translation>Kopeerisin lõikelauale: %1</translation>
-    </message>
-    <message>
-        <location filename="../qml/modules/Opal/About/private/ExternalUrlPage.qml" line="41"/>
-        <source>Copy to clipboard</source>
-        <translation>Kopeeri lõikelauale</translation>
-    </message>
-    <message>
         <location filename="../qml/modules/Opal/About/private/LicenseListPart.qml" line="120"/>
         <source>Please refer to &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt;</source>
         <translation>Palun vaata siia: &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt;</translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="28"/>
+        <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="37"/>
         <source>Download license texts</source>
         <translation>Laadi alla litsentside tekstid</translation>
     </message>
+    <message>
+        <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="40"/>
+        <source>You are using a mobile data connection.</source>
+        <translation>Sa kasutad mobiilset andmesideühendust.</translation>
+    </message>
     <message numerus="yes">
-        <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="34"/>
+        <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="45"/>
         <source>License(s)</source>
         <translation>
             <numerusform>Litsents</numerusform>
@@ -800,7 +798,7 @@ a moment.</source>
         </translation>
     </message>
     <message>
-        <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="44"/>
+        <location filename="../qml/modules/Opal/About/private/LicensePage.qml" line="55"/>
         <source>Note: please check the source code for most accurate information.</source>
         <translation>Märkus: kõige täpsema teabe saamiseks palun vaata lähtekoodi.</translation>
     </message>
@@ -824,6 +822,64 @@ a moment.</source>
     </message>
 </context>
 <context>
+    <name>Opal.LinkHandler</name>
+    <message>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="36"/>
+        <source>Copied to clipboard: %1</source>
+        <translation>Kopeerisin lõikelauale: %1</translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="47"/>
+        <source>Share link</source>
+        <translation>Jaga linki</translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="51"/>
+        <source>Phone number</source>
+        <translation>Telefoninumber</translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="51"/>
+        <source>External link</source>
+        <translation>Väline link</translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="73"/>
+        <source>Copy link</source>
+        <translation>Kopeeri link</translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="75"/>
+        <source>Copy text</source>
+        <translation>Kopeeri tekst</translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="79"/>
+        <source>Share</source>
+        <translation>Jaga</translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="84"/>
+        <source>Open in browser</source>
+        <translation>Ava veebibrauseris</translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/LinkHandler/private/ExternalUrlPage.qml" line="84"/>
+        <source>Open externally</source>
+        <translation>Ava välise rakendusega</translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/LinkHandler/private/PreviewPage.qml" line="27"/>
+        <source>No preview available.</source>
+        <translation>Eelvaadet pole saadaval.</translation>
+    </message>
+    <message>
+        <location filename="../qml/modules/Opal/LinkHandler/private/PreviewPage.qml" line="28"/>
+        <source>The page is taking too long to load.</source>
+        <translation>Selle lehe laadimiseks kulub liiga palju aega.</translation>
+    </message>
+</context>
+<context>
     <name>PlacesPage</name>
     <message>
         <location filename="../qml/pages/PlacesPage.qml" line="39"/>
@@ -844,19 +900,22 @@ a moment.</source>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../src/io/globals.cpp" line="121"/>
+        <location filename="../src/io/globals.cpp" line="122"/>
         <source>hh:mm:ss</source>
-        <translation>hh:mm:ss</translation>
+        <comment>Time format. Use what&apos;s common in your language. See https://doc.qt.io/archives/qt-5.15/qml-qtqml-date.html#format-strings for details.</comment>
+        <translation type="unfinished">hh:mm:ss</translation>
     </message>
     <message>
-        <location filename="../src/io/globals.cpp" line="124"/>
+        <location filename="../src/io/globals.cpp" line="125"/>
         <source>dd MMM yyyy, hh:mm:ss t</source>
-        <translation>dd MMM yyyy hh:mm:ss t</translation>
+        <comment>Date and time format. Use what&apos;s common in your language. See https://doc.qt.io/archives/qt-5.15/qml-qtqml-date.html#format-strings for details.</comment>
+        <translation type="unfinished">dd MMM yyyy hh:mm:ss t</translation>
     </message>
     <message>
-        <location filename="../src/io/globals.cpp" line="126"/>
+        <location filename="../src/io/globals.cpp" line="127"/>
         <source>dd.MM.yy, hh:mm</source>
-        <translation>dd.MM.yy hh:mm</translation>
+        <comment>Date and format. Use what&apos;s common in your language. See https://doc.qt.io/archives/qt-5.15/qml-qtqml-date.html#format-strings for details.</comment>
+        <translation type="unfinished">dd.MM.yy hh:mm</translation>
     </message>
 </context>
 <context>

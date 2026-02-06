@@ -1,6 +1,6 @@
 /*
     Space Inspector - a filesystem structure visualization for SailfishOS
-    SPDX-FileCopyrightText: 2024 Mirian Margiani
+    SPDX-FileCopyrightText: 2024-2026 Mirian Margiani
     SPDX-License-Identifier: GPL-3.0-or-later
 */
 
@@ -16,12 +16,17 @@ Item {
     property string value
     property bool busy: false
 
+    property alias valueLabel: valueLabel
+    property alias labelLabel: labelLabel
+
     // note: GridLayout items are added upside down,
     // from bottom to top.
 
     Label {
         id: valueLabel
         parent: grid
+        visible: root.visible
+        enabled: root.enabled
         leftPadding: root.busy ? spinner.width + Theme.paddingMedium : 0
         Layout.fillWidth: true
         Layout.alignment: Qt.AlignLeft | Qt.AlignTop
@@ -45,6 +50,8 @@ Item {
     Label {
         id: labelLabel
         parent: grid
+        visible: root.visible
+        enabled: root.enabled
         Layout.fillWidth: false
         Layout.alignment: Qt.AlignRight
         anchors.baseline: valueLabel.baseline

@@ -1,6 +1,6 @@
 /*
  * This file is part of File Browser.
- * SPDX-FileCopyrightText: 2020-2024 Mirian Margiani
+ * SPDX-FileCopyrightText: 2020-2026 Mirian Margiani
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
@@ -16,9 +16,10 @@
 #include <QAbstractListModel>
 #include <QObject>
 
+#include <libs/opal/propertymacros/property_macros.h>
+
 #include "configfilemonitor.h"
 #include "enumcontainer.h"
-#include "property_macros.h"
 
 // group Device includes everything that should show disk space info
 // - it is *not* strictly limited to physical devices or partitions
@@ -112,8 +113,10 @@ public:
     Q_INVOKABLE void selectAlternative(const QModelIndex& idx, QString alternative);
 
     Q_INVOKABLE void move(int fromIndex, int toIndex, bool saveImmediately = true);
-    Q_INVOKABLE void rename(QString path, QString newName);
+    Q_INVOKABLE void rename(QString path, QString newName, bool saveImmediately = true);
+    Q_INVOKABLE void reset(QString path, QString newPath, bool saveImmediately = true);
     Q_INVOKABLE bool hasBookmark(QString path) const;
+    Q_INVOKABLE int findUserDefinedIndex(QString path) const;
     Q_INVOKABLE void save();
 
     Q_INVOKABLE QStringList pathsForIndexes(const QModelIndexList& indexes);
@@ -130,10 +133,12 @@ public:
 signals:
     void temporaryAdded(QModelIndex modelIndex, int row);
 
+public slots:
+    void reload(bool keepTemporary = false);
+
 private slots:
     void updateExternalDevices();
     void updateStandardLocations(const QList<LocationAlternative>& newExternalPaths, const uint& lostPathsCount);
-    void reload();
     void reloadIgnoredMounts();
 
 private:
@@ -141,9 +146,6 @@ private:
 
     void addUserDefined(QString path, QString name, bool permanent);
     void removeUserDefined(QString path, bool permanent);
-    int findUserDefinedIndex(QString path);
-
-    QString loadBookmarksFile();
 
     struct BookmarkItem {
         BookmarkItem(

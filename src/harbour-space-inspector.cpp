@@ -38,12 +38,15 @@
 #include "io/filedata.h"
 #include "io/bookmarks.h"
 #include "io/enumcontainer.h"
+#include "io/quiet_logging.h"
 
 DEFINE_ENUM_REGISTRATION_FUNCTION(SpaceInspector) {
     REGISTER_ENUM_CONTAINER(ViewMode)
 }
 
 int main(int argc, char *argv[]) {
+    setupLogging();
+
     // File Browser types
     qRegisterMetaType<StatFileInfo>("StatFileInfo");
     qRegisterMetaType<QList<StatFileInfo>>("QList<StatFileInfo>");

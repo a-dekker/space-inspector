@@ -36,7 +36,8 @@ DEFINES += FILEDATA_NO_EXIF
 # Enable rebuilding when defines change
 include(libs/opal-cached-defines.pri)
 
-QML_IMPORT_PATH += qml/modules
+# Enable Opal modules
+include(libs/opal.pri)
 
 SOURCES += src/harbour-space-inspector.cpp \
     src/si_engine.cpp \
@@ -78,8 +79,8 @@ HEADERS += \
     src/io/filedata.h \
     src/io/fileworker.h \
     src/io/globals.h \
-    src/io/property_macros.h \
     src/io/statfileinfo.h \
+    src/io/quiet_logging.h \
 
 RESOURCES += \
     resources/resources.qrc

@@ -7,8 +7,9 @@
 #ifndef SI_ENGINE_H
 #define SI_ENGINE_H
 
+#include <libs/opal/propertymacros/property_macros.h>
+
 #include "io/engine.h"
-#include "io/property_macros.h"
 
 class SizeInfo {
     Q_GADGET
